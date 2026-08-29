@@ -1,4 +1,4 @@
-import { assessRequirements } from "@/lib/engine";
+﻿import { assessRequirements } from "@/lib/engine";
 import { getTranslation } from "@/lib/i18n/translations";
 import { DEFAULT_LANG } from "@/lib/i18n/config";
 import type { LangCode } from "@/lib/i18n/translations";
@@ -63,7 +63,7 @@ export default async function RisultatiPage({
         <ul className="text-sm text-slate-500 space-y-1">
           {result.sources.map((source) => (
             <li key={source.id}>
-              
+              <a
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"

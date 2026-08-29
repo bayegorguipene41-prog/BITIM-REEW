@@ -1,6 +1,6 @@
 import type { Procedure } from "@/lib/types";
 
-export const procedurePaesibassi: Procedure = {
+export const procedurePaesiBassi: Procedure = {
   id: "NL-permesso-soggiorno-lavoro",
   countryCode: "NL",
   slug: "permesso-soggiorno-lavoro",

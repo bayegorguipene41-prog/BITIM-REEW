@@ -9,14 +9,15 @@ export const metadata = {
   description: "Discover which documents you need, anywhere in the world.",
 };
 
-export default function LangLayout({
+export default async function LangLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = params.lang || DEFAULT_LANG;
+  const { lang: rawLang } = await params;
+  const lang = rawLang || DEFAULT_LANG;
   const t = getTranslation(lang);
   const selectedLang = LANGUAGES.find((l) => l.code === lang) || LANGUAGES[0];
   const dir = selectedLang.isRTL ? "rtl" : "ltr";

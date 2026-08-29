@@ -35,7 +35,7 @@ export default function Homepage() {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/${lang}/api/assess`, {
+      const res = await fetch(`/api/assess`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...profile, lang }),
@@ -61,8 +61,12 @@ export default function Homepage() {
                   {d.status === "required" ? "🔴" : d.status === "conditional" ? "🟡" : "🔵"}
                 </span>
                 <div>
-                  <h3 className="font-semibold">{d.item.name}</h3>
-                  <p className="text-sm text-slate-600 mt-1">{d.item.description}</p>
+                  <h3 className="font-semibold">
+                    {d.item.name?.[lang] ?? d.item.name?.it}
+                  </h3>
+                  <p className="text-sm text-slate-600 mt-1">
+                    {d.item.description?.[lang] ?? d.item.description?.it}
+                  </p>
                   {d.sourceName && (
                     <p className="text-xs text-slate-400 mt-2">
                       {t.source}: {d.sourceName}

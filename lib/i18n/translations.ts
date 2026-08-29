@@ -1,4 +1,4 @@
-import { LANGUAGES } from "./config";
+import { LANGUAGES, DEFAULT_LANG } from "./config";
 
 export type LangCode = (typeof LANGUAGES)[number]["code"];
 

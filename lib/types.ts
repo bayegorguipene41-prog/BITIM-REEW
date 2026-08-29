@@ -1,6 +1,12 @@
 export type NecessityType = "required" | "conditional" | "recommended";
 export type ConfidenceLevel = "high" | "medium" | "low";
 
+// 📌 Testo multilingua (italiano / inglese)
+export interface LocalizedText {
+  it: string;
+  en: string;
+}
+
 export interface Source {
   id: string;
   name: string;
@@ -13,8 +19,8 @@ export interface Source {
 export interface DocumentRequirement {
   id: string;
   code: string;
-  name: string;
-  description: string;
+  name: LocalizedText;
+  description: LocalizedText;
   necessity: NecessityType;
   condition?: string;
   translationRequired?: boolean;
@@ -26,9 +32,10 @@ export interface Procedure {
   id: string;
   countryCode: string;
   slug: string;
-  title: string;
-  description: string;
+  title: LocalizedText;
+  description: LocalizedText;
   category: string;
+  sources: Source[];
   requirements: DocumentRequirement[];
 }
 

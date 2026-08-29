@@ -1,21 +1,21 @@
 // 📌 IMPORTA TUTTE LE PROCEDURE
-import { procedureItalia } from "./Italia";
-import { procedureFrancia } from "./Francia";
-import { procedureGermania } from "./Germania";
-import { procedureSpagna } from "./Spagna";
+import { procedureItalia } from "./italia";
+import { procedureFrancia } from "./francia";
+import { procedureGermania } from "./germania";
+import { procedureSpagna } from "./spagna";
 import { procedureRegnoUnito } from "./RegnoUnito";
-import { procedureAustria } from "./Austria";
+import { procedureAustria } from "./austria";
 import { procedureBelgio } from "./Belgio";
-import { procedureSvizzera } from "./Svizzera";
+import { procedureSvizzera } from "./svizzera";
 import { procedurePortogallo } from "./Portogallo";
 import { procedureIrlanda } from "./Irlanda";
-import { procedureSvezia } from "./Svezia";
+import { procedureSvezia } from "./svezia";
 import { procedureStatiUniti } from "./StatiUniti";
 import { procedureMarocco } from "./Marocco";
 import { procedureAlgeria } from "./Algeria";
-import { procedureTunisia } from "./Tunisia";
-import { procedureSenegal } from "./Senegal"; // ✅ S maiuscola
-import { procedureCina } from "./Cina";
+import { procedureTunisia } from "./tunisia";
+import { procedureSenegal } from "./senegal";
+import { procedureCina } from "./cina";
 import { procedureMali } from "./Mali";
 import { procedurePaesiBassi } from "./PaesiBassi";
 

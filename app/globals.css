@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #165DFF;
+  --color-success: #00B42A;
+  --color-warning: #FF7D00;
+  --color-danger: #F53F3F;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: #F8FAFC;
+  color: #0F172A;
+  line-height: 1.5;
+}
+
+@layer utilities {
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200 shadow-sm;
+  }
+  .btn-primary {
+    @apply bg-[#165DFF] text-white font-semibold py-3 px-6 rounded-xl hover:bg-[#1550E0] transition-all duration-200;
+  }
+  .btn-secondary {
+    @apply border border-slate-200 text-slate-700 font-medium py-3 px-6 rounded-xl hover:bg-slate-50 transition-all duration-200;
+  }
+  .btn-option {
+    @apply w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-[#165DFF] hover:bg-blue-50 transition-all;
+  }
+  .btn-option.active {
+    @apply border-[#165DFF] bg-blue-50;
+  }
+}

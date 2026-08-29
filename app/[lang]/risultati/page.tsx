@@ -76,6 +76,7 @@ export default async function RisultatiPage({
           ))}
         </ul>
       </div>
+
       <p className="mt-8 text-xs text-slate-400">{t.disclaimer}</p>
     </div>
   );

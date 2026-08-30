@@ -1,21 +1,21 @@
 // 📌 IMPORTA TUTTE LE PROCEDURE
-import { procedureItalia } from "./italia";
-import { procedureFrancia } from "./francia";
-import { procedureGermania } from "./germania";
-import { procedureSpagna } from "./spagna";
+import { procedureItalia } from "./Italia";
+import { procedureFrancia } from "./Francia";
+import { procedureGermania } from "./Germania";
+import { procedureSpagna } from "./Spagna";
 import { procedureRegnoUnito } from "./RegnoUnito";
-import { procedureAustria } from "./austria";
+import { procedureAustria } from "./Austria";
 import { procedureBelgio } from "./Belgio";
-import { procedureSvizzera } from "./svizzera";
+import { procedureSvizzera } from "./Svizzera";
 import { procedurePortogallo } from "./Portogallo";
 import { procedureIrlanda } from "./Irlanda";
-import { procedureSvezia } from "./svezia";
+import { procedureSvezia } from "./Svezia";
 import { procedureStatiUniti } from "./StatiUniti";
 import { procedureMarocco } from "./Marocco";
 import { procedureAlgeria } from "./Algeria";
-import { procedureTunisia } from "./tunisia";
-import { procedureSenegal } from "./senegal";
-import { procedureCina } from "./cina";
+import { procedureTunisia } from "./Tunisia";
+import { procedureSenegal } from "./Senegal";
+import { procedureCina } from "./Cina";
 import { procedureMali } from "./Mali";
 import { procedurePaesiBassi } from "./PaesiBassi";
 
@@ -44,6 +44,6 @@ export const PROCEDURES = [
   procedureMali,
   procedurePaesiBassi,
 
-  // ✅ Aggiungi qui le procedure dettagliate nuove
+  // ✅ Nuove procedure dettagliate
   ...PROCEDURE_ITALIA,
 ];

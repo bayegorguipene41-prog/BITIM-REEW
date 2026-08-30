@@ -1,4 +1,8 @@
-// 📌 IMPORTA TUTTE LE PROCEDURE
+// ==========================================
+// INDICE — TUTTE LE PROCEDURE
+// ==========================================
+
+// 📌 IMPORTA TUTTE LE PROCEDURE DEI SINGOLI PAESI
 import { procedureItalia } from "./Italia";
 import { procedureFrancia } from "./Francia";
 import { procedureGermania } from "./Germania";
@@ -19,10 +23,14 @@ import { procedureCina } from "./Cina";
 import { procedureMali } from "./Mali";
 import { procedurePaesiBassi } from "./PaesiBassi";
 
-// ✅ NUOVA: Importa le procedure dettagliate dell'Italia
-import { PROCEDURE_ITALIA } from "./italia";
+// ✅ Importa le procedure dettagliate e le categorie
+import { PROCEDURE_ITALIA } from "./Italia";
+import { CATEGORIE } from "../categorie";
 
-// 📌 ESPORTA TUTTE INSIEME
+// ✅ Esporta le categorie per usarle nell'app
+export { CATEGORIE };
+
+// 📌 ELENCO COMPLETO DI TUTTE LE PROCEDURE
 export const PROCEDURES = [
   procedureItalia,
   procedureFrancia,
@@ -44,6 +52,6 @@ export const PROCEDURES = [
   procedureMali,
   procedurePaesiBassi,
 
-  // ✅ Nuove procedure dettagliate
+  // ✅ Procedure dettagliate nuove
   ...PROCEDURE_ITALIA,
 ];

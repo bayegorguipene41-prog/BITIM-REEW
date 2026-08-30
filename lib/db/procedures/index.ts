@@ -2,7 +2,7 @@
 // INDICE — TUTTE LE PROCEDURE
 // ==========================================
 
-// 📌 IMPORTA TUTTE LE PROCEDURE DEI SINGOLI PAESI
+// 📌 IMPORTA TUTTE LE PROCEDURE — NOMI ESATTI DA GITHUB (MAIUSCOLA INIZIALE)
 import { procedureItalia } from "./Italia";
 import { procedureFrancia } from "./Francia";
 import { procedureGermania } from "./Germania";
@@ -23,12 +23,8 @@ import { procedureCina } from "./Cina";
 import { procedureMali } from "./Mali";
 import { procedurePaesiBassi } from "./PaesiBassi";
 
-// ✅ Importa le procedure dettagliate e le categorie
+// ✅ Importa le procedure dettagliate dell'Italia
 import { PROCEDURE_ITALIA } from "./Italia";
-import { CATEGORIE } from "../categorie";
-
-// ✅ Esporta le categorie per usarle nell'app
-export { CATEGORIE };
 
 // 📌 ELENCO COMPLETO DI TUTTE LE PROCEDURE
 export const PROCEDURES = [

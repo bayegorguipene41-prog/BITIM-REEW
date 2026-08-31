@@ -1,6 +1,8 @@
 export type NecessityType = "required" | "conditional" | "recommended";
 export type ConfidenceLevel = "high" | "medium" | "low";
 
+import type { Condition } from "./conditions";
+
 // 📌 Testo multilingua (italiano / inglese)
 export interface LocalizedText {
   it: string;
@@ -22,10 +24,40 @@ export interface DocumentRequirement {
   name: LocalizedText;
   description: LocalizedText;
   necessity: NecessityType;
-  condition?: string;
+  condition?: Condition;
   translationRequired?: boolean;
   legalizationType?: "none" | "apostille" | "consular";
+  apostilleRequired?: boolean;
+  whereToGet?: LocalizedText;
+  whatYouNeed?: LocalizedText;
+  validityPeriod?: LocalizedText;
+  estimatedCost?: LocalizedText;
+  processingTime?: LocalizedText;
   sourceId: string;
+}
+
+export interface WhereToApply {
+  name: LocalizedText;
+  address?: LocalizedText;
+  hours?: LocalizedText;
+  appointment?: LocalizedText;
+  phone?: string;
+  email?: string;
+  website?: string;
+  notes?: LocalizedText;
+}
+
+export interface ProcedureMeta {
+  whoCanApply?: LocalizedText;
+  whereToApply?: WhereToApply;
+  method?: LocalizedText;
+  estimatedCost?: LocalizedText;
+  processingTime?: LocalizedText;
+  validity?: LocalizedText;
+  renewal?: LocalizedText;
+  appointmentRequired?: boolean;
+  steps?: LocalizedText[];
+  note?: LocalizedText;
 }
 
 export interface Procedure {
@@ -37,6 +69,10 @@ export interface Procedure {
   category: string;
   sources: Source[];
   requirements: DocumentRequirement[];
+  meta?: ProcedureMeta;
+  // Condizione opzionale di applicabilità al contesto utente corrente.
+  // Assente → procedura sempre applicabile.
+  condition?: Condition;
 }
 
 export interface UserProfileData {

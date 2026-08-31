@@ -1,18 +1,16 @@
-import HomePageClient from "@/components/home/HomePageClient";
+import WizardClient from "@/components/wizard/WizardClient";
 import { LANGUAGES, DEFAULT_LANG } from "@/lib/i18n/config";
 
 export const metadata = {
-  title: "BITIM REEW — Documents guide worldwide",
-  description:
-    "Know exactly which documents you need, anywhere in the world.",
+  title: "Start your document guide — BITIM REEW",
 };
 
-export default async function HomePage({
+export default async function WizardPage({
   params,
 }: {
   params: Promise<{ lang?: string }>;
 }) {
   const { lang: rawLang } = await params;
   const lang = rawLang && LANGUAGES.some((l) => l.code === rawLang) ? rawLang : DEFAULT_LANG;
-  return <HomePageClient lang={lang} />;
+  return <WizardClient lang={lang} />;
 }

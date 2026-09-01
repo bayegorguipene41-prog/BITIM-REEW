@@ -40,7 +40,7 @@ export default function HomePageClient({ lang }: { lang: string }) {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 20%, rgba(22,93,255,0.6) 0, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22,93,255,0.4) 0, transparent 45%)",
+              "radial-gradient(circle at 20% 20%, rgba(166,61,64,0.55) 0, transparent 50%), radial-gradient(circle at 80% 70%, rgba(76,107,84,0.4) 0, transparent 45%)",
           }}
         />
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none"

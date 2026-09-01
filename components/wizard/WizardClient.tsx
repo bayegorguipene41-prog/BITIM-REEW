@@ -33,6 +33,27 @@ const CATEGORIES = [
 
 const STEP_LABELS = ["wiz_dest_title", "wiz_origin_question", "wiz_nationality_question", "wiz_procedure_question", "wiz_personal_title"];
 
+const MARITAL_OPTIONS = [
+  { value: "single", en: "Single", it: "Celibe/Nubile", fr: "Célibataire", es: "Soltero", de: "Single", pt: "Solteiro", ar: "أعزب" },
+  { value: "married", en: "Married", it: "Sposato/a", fr: "Marié(e)", es: "Casado/a", de: "Verheiratet", pt: "Casado/a", ar: "متزوج" },
+  { value: "other", en: "Other", it: "Altro", fr: "Autre", es: "Otro", de: "Andere", pt: "Outro", ar: "أخرى" },
+];
+
+const EMPLOYMENT_OPTIONS = [
+  { value: "employed", en: "Employed", it: "Impiegato/a", fr: "Salarié(e)", es: "Empleado/a", de: "Beschäftigt", pt: "Empregado/a", ar: "موظف" },
+  { value: "self_employed", en: "Self-employed", it: "Autonomo/a", fr: "Indépendant", es: "Autónomo/a", de: "Selbstständig", pt: "Autônomo/a", ar: "自营职业" },
+  { value: "student", en: "Student", it: "Studente", fr: "Étudiant", es: "Estudiante", de: "Student", pt: "Estudante", ar: "طالب" },
+  { value: "unemployed", en: "Unemployed", it: "Disoccupato/a", fr: "Sans emploi", es: "Desempleado/a", de: "Arbeitslos", pt: "Desempregado", ar: "عاطل" },
+  { value: "retired", en: "Retired", it: "Pensionato/a", fr: "Retraité(e)", es: "Jubilado/a", de: "Rentner", pt: "Aposentado/a", ar: "متقاعد" },
+  { value: "other", en: "Other", it: "Altro", fr: "Autre", es: "Otro", de: "Andere", pt: "Outro", ar: "أخرى" },
+];
+
+function optionLabel(options: typeof MARITAL_OPTIONS, value: string, lang: string): string {
+  const opt = options.find((o) => o.value === value);
+  if (!opt) return value;
+  return (opt as any)[lang] || opt.en;
+}
+
 export default function WizardPage({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
@@ -170,8 +191,12 @@ export default function WizardPage({ lang }: { lang: string }) {
       addRecentCountry(profile.destination);
       clearWizard();
       router.push(`/${lang}/applications/${app.id}`);
-    } catch (e) {
-      setSubStatus(t.cat_other);
+    } catch {
+      setSubStatus(
+        lang === "it"
+          ? "Non è stato possibile elaborare la richiesta. Riprova."
+          : "Could not process your request. Please try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -294,15 +319,15 @@ export default function WizardPage({ lang }: { lang: string }) {
               <div className="space-y-2">
                 <label className="label">{t.marital_status}</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {["single", "married", "other"].map((v) => (
+                  {MARITAL_OPTIONS.map((opt) => (
                     <button
-                      key={v}
-                      onClick={() => patch({ maritalStatus: v })}
+                      key={opt.value}
+                      onClick={() => patch({ maritalStatus: opt.value })}
                       className={`btn-option !p-3 text-center text-sm ${
-                        profile.maritalStatus === v ? "active" : ""
+                        profile.maritalStatus === opt.value ? "active" : ""
                       }`}
                     >
-                      {v}
+                      {optionLabel(MARITAL_OPTIONS, opt.value, lang)}
                     </button>
                   ))}
                 </div>
@@ -312,15 +337,15 @@ export default function WizardPage({ lang }: { lang: string }) {
               <div className="space-y-2">
                 <label className="label">{t.employment_status}</label>
                 <div className="grid grid-cols-2 gap-2">
-                  {["employed", "self_employed", "student", "unemployed", "retired", "other"].map((v) => (
+                  {EMPLOYMENT_OPTIONS.map((opt) => (
                     <button
-                      key={v}
-                      onClick={() => patch({ employment: v })}
+                      key={opt.value}
+                      onClick={() => patch({ employment: opt.value })}
                       className={`btn-option !p-3 text-center text-sm ${
-                        profile.employment === v ? "active" : ""
+                        profile.employment === opt.value ? "active" : ""
                       }`}
                     >
-                      {v}
+                      {optionLabel(EMPLOYMENT_OPTIONS, opt.value, lang)}
                     </button>
                   ))}
                 </div>

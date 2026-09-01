@@ -9,24 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#165DFF",
-        "primary-dark": "#0e3fb8",
-        navy: "#0B1F3A",
-        charcoal: "#1A2B45",
-        success: "#12B76A",
+        primary: "#A63D40",
+        "primary-dark": "#863034",
+        navy: "#12213D",
+        charcoal: "#1C2B45",
+        success: "#4C6B54",
         warning: "#F79009",
-        danger: "#F04438",
-        bg: "#F6F8FC",
+        danger: "#9A2D2F",
+        bg: "#F7F5F0",
         neutral: {
-          50: "#F6F8FC",
-          100: "#EEF2F7",
-          200: "#E2E8F0",
-          700: "#334155",
-          900: "#0F172A",
+          50: "#F7F5F0",
+          100: "#EFEBE3",
+          200: "#E2E0D8",
+          700: "#3E4654",
+          900: "#141B28",
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       boxShadow: {
         card: "0 1px 2px rgba(11,31,58,0.05), 0 4px 16px rgba(11,31,58,0.06)",

@@ -138,7 +138,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
           />
         </div>
 
-        {/* Smart warning */}
+        {/* Completion status */}
         <div
           className={`mt-4 flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium ${
             complete
@@ -376,7 +376,7 @@ function DocCard({
           <Chevron open={open} />
         </div>
 
-        {/* Smart warnings */}
+        {/* Document flags */}
         <div className="flex flex-wrap gap-2 mt-3">
           {needsTranslation && (
             <span className="chip bg-warning/10 text-warning">⚠️ {t.doc_translation}</span>

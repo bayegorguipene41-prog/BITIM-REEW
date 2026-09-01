@@ -1,13 +1,31 @@
 import { NextResponse } from "next/server";
+import type { NextResponse as NextResponseType } from "next/server";
 import type { Procedure } from "@/lib/types";
 import { PROCEDURES, PROCEDURES_ALL } from "@/lib/db/procedures";
 import { conditionContextFromProfile, isApplicable } from "@/lib/conditions";
 
 export async function POST(request: Request) {
   try {
-    const profile = await request.json();
-    const country = profile.country || profile.destination || "IT";
-    const procedureSlug = profile.procedureSlug || profile.procedure;
+    const contentType = request.headers.get("content-type");
+    if (!contentType?.includes("application/json")) {
+      return NextResponse.json(
+        { error: "Invalid request format." },
+        { status: 415 }
+      );
+    }
+
+    let profile: Record<string, unknown>;
+    try {
+      profile = await request.json();
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid request body." },
+        { status: 400 }
+      );
+    }
+
+    const country = (profile.country as string) || (profile.destination as string) || "IT";
+    const procedureSlug = (profile.procedureSlug as string) || (profile.procedure as string);
 
     const context = conditionContextFromProfile(profile);
 
@@ -18,9 +36,14 @@ export async function POST(request: Request) {
       PROCEDURES[0],
     ].filter((p): p is Procedure => Boolean(p));
 
-    // Sceglie la prima procedura applicabile al contesto utente;
-    // se nessuna è applicabile ripiega sulla prima candidata.
     const procedure = candidates.find((p) => isApplicable(p, context)) || candidates[0];
+
+    if (!procedure) {
+      return NextResponse.json(
+        { error: "No matching procedure found." },
+        { status: 404 }
+      );
+    }
 
     const documents = procedure.requirements.map((req) => ({
       item: req,
@@ -39,6 +62,10 @@ export async function POST(request: Request) {
       },
     });
   } catch (err) {
-    return NextResponse.json({ error: "Error" }, { status: 500 });
+    console.error("[assess]", err);
+    return NextResponse.json(
+      { error: "Something went wrong. Please try again." },
+      { status: 500 }
+    );
   }
 }

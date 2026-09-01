@@ -160,7 +160,7 @@ export type Dictionary = {
 
 const en: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Your international document assistant",
+  tagline: "Your paperwork, in order — before anyone asks for it.",
   hero_title: "Know exactly which documents you need.",
   hero_subtitle:
     "BITIM REEW helps you understand the documents, requirements and steps needed for your procedure — wherever you are in the world.",
@@ -318,7 +318,7 @@ const en: Dictionary = {
 
 const it: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Il tuo assistente documenti internazionale",
+  tagline: "Le tue carte in regola, prima ancora che te le chiedano.",
   hero_title: "Sappi esattamente quali documenti ti servono.",
   hero_subtitle:
     "BITIM REEW ti aiuta a capire documenti, requisiti e passaggi necessari per la tua pratica — ovunque nel mondo.",
@@ -476,7 +476,7 @@ const it: Dictionary = {
 
 const fr: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Votre assistant documentaire international",
+  tagline: "Vos papiers en règle, avant même qu'on vous les réclame.",
   hero_title: "Sachez précisément quels documents vous avez besoin.",
   hero_subtitle:
     "BITIM REEW vous aide à comprendre les documents, exigences et étapes nécessaires pour votre démarche — où que vous soyez dans le monde.",
@@ -634,7 +634,7 @@ const fr: Dictionary = {
 
 const es: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Tu asistente documental internacional",
+  tagline: "Tu papeleo en orden, antes incluso de que te lo pidan.",
   hero_title: "Sabe exactamente qué documentos necesitas.",
   hero_subtitle:
     "BITIM REEW te ayuda a entender los documentos, requisitos y pasos necesarios para tu trámite, dondequiera que estés.",
@@ -792,7 +792,7 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Ihr internationaler Dokumentenassistent",
+  tagline: "Ihre Unterlagen in Ordnung — bevor jemand danach fragt.",
   hero_title: "Wissen Sie genau, welche Dokumente Sie brauchen.",
   hero_subtitle:
     "BITIM REEW hilft Ihnen, Dokumente, Anforderungen und Schritte für Ihr Verfahren zu verstehen — egal wo auf der Welt.",
@@ -950,7 +950,7 @@ const de: Dictionary = {
 
 const pt: Dictionary = {
   brand: "BITIM REEW",
-  tagline: "Seu assistente internacional de documentos",
+  tagline: "Seus documentos em ordem, antes mesmo de te pedirem.",
   hero_title: "Saiba exatamente quais documentos você precisa.",
   hero_subtitle:
     "A BITIM REEW ajuda você a entender os documentos, requisitos e passos necessários para o seu procedimento — onde quer que esteja.",
@@ -1108,7 +1108,7 @@ const pt: Dictionary = {
 
 const ar: Dictionary = {
   brand: "بيتيم ريوس",
-  tagline: "مساعد المستندات الدولي الخاص بك",
+  tagline: "أوراقك في محلها، قبل أن يطلبها أحد.",
   hero_title: "اعرف بالضبط المستندات التي تحتاجها.",
   hero_subtitle:
     "يساعدك بيتيم ريوس على فهم المستندات والمتطلبات والخطوات اللازمة لإجراءاتك، أينما كنت في العالم.",

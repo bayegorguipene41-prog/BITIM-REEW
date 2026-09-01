@@ -1,20 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LANGUAGES } from "@/lib/i18n/config";
 import { getTranslation } from "@/lib/i18n/translations";
-import { isLoggedIn, getSession, logout } from "@/lib/storage";
+import { useClientAuth } from "@/lib/auth-client";
 
 export default function Header({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const pathname = usePathname();
   const router = useRouter();
+  const { logged, session, signOut } = useClientAuth();
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showLang, setShowLang] = useState(false);
-  const logged = isLoggedIn();
-  const session = getSession();
+  const langRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { key: "nav_home", href: `/${lang}` },
@@ -24,6 +24,26 @@ export default function Header({ lang }: { lang: string }) {
   ];
 
   const selectedLang = LANGUAGES.find((l) => l.code === lang) || LANGUAGES[0];
+
+  const closeLang = useCallback(() => setShowLang(false), []);
+
+  useEffect(() => {
+    if (!showLang) return;
+    function handleClick(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        closeLang();
+      }
+    }
+    function handleEsc(e: KeyboardEvent) {
+      if (e.key === "Escape") closeLang();
+    }
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [showLang, closeLang]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
@@ -35,7 +55,7 @@ export default function Header({ lang }: { lang: string }) {
             className="flex items-center gap-2 shrink-0"
             onClick={() => setMobileMenu(false)}
           >
-            <span className="grid place-items-center w-9 h-9 rounded-xl bg-navy text-white font-extrabold text-sm">
+            <span className="grid place-items-center w-9 h-9 rounded-xl bg-navy text-white font-extrabold text-sm" aria-hidden="true">
               BR
             </span>
             <span className="text-lg font-extrabold tracking-tight text-navy">
@@ -44,7 +64,7 @@ export default function Header({ lang }: { lang: string }) {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             {navLinks.map((l) => {
               const active =
                 l.key === "nav_home"
@@ -72,32 +92,41 @@ export default function Header({ lang }: { lang: string }) {
             <button
               onClick={() => router.push(`/${lang}/search`)}
               aria-label={t.search_placeholder}
-              className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 text-slate-500 hover:border-slate-300 text-sm w-44"
+              className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 text-slate-500 hover:border-slate-300 text-sm w-44 transition-colors"
             >
               <SearchIcon />
               <span className="truncate text-slate-400">{t.search_placeholder}</span>
             </button>
 
             {/* Language */}
-            <div className="relative">
+            <div className="relative" ref={langRef}>
               <button
                 onClick={() => setShowLang((v) => !v)}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-sm font-medium text-slate-700"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-sm font-medium text-slate-700 transition-colors"
+                aria-expanded={showLang}
+                aria-haspopup="listbox"
+                aria-label={`${lang} - ${t.mobile_menu}`}
               >
                 <GlobeIcon />
                 <span className="hidden md:inline uppercase">{lang}</span>
                 <ChevronDown />
               </button>
               {showLang && (
-                <div className="absolute right-0 mt-2 w-44 bg-white rounded-xl border border-slate-200 shadow-card p-1.5 z-50 animate-fade-in">
+                <div
+                  className="absolute right-0 mt-2 w-44 bg-white rounded-xl border border-slate-200 shadow-card p-1.5 z-50 animate-fade-in"
+                  role="listbox"
+                  aria-label="Select language"
+                >
                   {LANGUAGES.map((l) => (
                     <button
                       key={l.code}
+                      role="option"
+                      aria-selected={l.code === lang}
                       onClick={() => {
                         setShowLang(false);
                         window.location.href = `/${l.code}`;
                       }}
-                      className={`w-full text-left px-3 py-2 rounded-lg text-sm hover:bg-slate-100 flex justify-between ${
+                      className={`w-full text-left px-3 py-2 rounded-lg text-sm hover:bg-slate-100 flex justify-between transition-colors ${
                         l.code === lang ? "text-primary font-semibold" : "text-slate-700"
                       }`}
                     >
@@ -120,9 +149,10 @@ export default function Header({ lang }: { lang: string }) {
 
             {/* Hamburger */}
             <button
-              className="lg:hidden grid place-items-center w-10 h-10 rounded-lg hover:bg-slate-100"
+              className="lg:hidden grid place-items-center w-10 h-10 rounded-lg hover:bg-slate-100 transition-colors"
               onClick={() => setMobileMenu((v) => !v)}
               aria-label={t.mobile_menu}
+              aria-expanded={mobileMenu}
             >
               {mobileMenu ? <CloseIcon /> : <MenuIcon />}
             </button>
@@ -132,14 +162,14 @@ export default function Header({ lang }: { lang: string }) {
 
       {/* Mobile menu */}
       {mobileMenu && (
-        <div className="lg:hidden border-t border-slate-100 bg-white animate-fade-in">
+        <nav className="lg:hidden border-t border-slate-100 bg-white animate-fade-in" aria-label="Mobile navigation">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((l) => (
               <Link
                 key={l.key}
                 href={l.href}
                 onClick={() => setMobileMenu(false)}
-                className="block px-3 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-100"
+                className="block px-3 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-100 transition-colors"
               >
                 {t[l.key as keyof typeof t] as string}
               </Link>
@@ -147,31 +177,32 @@ export default function Header({ lang }: { lang: string }) {
             <Link
               href={`/${lang}/search`}
               onClick={() => setMobileMenu(false)}
-              className="block px-3 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-100"
+              className="flex items-center gap-2 px-3 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-100 transition-colors"
             >
-              🔍 {t.search_placeholder}
+              <SearchIcon />
+              {t.search_placeholder}
             </Link>
             <Link
               href={logged ? `/${lang}/account` : `/${lang}/login`}
               onClick={() => setMobileMenu(false)}
-              className="block px-3 py-3 rounded-xl text-base font-medium text-primary hover:bg-primary/5"
+              className="block px-3 py-3 rounded-xl text-base font-medium text-primary hover:bg-primary/5 transition-colors"
             >
               {logged ? t.nav_account : t.nav_login}
             </Link>
             {logged && (
               <button
-                onClick={() => {
-                  logout();
+                onClick={async () => {
+                  await signOut();
                   setMobileMenu(false);
                   router.push(`/${lang}`);
                 }}
-                className="block w-full text-left px-3 py-3 rounded-xl text-base font-medium text-danger hover:bg-red-50"
+                className="block w-full text-left px-3 py-3 rounded-xl text-base font-medium text-danger hover:bg-red-50 transition-colors"
               >
                 {t.nav_logout}
               </button>
             )}
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

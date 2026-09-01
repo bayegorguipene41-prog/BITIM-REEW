@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #165DFF;
-  --color-primary-dark: #0e3fb8;
-  --color-navy: #0B1F3A;
-  --color-charcoal: #1A2B45;
-  --color-success: #12B76A;
+  --color-primary: #A63D40;
+  --color-primary-dark: #863034;
+  --color-navy: #12213D;
+  --color-charcoal: #1C2B45;
+  --color-success: #4C6B54;
   --color-warning: #F79009;
-  --color-danger: #F04438;
-  --color-bg: #F6F8FC;
+  --color-danger: #9A2D2F;
+  --color-bg: #F7F5F0;
 }
 
 * {
@@ -21,13 +21,30 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-sans), system-ui, "Segoe UI", sans-serif;
   background: var(--color-bg);
-  color: #0F172A;
+  color: #141B28;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.01em;
 }
 
 @layer components {
@@ -43,23 +60,41 @@ body {
   .btn-primary {
     @apply btn bg-primary text-white py-3 px-6 hover:bg-primary-dark shadow-sm shadow-primary/20;
   }
+  .btn-primary:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
   .btn-secondary {
     @apply btn border border-slate-200 bg-white text-slate-700 py-3 px-6 hover:bg-slate-50 hover:border-slate-300;
+  }
+  .btn-secondary:focus-visible {
+    @apply outline-none ring-2 ring-slate-400 ring-offset-2;
   }
   .btn-ghost {
     @apply btn text-slate-600 py-2 px-4 hover:bg-slate-100;
   }
+  .btn-ghost:focus-visible {
+    @apply outline-none ring-2 ring-slate-400 ring-offset-2;
+  }
   .btn-danger {
     @apply btn bg-danger text-white py-3 px-6 hover:bg-red-600;
   }
+  .btn-danger:focus-visible {
+    @apply outline-none ring-2 ring-danger ring-offset-2;
+  }
   .btn-dark {
     @apply btn bg-navy text-white py-3 px-6 hover:bg-charcoal;
+  }
+  .btn-dark:focus-visible {
+    @apply outline-none ring-2 ring-navy ring-offset-2;
   }
   .btn-sm {
     @apply py-2 px-4 text-sm;
   }
   .btn-option {
     @apply w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-primary hover:bg-blue-50 transition-all;
+  }
+  .btn-option:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   .btn-option.active {
     @apply border-primary bg-blue-50;
@@ -68,7 +103,13 @@ body {
     @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
   }
   .input {
-    @apply w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-base focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary;
+    @apply w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-base transition-colors;
+  }
+  .input:focus {
+    @apply outline-none ring-2 ring-primary/30 border-primary;
+  }
+  .input::placeholder {
+    @apply text-slate-400;
   }
   .label {
     @apply block text-sm font-semibold text-navy mb-1.5;
@@ -104,3 +145,32 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Focus-visible for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+/* Skip to content link */
+.sr-only-focusable:focus {
+  @apply not-sr-only fixed top-2 left-2 z-[100] bg-navy text-white px-4 py-2 rounded-lg;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(166, 61, 64, 0.15);
+}
+
+/* Print styles */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

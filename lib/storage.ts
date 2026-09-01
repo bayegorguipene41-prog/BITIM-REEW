@@ -31,7 +31,6 @@ export type SavedApplication = {
 const APP_KEY = "bitimreew.apps.v1";
 const RECENT_KEY = "bitimreew.recentCountries.v1";
 const PROFILE_KEY = "bitimreew.wizard.v1";
-const SESSION_KEY = "bitimreew.session.v1";
 
 function safeGet(key: string): string | null {
   if (typeof window === "undefined") return null;
@@ -121,28 +120,6 @@ export function loadWizard(): Record<string, unknown> | null {
 
 export function clearWizard() {
   safeRemove(PROFILE_KEY);
-}
-
-export function isLoggedIn(): boolean {
-  return !!safeGet(SESSION_KEY);
-}
-
-export function login(user: { name?: string; email?: string }) {
-  safeSet(SESSION_KEY, JSON.stringify({ ...user, at: Date.now() }));
-}
-
-export function logout() {
-  safeRemove(SESSION_KEY);
-}
-
-export function getSession() {
-  const raw = safeGet(SESSION_KEY);
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw);
-  } catch {
-    return null;
-  }
 }
 
 export function uid(): string {

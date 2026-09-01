@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { getTranslation } from "@/lib/i18n/translations";
-import { getApps, deleteApp, isLoggedIn, type SavedApplication } from "@/lib/storage";
+import { getApps, deleteApp, type SavedApplication } from "@/lib/storage";
+import { useClientAuth } from "@/lib/auth-client";
 
 type AppItem = SavedApplication & { pct: number; total: number; ready: number };
 
@@ -16,12 +17,14 @@ function toItem(a: SavedApplication): AppItem {
 export default function ApplicationsClient({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const [apps, setApps] = useState<AppItem[]>(() => getApps().map(toItem));
-  const logged = isLoggedIn();
+  const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
+  const { logged } = useClientAuth();
 
-  function handleDelete(id: string) {
+  const handleDelete = useCallback((id: string) => {
     deleteApp(id);
     setApps(getApps().map(toItem));
-  }
+    setConfirmDelete(null);
+  }, []);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
@@ -39,7 +42,11 @@ export default function ApplicationsClient({ lang }: { lang: string }) {
 
       {apps.length === 0 ? (
         <div className="text-center py-20">
-          <div className="text-6xl mb-4">🗂️</div>
+          <div className="w-20 h-20 rounded-2xl bg-slate-100 grid place-items-center mx-auto mb-4" aria-hidden="true">
+            <svg className="w-10 h-10 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M9 12h6M12 9v6M3 7V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+            </svg>
+          </div>
           <h2 className="text-xl font-bold text-navy mb-2">{t.no_apps}</h2>
           <p className="text-slate-500 max-w-sm mx-auto mb-6">{t.no_apps_desc}</p>
           <Link href={`/${lang}/wizard`} className="btn-primary">
@@ -62,13 +69,30 @@ export default function ApplicationsClient({ lang }: { lang: string }) {
                     </p>
                   )}
                 </div>
-                <button
-                  onClick={() => handleDelete(a.id)}
-                  className="text-slate-300 hover:text-danger transition-colors"
-                  aria-label="Delete"
-                >
-                  <TrashIcon />
-                </button>
+                {confirmDelete === a.id ? (
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => handleDelete(a.id)}
+                      className="text-xs px-2 py-1 rounded-lg bg-danger text-white hover:bg-red-600 transition-colors font-medium"
+                    >
+                      {lang === "it" ? "Conferma" : "Confirm"}
+                    </button>
+                    <button
+                      onClick={() => setConfirmDelete(null)}
+                      className="text-xs px-2 py-1 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors font-medium"
+                    >
+                      {lang === "it" ? "Annulla" : "Cancel"}
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => setConfirmDelete(a.id)}
+                    className="text-slate-300 hover:text-danger transition-colors p-1"
+                    aria-label={lang === "it" ? "Elimina pratica" : "Delete application"}
+                  >
+                    <TrashIcon />
+                  </button>
+                )}
               </div>
 
               <div className="mt-4">
@@ -80,7 +104,7 @@ export default function ApplicationsClient({ lang }: { lang: string }) {
                 </div>
                 <div className="h-2.5 rounded-full bg-slate-100 overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-primary transition-all"
+                    className="h-full rounded-full bg-primary transition-all duration-500"
                     style={{ width: `${a.pct}%` }}
                   />
                 </div>

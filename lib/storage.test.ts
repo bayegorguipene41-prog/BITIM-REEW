@@ -6,6 +6,9 @@ import {
   deleteApp,
   loadWizard,
   saveWizard,
+  getSavedProcedureIds,
+  isProcedureSaved,
+  toggleSavedProcedure,
   type SavedApplication,
 } from "./storage";
 
@@ -103,5 +106,46 @@ describe("account storage isolation", () => {
 
     setAccountScope("acct-2");
     expect(loadWizard()).toBeNull();
+  });
+});
+
+describe("saved procedures (bookmarks)", () => {
+  it("starts empty", () => {
+    expect(getSavedProcedureIds()).toEqual([]);
+    expect(isProcedureSaved("p1")).toBe(false);
+  });
+
+  it("toggle adds then removes an id", () => {
+    expect(toggleSavedProcedure("p1")).toEqual(["p1"]);
+    expect(isProcedureSaved("p1")).toBe(true);
+    expect(toggleSavedProcedure("p1")).toEqual([]);
+    expect(isProcedureSaved("p1")).toBe(false);
+  });
+
+  it("new saves are unshifted at the front", () => {
+    toggleSavedProcedure("p1");
+    toggleSavedProcedure("p2");
+    expect(getSavedProcedureIds()).toEqual(["p2", "p1"]);
+  });
+
+  it("bookmarks are isolated per account scope", () => {
+    setAccountScope("fav-a");
+    toggleSavedProcedure("pA");
+    expect(getSavedProcedureIds()).toEqual(["pA"]);
+
+    setAccountScope("fav-b");
+    expect(getSavedProcedureIds()).toEqual([]);
+  });
+
+  it("guest bookmarks persist and remain private from accounts", () => {
+    toggleSavedProcedure("guest-1");
+    expect(isProcedureSaved("guest-1")).toBe(true);
+    setAccountScope("fav-c");
+    expect(isProcedureSaved("guest-1")).toBe(false);
+  });
+
+  it("caps the list at 100 entries", () => {
+    for (let i = 0; i < 150; i++) toggleSavedProcedure(`bulk-${i}`);
+    expect(getSavedProcedureIds()).toHaveLength(100);
   });
 });

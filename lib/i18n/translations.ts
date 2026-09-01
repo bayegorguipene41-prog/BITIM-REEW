@@ -111,6 +111,11 @@ export type Dictionary = {
   no_apps: string;
   no_apps_desc: string;
   start_guide: string;
+  save_procedure: string;
+  saved_procedure: string;
+  saved_procedures: string;
+  saved_procedures_empty: string;
+  no_results_hint: string;
   welcome_back: string;
   your_applications: string;
   app_name: string;
@@ -270,6 +275,11 @@ const en: Dictionary = {
   no_apps: "No applications yet",
   no_apps_desc: "Start your first document guide and we'll help you understand what you need.",
   start_guide: "Start a guide",
+  save_procedure: "Save procedure",
+  saved_procedure: "Saved",
+  saved_procedures: "Saved procedures",
+  saved_procedures_empty: "No saved procedures yet. Use the ★ button on a procedure to pin it here.",
+  no_results_hint: "No procedures match these filters. Try clearing the country, category or search text.",
   welcome_back: "Welcome back",
   your_applications: "Your applications",
   app_name: "Application",
@@ -430,6 +440,11 @@ const it: Dictionary = {
   no_apps: "Nessuna pratica ancora",
   no_apps_desc: "Inizia la tua prima guida documenti e ti aiuteremo a capire cosa ti serve.",
   start_guide: "Inizia una guida",
+  save_procedure: "Salva procedura",
+  saved_procedure: "Salvata",
+  saved_procedures: "Procedure salvate",
+  saved_procedures_empty: "Non hai ancora salvato procedure. Usa il pulsante ★ su una procedura per appuntarla qui.",
+  no_results_hint: "Nessuna procedura corrisponde a questi filtri. Prova a rimuovere paese, categoria o testo di ricerca.",
   welcome_back: "Bentornato",
   your_applications: "Le tue pratiche",
   app_name: "Pratica",
@@ -590,6 +605,11 @@ const fr: Dictionary = {
   no_apps: "Aucune démarche",
   no_apps_desc: "Commencez votre première guide documentaire et nous vous aiderons.",
   start_guide: "Commencer un guide",
+  save_procedure: "Enregistrer la procédure",
+  saved_procedure: "Enregistrée",
+  saved_procedures: "Procédures enregistrées",
+  saved_procedures_empty: "Aucune procédure enregistrée pour l'instant. Utilisez le bouton ★ sur une procédure pour l'épingler ici.",
+  no_results_hint: "Aucune procédure ne correspond à ces filtres. Essayez de retirer le pays, la catégorie ou le texte de recherche.",
   welcome_back: "Bon retour",
   your_applications: "Vos démarches",
   app_name: "Démarche",
@@ -750,6 +770,11 @@ const es: Dictionary = {
   no_apps: "Aún no hay trámites",
   no_apps_desc: "Empieza tu primer guía documental.",
   start_guide: "Empezar una guía",
+  save_procedure: "Guardar procedimiento",
+  saved_procedure: "Guardado",
+  saved_procedures: "Procedimientos guardados",
+  saved_procedures_empty: "Aún no hay procedimientos guardados. Usa el botón ★ en un procedimiento para fijarlo aquí.",
+  no_results_hint: "Ningún procedimiento coincide con estos filtros. Intenta quitar el país, la categoría o el texto de búsqueda.",
   welcome_back: "Bienvenido",
   your_applications: "Tus trámites",
   app_name: "Trámite",
@@ -910,6 +935,11 @@ const de: Dictionary = {
   no_apps: "Noch keine Anträge",
   no_apps_desc: "Starten Sie Ihren ersten Leitfaden.",
   start_guide: "Leitfaden starten",
+  save_procedure: "Verfahren speichern",
+  saved_procedure: "Gespeichert",
+  saved_procedures: "Gespeicherte Verfahren",
+  saved_procedures_empty: "Noch keine gespeicherten Verfahren. Verwende die ★-Schaltfläche auf einem Verfahren, um es hier zu pinnten.",
+  no_results_hint: "Keine Verfahren entsprechen diesen Filtern. Versuche, Land, Kategorie oder Suchtext zu entfernen.",
   welcome_back: "Willkommen zurück",
   your_applications: "Ihre Anträge",
   app_name: "Antrag",
@@ -1070,6 +1100,11 @@ const pt: Dictionary = {
   no_apps: "Nenhum processo ainda",
   no_apps_desc: "Comece sua primeira guia documental.",
   start_guide: "Iniciar uma guia",
+  save_procedure: "Salvar procedimento",
+  saved_procedure: "Salvo",
+  saved_procedures: "Procedimentos salvos",
+  saved_procedures_empty: "Nenhum procedimento salvo ainda. Use o botão ★ em um procedimento para fixá-lo aqui.",
+  no_results_hint: "Nenhum procedimento corresponde a esses filtros. Tente remover o país, a categoria ou o texto de pesquisa.",
   welcome_back: "Bem-vindo",
   your_applications: "Seus processos",
   app_name: "Processo",
@@ -1230,6 +1265,11 @@ const ar: Dictionary = {
   no_apps: "لا توجد طلبات بعد",
   no_apps_desc: "ابدأ أول دليل مستندات وسنساعدك.",
   start_guide: "ابدأ دليلًا",
+  save_procedure: "احفظ الإجراء",
+  saved_procedure: "محفوظ",
+  saved_procedures: "الإجراءات المحفوظة",
+  saved_procedures_empty: "لا توجد إجراءات محفوظة بعد. استخدم زر ★ على إجراء لتثبيته هنا.",
+  no_results_hint: "لا يوجد إجراء يطابق هذه الفلاتر. جرّب إزالة الدولة أو الفئة أو نص البحث.",
   welcome_back: "مرحبًا بعودتك",
   your_applications: "طلباتك",
   app_name: "الطلب",

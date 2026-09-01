@@ -32,6 +32,7 @@ export type SavedApplication = {
 const LEGACY_APP_KEY = "bitimreew.apps.v1";
 const LEGACY_RECENT_KEY = "bitimreew.recentCountries.v1";
 const LEGACY_PROFILE_KEY = "bitimreew.wizard.v1";
+const LEGACY_FAV_KEY = "bitimreew.savedProcedures.v1";
 
 let currentScope: string | null = null;
 
@@ -179,6 +180,32 @@ export function loadWizard(): Record<string, unknown> | null {
 
 export function clearWizard() {
   safeRemove(scopedKey(LEGACY_PROFILE_KEY));
+}
+
+// ---------------------------------------------------------------------------
+// Saved / bookmarked procedures (segnaposto per procedura consultata spesso)
+// ---------------------------------------------------------------------------
+
+export function getSavedProcedureIds(): string[] {
+  const raw = scopedGet(scopedKey(LEGACY_FAV_KEY), LEGACY_FAV_KEY);
+  if (!raw) return [];
+  try {
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.filter((x) => typeof x === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+export function isProcedureSaved(id: string): boolean {
+  return getSavedProcedureIds().includes(id);
+}
+
+export function toggleSavedProcedure(id: string): string[] {
+  const ids = getSavedProcedureIds();
+  const next = ids.includes(id) ? ids.filter((x) => x !== id) : [id, ...ids];
+  safeSet(scopedKey(LEGACY_FAV_KEY), JSON.stringify(next.slice(0, 100)));
+  return next;
 }
 
 export function uid(): string {

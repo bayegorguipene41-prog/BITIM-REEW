@@ -268,6 +268,22 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
           <p className="mt-4 text-xs text-slate-400">{t.info_change}</p>
         </section>
       )}
+
+      {/* Disclaimer (sempre visibile) */}
+      <section
+        role="note"
+        aria-label={t.disclaimer}
+        className="card p-6 border-l-4 border-l-navy"
+      >
+        <div className="flex items-start gap-3">
+          <span className="text-2xl" aria-hidden="true">⚠️</span>
+          <div>
+            <h2 className="font-bold text-navy mb-2">{t.disclaimer_title}</h2>
+            <p className="text-sm text-slate-600 leading-relaxed">{t.disclaimer}</p>
+            <p className="mt-3 text-xs text-slate-400">{t.info_change}</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

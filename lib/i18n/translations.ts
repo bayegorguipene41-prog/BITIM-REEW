@@ -134,6 +134,7 @@ export type Dictionary = {
   open: string;
   document_name: string;
   disclaimer: string;
+  disclaimer_title: string;
   restart: string;
   source: string;
   official_source: string;
@@ -299,6 +300,7 @@ const en: Dictionary = {
   document_name: "Document",
   disclaimer:
     "This guide is for informational purposes only and does not constitute legal advice. Always verify with official sources before submitting any application. Regulations may change and vary by location.",
+  disclaimer_title: "Disclaimer — informational guide",
   restart: "Start over",
   source: "Source",
   official_source: "Official source",
@@ -464,6 +466,7 @@ const it: Dictionary = {
   document_name: "Documento",
   disclaimer:
     "⚠️ Questa guida è orientativa e non sostituisce consulenza legale. Verifica sempre con le fonti ufficiali prima di presentare qualsiasi domanda. Le normative possono cambiare e variare per località.",
+  disclaimer_title: "Disclaimer — guida informativa",
   restart: "Ricomincia",
   source: "Fonte",
   official_source: "Fonte ufficiale",
@@ -629,6 +632,7 @@ const fr: Dictionary = {
   document_name: "Document",
   disclaimer:
     "Ce guide est informatif et ne remplace pas un conseil juridique. Vérifiez toujours auprès des sources officielles.",
+  disclaimer_title: "Avertissement — guide informatif",
   restart: "Recommencer",
   source: "Source",
   official_source: "Source officielle",
@@ -794,6 +798,7 @@ const es: Dictionary = {
   document_name: "Documento",
   disclaimer:
     "Esta guía es informativa y no sustituye asesoría legal. Verifica siempre con las fuentes oficiales.",
+  disclaimer_title: "Aviso legal — guía informativa",
   restart: "Empezar de nuevo",
   source: "Fuente",
   official_source: "Fuente oficial",
@@ -959,6 +964,7 @@ const de: Dictionary = {
   document_name: "Dokument",
   disclaimer:
     "Dieser Leitfaden dient nur zu Informationszwecken und ersetzt keine Rechtsberatung. Prüfen Sie immer offizielle Quellen.",
+  disclaimer_title: "Hinweis — informativer Leitfaden",
   restart: "Neu starten",
   source: "Quelle",
   official_source: "Offizielle Quelle",
@@ -1124,6 +1130,7 @@ const pt: Dictionary = {
   document_name: "Documento",
   disclaimer:
     "Este guia é informativo e não substitui aconselhamento jurídico. Verifique sempre as fontes oficiais.",
+  disclaimer_title: "Aviso legal — guia informativo",
   restart: "Recomeçar",
   source: "Fonte",
   official_source: "Fonte oficial",
@@ -1289,6 +1296,7 @@ const ar: Dictionary = {
   document_name: "المستند",
   disclaimer:
     "هذا الدليل إرشادي ولا يُستشار قانونيًا. تحقق دائمًا من المصادر الرسمية قبل تقديم أي طلب.",
+  disclaimer_title: "إخلاء مسؤولية — دليل إرشادي",
   restart: "ابدأ من جديد",
   source: "المصدر",
   official_source: "المصدر الرسمي",

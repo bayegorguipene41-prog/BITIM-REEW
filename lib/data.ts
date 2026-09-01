@@ -1,5 +1,6 @@
 import { COUNTRIES, countryName } from "./db/countries";
 import type { LocalizedText } from "./types";
+import { resolveLocalized } from "./i18n/procedure-locale";
 
 export function countryByCode(code?: string) {
   return COUNTRIES.find((c) => c.code === code);
@@ -24,14 +25,7 @@ export function countryNameByCountry(c: (typeof COUNTRIES)[number], lang: string
 }
 
 export function localize(t: LocalizedText | undefined, lang: string): string {
-  if (!t) return "";
-  const codes = [lang, "en", "it"];
-  for (const c of codes) {
-    const v = (t as any)[c];
-    if (v && v.trim()) return v;
-  }
-  const first = Object.values(t)[0];
-  return first || "";
+  return resolveLocalized(t, lang);
 }
 
 export const POPULAR_COUNTRIES = ["IT", "FR", "ES", "DE", "GB", "US", "PT"];

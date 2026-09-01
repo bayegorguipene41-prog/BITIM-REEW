@@ -31,7 +31,12 @@ Wizard / Esplora / Ricerca / API    ← nessuna modifica qui
    - `countryCode`: **codice ISO maiuscolo** (es. `"IT"`, `"FR"`). **Non il nome
      italiano del Paese**.
    - `slug`: kebab-case (es. `"permesso-soggiorno-lavoro"`).
-   - `title` / `description`: `LocalizedText` (`{ it, en }`).
+   - `title` / `description`: `LocalizedText`. `it`/`en` sono obbligatori; le
+     altre 5 lingue dell'interfaccia (`fr`, `es`, `de`, `pt`, `ar`) sono
+     **opzionali per campo**. `localize()` / `resolveLocalized()` risolvono in
+     fallback: lingua richiesta → altre lingue disponibili → `en` → `it`. Non
+     inventare contenuti ufficiali: se non hai testo reale per una lingua,
+     ometti la chiave e lascia che il fallback la restituisca.
    - `category`: una delle categorie canoniche.
    - `sources[].lastVerifiedAt`: `"YYYY-MM-DD"` reale. Fonte con data vecchia (>12
      mesi) viene mostrata con badge "da verificare".

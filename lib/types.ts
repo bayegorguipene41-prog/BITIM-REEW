@@ -3,10 +3,20 @@ export type ConfidenceLevel = "high" | "medium" | "low";
 
 import type { Condition } from "./conditions";
 
-// 📌 Testo multilingua (italiano / inglese)
+// 📌 Testo multilingua dei contenuti procedura.
+// `it`/`en` sono sempre presenti; le altre 5 lingue dell'interfaccia
+// (fr/es/de/pt/ar) sono opzionali per singolo campo e vengono risolte in
+// fallback da `localize()` (lingua richiesta → altre lingue disponibili → en
+// → it). Questo consente supporto a tutte le 7 lingue nella struttura dei dati
+// senza richiedere di tradurre ogni campo finché non esiste contenuto ufficiale.
 export interface LocalizedText {
   it: string;
   en: string;
+  fr?: string;
+  es?: string;
+  de?: string;
+  pt?: string;
+  ar?: string;
 }
 
 export interface Source {

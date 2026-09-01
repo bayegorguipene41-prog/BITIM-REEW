@@ -1,8 +1,22 @@
 import { NextResponse } from "next/server";
 import { createUser } from "@/lib/users";
+import { stableClientKey, rateLimit, readBodyWithLimit } from "@/lib/security";
 
 export async function POST(req: Request) {
   try {
+    // Rate limit by a hardened client key (backed by Upstash when configured,
+    // otherwise the in-memory fallback; see lib/security).
+    const ipDecision = await rateLimit("register", stableClientKey(req));
+    if (!ipDecision.ok) {
+      return NextResponse.json(
+        { error: "Too many attempts. Please try again later." },
+        {
+          status: 429,
+          headers: { "Retry-After": String(Math.max(1, ipDecision.retryAfterSeconds)) },
+        }
+      );
+    }
+
     const contentType = req.headers.get("content-type");
     if (!contentType?.includes("application/json")) {
       return NextResponse.json(
@@ -11,9 +25,20 @@ export async function POST(req: Request) {
       );
     }
 
+    const bodyRes = await readBodyWithLimit(req);
+    let raw: string;
+    if (bodyRes.state === "ok") {
+      raw = bodyRes.text;
+    } else {
+      return NextResponse.json(
+        { error: bodyRes.state === "too_large" ? "Payload too large." : "Invalid request body." },
+        { status: bodyRes.status }
+      );
+    }
+
     let body: unknown;
     try {
-      body = await req.json();
+      body = JSON.parse(raw);
     } catch {
       return NextResponse.json(
         { error: "Invalid request body." },

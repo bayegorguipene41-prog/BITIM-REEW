@@ -47,8 +47,8 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
       {/* Filters */}
       <div className="card p-4 mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <div>
-          <label className="label">{t.filter_country}</label>
-          <select className="input !py-2.5" value={country} onChange={(e) => setCountry(e.target.value)}>
+          <label className="label" htmlFor="explore-country">{t.filter_country}</label>
+          <select id="explore-country" className="input !py-2.5" value={country} onChange={(e) => setCountry(e.target.value)}>
             <option value="">{t.all}</option>
             {COUNTRIES.map((c) => (
               <option key={c.code} value={c.code}>
@@ -58,8 +58,8 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
           </select>
         </div>
         <div>
-          <label className="label">{t.filter_category}</label>
-          <select className="input !py-2.5" value={category} onChange={(e) => setCategory(e.target.value)}>
+          <label className="label" htmlFor="explore-category">{t.filter_category}</label>
+          <select id="explore-category" className="input !py-2.5" value={category} onChange={(e) => setCategory(e.target.value)}>
             <option value="">{t.all}</option>
             {PROCEDURE_CATEGORIES.map((c) => (
               <option key={c} value={c}>
@@ -69,8 +69,9 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
           </select>
         </div>
         <div className="sm:col-span-2">
-          <label className="label">{t.search_placeholder}</label>
+          <label className="label" htmlFor="explore-query">{t.search_placeholder}</label>
           <input
+            id="explore-query"
             className="input !py-2.5"
             placeholder={t.search_placeholder}
             value={query}

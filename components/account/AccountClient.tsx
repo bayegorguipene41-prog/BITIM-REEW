@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getTranslation } from "@/lib/i18n/translations";
-import { getApps } from "@/lib/storage";
+import { getApps, setAccountScope } from "@/lib/storage";
 import { useClientAuth } from "@/lib/auth-client";
 
 export default function AccountClient({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
   const { status, session, signOut } = useClientAuth();
+  setAccountScope(session?.id as string | undefined ?? null);
   const appCount = getApps().length;
 
   if (status === "loading") {

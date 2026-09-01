@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getTranslation } from "@/lib/i18n/translations";
 import { localize } from "@/lib/data";
-import { getApp, upsertApp, type SavedApplication, type SavedDoc, type DocStatus } from "@/lib/storage";
+import { getApp, upsertApp, setAccountScope, type SavedApplication, type SavedDoc, type DocStatus } from "@/lib/storage";
+import { useClientAuth } from "@/lib/auth-client";
 
 const STATUS_ORDER: DocStatus[] = ["not_started", "to_obtain", "in_progress", "ready", "expired"];
 
@@ -33,10 +34,12 @@ function statusColor(s: DocStatus) {
 export default function ApplicationClient({ lang, id }: { lang: string; id: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
+  const { session } = useClientAuth();
   const [app, setApp] = useState<SavedApplication | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
   useEffect(() => {
+    setAccountScope(session?.id as string | undefined ?? null);
     const a = getApp(id);
     if (a) {
       if (a.language !== lang) a.language = lang;
@@ -44,7 +47,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
     } else {
       router.replace(`/${lang}/applications`);
     }
-  }, [id, lang]);
+  }, [id, lang, session?.id]);
 
   const docs = useMemo(() => {
     if (!app?.procedure) return [];
@@ -146,7 +149,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
               : "bg-red-50 text-danger"
           }`}
         >
-          {complete ? "🟢" : "🔴"} {complete ? t.checklist_complete : t.missing_required}
+          {complete ? <CircleCheckIcon /> : <CircleAlertIcon />} {complete ? t.checklist_complete : t.missing_required}
           {!complete && ` (${missingCount})`}
         </div>
       </div>
@@ -196,7 +199,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 mb-8">
         <button className="btn-primary flex-1" onClick={() => window.print()}>
-          🖨️ {t.print_checklist}
+          <PrintIcon /> {t.print_checklist}
         </button>
         <button
           className="btn-secondary flex-1"
@@ -204,7 +207,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
             openPrintWindow(lang, app, docs, t);
           }}
         >
-          ⬇️ {t.download_checklist}
+          <DownloadIcon /> {t.download_checklist}
         </button>
       </div>
 
@@ -379,13 +382,19 @@ function DocCard({
         {/* Document flags */}
         <div className="flex flex-wrap gap-2 mt-3">
           {needsTranslation && (
-            <span className="chip bg-warning/10 text-warning">⚠️ {t.doc_translation}</span>
+            <span className="chip bg-warning/10 text-warning">
+              <WarnIcon /> {t.doc_translation}
+            </span>
           )}
           {needsApostille && (
-            <span className="chip bg-warning/10 text-warning">⚠️ {t.doc_apostille}</span>
+            <span className="chip bg-warning/10 text-warning">
+              <WarnIcon /> {t.doc_apostille}
+            </span>
           )}
           {validity && (
-            <span className="chip bg-slate-100 text-slate-600">⏱ {t.doc_validity}</span>
+            <span className="chip bg-slate-100 text-slate-600">
+              <ClockIcon /> {t.doc_validity}
+            </span>
           )}
         </div>
       </button>
@@ -476,6 +485,59 @@ function Chevron({ open }: { open: boolean }) {
       className={`mt-1 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}
     >
       <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
+function PrintIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M6 9V3h12v6M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+      <path d="M6 14h12v8H6z" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+    </svg>
+  );
+}
+
+function CircleCheckIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  );
+}
+
+function CircleAlertIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 8v4M12 16h.01" />
+    </svg>
+  );
+}
+
+function WarnIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0" aria-hidden="true">
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+      <path d="M12 9v4M12 17h.01" />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 6v6l4 2" />
     </svg>
   );
 }

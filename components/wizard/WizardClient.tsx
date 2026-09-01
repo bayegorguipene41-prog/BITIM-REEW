@@ -11,10 +11,12 @@ import {
   clearWizard,
   addRecentCountry,
   upsertApp,
+  setAccountScope,
   uid,
   type SavedApplication,
   type SavedDoc,
 } from "@/lib/storage";
+import { useClientAuth } from "@/lib/auth-client";
 
 const CATEGORIES = [
   { slug: "visa", icon: "🛂", key: "cat_visa" },
@@ -41,7 +43,7 @@ const MARITAL_OPTIONS = [
 
 const EMPLOYMENT_OPTIONS = [
   { value: "employed", en: "Employed", it: "Impiegato/a", fr: "Salarié(e)", es: "Empleado/a", de: "Beschäftigt", pt: "Empregado/a", ar: "موظف" },
-  { value: "self_employed", en: "Self-employed", it: "Autonomo/a", fr: "Indépendant", es: "Autónomo/a", de: "Selbstständig", pt: "Autônomo/a", ar: "自营职业" },
+  { value: "self_employed", en: "Self-employed", it: "Autonomo/a", fr: "Indépendant", es: "Autónomo/a", de: "Selbstständig", pt: "Autônomo/a", ar: "عمل حر" },
   { value: "student", en: "Student", it: "Studente", fr: "Étudiant", es: "Estudiante", de: "Student", pt: "Estudante", ar: "طالب" },
   { value: "unemployed", en: "Unemployed", it: "Disoccupato/a", fr: "Sans emploi", es: "Desempleado/a", de: "Arbeitslos", pt: "Desempregado", ar: "عاطل" },
   { value: "retired", en: "Retired", it: "Pensionato/a", fr: "Retraité(e)", es: "Jubilado/a", de: "Rentner", pt: "Aposentado/a", ar: "متقاعد" },
@@ -57,6 +59,8 @@ function optionLabel(options: typeof MARITAL_OPTIONS, value: string, lang: strin
 export default function WizardPage({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
+  const { session } = useClientAuth();
+  setAccountScope(session?.id as string | undefined ?? null);
 
   const [step, setStep] = useState(1);
   const [profile, setProfile] = useState<any>({});
@@ -372,12 +376,21 @@ export default function WizardPage({ lang }: { lang: string }) {
               className="btn-primary flex-1"
               onClick={next}
               disabled={loading || !canProceed}
+              aria-busy={loading}
             >
-              {loading
-                ? t.loading
-                : step === totalSteps
-                ? t.discover
-                : t.cta_continue}
+              {loading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                  {t.loading}
+                </span>
+              ) : step === totalSteps ? (
+                t.discover
+              ) : (
+                t.cta_continue
+              )}
             </button>
           )}
         </div>

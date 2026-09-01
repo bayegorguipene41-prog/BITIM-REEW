@@ -66,6 +66,11 @@ export default function CountrySelect({
         <input
           className="input !pl-10"
           placeholder={placeholder || t.search_country}
+          aria-label={t.search_country}
+          aria-haspopup="listbox"
+          aria-expanded={openList}
+          aria-autocomplete="list"
+          role="combobox"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -79,7 +84,11 @@ export default function CountrySelect({
       </div>
 
       {openList && (
-        <div className="absolute z-40 mt-2 w-full bg-white rounded-2xl border border-slate-200 shadow-card max-h-80 overflow-auto animate-fade-in">
+        <div
+          role="listbox"
+          aria-label={t.search_country}
+          className="absolute z-40 mt-2 w-full bg-white rounded-2xl border border-slate-200 shadow-card max-h-80 overflow-auto animate-fade-in"
+        >
           {!query.trim() && recents.length > 0 && (
             <section>
               <p className="px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">
@@ -92,6 +101,8 @@ export default function CountrySelect({
                   return (
                     <button
                       key={code}
+                      role="option"
+                      aria-selected={code === value}
                       onClick={() => {
                         onChange(code);
                         setOpenList(false);
@@ -119,6 +130,8 @@ export default function CountrySelect({
                   return (
                     <button
                       key={code}
+                      role="option"
+                      aria-selected={code === value}
                       onClick={() => {
                         onChange(code);
                         setOpenList(false);
@@ -142,6 +155,8 @@ export default function CountrySelect({
               {filtered.map((c) => (
                 <button
                   key={c.code}
+                  role="option"
+                  aria-selected={c.code === value}
                   onClick={() => {
                     onChange(c.code);
                     setOpenList(false);

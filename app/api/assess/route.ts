@@ -3,9 +3,24 @@ import type { NextResponse as NextResponseType } from "next/server";
 import type { Procedure } from "@/lib/types";
 import { PROCEDURES, PROCEDURES_ALL } from "@/lib/db/procedures";
 import { conditionContextFromProfile, isApplicable } from "@/lib/conditions";
+import { readBodyWithLimit, stableClientKey, assessRateLimited } from "@/lib/security";
 
 export async function POST(request: Request) {
   try {
+    // Public, unauthenticated endpoint doing computation from user input: apply
+    // a generous rate limit per client key to curb abuse/DoS (Upstash when
+    // configured, in-memory fallback otherwise).
+    const rl = await assessRateLimited(stableClientKey(request));
+    if (!rl.ok) {
+      return NextResponse.json(
+        { error: "Too many attempts. Please try again later." },
+        {
+          status: 429,
+          headers: { "Retry-After": String(Math.max(1, rl.retryAfterSeconds)) },
+        }
+      );
+    }
+
     const contentType = request.headers.get("content-type");
     if (!contentType?.includes("application/json")) {
       return NextResponse.json(
@@ -14,9 +29,20 @@ export async function POST(request: Request) {
       );
     }
 
+    let raw: string;
+    const bodyRes = await readBodyWithLimit(request);
+    if (bodyRes.state === "ok") {
+      raw = bodyRes.text;
+    } else {
+      return NextResponse.json(
+        { error: bodyRes.state === "too_large" ? "Payload too large." : "Invalid request body." },
+        { status: bodyRes.status }
+      );
+    }
+
     let profile: Record<string, unknown>;
     try {
-      profile = await request.json();
+      profile = JSON.parse(raw);
     } catch {
       return NextResponse.json(
         { error: "Invalid request body." },

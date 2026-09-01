@@ -28,9 +28,39 @@ export type SavedApplication = {
   profile?: Record<string, unknown>;
 };
 
-const APP_KEY = "bitimreew.apps.v1";
-const RECENT_KEY = "bitimreew.recentCountries.v1";
-const PROFILE_KEY = "bitimreew.wizard.v1";
+const LEGACY_APP_KEY = "bitimreew.apps.v1";
+const LEGACY_RECENT_KEY = "bitimreew.recentCountries.v1";
+const LEGACY_PROFILE_KEY = "bitimreew.wizard.v1";
+
+let currentScope: string | null = null;
+
+/**
+ * Accounts are isolated in localStorage by a namespace derived from the
+ * authenticated user id (a stable random hex, not PII). When set, app/wizard/
+ * recent data is stored under `.<namespace>` so two accounts on the same
+ * browser never see each other's data. `null` = guest / not signed in.
+ *
+ * IMPORTANT: this is a UX/safety mitigation only. localStorage is NOT secure
+ * storage and things are isolated per-browser, not per-account across devices.
+ * The production-grade solution is server-side persistence with per-user
+ * authorization (see the audit notes).
+ */
+export function setAccountScope(userId: string | null) {
+  currentScope = userId && userId.trim() ? safeScope(userId) : null;
+}
+
+function safeScope(id: string): string {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) {
+    h = (h * 31 + id.charCodeAt(i)) | 0;
+  }
+  // Keep it short, URL/label-safe, non-PII.
+  return (h >>> 0).toString(36);
+}
+
+function scopedKey(base: string): string {
+  return currentScope ? `${base}.${currentScope}` : base;
+}
 
 function safeGet(key: string): string | null {
   if (typeof window === "undefined") return null;
@@ -55,8 +85,28 @@ function safeRemove(key: string) {
   } catch {}
 }
 
+/**
+ * Read the current scope's value. The legacy unscoped key is ONLY consulted
+ * for the guest scope (where the scoped key equals the legacy key), so that:
+ *  - guest data is never silently attributed to a signed-in account;
+ *  - two different accounts never read a shared/unscoped bucket.
+ * Migration of legacy data is therefore confined to the guest session.
+ */
+function scopedGet(scoped: string, legacy: string): string | null {
+  const v = safeGet(scoped);
+  if (v !== null) return v;
+  // Only when the scoped key IS the legacy key (guest scope) do we treat it as
+  // a migration target; otherwise the fallback would leak guest data into an
+  // account namespace.
+  return scoped === legacy ? safeGet(legacy) : null;
+}
+
+// ---------------------------------------------------------------------------
+// Applications
+// ---------------------------------------------------------------------------
+
 export function getApps(): SavedApplication[] {
-  const raw = safeGet(APP_KEY);
+  const raw = scopedGet(scopedKey(LEGACY_APP_KEY), LEGACY_APP_KEY);
   if (!raw) return [];
   try {
     return JSON.parse(raw);
@@ -66,7 +116,7 @@ export function getApps(): SavedApplication[] {
 }
 
 export function saveApps(apps: SavedApplication[]) {
-  safeSet(APP_KEY, JSON.stringify(apps));
+  safeSet(scopedKey(LEGACY_APP_KEY), JSON.stringify(apps));
 }
 
 export function getApp(id: string): SavedApplication | undefined {
@@ -88,8 +138,12 @@ export function deleteApp(id: string): SavedApplication[] {
   return apps;
 }
 
+// ---------------------------------------------------------------------------
+// Recent countries
+// ---------------------------------------------------------------------------
+
 export function getRecentCountries(): string[] {
-  const raw = safeGet(RECENT_KEY);
+  const raw = scopedGet(scopedKey(LEGACY_RECENT_KEY), LEGACY_RECENT_KEY);
   if (!raw) return [];
   try {
     return JSON.parse(raw);
@@ -101,15 +155,19 @@ export function getRecentCountries(): string[] {
 export function addRecentCountry(code: string) {
   const recents = getRecentCountries().filter((c) => c !== code);
   recents.unshift(code);
-  safeSet(RECENT_KEY, JSON.stringify(recents.slice(0, 8)));
+  safeSet(scopedKey(LEGACY_RECENT_KEY), JSON.stringify(recents.slice(0, 8)));
 }
 
+// ---------------------------------------------------------------------------
+// Wizard profile
+// ---------------------------------------------------------------------------
+
 export function saveWizard(profile: Record<string, unknown>) {
-  safeSet(PROFILE_KEY, JSON.stringify({ ...profile, savedAt: Date.now() }));
+  safeSet(scopedKey(LEGACY_PROFILE_KEY), JSON.stringify({ ...profile, savedAt: Date.now() }));
 }
 
 export function loadWizard(): Record<string, unknown> | null {
-  const raw = safeGet(PROFILE_KEY);
+  const raw = scopedGet(scopedKey(LEGACY_PROFILE_KEY), LEGACY_PROFILE_KEY);
   if (!raw) return null;
   try {
     return JSON.parse(raw);
@@ -119,7 +177,7 @@ export function loadWizard(): Record<string, unknown> | null {
 }
 
 export function clearWizard() {
-  safeRemove(PROFILE_KEY);
+  safeRemove(scopedKey(LEGACY_PROFILE_KEY));
 }
 
 export function uid(): string {

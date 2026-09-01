@@ -1,5 +1,6 @@
 import LoginClient from "@/components/auth/LoginClient";
 import { LANGUAGES, DEFAULT_LANG } from "@/lib/i18n/config";
+import { isGoogleConfigured } from "@/lib/oauth-config";
 
 export const metadata = { title: "Login — BITIM REEW" };
 
@@ -10,5 +11,5 @@ export default async function LoginPage({
 }) {
   const { lang: rawLang } = await params;
   const lang = rawLang && LANGUAGES.some((l) => l.code === rawLang) ? rawLang : DEFAULT_LANG;
-  return <LoginClient lang={lang} />;
+  return <LoginClient lang={lang} googleEnabled={isGoogleConfigured()} />;
 }

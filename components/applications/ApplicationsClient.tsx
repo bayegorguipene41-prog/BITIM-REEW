@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { getTranslation } from "@/lib/i18n/translations";
-import { getApps, deleteApp, type SavedApplication } from "@/lib/storage";
+import { getApps, deleteApp, setAccountScope, type SavedApplication } from "@/lib/storage";
 import { useClientAuth } from "@/lib/auth-client";
 
 type AppItem = SavedApplication & { pct: number; total: number; ready: number };
@@ -16,9 +16,10 @@ function toItem(a: SavedApplication): AppItem {
 
 export default function ApplicationsClient({ lang }: { lang: string }) {
   const t = getTranslation(lang);
+  const { logged, session } = useClientAuth();
+  setAccountScope(session?.id as string | undefined ?? null);
   const [apps, setApps] = useState<AppItem[]>(() => getApps().map(toItem));
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
-  const { logged } = useClientAuth();
 
   const handleDelete = useCallback((id: string) => {
     deleteApp(id);

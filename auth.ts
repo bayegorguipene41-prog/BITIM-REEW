@@ -2,23 +2,18 @@ import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
 import { verifyUser } from "@/lib/users";
+import { isGoogleConfigured } from "@/lib/oauth-config";
+import { SESSION_MAX_AGE } from "@/lib/security";
 
-const googleClientId = process.env.AUTH_GOOGLE_ID;
-const googleClientSecret = process.env.AUTH_GOOGLE_SECRET;
-
-const googleConfigured =
-  !!googleClientId &&
-  !!googleClientSecret &&
-  !googleClientId.startsWith("REPLACE") &&
-  !googleClientSecret.startsWith("REPLACE");
+const googleConfigured = isGoogleConfigured();
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     ...(googleConfigured
       ? [
           Google({
-            clientId: googleClientId,
-            clientSecret: googleClientSecret,
+            clientId: process.env.AUTH_GOOGLE_ID as string,
+            clientSecret: process.env.AUTH_GOOGLE_SECRET as string,
           }),
         ]
       : []),
@@ -39,7 +34,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
-  session: { strategy: "jwt" },
+  session: {
+    strategy: "jwt",
+    // Cap session lifetime to 7 days instead of the 30-day Auth.js default.
+    maxAge: SESSION_MAX_AGE,
+  },
   trustHost: true,
   pages: {
     signIn: "/login",
@@ -47,6 +46,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     authorized({ auth }) {
       return !!auth;
+    },
+    async jwt({ token, user }) {
+      if (user?.id) token.sub = user.id;
+      return token;
+    },
+    async session({ session, token }) {
+      if (session.user && token.sub) session.user.id = token.sub;
+      return session;
     },
   },
 });

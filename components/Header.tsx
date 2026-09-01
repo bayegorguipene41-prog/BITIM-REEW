@@ -23,8 +23,6 @@ export default function Header({ lang }: { lang: string }) {
     { key: "nav_apps", href: `/${lang}/applications` },
   ];
 
-  const selectedLang = LANGUAGES.find((l) => l.code === lang) || LANGUAGES[0];
-
   const closeLang = useCallback(() => setShowLang(false), []);
 
   useEffect(() => {

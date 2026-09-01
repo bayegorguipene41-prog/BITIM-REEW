@@ -41,13 +41,17 @@ export default function SearchClient({ lang }: { lang: string }) {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
       <h1 className="text-3xl font-extrabold text-navy mb-2">{t.search_placeholder}</h1>
-      <input
-        autoFocus
-        className="input mb-8"
-        placeholder='e.g. "Residence permit Italy"'
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-      />
+      <div className="mb-8">
+        <label htmlFor="global-search" className="sr-only">{t.search_placeholder}</label>
+        <input
+          id="global-search"
+          autoFocus
+          className="input"
+          placeholder={t.search_placeholder}
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+      </div>
 
       {q.trim() !== "" && (
         <div className="space-y-8">

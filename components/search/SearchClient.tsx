@@ -69,7 +69,7 @@ export default function SearchClient({ lang }: { lang: string }) {
           {results.procedures.length > 0 && (
             <Section title={t.procedure}>
               {results.procedures.map((p) => (
-                <Link key={p.id} href={`/${lang}/wizard`} className="card card-hover p-4">
+                <Link key={p.id} href={`/${lang}/wizard?procedureId=${encodeURIComponent(p.id)}`} className="card card-hover p-4">
                   <p className="font-semibold text-navy">{localize(p.title, lang)}</p>
                   <p className="text-sm text-slate-500 line-clamp-1">{localize(p.description, lang)}</p>
                 </Link>
@@ -80,7 +80,7 @@ export default function SearchClient({ lang }: { lang: string }) {
           {results.documents.length > 0 && (
             <Section title={t.document_name}>
               {results.documents.map(({ r, p }) => (
-                <Link key={r.id + p.id} href={`/${lang}/wizard`} className="card card-hover p-4">
+                <Link key={r.id + p.id} href={`/${lang}/wizard?procedureId=${encodeURIComponent(p.id)}`} className="card card-hover p-4">
                   <p className="font-semibold text-navy">{localize(r.name, lang)}</p>
                   <p className="text-xs text-slate-400">{localize(p.title, lang)}</p>
                 </Link>

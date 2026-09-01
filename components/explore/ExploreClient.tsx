@@ -94,7 +94,7 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
             return (
               <Link
                 key={p.id}
-                href={`/${lang}/wizard`}
+                href={`/${lang}/wizard?procedureId=${encodeURIComponent(p.id)}`}
                 className="card card-hover p-5 flex items-start gap-3"
               >
                 <span className="text-3xl">{c?.flag || "🌍"}</span>

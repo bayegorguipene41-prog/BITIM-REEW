@@ -15,6 +15,7 @@ export type SavedApplication = {
   title: string;
   destination: string;
   destinationName: string;
+  procedureId?: string;
   procedureSlug: string;
   procedureName: string;
   nationality?: string;

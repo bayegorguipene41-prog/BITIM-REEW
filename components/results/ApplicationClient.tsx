@@ -49,9 +49,15 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
     }
   }, [id, lang, session?.id]);
 
+  const hasProcedureData = useMemo(
+    () => !!app?.procedure && Array.isArray(app.procedure.requirements) && app.procedure.requirements.length > 0,
+    [app]
+  );
+
   const docs = useMemo(() => {
-    if (!app?.procedure) return [];
-    return (app.procedure.requirements || []).map((req: any) => {
+    if (!hasProcedureData || !app?.procedure) return [];
+    const requirements: any[] = app.procedure.requirements || [];
+    return requirements.map((req: any) => {
       const saved: SavedDoc | undefined = app.docs.find((d) => d.id === req.id);
       return {
         req,
@@ -120,6 +126,12 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
 
       {/* Procedure overview */}
       <ProcedureOverview lang={lang} t={t} procedure={app.procedure} />
+
+      {!hasProcedureData && (
+        <div className="card p-6 mb-6">
+          <p className="text-slate-600">{t.proc_no_info}</p>
+        </div>
+      )}
 
       {/* Completion */}
       <div className="card p-6 mb-6">

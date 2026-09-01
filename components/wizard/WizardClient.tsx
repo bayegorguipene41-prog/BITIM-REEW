@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { getTranslation } from "@/lib/i18n/translations";
 import CountrySelect from "@/components/wizard/CountrySelect";
 import { countryByCode, countryLabel } from "@/lib/data";
@@ -17,21 +17,8 @@ import {
   type SavedDoc,
 } from "@/lib/storage";
 import { useClientAuth } from "@/lib/auth-client";
-
-const CATEGORIES = [
-  { slug: "visa", icon: "🛂", key: "cat_visa" },
-  { slug: "immigration", icon: "🌍", key: "cat_immigration" },
-  { slug: "residency", icon: "🏠", key: "cat_residency" },
-  { slug: "citizenship", icon: "🪪", key: "cat_citizenship" },
-  { slug: "marriage", icon: "💍", key: "cat_marriage" },
-  { slug: "birth", icon: "👶", key: "cat_birth" },
-  { slug: "work", icon: "💼", key: "cat_work" },
-  { slug: "study", icon: "🎓", key: "cat_study" },
-  { slug: "business", icon: "🏢", key: "cat_business" },
-  { slug: "driving", icon: "🚗", key: "cat_driving" },
-  { slug: "tax", icon: "🧾", key: "cat_tax" },
-  { slug: "other", icon: "📄", key: "cat_other" },
-];
+import { proceduresForCountry } from "@/lib/db/procedures/lookup";
+import { localize } from "@/lib/data";
 
 const STEP_LABELS = ["wiz_dest_title", "wiz_origin_question", "wiz_nationality_question", "wiz_procedure_question", "wiz_personal_title"];
 
@@ -59,8 +46,16 @@ function optionLabel(options: typeof MARITAL_OPTIONS, value: string, lang: strin
 export default function WizardPage({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { session } = useClientAuth();
   setAccountScope(session?.id as string | undefined ?? null);
+
+  // Optional ?procedureId=<stable id> pre-selects a concrete procedure (from a
+  // linked card, e.g. /explore or /search). No fallback to a default procedure.
+  const initialProcedureId = useMemo(
+    () => searchParams.get("procedureId")?.trim() || undefined,
+    [searchParams]
+  );
 
   const [step, setStep] = useState(1);
   const [profile, setProfile] = useState<any>({});
@@ -70,13 +65,49 @@ export default function WizardPage({ lang }: { lang: string }) {
 
   const totalSteps = 5;
 
+  // Real, distinct procedures available for the selected destination country.
+  // The user must pick one concrete procedure, captured as its stable id.
+  const availableProcedures = useMemo(
+    () => proceduresForCountry(profile.destination),
+    [profile.destination]
+  );
+
+  const selectedProcedure = useMemo(
+    () => availableProcedures.find((p) => p.id === profile.procedureId),
+    [availableProcedures, profile.procedureId]
+  );
+
   useEffect(() => {
     const saved = loadWizard();
-    if (saved && saved.lang === lang) {
-      setProfile(saved);
-      if (saved.step) setStep(Number(saved.step));
+    let next = saved && saved.lang === lang ? { ...saved } : {};
+    const destCode =
+      typeof next.destination === "string"
+        ? next.destination
+        : typeof next.country === "string"
+          ? next.country
+          : "";
+
+    if (initialProcedureId) {
+      const maybe = proceduresForCountry(destCode).find(
+        (p) => p.id === initialProcedureId
+      );
+      next = {
+        ...next,
+        procedureId: initialProcedureId,
+        category: maybe?.category ?? next.category,
+        destination: next.destination ?? maybe?.countryCode,
+      };
+    } else if (!next.procedureId) {
+      // Legacy profiles carried only a category, not a concrete procedureId.
+      // Migrate deterministically: if the destination has exactly one available
+      // procedure, promote it; otherwise require an explicit selection in step 4.
+      const one = proceduresForCountry(destCode);
+      if (one.length === 1) next.procedureId = one[0].id;
     }
-  }, [lang]);
+
+    setProfile(next);
+    if (next.step) setStep(Number(next.step));
+  }, [lang, initialProcedureId]);
 
   const patch = (p: any) => {
     const next = { ...profile, ...p, lang, step };
@@ -89,7 +120,7 @@ export default function WizardPage({ lang }: { lang: string }) {
       case 1: return !!profile.destination;
       case 2: return true;
       case 3: return !!profile.nationality;
-      case 4: return !!profile.category;
+      case 4: return !!profile.procedureId;
       case 5: return personalComplete();
       default: return true;
     }
@@ -129,24 +160,44 @@ export default function WizardPage({ lang }: { lang: string }) {
   };
 
   const procedureLabel = useMemo(() => {
-    if (!profile.category) return "";
-    const cat = CATEGORIES.find((c) => c.slug === profile.category);
-    return cat ? (t[cat.key as keyof typeof t] as string) : "";
-  }, [profile.category, lang]);
+    if (selectedProcedure) return localize(selectedProcedure.title, lang);
+    if (availableProcedures.length === 1) return localize(availableProcedures[0].title, lang);
+    return "";
+  }, [selectedProcedure, availableProcedures, lang]);
 
   async function submit() {
+    const procedureId = profile.procedureId || selectedProcedure?.id;
+    if (!procedureId) {
+      setSubStatus(
+        lang === "it"
+          ? "Seleziona una procedura."
+          : "Select a procedure."
+      );
+      return;
+    }
     setLoading(true);
     try {
       const res = await fetch("/api/assess", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          procedureId,
+          profile: {
+            country: profile.destination,
+            destination: profile.destination,
+            origin: profile.origin,
+            nationality: profile.nationality,
+            category: profile.category,
+            situation: profile.situation,
+            age: profile.age,
+            maritalStatus: profile.maritalStatus,
+            employment: profile.employment,
+          },
           country: profile.destination,
           destination: profile.destination,
           origin: profile.origin,
           nationality: profile.nationality,
           category: profile.category,
-          procedureSlug: profile.category === "residency" ? "permesso-soggiorno-lavoro" : undefined,
           situation: profile.situation,
           age: profile.age,
           maritalStatus: profile.maritalStatus,
@@ -155,6 +206,10 @@ export default function WizardPage({ lang }: { lang: string }) {
         }),
       });
       const data = await res.json();
+      if (!res.ok) {
+        setSubStatus(data.error || (lang === "it" ? "Errore nell'elaborazione." : "Processing error."));
+        return;
+      }
       const docs: SavedDoc[] = (data.documents || []).map((d: any) => ({
         id: d.item?.id || d.item?.code || "doc",
         status: "not_started",
@@ -170,6 +225,7 @@ export default function WizardPage({ lang }: { lang: string }) {
         title: `${destLabel} — ${procTitle || t.app_name}`,
         destination: profile.destination,
         destinationName: destLabel,
+        procedureId: data.procedure?.id || procedureId,
         procedureSlug: data.procedure?.slug || "",
         procedureName: procTitle,
         nationality: countryLabel(profile.nationality, lang),
@@ -181,6 +237,7 @@ export default function WizardPage({ lang }: { lang: string }) {
         procedure: data.procedure,
         sources: data.sources || [],
         profile: {
+          procedureId: data.procedure?.id || procedureId,
           destination: profile.destination,
           origin: profile.origin,
           nationality: profile.nationality,
@@ -284,22 +341,28 @@ export default function WizardPage({ lang }: { lang: string }) {
 
         {step === 4 && (
           <Step title={t.wiz_procedure_question} subtitle="">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {CATEGORIES.map((c) => (
-                <button
-                  key={c.slug}
-                  onClick={() => patch({ category: c.slug, step })}
-                  className={`btn-option flex flex-col items-center gap-2 !p-5 text-center ${
-                    profile.category === c.slug ? "active" : ""
-                  }`}
-                >
-                  <span className="text-3xl">{c.icon}</span>
-                  <span className="text-sm font-semibold">
-                    {t[c.key as keyof typeof t] as string}
-                  </span>
-                </button>
-              ))}
-            </div>
+            {availableProcedures.length === 0 ? (
+              <p className="text-danger">{t.no_results}</p>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {availableProcedures.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => patch({ procedureId: p.id, category: p.category, step })}
+                    className={`btn-option flex flex-col items-start gap-2 !p-5 text-left ${
+                      profile.procedureId === p.id ? "active" : ""
+                    }`}
+                  >
+                    <span className="text-lg font-semibold">
+                      {localize(p.title, lang)}
+                    </span>
+                    <span className="text-sm text-slate-500">
+                      {localize(p.description, lang)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
           </Step>
         )}
 

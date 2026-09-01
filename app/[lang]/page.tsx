@@ -1,12 +1,6 @@
 import HomePageClient from "@/components/home/HomePageClient";
 import { LANGUAGES, DEFAULT_LANG } from "@/lib/i18n/config";
 
-export const metadata = {
-  title: "BITIM REEW — Documents guide worldwide",
-  description:
-    "Know exactly which documents you need, anywhere in the world.",
-};
-
 export default async function HomePage({
   params,
 }: {

@@ -52,6 +52,7 @@ export type Dictionary = {
   popular: string;
   no_results: string;
   proc_no_info: string;
+  proc_stale: string;
   select_procedure: string;
   loading: string;
   discover: string;
@@ -210,6 +211,7 @@ const en: Dictionary = {
   popular: "Popular",
   no_results: "No results found.",
   proc_no_info: "We don't have information available for this procedure yet.",
+  proc_stale: "This procedure's details may be out of date — please verify.",
   select_procedure: "Choose a procedure",
   loading: "Processing…",
   discover: "Build my guide",
@@ -369,6 +371,7 @@ const it: Dictionary = {
   popular: "Popolari",
   no_results: "Nessun risultato trovato.",
   proc_no_info: "Non abbiamo ancora informazioni disponibili per questa procedura.",
+  proc_stale: "I dettagli di questa procedura potrebbero essere datati — verifica.",
   select_procedure: "Scegli una procedura",
   loading: "Elaborazione…",
   discover: "Crea la mia guida",
@@ -528,6 +531,7 @@ const fr: Dictionary = {
   popular: "Populaires",
   no_results: "Aucun résultat trouvé.",
   proc_no_info: "Nous n'avons pas encore d'informations disponibles pour cette démarche.",
+  proc_stale: "Les détails de cette démarche peuvent être obsolètes — à vérifier.",
   select_procedure: "Choisissez une démarche",
   loading: "Traitement…",
   discover: "Créer mon guide",
@@ -687,6 +691,7 @@ const es: Dictionary = {
   popular: "Populares",
   no_results: "No se encontraron resultados.",
   proc_no_info: "Aún no tenemos información disponible para este trámite.",
+  proc_stale: "Los detalles de este trámite pueden estar desactualizados — verificar.",
   select_procedure: "Elige un trámite",
   loading: "Procesando…",
   discover: "Crear mi guía",
@@ -846,6 +851,7 @@ const de: Dictionary = {
   popular: "Beliebt",
   no_results: "Keine Ergebnisse gefunden.",
   proc_no_info: "Für dieses Verfahren haben wir noch keine Informationen verfügbar.",
+  proc_stale: "Die Angaben zu diesem Verfahren könnten veraltet sein — bitte überprüfen.",
   select_procedure: "Wählen Sie ein Verfahren",
   loading: "Verarbeitung…",
   discover: "Meinen Leitfaden erstellen",
@@ -1005,6 +1011,7 @@ const pt: Dictionary = {
   popular: "Populares",
   no_results: "Nenhum resultado encontrado.",
   proc_no_info: "Ainda não temos informações disponíveis para este procedimento.",
+  proc_stale: "Os detalhes deste procedimento podem estar desatualizados — verifique.",
   select_procedure: "Escolha um procedimento",
   loading: "Processando…",
   discover: "Criar meu guia",
@@ -1164,6 +1171,7 @@ const ar: Dictionary = {
   popular: "الشائعة",
   no_results: "لا توجد نتائج.",
   proc_no_info: "لا تتوفر معلومات عن هذا الإجراء بعد.",
+  proc_stale: "قد تكون تفاصيل هذا الإجراء قديمة — يرجى التحقق.",
   select_procedure: "اختر إجراء",
   loading: "جارٍ المعالجة…",
   discover: "أنشئ دليلي",

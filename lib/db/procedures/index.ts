@@ -27,6 +27,15 @@ import { procedurePaesiBassi } from "./PaesiBassi";
 import { PROCEDURE_ITALIA } from "./Italia";
 import type { Procedure } from "@/lib/types";
 import type { Procedura } from "../tipi";
+import { COUNTRIES } from "../countries";
+
+// Mappa il nome italiano del Paese (campo `paese` del modello legacy) al codice
+// ISO usato dal resto dell'app. Così le procedure legacy rispettano la
+// convenzione `countryCode = ISO` (non il nome localizzato).
+function countryCodeForPaese(paese: string): string {
+  const hit = COUNTRIES.find((c) => c.it.toLowerCase() === paese.trim().toLowerCase());
+  return hit?.code ?? paese;
+}
 
 // 📌 ELENCO COMPLETO DI TUTTE LE PROCEDURE
 export const PROCEDURES: Procedure[] = [
@@ -55,7 +64,7 @@ export const PROCEDURES: Procedure[] = [
 export function addLegacyProcedures(list: Procedura[]): Procedure[] {
   return list.map((p) => ({
     id: p.id,
-    countryCode: p.paese,
+    countryCode: countryCodeForPaese(p.paese),
     slug: p.id,
     title: { it: p.nome_procedura, en: p.nome_procedura },
     description: { it: p.descrizione, en: p.descrizione },

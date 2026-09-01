@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getTranslation } from "@/lib/i18n/translations";
 import { localize } from "@/lib/data";
+import { isProcedureStale } from "@/lib/data-freshness";
 import { getApp, upsertApp, setAccountScope, type SavedApplication, type SavedDoc, type DocStatus } from "@/lib/storage";
 import { useClientAuth } from "@/lib/auth-client";
 
@@ -51,6 +52,11 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
 
   const hasProcedureData = useMemo(
     () => !!app?.procedure && Array.isArray(app.procedure.requirements) && app.procedure.requirements.length > 0,
+    [app]
+  );
+
+  const procedureStale = useMemo(
+    () => (app?.procedure ? isProcedureStale(app.procedure) : false),
     [app]
   );
 
@@ -130,6 +136,16 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
       {!hasProcedureData && (
         <div className="card p-6 mb-6">
           <p className="text-slate-600">{t.proc_no_info}</p>
+        </div>
+      )}
+
+      {procedureStale && (
+        <div className="mb-6 flex items-start gap-2 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning" role="status">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 mt-0.5" aria-hidden="true">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+            <path d="M12 9v4M12 17h.01" />
+          </svg>
+          <span>{t.proc_stale}</span>
         </div>
       )}
 

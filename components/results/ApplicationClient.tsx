@@ -140,7 +140,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
       )}
 
       {procedureStale && (
-        <div className="mb-6 flex items-start gap-2 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning" role="status">
+        <div className="mb-6 flex items-start gap-2 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm text-warning-dark" role="status">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 mt-0.5" aria-hidden="true">
             <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
             <path d="M12 9v4M12 17h.01" />
@@ -171,6 +171,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
 
         {/* Completion status */}
         <div
+          aria-live="polite"
           className={`mt-4 flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium ${
             complete
               ? "bg-success/10 text-success"
@@ -410,12 +411,12 @@ function DocCard({
         {/* Document flags */}
         <div className="flex flex-wrap gap-2 mt-3">
           {needsTranslation && (
-            <span className="chip bg-warning/10 text-warning">
+            <span className="chip bg-warning/10 text-warning-dark">
               <WarnIcon /> {t.doc_translation}
             </span>
           )}
           {needsApostille && (
-            <span className="chip bg-warning/10 text-warning">
+            <span className="chip bg-warning/10 text-warning-dark">
               <WarnIcon /> {t.doc_apostille}
             </span>
           )}
@@ -449,11 +450,12 @@ function DocCard({
           {/* Status selector */}
           <div className="mt-4">
             <p className="label">{t.status}</p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2" role="group" aria-label={t.status}>
               {STATUS_ORDER.map((s) => (
                 <button
                   key={s}
                   onClick={() => onStatus(s)}
+                  aria-pressed={status === s}
                   className={`chip border transition-colors ${
                     status === s ? "bg-primary/10 border-primary text-primary" : "border-slate-200 text-slate-600 hover:border-slate-300"
                   }`}
@@ -467,8 +469,9 @@ function DocCard({
           {/* Notes & deadline */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
             <div>
-              <p className="label">{t.notes}</p>
+              <label htmlFor={`note-${req.id}`} className="label">{t.notes}</label>
               <input
+                id={`note-${req.id}`}
                 className="input !py-2 text-sm"
                 placeholder={t.add_note}
                 value={note}
@@ -476,8 +479,9 @@ function DocCard({
               />
             </div>
             <div>
-              <p className="label">{t.deadline}</p>
+              <label htmlFor={`deadline-${req.id}`} className="label">{t.deadline}</label>
               <input
+                id={`deadline-${req.id}`}
                 type="date"
                 className="input !py-2 text-sm"
                 value={deadline}

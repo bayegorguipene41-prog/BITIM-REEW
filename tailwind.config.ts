@@ -15,6 +15,7 @@ const config: Config = {
         charcoal: "#1C2B45",
         success: "#4C6B54",
         warning: "#F79009",
+        "warning-dark": "#92400E",
         danger: "#9A2D2F",
         bg: "#F7F5F0",
         neutral: {

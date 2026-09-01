@@ -349,6 +349,7 @@ export default function WizardPage({ lang }: { lang: string }) {
                   <button
                     key={p.id}
                     onClick={() => patch({ procedureId: p.id, category: p.category, step })}
+                    aria-pressed={profile.procedureId === p.id}
                     className={`btn-option flex flex-col items-start gap-2 !p-5 text-left ${
                       profile.procedureId === p.id ? "active" : ""
                     }`}
@@ -370,8 +371,9 @@ export default function WizardPage({ lang }: { lang: string }) {
           <Step title={t.wiz_personal_title} subtitle="">
             {personalIndex === 0 && (
               <div className="space-y-2">
-                <label className="label">{t.age}</label>
+                <label htmlFor="wiz-age" className="label">{t.age}</label>
                 <input
+                  id="wiz-age"
                   type="number"
                   min={0}
                   max={120}
@@ -390,6 +392,7 @@ export default function WizardPage({ lang }: { lang: string }) {
                     <button
                       key={opt.value}
                       onClick={() => patch({ maritalStatus: opt.value })}
+                      aria-pressed={profile.maritalStatus === opt.value}
                       className={`btn-option !p-3 text-center text-sm ${
                         profile.maritalStatus === opt.value ? "active" : ""
                       }`}
@@ -408,6 +411,7 @@ export default function WizardPage({ lang }: { lang: string }) {
                     <button
                       key={opt.value}
                       onClick={() => patch({ employment: opt.value })}
+                      aria-pressed={profile.employment === opt.value}
                       className={`btn-option !p-3 text-center text-sm ${
                         profile.employment === opt.value ? "active" : ""
                       }`}

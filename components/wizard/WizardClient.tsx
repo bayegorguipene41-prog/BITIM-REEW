@@ -11,12 +11,10 @@ import {
   clearWizard,
   addRecentCountry,
   upsertApp,
-  setAccountScope,
   uid,
   type SavedApplication,
   type SavedDoc,
 } from "@/lib/storage";
-import { useClientAuth } from "@/lib/auth-client";
 import { proceduresForCountry } from "@/lib/db/procedures/lookup";
 import { localize } from "@/lib/data";
 
@@ -47,8 +45,6 @@ export default function WizardPage({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { session } = useClientAuth();
-  setAccountScope(session?.id as string | undefined ?? null);
 
   // Optional ?procedureId=<stable id> pre-selects a concrete procedure (from a
   // linked card, e.g. /explore or /search). No fallback to a default procedure.

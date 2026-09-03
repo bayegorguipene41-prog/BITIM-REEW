@@ -6,9 +6,6 @@ import {
   contentLengthTooLarge,
   readBodyWithLimit,
   MAX_BODY_BYTES,
-  registerRateLimited,
-  loginRateLimited,
-  SESSION_MAX_AGE,
   clientIp,
 } from "./security";
 
@@ -112,28 +109,6 @@ describe("payload guard", () => {
   });
 });
 
-describe("rate limiting", () => {
-  it("allows normal attempts then rejects with retry-after", () => {
-    // register limiter: 5/min
-    let last: ReturnType<typeof registerRateLimited>;
-    for (let i = 0; i < 5; i++) {
-      last = registerRateLimited("1.2.3.4");
-      expect(last.ok).toBe(true);
-    }
-    const blocked = registerRateLimited("1.2.3.4");
-    expect(blocked.ok).toBe(false);
-    expect(blocked.retryAfterSeconds).toBeGreaterThan(0);
-
-    // different IP is not affected
-    expect(registerRateLimited("9.9.9.9").ok).toBe(true);
-  });
-
-  it("login limiter rejects after threshold", () => {
-    for (let i = 0; i < 10; i++) expect(loginRateLimited("5.6.7.8").ok).toBe(true);
-    expect(loginRateLimited("5.6.7.8").ok).toBe(false);
-  });
-});
-
 describe("clientIp", () => {
   it("uses first x-forwarded-for value", () => {
     const req = new Request("http://localhost:3000/", {
@@ -147,14 +122,5 @@ describe("clientIp", () => {
       clientIp(new Request("http://localhost:3000/", { headers: { "x-real-ip": "172.16.0.9" } }))
     ).toBe("172.16.0.9");
     expect(clientIp(new Request("http://localhost:3000/"))).toBe("unknown");
-  });
-});
-
-describe("SESSION_MAX_AGE", () => {
-  it("is between 1 and 7 days inclusive", () => {
-    const days = SESSION_MAX_AGE / 86400;
-    expect(days).toBeGreaterThanOrEqual(1);
-    expect(days).toBeLessThanOrEqual(7);
-    expect(SESSION_MAX_AGE).toBe(7 * 24 * 60 * 60);
   });
 });

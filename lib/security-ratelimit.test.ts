@@ -3,7 +3,6 @@ import {
   activeRateLimitMode,
   rateLimit,
   stableClientKey,
-  RateLimitDecision,
 } from "./security";
 
 const ORIGINAL_URL = process.env.UPSTASH_REDIS_REST_URL;
@@ -69,29 +68,6 @@ describe("stableClientKey (hardened IP resolution)", () => {
 });
 
 describe("rateLimit in-memory backend", () => {
-  it("register: allows 5/min/key then rejects with Retry-After", async () => {
-    setRedisEnv();
-    let last: RateLimitDecision;
-    for (let i = 0; i < 5; i++) {
-      last = await rateLimit("register", "10.0.0.1");
-      expect(last.ok).toBe(true);
-    }
-    const blocked = await rateLimit("register", "10.0.0.1");
-    expect(blocked.ok).toBe(false);
-    expect(blocked.retryAfterSeconds).toBeGreaterThan(0);
-
-    // A different client key is not affected.
-    expect((await rateLimit("register", "10.0.0.2")).ok).toBe(true);
-  });
-
-  it("login: allows 10/min/key then rejects", async () => {
-    setRedisEnv();
-    for (let i = 0; i < 10; i++) {
-      expect((await rateLimit("login", "10.1.1.1")).ok).toBe(true);
-    }
-    expect((await rateLimit("login", "10.1.1.1")).ok).toBe(false);
-  });
-
   it("assess: uses a generous 60/min/key limit", async () => {
     setRedisEnv();
     for (let i = 0; i < 60; i++) {
@@ -102,11 +78,10 @@ describe("rateLimit in-memory backend", () => {
 
   it("keys are hashed so different routes/IPs never collide", async () => {
     setRedisEnv();
-    // Register bucket full for IP 10.3.3.3
-    for (let i = 0; i < 5; i++) await rateLimit("register", "10.3.3.3");
-    // Login on the SAME ip has a separate namespace and is still allowed.
-    expect((await rateLimit("login", "10.3.3.3")).ok).toBe(true);
-    // A different IP can still register.
-    expect((await rateLimit("register", "10.3.3.4")).ok).toBe(true);
+    // Assess bucket full for IP 10.3.3.3
+    for (let i = 0; i < 60; i++) await rateLimit("assess", "10.3.3.3");
+    expect((await rateLimit("assess", "10.3.3.3")).ok).toBe(false);
+    // A different IP can still assess.
+    expect((await rateLimit("assess", "10.3.3.4")).ok).toBe(true);
   });
 });

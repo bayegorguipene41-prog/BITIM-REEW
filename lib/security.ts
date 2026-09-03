@@ -8,10 +8,8 @@ import { Ratelimit } from "@upstash/ratelimit";
 
 const WINDOW_MS = 60 * 1000; // 1 minute
 
-// Defaults tuned for the MVP (generous to avoid breaking normal use).
-const REGISTER_LIMIT = 5; // 5 registrations / min / IP
-const LOGIN_LIMIT = 10; // 10 credentials sign-in attempts / min / IP
-const ASSESS_LIMIT = 60; // 60 assessment calls / min / IP (public, unauthenticated)
+// Assessment rate limit (public, unauthenticated).
+const ASSESS_LIMIT = 60; // 60 assessment calls / min / IP
 
 /**
  * Rate-limit decision returned by every store backend.
@@ -188,12 +186,10 @@ function limiterFor(route: string, max: number): ActiveRateLimitStore {
  * Returns a normalized decision regardless of backend.
  */
 export async function rateLimit(
-  route: "login" | "register" | "assess",
+  route: "assess",
   rawKey: string
 ): Promise<RateLimitDecision> {
   const limits: Record<typeof route, number> = {
-    login: LOGIN_LIMIT,
-    register: REGISTER_LIMIT,
     assess: ASSESS_LIMIT,
   };
   const store = limiterFor(route, limits[route]);
@@ -219,23 +215,6 @@ export async function rateLimit(
     }
   }
   return (store as MemoryRateLimitStore).check(key);
-}
-
-// Synchronous in-memory facades. These power the in-memory (local/MVP) path and
-// are what the existing rate-limit unit tests exercise. Production routes use
-// the async `rateLimit()` above so they can share an Upstash Redis store.
-//
-// A shared singleton per route keeps counters persistent across calls within a
-// single process (single-instance semantics, matching the original design).
-const memoryLoginLimiter = new MemoryRateLimitStore(LOGIN_LIMIT);
-const memoryRegisterLimiter = new MemoryRateLimitStore(REGISTER_LIMIT);
-
-export function loginRateLimited(ip: string): RateLimitDecision {
-  return memoryLoginLimiter.check(`login:${rateLimitKey(ip ?? "unknown")}`);
-}
-
-export function registerRateLimited(ip: string): RateLimitDecision {
-  return memoryRegisterLimiter.check(`register:${rateLimitKey(ip ?? "unknown")}`);
 }
 
 export async function assessRateLimited(ip: string): Promise<RateLimitDecision> {
@@ -315,9 +294,6 @@ export function isTrustedOrigin(proto: string | null | undefined, host: string |
 
 /** Upper bound for accepted JSON bodies (bytes). */
 export const MAX_BODY_BYTES = 256 * 1024; // 256 KB
-
-/** JWT session lifetime in seconds (7 days), capped below the 30-day default. */
-export const SESSION_MAX_AGE = 7 * 24 * 60 * 60;
 
 /**
  * Cheap pre-check using Content-Length header when present.

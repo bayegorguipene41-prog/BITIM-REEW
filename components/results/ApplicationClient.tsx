@@ -5,8 +5,7 @@ import { useRouter } from "next/navigation";
 import { getTranslation } from "@/lib/i18n/translations";
 import { localize } from "@/lib/data";
 import { isProcedureStale } from "@/lib/data-freshness";
-import { getApp, upsertApp, setAccountScope, type SavedApplication, type SavedDoc, type DocStatus } from "@/lib/storage";
-import { useClientAuth } from "@/lib/auth-client";
+import { getApp, upsertApp, type SavedApplication, type SavedDoc, type DocStatus } from "@/lib/storage";
 
 const STATUS_ORDER: DocStatus[] = ["not_started", "to_obtain", "in_progress", "ready", "expired"];
 
@@ -35,12 +34,10 @@ function statusColor(s: DocStatus) {
 export default function ApplicationClient({ lang, id }: { lang: string; id: string }) {
   const t = getTranslation(lang);
   const router = useRouter();
-  const { session } = useClientAuth();
   const [app, setApp] = useState<SavedApplication | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
   useEffect(() => {
-    setAccountScope(session?.id as string | undefined ?? null);
     const a = getApp(id);
     if (a) {
       if (a.language !== lang) a.language = lang;
@@ -48,7 +45,7 @@ export default function ApplicationClient({ lang, id }: { lang: string; id: stri
     } else {
       router.replace(`/${lang}/applications`);
     }
-  }, [id, lang, session?.id]);
+  }, [id, lang]);
 
   const hasProcedureData = useMemo(
     () => !!app?.procedure && Array.isArray(app.procedure.requirements) && app.procedure.requirements.length > 0,

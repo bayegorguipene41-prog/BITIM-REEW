@@ -5,13 +5,10 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LANGUAGES } from "@/lib/i18n/config";
 import { getTranslation } from "@/lib/i18n/translations";
-import { useClientAuth } from "@/lib/auth-client";
-
 export default function Header({ lang }: { lang: string }) {
   const t = getTranslation(lang);
   const pathname = usePathname();
   const router = useRouter();
-  const { logged, session, signOut } = useClientAuth();
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showLang, setShowLang] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
@@ -136,13 +133,13 @@ export default function Header({ lang }: { lang: string }) {
               )}
             </div>
 
-            {/* Account */}
+            {/* Account - direct link to applications */}
             <Link
-              href={logged ? `/${lang}/account` : `/${lang}/login`}
+              href={`/${lang}/applications`}
               className="hidden md:inline-flex items-center gap-2 btn-primary !py-2 !px-4 text-sm"
             >
               <UserIcon />
-              {logged ? session?.name || t.nav_account : t.nav_login}
+              {t.nav_account}
             </Link>
 
             {/* Hamburger */}
@@ -181,24 +178,12 @@ export default function Header({ lang }: { lang: string }) {
               {t.search_placeholder}
             </Link>
             <Link
-              href={logged ? `/${lang}/account` : `/${lang}/login`}
+              href={`/${lang}/applications`}
               onClick={() => setMobileMenu(false)}
               className="block px-3 py-3 rounded-xl text-base font-medium text-primary hover:bg-primary/5 transition-colors"
             >
-              {logged ? t.nav_account : t.nav_login}
+              {t.nav_account}
             </Link>
-            {logged && (
-              <button
-                onClick={async () => {
-                  await signOut();
-                  setMobileMenu(false);
-                  router.push(`/${lang}`);
-                }}
-                className="block w-full text-left px-3 py-3 rounded-xl text-base font-medium text-danger hover:bg-red-50 transition-colors"
-              >
-                {t.nav_logout}
-              </button>
-            )}
           </div>
         </nav>
       )}

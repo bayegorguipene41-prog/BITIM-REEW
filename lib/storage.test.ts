@@ -22,7 +22,7 @@ function createMemoryStorage() {
   };
 }
 
-// Preserve the module-level scope state across tests: reset to guest first.
+// Reset to guest scope before each test.
 beforeEach(() => {
   (globalThis as any).window = { localStorage: createMemoryStorage() };
   setAccountScope(null);
@@ -45,67 +45,30 @@ function app(id: string): SavedApplication {
   };
 }
 
-describe("account storage isolation", () => {
-  it("guest sees legacy/plain data", () => {
+describe("guest storage (no account scoping)", () => {
+  it("stores and retrieves apps", () => {
     upsertApp(app("g1"));
     expect(getApps().map((a) => a.id)).toEqual(["g1"]);
   });
 
-  it("two accounts never see each other's apps", () => {
-    // Write as Account A
+  it("setAccountScope is a no-op (always guest)", () => {
     setAccountScope("account-a-user-id");
     upsertApp(app("A1"));
     expect(getApps().map((a) => a.id)).toEqual(["A1"]);
-
-    // Switch to Account B — must NOT see A's app
-    setAccountScope("account-b-user-id");
-    expect(getApps().map((a) => a.id)).toEqual([]);
-
-    // B writes its own
-    upsertApp(app("B1"));
-    expect(getApps().map((a) => a.id)).toEqual(["B1"]);
   });
 
-  it("guest data is not attributed to a signed-in account (no legacy fallback leak)", () => {
-    // Guest saves an app on the plain key
-    setAccountScope(null);
-    upsertApp(app("guest1"));
-
-    // A logs in: must NOT inherit the guest app via legacy fallback
-    setAccountScope("account-a-user-id");
-    expect(getApps().map((a) => a.id)).toEqual([]);
-  });
-
-  it("account can edit/delete only its own apps", () => {
-    setAccountScope("acct-x");
+  it("can edit/delete apps", () => {
     upsertApp(app("x1"));
     upsertApp(app("x2"));
     expect(getApps().map((a) => a.id)).toEqual(["x2", "x1"]);
 
     deleteApp("x1");
     expect(getApps().map((a) => a.id)).toEqual(["x2"]);
-
-    // Another account unaffected
-    setAccountScope("acct-y");
-    expect(getApps().map((a) => a.id)).toEqual([]);
   });
 
-  it("re-login of the same account returns its apps", () => {
-    setAccountScope("acct-z");
-    upsertApp(app("z1"));
-    setAccountScope(null); // logout
-    expect(getApps().map((a) => a.id)).toEqual([]);
-    setAccountScope("acct-z"); // login again
-    expect(getApps().map((a) => a.id)).toEqual(["z1"]);
-  });
-
-  it("wizard profile is isolated per account", () => {
-    setAccountScope("acct-1");
+  it("wizard profile is stored and retrieved", () => {
     saveWizard({ destination: "FR", lang: "fr" });
     expect(loadWizard()?.destination).toBe("FR");
-
-    setAccountScope("acct-2");
-    expect(loadWizard()).toBeNull();
   });
 });
 
@@ -126,22 +89,6 @@ describe("saved procedures (bookmarks)", () => {
     toggleSavedProcedure("p1");
     toggleSavedProcedure("p2");
     expect(getSavedProcedureIds()).toEqual(["p2", "p1"]);
-  });
-
-  it("bookmarks are isolated per account scope", () => {
-    setAccountScope("fav-a");
-    toggleSavedProcedure("pA");
-    expect(getSavedProcedureIds()).toEqual(["pA"]);
-
-    setAccountScope("fav-b");
-    expect(getSavedProcedureIds()).toEqual([]);
-  });
-
-  it("guest bookmarks persist and remain private from accounts", () => {
-    toggleSavedProcedure("guest-1");
-    expect(isProcedureSaved("guest-1")).toBe(true);
-    setAccountScope("fav-c");
-    expect(isProcedureSaved("guest-1")).toBe(false);
   });
 
   it("caps the list at 100 entries", () => {

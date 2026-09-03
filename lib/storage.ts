@@ -37,31 +37,15 @@ const LEGACY_FAV_KEY = "bitimreew.savedProcedures.v1";
 let currentScope: string | null = null;
 
 /**
- * Accounts are isolated in localStorage by a namespace derived from the
- * authenticated user id (a stable random hex, not PII). When set, app/wizard/
- * recent data is stored under `.<namespace>` so two accounts on the same
- * browser never see each other's data. `null` = guest / not signed in.
- *
- * IMPORTANT: this is a UX/safety mitigation only. localStorage is NOT secure
- * storage and things are isolated per-browser, not per-account across devices.
- * The production-grade solution is server-side persistence with per-user
- * authorization (see the audit notes).
+ * No-op: account scoping has been removed. Data is always stored under the
+ * plain (unscoped) localStorage keys for the guest scope.
  */
-export function setAccountScope(userId: string | null) {
-  currentScope = userId && userId.trim() ? safeScope(userId) : null;
-}
-
-function safeScope(id: string): string {
-  let h = 0;
-  for (let i = 0; i < id.length; i++) {
-    h = (h * 31 + id.charCodeAt(i)) | 0;
-  }
-  // Keep it short, URL/label-safe, non-PII.
-  return (h >>> 0).toString(36);
+export function setAccountScope(_userId: string | null) {
+  currentScope = null;
 }
 
 function scopedKey(base: string): string {
-  return currentScope ? `${base}.${currentScope}` : base;
+  return base;
 }
 
 function safeGet(key: string): string | null {

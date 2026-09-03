@@ -3,8 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { getTranslation } from "@/lib/i18n/translations";
-import { getApps, deleteApp, setAccountScope, type SavedApplication } from "@/lib/storage";
-import { useClientAuth } from "@/lib/auth-client";
+import { getApps, deleteApp, type SavedApplication } from "@/lib/storage";
 
 type AppItem = SavedApplication & { pct: number; total: number; ready: number };
 
@@ -16,8 +15,6 @@ function toItem(a: SavedApplication): AppItem {
 
 export default function ApplicationsClient({ lang }: { lang: string }) {
   const t = getTranslation(lang);
-  const { logged, session } = useClientAuth();
-  setAccountScope(session?.id as string | undefined ?? null);
   const [apps, setApps] = useState<AppItem[]>(() => getApps().map(toItem));
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
 
@@ -32,7 +29,7 @@ export default function ApplicationsClient({ lang }: { lang: string }) {
       <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-extrabold text-navy">
-            {logged ? t.welcome_back : t.your_applications}
+            {t.your_applications}
           </h1>
           <p className="text-slate-500 mt-1">{t.your_applications}</p>
         </div>

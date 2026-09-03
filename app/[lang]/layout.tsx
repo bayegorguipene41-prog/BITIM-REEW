@@ -6,7 +6,6 @@ import { getTranslation } from "@/lib/i18n/translations";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SessionProvider from "@/components/SessionProvider";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -89,11 +88,9 @@ export default async function LangLayout({
             }),
           }}
         />
-        <SessionProvider>
-          <Header lang={lang} />
-          <main className="flex-1">{children}</main>
-          <Footer lang={lang} />
-        </SessionProvider>
+        <Header lang={lang} />
+        <main className="flex-1">{children}</main>
+        <Footer lang={lang} />
       </body>
     </html>
   );

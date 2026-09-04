@@ -10,9 +10,15 @@ import { PROCEDURE_ITALIA } from "./Italia";
 
 // ── Procedure con dati reali verificati (fonte: file JSON canonici) ────
 // IT: procedure Italia (verificate) — IT.json (Sessione 3).
+// AL: procedure Albania (verificate) — AL.json (Fase 2B, Sessione 5).
+// MA: procedure Marocco (verificate) — MA.json (Fase 2B, Sessione 6).
+// TN: procedure Tunisia (verificate) — TN.json (Fase 2B, Sessione 6).
 // FR/DE: placeholder marcati needs_review — FR.json / DE.json.
 const VERIFIED_FROM_JSON: Procedure[] = [
   ...loadCountryProceduresJson("IT"),
+  ...loadCountryProceduresJson("AL"),
+  ...loadCountryProceduresJson("MA"),
+  ...loadCountryProceduresJson("TN"),
 ];
 
 export const PROCEDURES: Procedure[] = [

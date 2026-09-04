@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "countryCode": "AL",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "AL-permesso-soggiorno-lavoro",
+      "countryCode": "AL",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino albanese. L'Albania è coperta da accordo bilaterale in materia di lavoro (2008) e rientra tra i Paesi ammessi al Decreto Flussi.",
+        "en": "Documents to work in Italy as an Albanian citizen. Albania is covered by a bilateral labour agreement (2008) and is among the countries admitted under the Decreto Flussi."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-AL-minlavoro",
+          "name": "Ingresso e soggiorno per lavoro in Italia",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/ingresso-e-soggiorno-per-lavoro-in-italia",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-AL-accordo",
+          "name": "Accordi migrazione lavoro — Accordo bilaterale Italia-Albania (2008)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-AL-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-AL-portaleimm",
+          "name": "Codice 16 — Permesso di Soggiorno per Lavoro Subordinato",
+          "authority": "Portale Immigrazione (Ministero dell'Interno / Poste)",
+          "url": "https://www.portaleimmigrazione.it/ITA/lavoroSubordinato.html",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-AL-tirana",
+          "name": "Requisiti per il visto per lavoro subordinato",
+          "authority": "Ambasciata d'Italia a Tirana",
+          "url": "https://ambtirana.esteri.it/wp-content/uploads/2023/09/requisiti_visto_lavoro_subordinato.doc",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-AL-tirana-visti",
+          "name": "Visti — informazioni generali e appuntamenti (Prenot@Mi)",
+          "authority": "Ambasciata d'Italia a Tirana",
+          "url": "https://ambtirana.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "medium",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Il passaporto deve avere una validità residua di almeno 3 mesi oltre la scadenza del visto richiesto.",
+            "en": "The passport must remain valid for at least 3 months beyond the visa you intend to request."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità albanese preposta; in Italia, Ambasciata o Consolato.",
+            "en": "Albanian issuing authority; in Italy, Embassy or Consulate."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità non scaduto e fotocopia dello stesso.",
+            "en": "A valid, non-expired passport and a photocopy of it."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 3 mesi oltre la scadenza del visto.", "en": "Minimum 3 months beyond the visa expiry." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta al lavoro (SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Autorizzazione richiesta dal datore di lavoro allo Sportello Unico per l'Immigrazione; per il visto deve essere rilasciata da non più di 6 mesi.",
+            "en": "Authorization requested by the employer from the One-Stop Immigration Desk (SUI); for the visa it must have been issued within the last 6 months."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia del nulla osta rilasciato dal SUI, emesso da non più di 6 mesi.",
+            "en": "A photocopy of the nulla osta issued by the SUI, issued within the last 6 months."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "6 mesi dalla data di emissione.", "en": "6 months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "contratto-lavoro",
+          "code": "WORK_CONTRACT",
+          "name": { "it": "Contratto di lavoro", "en": "Employment contract" },
+          "description": {
+            "it": "Contratto di lavoro stipulato con un datore di lavoro in Italia, con data di inizio e fine del rapporto.",
+            "en": "Employment contract signed with an employer in Italy, stating the start and end dates of the employment."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Datore di lavoro in Italia.",
+            "en": "Employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Copia del contratto di lavoro che riporta data di inizio e fine del rapporto.",
+            "en": "A copy of the employment contract showing the start and end dates."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Durata del rapporto di lavoro.", "en": "Duration of the employment relationship." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "certificato-personale",
+          "code": "CRIMINAL_RECORD_CERTIFICATE",
+          "name": { "it": "Certificato personale (penale)", "en": "Criminal record certificate (personal certificate)" },
+          "description": {
+            "it": "Certificato personale albanese con apostille e traduzione in italiano, richiesto solo in caso di prima domanda di visto.",
+            "en": "Albanian personal certificate with apostille and Italian translation, required only for a first visa application."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Autorità albanese competente; apostille dal Ministero degli Esteri albanese.",
+            "en": "Competent Albanian authority; apostille from the Albanian Ministry of Foreign Affairs."
+          },
+          "whatYouNeed": {
+            "it": "Certificato personale apostillato e tradotto in italiano.",
+            "en": "Personal certificate apostilled and translated into Italian."
+          },
+          "translationRequired": true,
+          "apostilleRequired": true,
+          "validityPeriod": { "it": "Rilasciato da non più di 6 mesi.", "en": "Issued within the last 6 months." },
+          "estimatedCost": { "it": "Variabile; traduzione e apostille a parte.", "en": "Varies; translation and apostille extra." },
+          "processingTime": { "it": "Da giorni a settimane.", "en": "From days to weeks." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "foto",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografie recenti formato tessera", "en": "Recent passport photos" },
+          "description": {
+            "it": "Due fotografie recenti formato tessera per la richiesta del visto.",
+            "en": "Two recent passport-size photographs for the visa application."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme.",
+            "en": "Authorized photographer or compliant booth."
+          },
+          "whatYouNeed": {
+            "it": "N. 2 fotografie formato tessera, recenti.",
+            "en": "2 recent passport-size photographs."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recenti.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "assicurazione-sanitaria",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione sanitaria", "en": "Health insurance" },
+          "description": {
+            "it": "Assicurazione sanitaria valida per una settimana dall'arrivo in Italia.",
+            "en": "Health insurance valid for one week from arrival in Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia assicurativa.",
+            "en": "Insurance provider."
+          },
+          "whatYouNeed": {
+            "it": "Copia della polizza assicurativa.",
+            "en": "A copy of the insurance policy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Copertura settimanale dall'arrivo.", "en": "Weekly coverage from arrival." },
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-AL-tirana"
+        },
+        {
+          "id": "biglietto-aereo",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del biglietto di viaggio", "en": "Travel ticket booking" },
+          "description": {
+            "it": "Copia della prenotazione del biglietto di viaggio verso l'Italia.",
+            "en": "A copy of the booking of the travel ticket to Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Prenotazione del biglietto di viaggio.",
+            "en": "A booking of the travel ticket."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-AL-tirana"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino albanese in possesso di nulla osta al lavoro emesso dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. L'Albania rientra tra i Paesi con accordo bilaterale in materia di lavoro (2008).",
+          "en": "Albanian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Albania is among the countries with a bilateral labour agreement (2008)."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Tirana — Ufficio Visti", "en": "Italian Embassy in Tirana — Visa Office" },
+          "address": { "it": "Tirana, Albania", "en": "Tirana, Albania" },
+          "hours": { "it": "Lun-Ven: 09:00-12:30", "en": "Mon-Fri: 09:00-12:30" },
+          "appointment": { "it": "Obbligatoria tramite il portale Prenot@Mi (https://prenotami.esteri.it).", "en": "Required via the Prenot@Mi portal (https://prenotami.esteri.it)." },
+          "website": "https://ambtirana.esteri.it",
+          "notes": {
+            "it": "Le domande possono essere presentate a partire da tre mesi dall'inizio del viaggio previsto.",
+            "en": "Applications may be submitted starting three months before the intended travel."
+          }
+        },
+        "method": { "it": "Appuntamento presso l'Ufficio Visti dell'Ambasciata a Tirana", "en": "Appointment at the Visa Office of the Embassy in Tirana" },
+        "processingTime": { "it": "Il visto è rilasciato con decorrenza dalla data di inizio del rapporto di lavoro.", "en": "The visa is issued effective from the start date of the employment." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato).", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended)." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).", "en": "The employer requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)." },
+          { "it": "Il cittadino albanese fissa un appuntamento su Prenot@Mi e presenta la domanda di visto per lavoro subordinato.", "en": "The Albanian citizen books an appointment on Prenot@Mi and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto con decorrenza dalla data di inizio del rapporto di lavoro.", "en": "The visa is issued effective from the start date of the employment." },
+          { "it": "Entrati in Italia, richiedere il permesso di soggiorno entro 8 giorni lavorativi dall'ingresso.", "en": "After entering Italy, apply for the residence permit within 8 working days of entry." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Tutti i documenti albanesi devono essere tradotti in italiano e, ove richiesto, apostillati dal Ministero degli Esteri albanese.",
+          "en": "All Albanian documents must be translated into Italian and, where required, apostilled by the Albanian Ministry of Foreign Affairs."
+        }
+      }
+    }
+  ]
+}

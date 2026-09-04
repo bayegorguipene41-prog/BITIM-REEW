@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "countryCode": "MA",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "MA-permesso-soggiorno-lavoro",
+      "countryCode": "MA",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino marocchino. Il Marocco è coperto da accordo bilaterale in materia di lavoro (2005) e rientra tra i Paesi ammessi al Decreto Flussi.",
+        "en": "Documents to work in Italy as a Moroccan citizen. Morocco is covered by a bilateral labour agreement (2005) and is among the countries admitted under the Decreto Flussi."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-MA-accordo",
+          "name": "Accordi migrazione lavoro — Accordo bilaterale Italia-Marocco (2005)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MA-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MA-vfs",
+          "name": "Checklist VISA TRAVAIL SUBORDONNÉ AVEC NULLA OSTA",
+          "authority": "VFS Global — partner ufficiale Ambasciata d'Italia a Rabat e Consolato Generale d'Italia a Casablanca",
+          "url": "https://www.vfsglobal.com/one-pager/italy/morocco/french/rabat/pdf/checklist-subordinate-nulla-osta.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MA-casablanca",
+          "name": "Visti — informazioni generali, modelli e modulistica",
+          "authority": "Consolato Generale d'Italia a Casablanca",
+          "url": "https://conscasablanca.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "medium",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MA-iom",
+          "name": "THAMM — Focus: l'ingresso in Italia dei lavoratori marocchini assunti",
+          "authority": "IOM Italia — THAMM",
+          "url": "https://italy.iom.int/sites/g/files/tmzbdl1096/files/documents/INTEGRATION/thamm_ingresso-lavoratori_rev.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "medium",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Formulario di richiesta del visto per lavoro subordinato, original, compilato e firmato dal richiedente (o dal legale rappresentante per minori).",
+            "en": "Original subordinate-work visa application form, fully completed and signed by the applicant (or legal representative for minors)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o sede consolare italiana competente.",
+            "en": "The 'Visa for Italy' portal or the competent Italian consular office."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photo" },
+          "description": {
+            "it": "Foto formato 3,5 x 4,5 cm su sfondo bianco, datata da meno di 3 mesi e conforme alle norme ICAO, da incollare sul formulario.",
+            "en": "Photo 3.5 x 4.5 cm on a white background, taken less than 3 months ago and compliant with ICAO rules, to be pasted on the form."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia 3,5 x 4,5 cm, sfondo bianco, recente.",
+            "en": "One 3.5 x 4.5 cm photo, white background, recent."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Datata da meno di 3 mesi.", "en": "Taken within the last 3 months." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto ordinario o documento di viaggio valido almeno 6 mesi dopo la scadenza del visto richiesto, emesso da meno di 10 anni e con almeno 2 pagine libere per il visto.",
+            "en": "Ordinary passport or recognized travel document valid at least 6 months after the requested visa expiry, issued less than 10 years ago and with at least 2 blank pages for the visa."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità marocchina preposta al rilascio dei passaporti.",
+            "en": "Moroccan authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra e relative fotocopie.",
+            "en": "A valid passport meeting the requirements above and its photocopies."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 6 mesi oltre la scadenza del visto.", "en": "Minimum 6 months beyond the visa expiry." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Passport photocopy" },
+          "description": {
+            "it": "Fotocopia delle pagine con i dati personali, incluse eventuali proroghe, annotazioni e le pagine con visti Schengen precedenti e timbri di ingresso/uscita.",
+            "en": "Photocopy of the personal-data pages, including any extensions, remarks, and pages with previous Schengen visas and entry/exit stamps."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria o stampante.",
+            "en": "Any copy shop or printer."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopie complete delle pagine richieste.",
+            "en": "Complete photocopies of the required pages."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "carta-identita-nazionale",
+          "code": "NATIONAL_ID",
+          "name": { "it": "Carta d'Identità Nazionale marocchina (CIN)", "en": "Moroccan National Identity Card (CIN)" },
+          "description": {
+            "it": "Fotocopia della Carta d'Identità Nazionale marocchina (CIN).",
+            "en": "Photocopy of the Moroccan National Identity Card (CIN)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità marocchina competente per il rilascio della CIN.",
+            "en": "Competent Moroccan authority for CIN issuance."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia fronte/retro della CIN.",
+            "en": "Front/back photocopy of the CIN."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta al lavoro (SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta per lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione italiano competente.",
+            "en": "Work authorization for subordinate employment issued by the competent Italian One-Stop Immigration Desk (SUI)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con il visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dal rilascio.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-MA-vfs"
+        },
+        {
+          "id": "apostille-traduzione",
+          "code": "APOSTILLE_TRANSLATION",
+          "name": { "it": "Apostille e traduzione dei documenti", "en": "Apostille and translation of documents" },
+          "description": {
+            "it": "Tutti i documenti forniti devono essere apostillati e tradotti in italiano da un traduttore riconosciuto dall'Ambasciata.",
+            "en": "All documents provided must be apostilled and translated into Italian by a translator recognized by the Embassy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Apostille: autorità marocchina competente; traduzione: traduttore riconosciuto dall'Ambasciata d'Italia.",
+            "en": "Apostille: competent Moroccan authority; translation: translator recognized by the Italian Embassy."
+          },
+          "whatYouNeed": {
+            "it": "Documenti marocchini apostillati e tradotti in italiano.",
+            "en": "Moroccan documents apostilled and translated into Italian."
+          },
+          "translationRequired": true,
+          "apostilleRequired": true,
+          "validityPeriod": { "it": "La validità dipende dal singolo documento.", "en": "Validity depends on the individual document." },
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MA-vfs"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino marocchino in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. Il Marocco rientra tra i Paesi con accordo bilaterale in materia di lavoro (2005).",
+          "en": "Moroccan citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Morocco is among the countries with a bilateral labour agreement (2005)."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Rabat o Consolato Generale d'Italia a Casablanca", "en": "Italian Embassy in Rabat or Italian Consulate General in Casablanca" },
+          "address": { "it": "Rabat, 2 Zankat Idriss Al Ahzar / Casablanca, 21 Avenue Hassan Souktani", "en": "Rabat, 2 Zankat Idriss Al Ahzar / Casablanca, 21 Avenue Hassan Souktani" },
+          "appointment": { "it": "Obbligatoria tramite VFS Global (canale ufficiale delle Rappresentanze italiane in Marocco).", "en": "Required via VFS Global (official channel of the Italian representations in Morocco)." },
+          "website": "https://ambrabat.esteri.it",
+          "notes": {
+            "it": "La richiesta del visto per lavoro subordinato si presenta dopo il rilascio del nulla osta, presso la Rappresentanza o tramite il partner VFS Global.",
+            "en": "The subordinate-work visa application is submitted after the nulla osta is issued, at the Representation or through the partner VFS Global."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite VFS Global / Rappresentanza diplomatico-consolare", "en": "Visa application via VFS Global / diplomatic-consular Representation" },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)." },
+          { "it": "Ottenuto il nulla osta, il cittadino marocchino presenta la domanda di visto per lavoro subordinato tramite VFS Global o la Rappresentanza italiana.", "en": "Once the nulla osta is obtained, the Moroccan citizen submits the visa application for subordinate work via VFS Global or the Italian Representation." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Tutti i documenti marocchini devono essere apostillati e tradotti in italiano da un traduttore riconosciuto.",
+          "en": "All Moroccan documents must be apostilled and translated into Italian by a recognized translator."
+        }
+      }
+    }
+  ]
+}

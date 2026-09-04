@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "countryCode": "TN",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "TN-permesso-soggiorno-lavoro",
+      "countryCode": "TN",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino tunisino. La Tunisia è coperta da accordo bilaterale in materia di lavoro (Memorandum Italia-Tunisia 2023) e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028.",
+        "en": "Documents to work in Italy as a Tunisian citizen. Tunisia is covered by a bilateral labour agreement (Italy-Tunisia Memorandum 2023) and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-TN-accordo",
+          "name": "Accordi migrazione lavoro — Memorandum Italia-Tunisia (2023)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TN-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TN-ambasciata",
+          "name": "Visti — informazioni generali e domanda di visto di lavoro",
+          "authority": "Ambasciata d'Italia a Tunisi",
+          "url": "https://ambtunisi.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TN-scheda",
+          "name": "Scheda VISA TRAVAIL SUBORDONNÉ AVEC NULLA OSTA",
+          "authority": "Ambasciata d'Italia a Tunisi",
+          "url": "https://ambtunisi.esteri.it/wp-content/uploads/2023/10/visa_travail_subordonn.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TN-almaviva",
+          "name": "Dove chiedere un visto — centro di incasso ALMAVIVA",
+          "authority": "Ambasciata d'Italia a Tunisi",
+          "url": "https://ambtunisi.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TN-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Formulario di richiesta del visto per lavoro subordinato, original, compilato e firmato dal richiedente.",
+            "en": "Original subordinate-work visa application form, fully completed and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o centro di incasso ALMAVIVA (Ambasciata d'Italia a Tunisi).",
+            "en": "The 'Visa for Italy' portal or the ALMAVIVA outsourcing centre (Italian Embassy in Tunis)."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-TN-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato passaporto", "en": "Passport photo" },
+          "description": {
+            "it": "Foto formato passaporto, recente e conforme alle norme ICAO, da incollare sul formulario.",
+            "en": "A passport-size photo, recent and compliant with ICAO rules, to be pasted on the form."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia formato passaporto, recente.",
+            "en": "One passport-size photograph, recent."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TN-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto valido almeno 3 mesi oltre la durata del soggiorno richiesto.",
+            "en": "Passport valid for at least 3 months beyond the intended stay."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità tunisina preposta al rilascio dei passaporti.",
+            "en": "Tunisian authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 3 mesi oltre la durata del soggiorno.", "en": "Minimum 3 months beyond the stay." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TN-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta per lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi.",
+            "en": "Work authorization for subordinate employment issued by the competent Italian One-Stop Immigration Desk (SUI), within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dal rilascio.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-TN-scheda"
+        },
+        {
+          "id": "traduzione-documenti",
+          "code": "APOSTILLE_TRANSLATION",
+          "name": { "it": "Lingua e fotocopie dei documenti", "en": "Language and photocopies of documents" },
+          "description": {
+            "it": "Ogni documento deve essere presentato in italiano o in francese, accompagnato dalla relativa fotocopia.",
+            "en": "Each document must be presented in Italian or French, accompanied by its photocopy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotocopie: qualsiasi centro copie; traduzione/lingua: documento redatto in italiano o francese o tradotto.",
+            "en": "Photocopies: any copy shop; language: document drafted in Italian or French or translated."
+          },
+          "whatYouNeed": {
+            "it": "Tutti i giustificativi presentati in italiano o francese con fotocopia.",
+            "en": "All supporting documents presented in Italian or French with a photocopy."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "La validità dipende dal singolo documento.", "en": "Validity depends on the individual document." },
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TN-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino tunisino in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. La Tunisia è coperta dal Memorandum Italia-Tunisia (2023) e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028).",
+          "en": "Tunisian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Tunisia is covered by the Italy-Tunisia Memorandum (2023) and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028)."
+        },
+        "whereToApply": {
+          "name": { "it": "Centro di incasso ALMAVIVA (per conto dell'Ambasciata d'Italia a Tunisi)", "en": "ALMAVIVA outsourcing centre (on behalf of the Italian Embassy in Tunis)" },
+          "address": { "it": "Tunisi, Rue Alphonse Laveran 8, 1002", "en": "Tunis, Rue Alphonse Laveran 8, 1002" },
+          "hours": { "it": "Lun-Ven: 09:00-17:00; Sab: 09:00-13:00", "en": "Mon-Fri: 09:00-17:00; Sat: 09:00-13:00" },
+          "appointment": { "it": "Obbligatoria tramite il centro ALMAVIVA (https://avs.com.tn). L'Ambasciata non rilascia appuntamenti né riceve domande via email.", "en": "Required via the ALMAVIVA centre (https://avs.com.tn). The Embassy does not issue appointments nor accept applications by email." },
+          "phone": "+216 70 103 710 / +216 31 303 041",
+          "website": "https://ambtunisi.esteri.it",
+          "notes": {
+            "it": "La richiesta del visto per lavoro subordinato si presenta dopo il rilascio del nulla osta, con appuntamento obbligatorio presso il centro ALMAVIVA.",
+            "en": "The subordinate-work visa application is submitted after the nulla osta is issued, by mandatory appointment at the ALMAVIVA centre."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite il centro di incasso ALMAVIVA (canale ufficiale dell'Ambasciata d'Italia a Tunisi)", "en": "Visa application via the ALMAVIVA outsourcing centre (official channel of the Italian Embassy in Tunis)" },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino tunisino fissa un appuntamento presso il centro ALMAVIVA e presenta la domanda di visto per lavoro subordinato.", "en": "Once the nulla osta is obtained, the Tunisian citizen books an appointment at the ALMAVIVA centre and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Ogni documento deve essere presentato in italiano o in francese con la relativa fotocopia. I documenti originali restano al lavoratore per i controlli in frontiera.",
+          "en": "Each document must be presented in Italian or French with its photocopy. Original documents remain with the worker for border checks."
+        }
+      }
+    }
+  ]
+}

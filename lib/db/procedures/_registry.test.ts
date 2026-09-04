@@ -31,11 +31,25 @@ describe("COUNTRY_PROCEDURE_INDEX — copertura paesi", () => {
     expect(COUNTRY_PROCEDURE_INDEX["DE"]?.status).toBe("needs_review");
   });
 
+  it("Albania è verified con una procedura reale (Fase 2B)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["AL"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["AL"]?.procedureCount).toBe(1);
+  });
+
+  it("Marocco è verified con una procedura reale (Fase 2B)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["MA"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["MA"]?.procedureCount).toBe(1);
+  });
+
+  it("Tunisia è verified con una procedura reale (Fase 2B)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["TN"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["TN"]?.procedureCount).toBe(1);
+  });
+
   it("i paesi senza dati sono 'unavailable' con procedureCount 0", () => {
-    // Tunisia, Marocco, Albania, Algeria, ecc. non hanno ancora dati → unavailable
+    // Algeria, ecc. non hanno ancora dati → unavailable
     expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.status).toBe("unavailable");
-    expect(COUNTRY_PROCEDURE_INDEX["TN"]?.status).toBe("unavailable");
-    expect(COUNTRY_PROCEDURE_INDEX["TN"]?.procedureCount).toBe(0);
+    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.procedureCount).toBe(0);
   });
 
   it("ogni meta ha la forma CountryProcedureMeta completa", () => {
@@ -56,13 +70,14 @@ describe("isCountryAvailable / getCountryMeta", () => {
     expect(isCountryAvailable("FR")).toBe(true);
   });
 
-  it("paese senza dati (Tunisia) NON è available", () => {
-    expect(isCountryAvailable("TN")).toBe(false);
+  it("paese senza dati (Algeria) NON è available", () => {
+    expect(isCountryAvailable("DZ")).toBe(false);
   });
 
-  it("Albania e Marocco NON sono available in Fase 2A (apice in 2B)", () => {
-    expect(isCountryAvailable("AL")).toBe(false);
-    expect(isCountryAvailable("MA")).toBe(false);
+  it("Albania, Marocco e Tunisia sono available (datati verificati)", () => {
+    expect(isCountryAvailable("AL")).toBe(true);
+    expect(isCountryAvailable("MA")).toBe(true);
+    expect(isCountryAvailable("TN")).toBe(true);
   });
 
   it("doesn't throw on null/undefined/empty", () => {
@@ -74,7 +89,7 @@ describe("isCountryAvailable / getCountryMeta", () => {
 
   it("normalizza a uppercase", () => {
     expect(isCountryAvailable("it")).toBe(true);
-    expect(getCountryMeta("de")?.status).toBe("needs_review");
+    expect(getCountryMeta("ma")?.status).toBe("verified");
   });
 });
 
@@ -84,6 +99,27 @@ describe("loadProceduresForCountry", () => {
     expect(procs.length).toBe(2);
   });
 
+  it("Albania → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("AL");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("AL-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Marocco → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("MA");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("MA-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Tunisia → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("TN");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("TN-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
   it("Francia → 1 procedura (needs_review)", async () => {
     const procs = await loadProceduresForCountry("FR");
     expect(procs.length).toBe(1);
@@ -91,7 +127,7 @@ describe("loadProceduresForCountry", () => {
   });
 
   it("paese senza dati → array vuoto", async () => {
-    expect(await loadProceduresForCountry("TN")).toEqual([]);
+    expect(await loadProceduresForCountry("DZ")).toEqual([]);
     expect(await loadProceduresForCountry("ZZ")).toEqual([]);
   });
 
@@ -110,13 +146,22 @@ describe("lookup — integrazione sync/async backward compat", () => {
     expect(de).toContain("DE-permesso-soggiorno-lavoro");
   });
 
-  it("proceduresForCountryAsync risolve per IT/FR/DE", async () => {
+  it("proceduresForCountryAsync risolve per IT/AL/MA/TN/FR/DE", async () => {
     const it = await proceduresForCountryAsync("IT");
     expect(it.length).toBeGreaterThanOrEqual(2);
+    const al = await proceduresForCountryAsync("AL");
+    expect(al.length).toBeGreaterThanOrEqual(1);
+    expect(al[0].id).toBe("AL-permesso-soggiorno-lavoro");
+    const ma = await proceduresForCountryAsync("MA");
+    expect(ma.length).toBeGreaterThanOrEqual(1);
+    expect(ma[0].id).toBe("MA-permesso-soggiorno-lavoro");
+    const tn = await proceduresForCountryAsync("TN");
+    expect(tn.length).toBeGreaterThanOrEqual(1);
+    expect(tn[0].id).toBe("TN-permesso-soggiorno-lavoro");
     const fr = await proceduresForCountryAsync("FR");
     expect(fr.length).toBeGreaterThanOrEqual(1);
-    const tn = await proceduresForCountryAsync("TN");
-    expect(tn.length).toBe(0);
+    const dz = await proceduresForCountryAsync("DZ");
+    expect(dz.length).toBe(0);
   });
 
   it("getProcedureById risolve ancora FR (unverified)", () => {
@@ -125,9 +170,12 @@ describe("lookup — integrazione sync/async backward compat", () => {
 });
 
 describe("PROCEDURES/PROCEDURES_ALL — nessuna regressione", () => {
-  it("PROCEDURES contiene Italia + unverified", () => {
+  it("PROCEDURES contiene Italia + Albania + Marocco + Tunisia + unverified", () => {
     const ids = PROCEDURES.map((p) => p.id);
     expect(ids).toContain("IT-permesso-soggiorno-lavoro");
+    expect(ids).toContain("AL-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MA-permesso-soggiorno-lavoro");
+    expect(ids).toContain("TN-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });
@@ -157,8 +205,32 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(loadCountryProceduresJson("DE").length).toBe(1);
   });
 
+  it("AL.json è la fonte delle procedure Albania (Fase 2B)", () => {
+    const json = loadCountryProceduresJson("AL");
+    expect(json.length).toBe(1);
+    expect(json.map((p) => p.id)).toEqual(expect.arrayContaining(["AL-permesso-soggiorno-lavoro"]));
+    expect(getCountryProceduresJson("AL")?.status).toBe("verified");
+    expect(json[0].sources[0].verificationStatus).toBe("verified");
+  });
+
+  it("MA.json è la fonte delle procedure Marocco (Fase 2B)", () => {
+    const json = loadCountryProceduresJson("MA");
+    expect(json.length).toBe(1);
+    expect(json.map((p) => p.id)).toEqual(expect.arrayContaining(["MA-permesso-soggiorno-lavoro"]));
+    expect(getCountryProceduresJson("MA")?.status).toBe("verified");
+    expect(json[0].sources[0].verificationStatus).toBe("verified");
+  });
+
+  it("TN.json è la fonte delle procedure Tunisia (Fase 2B)", () => {
+    const json = loadCountryProceduresJson("TN");
+    expect(json.length).toBe(1);
+    expect(json.map((p) => p.id)).toEqual(expect.arrayContaining(["TN-permesso-soggiorno-lavoro"]));
+    expect(getCountryProceduresJson("TN")?.status).toBe("verified");
+    expect(json[0].sources[0].verificationStatus).toBe("verified");
+  });
+
   it("paese senza file JSON → array vuoto", () => {
-    expect(loadCountryProceduresJson("TN")).toEqual([]);
+    expect(loadCountryProceduresJson("DZ")).toEqual([]);
     expect(loadCountryProceduresJson("ZZ")).toEqual([]);
     expect(loadCountryProceduresJson("")).toEqual([]);
   });
@@ -166,6 +238,9 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
   it("PROCEDURES (bundle) riflette la fonte JSON canonica", () => {
     const ids = PROCEDURES.map((p) => p.id);
     expect(ids).toContain("IT-permesso-soggiorno-lavoro");
+    expect(ids).toContain("AL-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MA-permesso-soggiorno-lavoro");
+    expect(ids).toContain("TN-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });

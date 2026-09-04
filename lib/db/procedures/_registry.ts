@@ -1,3 +1,16 @@
+// ==========================================
+// PROCEDURE REGISTRY — indice leggero + lazy loading
+// ==========================================
+//
+// Questo modulo contiene SOLO metadati (CountryProcedureMeta) per ogni paese:
+// quante procedure, quando verificato, stato di fiducia. I dettagli completi
+// delle procedure NON sono qui: vengono caricati tramite loadProceduresForCountry().
+//
+// In Fase 2A i dati sono ancora moduli TS nel bundle, quindi il loader risolve
+// in modo sincrono. Quando i dati passeranno a JSON esterni (Fase 2B), questo
+// loader userà import() dinamico e i chunk saranno scaricati on-demand:
+// il bundle iniziale conterrà solo ~KB di metadati.
+
 import { COUNTRIES } from "../countries";
 import { loadCountryProceduresJson } from "./json-loader";
 import { UNVERIFIED_PROCEDURES } from "./unverified";
@@ -12,6 +25,9 @@ import type { CountryProcedureMeta, Procedure, VerificationStatus } from "@/lib/
 
 const STATIC_STATUS: Record<string, VerificationStatus> = {
   IT: "verified",
+  AL: "verified",
+  MA: "verified",
+  TN: "verified",
   FR: "needs_review",
   DE: "needs_review",
 };
@@ -60,6 +76,9 @@ export function getCountryMeta(countryCode: string | undefined | null): CountryP
 
 const ALL_BUNDLE_DATA: Procedure[] = [
   ...loadCountryProceduresJson("IT"),
+  ...loadCountryProceduresJson("AL"),
+  ...loadCountryProceduresJson("MA"),
+  ...loadCountryProceduresJson("TN"),
   ...UNVERIFIED_PROCEDURES,
 ];
 

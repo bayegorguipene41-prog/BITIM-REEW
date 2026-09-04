@@ -5,8 +5,10 @@ import Link from "next/link";
 import { getTranslation } from "@/lib/i18n/translations";
 import { PROCEDURES } from "@/lib/db/procedures";
 import { COUNTRIES, countryName } from "@/lib/db/countries";
+import { getCountryMeta } from "@/lib/db/procedures/lookup";
 import { PROCEDURE_CATEGORIES } from "@/lib/data";
 import { localize } from "@/lib/data";
+import StatusBadge from "@/components/StatusBadge";
 import {
   getSavedProcedureIds,
   toggleSavedProcedure,
@@ -72,11 +74,15 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
           <label className="label" htmlFor="explore-country">{t.filter_country}</label>
           <select id="explore-country" className="input !py-2.5" value={country} onChange={(e) => setCountry(e.target.value)}>
             <option value="">{t.all}</option>
-            {COUNTRIES.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.flag} {countryName(c, lang)}
-              </option>
-            ))}
+            {COUNTRIES.map((c) => {
+              const meta = getCountryMeta(c.code);
+              return (
+                <option key={c.code} value={c.code}>
+                  {c.flag} {countryName(c, lang)}
+                  {meta && meta.status === "unavailable" ? ` · ${t.status_unavailable}` : ""}
+                </option>
+              );
+            })}
           </select>
         </div>
         <div>
@@ -144,7 +150,10 @@ export default function ExploreClient({ lang, initialCategory, initialCountry }:
                 >
                   <span className="text-3xl">{c?.flag || "🌍"}</span>
                   <div className="min-w-0">
-                    <h3 className="font-bold text-navy leading-tight">{name}</h3>
+                    <div className="flex items-start gap-2">
+                      <h3 className="font-bold text-navy leading-tight">{name}</h3>
+                      <StatusBadge status={p.dataSource} lang={lang} className="shrink-0 mt-0.5" />
+                    </div>
                     <p className="text-xs text-slate-400 mt-0.5">
                       {countryName(c || { code: "", it: "", en: "", flag: "" }, lang)}
                       {" · "}

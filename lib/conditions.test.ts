@@ -192,3 +192,84 @@ describe("applicableOf — filters a list", () => {
     expect(applicableOf(list, ctx()).map((e) => e.id)).toEqual(["a", "b"]);
   });
 });
+
+// ── nationalityGroup: il campo aggiunto al condition context ─────
+
+describe("evaluateCondition — nationalityGroup (array-based)", () => {
+  const ctxWithNationality = (groups: string[]) => ({
+    nationalityGroup: groups,
+    nationality: "IT",
+  });
+
+  it("in operator: eu in [eu, eea] → true", () => {
+    const context = ctxWithNationality(["eu", "eea"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "in", value: ["eu", "eea"] },
+        context
+      )
+    ).toBe(true);
+  });
+
+  it("in operator: foreign not in [eu, eea] → false", () => {
+    const context = ctxWithNationality(["foreign"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "in", value: ["eu", "eea"] },
+        context
+      )
+    ).toBe(false);
+  });
+
+  it("not_in operator: foreign not_in [eu, eea] → true", () => {
+    const context = ctxWithNationality(["foreign"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "not_in", value: ["eu", "eea"] },
+        context
+      )
+    ).toBe(true);
+  });
+
+  it("not_in operator: eu not_in [eu, eea] → false", () => {
+    const context = ctxWithNationality(["eu", "eea"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "not_in", value: ["eu", "eea"] },
+        context
+      )
+    ).toBe(false);
+  });
+
+  it("eq operator: direct array comparison is not supported (returns false)", () => {
+    // L'operatore eq confronta per strict equality, non per contenuto array.
+    // Per verificare l'appartenenza a un gruppo usare in/not_in.
+    const context = ctxWithNationality(["eu", "eea"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "eq", value: ["eu", "eea"] },
+        context
+      )
+    ).toBe(false);
+  });
+
+  it("contains operator: array ['eu','eea'] contains 'eu' → true", () => {
+    const context = ctxWithNationality(["eu", "eea"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "contains", value: "eu" },
+        context
+      )
+    ).toBe(true);
+  });
+
+  it("contains operator: array ['foreign'] contains 'eu' → false", () => {
+    const context = ctxWithNationality(["foreign"]);
+    expect(
+      evaluateCondition(
+        { field: "nationalityGroup", operator: "contains", value: "eu" },
+        context
+      )
+    ).toBe(false);
+  });
+});

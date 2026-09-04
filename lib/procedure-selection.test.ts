@@ -142,6 +142,9 @@ describe("REAL procedures: A → A, B → B, C → C, never another's data", () 
     expect(res.procedure.slug).toBe("permesso-soggiorno-lavoro");
     // C is a different country than A, even though they share a slug value.
     expect(res.procedure.countryCode).not.toBe(PROCEDURE_A.countryCode);
+    // Dopo la rimozione dei placeholder, FR/DE sono marcati explicitly
+    // needs_review, non più falsamente verificati.
+    expect(res.procedure.dataSource).toBe("needs_review");
   });
 
   it("A !== B: distinct ids and distinct datasets, no bleeding", () => {

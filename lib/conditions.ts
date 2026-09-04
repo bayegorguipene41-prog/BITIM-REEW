@@ -80,8 +80,19 @@ export function evaluateCondition(condition: Condition, context: ConditionContex
     case "neq":
       return !compareEquals(actual, expected);
     case "in":
+      // Se actual e un array, verifica se QUALSIASI elemento e presente in expected.
+      // Se actual e un singolo valore, verifica se e presente in expected.
+      if (Array.isArray(actual)) {
+        const expectedArr = toArray(expected);
+        return actual.some((v) => expectedArr.includes(v));
+      }
       return toArray(expected).includes(actual as string | number | boolean);
     case "not_in":
+      // Contrario di in: true se NESSUN elemento di actual e in expected.
+      if (Array.isArray(actual)) {
+        const expectedArr = toArray(expected);
+        return !actual.some((v) => expectedArr.includes(v));
+      }
       return !toArray(expected).includes(actual as string | number | boolean);
     case "gte":
       return compareNumeric(actual, expected, (a, b) => a >= b);
@@ -114,6 +125,8 @@ export function applicableOf<T extends Conditioned>(
   return entities.filter((e) => isApplicable(e, context));
 }
 
+import { resolveNationalityGroups } from "./db/nationality-groups";
+
 // Costruisce il contesto condizioni a partire da un profilo/questionario utente.
 // I campi non presenti nel profilo restano undefined (una condizione che li
 // verifica con eq/neq produce rispettivamente false/true senza eccezioni).
@@ -123,6 +136,7 @@ export function conditionContextFromProfile(profile: Record<string, unknown>): C
     maritalStatus: profile.maritalStatus,
     employment: profile.employment,
     nationality: profile.nationality,
+    nationalityGroup: resolveNationalityGroups(profile.nationality as string),
     destination: profile.destination ?? profile.country,
     category: profile.category,
     situation: profile.situation,

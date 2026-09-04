@@ -6,6 +6,8 @@ import { POPULAR_COUNTRIES } from "@/lib/data";
 import { getRecentCountries } from "@/lib/storage";
 import { getTranslation } from "@/lib/i18n/translations";
 import { countryName } from "@/lib/db/countries";
+import { getCountryMeta } from "@/lib/db/procedures/lookup";
+import StatusBadge from "@/components/StatusBadge";
 
 export default function CountrySelect({
   lang,
@@ -111,6 +113,9 @@ export default function CountrySelect({
                     >
                       <span className="text-xl">{c.flag}</span>
                       <span className="text-slate-700 font-medium">{countryName(c, lang)}</span>
+                      <span className="ml-auto">
+                        <StatusBadge status={getCountryMeta(c.code)?.status} lang={lang} />
+                      </span>
                     </button>
                   );
                 })}
@@ -140,6 +145,9 @@ export default function CountrySelect({
                     >
                       <span className="text-xl">{c.flag}</span>
                       <span className="text-slate-700 font-medium">{countryName(c, lang)}</span>
+                      <span className="ml-auto">
+                        <StatusBadge status={getCountryMeta(c.code)?.status} lang={lang} />
+                      </span>
                     </button>
                   );
                 })}
@@ -167,7 +175,10 @@ export default function CountrySelect({
                 >
                   <span className="text-xl">{c.flag}</span>
                   <span className="text-slate-700 font-medium">{countryName(c, lang)}</span>
-                  <span className="ml-auto text-xs text-slate-400">{c.code}</span>
+                  <span className="ml-auto flex items-center gap-2">
+                    <StatusBadge status={getCountryMeta(c.code)?.status} lang={lang} />
+                    <span className="text-xs text-slate-300">{c.code}</span>
+                  </span>
                 </button>
               ))}
             </div>

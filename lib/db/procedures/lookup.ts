@@ -1,5 +1,12 @@
 import type { Procedure } from "@/lib/types";
 import { PROCEDURES_ALL } from "./index";
+import {
+  COUNTRY_PROCEDURE_INDEX,
+  isCountryAvailable,
+  getCountryMeta,
+  loadProceduresForCountry,
+} from "./_registry";
+import type { CountryProcedureMeta } from "@/lib/types";
 
 /**
  * Resolve a Procedure by its stable internal id (`procedure.id`).
@@ -18,8 +25,35 @@ export function getProcedureById(id: string | undefined | null): Procedure | und
  * All distinct procedures available for a destination country code (e.g. "IT").
  * Used by the wizard to let the user pick a concrete procedure and by the
  * explore/search pages. Does not include duplicates.
+ *
+ * SYNC backward-compatible version (Fase 2A): legge dal bundle.
  */
 export function proceduresForCountry(countryCode: string | undefined | null): Procedure[] {
   if (!countryCode) return [];
   return PROCEDURES_ALL.filter((p) => p.countryCode === countryCode);
+}
+
+// ── Registry (metadati leggeri, sempre disponibili senza caricare i dati) ──
+
+export { COUNTRY_PROCEDURE_INDEX, isCountryAvailable, getCountryMeta };
+
+/**
+ * Metadati leggeri per un paese dal registro. Può restare undefined per i paesi
+ * che non compaiono neanche in COUNTRIES.
+ */
+export function countryProcedureMeta(code: string | undefined | null): CountryProcedureMeta | undefined {
+  return getCountryMeta(code);
+}
+
+/**
+ * Async lookup — carica i dettagli completi delle procedure per un paese
+ * (code-splitting). In Fase 2A risolve sincrono dal bundle; in Fase 2B
+ * caricherà i JSON per paese on-demand.
+ */
+export async function proceduresForCountryAsync(
+  countryCode: string | undefined | null
+): Promise<Procedure[]> {
+  const sync = proceduresForCountry(countryCode);
+  if (sync.length > 0) return sync;
+  return loadProceduresForCountry(countryCode);
 }

@@ -1,5 +1,6 @@
 export type NecessityType = "required" | "conditional" | "recommended";
 export type ConfidenceLevel = "high" | "medium" | "low";
+export type VerificationStatus = "verified" | "partial" | "needs_review" | "unavailable";
 
 import type { Condition } from "./conditions";
 
@@ -26,6 +27,7 @@ export interface Source {
   url: string;
   lastVerifiedAt: string;
   confidence: ConfidenceLevel;
+  verificationStatus?: VerificationStatus;
 }
 
 export interface DocumentRequirement {
@@ -83,6 +85,17 @@ export interface Procedure {
   // Condizione opzionale di applicabilità al contesto utente corrente.
   // Assente → procedura sempre applicabile.
   condition?: Condition;
+  // Livello di fiducia globale dei dati per questa procedura.
+  dataSource?: VerificationStatus;
+  // Nota sull'applicabilità in base alla nazionalità (es. "Solo per cittadini extra-UE").
+  applicabilityNote?: LocalizedText;
+}
+
+export interface CountryProcedureMeta {
+  countryCode: string;
+  procedureCount: number;
+  lastVerified: string;
+  status: VerificationStatus;
 }
 
 export interface UserProfileData {

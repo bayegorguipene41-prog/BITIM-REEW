@@ -15,8 +15,9 @@ import {
   type SavedApplication,
   type SavedDoc,
 } from "@/lib/storage";
-import { proceduresForCountry } from "@/lib/db/procedures/lookup";
+import { proceduresForCountry, getCountryMeta } from "@/lib/db/procedures/lookup";
 import { localize } from "@/lib/data";
+import StatusBadge from "@/components/StatusBadge";
 
 const STEP_LABELS = ["wiz_dest_title", "wiz_origin_question", "wiz_nationality_question", "wiz_procedure_question", "wiz_personal_title"];
 
@@ -72,6 +73,21 @@ export default function WizardPage({ lang }: { lang: string }) {
     () => availableProcedures.find((p) => p.id === profile.procedureId),
     [availableProcedures, profile.procedureId]
   );
+
+  // Stato del paese selezionato (verified / needs_review / partial / unavailable).
+  // Quando il paese non ha ancora dati (unavailable) l'utente non deve restare
+  // bloccato: deve poter tornare al passo 1 e scegliere un altro paese.
+  const destinationMeta = useMemo(
+    () => getCountryMeta(profile.destination),
+    [profile.destination]
+  );
+
+  // Riporta al passo 1 per permettere di cambiare destinazione. Mantiene il
+  // resto del profilo per non far perdere i dati già inseriti.
+  const changeCountry = () => {
+    patch({ destination: "", procedureId: "", category: "", step: 1 });
+    setStep(1);
+  };
 
   useEffect(() => {
     const saved = loadWizard();
@@ -338,7 +354,29 @@ export default function WizardPage({ lang }: { lang: string }) {
         {step === 4 && (
           <Step title={t.wiz_procedure_question} subtitle="">
             {availableProcedures.length === 0 ? (
-              <p className="text-danger">{t.no_results}</p>
+              <div className="space-y-4">
+                <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+                  <p className="font-semibold text-amber-800">
+                    {t.unavailable_title}
+                  </p>
+                  <p className="text-sm text-amber-700 mt-1">
+                    {t.unavailable_hint}
+                  </p>
+                  {destinationMeta && (
+                    <div className="mt-2">
+                      <StatusBadge status={destinationMeta.status} lang={lang} />
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <button className="btn-primary flex-1" onClick={changeCountry}>
+                    {t.change_country}
+                  </button>
+                  <button className="btn-secondary flex-1" onClick={back}>
+                    {t.back}
+                  </button>
+                </div>
+              </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {availableProcedures.map((p) => (

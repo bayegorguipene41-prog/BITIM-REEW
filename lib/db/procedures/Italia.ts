@@ -1,6 +1,26 @@
 // ==========================================
-// PROCEDURE PER L'ITALIA
+// ⚠️ ATTENZIONE — FONTE LEGACY (SOLO TEST E BACKWARD-COMPAT)
 // ==========================================
+//
+// QUESTO FILE NON È LA FONTE DI VERITÀ DEL RUNTIME.
+//
+// I dati ufficiali per l'Italia ora vivono in:
+//     data/procedures/IT.json   ← FONTE DI VERITÀ (runtime)
+//
+// Il runtime legge da IT.json tramite lib/db/procedures/json-loader.ts →
+// italiaData.ts. Questo file (Italia.ts) serve SOLO a due scopi residuali:
+//
+//   1. Fornire `PROCEDURE_ITALIA` (modello legacy `Procedura`) a
+//      PROCEDURES_ALL in lib/db/procedures/index.ts (backward-compatibility
+//      col formato storico, non più fonte del runtime).
+//   2. Essere importato direttamente dai TEST impostati prima della migrazione
+//      a JSON (lib/procedure-selection.test.ts, lib/procedure-applicability.ts)
+//      che verificano LOGICA (condizioni, applicabilità), non contenuti.
+//
+// ⚠️ REGOLA: se vuoi aggiornare i CONTENUTI (testi, requisiti, fonti, costi,
+// tempi) dell'Italia, modifica IT.json, NON questo file. Modifica qui SOLO se
+// stai lavorando a compatibilità legacy o ai test. Altrimenti incorri in una
+// "deriva dati" tra Italia.ts e IT.json che l'app non coglie.
 
 import type { Procedure } from "@/lib/types";
 import type { Procedura } from '../tipi';

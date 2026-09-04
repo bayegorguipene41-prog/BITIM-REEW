@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { PROCEDURES, PROCEDURES_ALL } from "./db/procedures";
 import { procedureItalia, procedureItaliaRicongiungimento } from "./db/procedures/Italia";
 import { isApplicable, applicableOf, conditionContextFromProfile, type Condition } from "./conditions";
+import { resolveNationalityGroups } from "./db/nationality-groups";
 import { assessRequirements } from "./engine";
 import type { Procedure } from "./types";
 
@@ -100,5 +101,77 @@ describe("Procedure applicability — dati reali (regression / backward compat)"
       (p) => p.id === "IT-ricongiungimento-familiare" && p.condition !== undefined
     );
     expect(found).toBe(true);
+  });
+});
+
+// ── nationalityGroup: condizioni basate sulla nazionalità ────────
+
+describe("Procedure applicability — nationalityGroup", () => {
+  // Procedura fittizia applicabile solo a cittadini EU/EEA
+  const pEuOnly: Procedure = {
+    id: "p-eu-only",
+    countryCode: "XX",
+    slug: "eu-only",
+    title: { it: "Solo EU", en: "EU only" },
+    description: { it: "", en: "" },
+    category: "other",
+    sources: [],
+    requirements: [],
+    condition: {
+      field: "nationalityGroup",
+      operator: "in",
+      value: ["eu", "eea"],
+    },
+  };
+
+  // Procedura fittizia applicabile solo a stranieri extra-UE
+  const pForeignOnly: Procedure = {
+    id: "p-foreign-only",
+    countryCode: "XX",
+    slug: "foreign-only",
+    title: { it: "Solo stranieri", en: "Foreign only" },
+    description: { it: "", en: "" },
+    category: "other",
+    sources: [],
+    requirements: [],
+    condition: {
+      field: "nationalityGroup",
+      operator: "not_in",
+      value: ["eu", "eea"],
+    },
+  };
+
+  it("EU citizen context: eu-only is applicable, foreign-only is not", () => {
+    const ctx = conditionContextFromProfile({ nationality: "IT" });
+    expect(isApplicable(pEuOnly, ctx)).toBe(true);
+    expect(isApplicable(pForeignOnly, ctx)).toBe(false);
+  });
+
+  it("non-EU citizen context: foreign-only is applicable, eu-only is not", () => {
+    const ctx = conditionContextFromProfile({ nationality: "IN" });
+    expect(isApplicable(pEuOnly, ctx)).toBe(false);
+    expect(isApplicable(pForeignOnly, ctx)).toBe(true);
+  });
+
+  it("bilateral citizen context (Morocco): foreign-only is applicable, eu-only is not", () => {
+    const ctx = conditionContextFromProfile({ nationality: "MA" });
+    expect(isApplicable(pEuOnly, ctx)).toBe(false);
+    expect(isApplicable(pForeignOnly, ctx)).toBe(true);
+  });
+
+  it("conditionContextFromProfile includes nationalityGroup for EU", () => {
+    const ctx = conditionContextFromProfile({ nationality: "IT" }) as any;
+    expect(ctx.nationalityGroup).toEqual(expect.arrayContaining(["eu", "eea"]));
+  });
+
+  it("conditionContextFromProfile includes nationalityGroup for non-EU", () => {
+    const ctx = conditionContextFromProfile({ nationality: "IN" }) as any;
+    expect(ctx.nationalityGroup).toEqual(["foreign"]);
+  });
+
+  it("resolveNationalityGroups is used inside conditionContextFromProfile", () => {
+    const ctx = conditionContextFromProfile({ nationality: "CH" }) as any;
+    const expected = resolveNationalityGroups("CH");
+    expect(ctx.nationalityGroup).toEqual(expected);
   });
 });

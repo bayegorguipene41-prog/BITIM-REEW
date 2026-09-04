@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "countryCode": "DE",
+  "updatedAt": "2026-09-03",
+  "status": "needs_review",
+  "procedures": [
+    {
+      "id": "DE-permesso-soggiorno-lavoro",
+      "countryCode": "DE",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Informazioni non ancora verificate per questo paese. Dati in fase di revisione.",
+        "en": "Information not yet verified for this country. Data under review."
+      },
+      "category": "residence",
+      "dataSource": "needs_review",
+      "sources": [
+        {
+          "id": "source-unverified",
+          "name": "Fonte da verificare",
+          "authority": "",
+          "url": "",
+          "lastVerifiedAt": "",
+          "confidence": "low",
+          "verificationStatus": "needs_review"
+        }
+      ],
+      "requirements": []
+    }
+  ]
+}

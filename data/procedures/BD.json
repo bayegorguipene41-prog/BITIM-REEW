@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "countryCode": "BD",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "BD-permesso-soggiorno-lavoro",
+      "countryCode": "BD",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino del Bangladesh. Il Bangladesh è coperto da accordo bilaterale in materia di lavoro (Accordo Italia-Bangladesh 2025) e rientra tra i Paesi ammessi al Decreto Flussi 2026-2028. La scheda dell'Ambasciata d'Italia a Dhaka copre il visto nazionale di lavoro subordinato (tipo D).",
+        "en": "Documents to work in Italy as a Bangladeshi citizen. Bangladesh is covered by a bilateral labour agreement (Italy-Bangladesh agreement 2025) and is among the countries admitted under the Decreto Flussi 2026-2028. The checklist of the Italian Embassy in Dhaka covers the national subordinate-work visa (type D)."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-BD-accordo",
+          "name": "Accordi migrazione lavoro — Accordo Italia-Bangladesh (2025)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita-immigrazione/focus/accordo-italia-bangladesh-nel-campo-della-migrazione-e-della",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-scegli",
+          "name": "Scegli il visto corretto e controlla i documenti necessari (aggiornato il 10/08/2026)",
+          "authority": "Ambasciata d'Italia a Dhaka",
+          "url": "https://ambdhaka.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-scheda",
+          "name": "Check-list for Work VISA ('D' type) — visto per lavoro subordinato",
+          "authority": "Ambasciata d'Italia a Dhaka",
+          "url": "https://ambdhaka.esteri.it/wp-content/uploads/2026/07/Subordinate-work-type-D.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-dove",
+          "name": "Dove chiedere un visto — VFS Global (unica sede di presentazione)",
+          "authority": "Ambasciata d'Italia a Dhaka",
+          "url": "https://ambdhaka.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote per i Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-BD-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto nazionale (tipo D)", "en": "National (D-type) visa application form" },
+          "description": {
+            "it": "Formulario di richiesta del visto nazionale (tipo D), in originale, debitamente compilato in lingua inglese o italiana e firmato dal richiedente.",
+            "en": "Original national (D-type) visa application form, duly filled in English or Italian and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o VFS Global (canale ufficiale dell'Ambasciata d'Italia a Dhaka).",
+            "en": "The 'Visa for Italy' portal or VFS Global (official channel of the Italian Embassy in Dhaka)."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-BD-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photo" },
+          "description": {
+            "it": "Una fotografia recente in formato ICAO (3.5 x 4.0 cm, foto a colori con sfondo bianco, scattata negli ultimi 6 mesi).",
+            "en": "One recent photo in ICAO format (3.5 x 4.0 cm, colour photo with white background, taken within the last 6 months)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente in formato ICAO.",
+            "en": "One recent ICAO-format photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Scattata negli ultimi 6 mesi.", "en": "Taken within the last 6 months." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-BD-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto in corso di validità con almeno tre mesi di validità residua dalla data di scadenza della validità del visto e almeno due pagine visti non utilizzate.",
+            "en": "Passport valid for at least an additional three months from the date of expiry of the visa's validity, with at least two blank and unmarked visa pages."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità bangladese preposta al rilascio dei passaporti.",
+            "en": "Bangladeshi authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 3 mesi oltre la scadenza di validità del visto.", "en": "Minimum 3 months beyond the visa's expiry." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-BD-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Copia della pagina con i dati biometrici", "en": "Copy of the bio-data page" },
+          "description": {
+            "it": "Allegare una copia della pagina del passaporto contenente i dati biometrici.",
+            "en": "Submit one copy of the passport page containing the bio-data."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Copia della pagina anagrafica (bio-data) del passaporto.",
+            "en": "Copy of the passport bio-data page."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-BD-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Copia del nulla osta per lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi. Verificare l'esattezza dei dati anagrafici (nome, cognome, sesso e data di nascita) per evitare ritardi nel rilascio.",
+            "en": "Copy of the work authorization (nulla osta) for subordinate employment issued by the competent Italian One-Stop Immigration Desk (SUI), within the Decreto Flussi. Check the accuracy of the applicant's personal data (name, surname, gender and date of birth) to avoid delays in visa issuance."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Copia del nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Copy of the nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dal rilascio.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-BD-scheda"
+        },
+        {
+          "id": "esperienza-lavorativa",
+          "code": "PROOF_OF_WORK_EXPERIENCE",
+          "name": { "it": "Prova di esperienza lavorativa o qualifica", "en": "Proof of work experience or qualification" },
+          "description": {
+            "it": "Documenti e certificati relativi al settore lavorativo nel quale il richiedente intende lavorare in Italia.",
+            "en": "Documents and certificates related to the job sector in which the applicant intends to work in Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Precedenti datori di lavoro, istituti di formazione o autorità competenti del settore.",
+            "en": "Previous employers, training institutions or the competent sectoral authorities."
+          },
+          "whatYouNeed": {
+            "it": "Certificati di esperienza o qualifica del settore di impiego previsto in Italia.",
+            "en": "Experience or qualification certificates for the sector of employment in Italy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-BD-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino del Bangladesh in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. Il Bangladesh è coperto dall'Accordo Italia-Bangladesh (2025) ed è tra i Paesi ammessi al Decreto Flussi 2026-2028.",
+          "en": "Bangladeshi citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Bangladesh is covered by the Italy-Bangladesh agreement (2025) and is among the countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global — Visa Application Centre (per conto dell'Ambasciata d'Italia a Dhaka)", "en": "VFS Global — Visa Application Centre (on behalf of the Italian Embassy in Dhaka)" },
+          "appointment": { "it": "Obbligatoria tramite il sito VFS Global indicato nella pagina 'Dove chiedere un visto' dell'Ambasciata (unica sede di presentazione delle domande).", "en": "Mandatory via the VFS Global website indicated on the Embassy's 'Where to apply' page (single submission point for applications)." },
+          "website": "https://ambdhaka.esteri.it",
+          "notes": {
+            "it": "VFS Global è l'unica sede di presentazione delle domande di visto per l'Italia in Bangladesh. La richiesta di visto per lavoro subordinato si presenta dopo il rilascio del nulla osta.",
+            "en": "VFS Global is the single submission point for Italy visa applications in Bangladesh. The subordinate-work visa application is submitted after the nulla osta is issued."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite il Visa Application Centre VFS Global (canale ufficiale dell'Ambasciata d'Italia a Dhaka)", "en": "Visa application via the VFS Global Visa Application Centre (official channel of the Italian Embassy in Dhaka)" },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino del Bangladesh fissa un appuntamento presso VFS Global e presenta la domanda di visto per lavoro subordinato.", "en": "Once the nulla osta is obtained, the Bangladeshi citizen books an appointment at VFS Global and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Il Decreto Legge 145/2024 ha introdotto la conferma dell'offerta di lavoro da parte del datore di lavoro in Italia, richiesta dal SUI entro 15 giorni dal completamento della domanda. Lo stesso richiedente non può presentare più di una domanda di visto nello stesso momento, anche con due passaporti diversi. L'Ambasciata si riserva di richiedere documenti supplementari.",
+          "en": "Law Decree 145/2024 introduced the requirement of confirmation of the job offer by the employer in Italy, requested by the SUI within 15 days of the application being completed. The same applicant cannot submit more than one visa application at the same time, even with two different passports. The Embassy reserves the right to request supplementary documents."
+        }
+      }
+    }
+  ]
+}

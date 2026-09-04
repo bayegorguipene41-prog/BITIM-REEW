@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "countryCode": "PH",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "PH-permesso-soggiorno-lavoro",
+      "countryCode": "PH",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino filippino. Le Filippine sono coperte da accordo bilaterale in materia di lavoro (Accordo Italia-Filippine 2017) e rientrano tra i Paesi ammessi al Decreto Flussi 2026-2028. La scheda dell'Ambasciata d'Italia a Manila copre sia il visto Schengen tipo C (fino a 90 giorni) sia il visto nazionale tipo D (oltre 90 giorni).",
+        "en": "Documents to work in Italy as a Filipino citizen. The Philippines are covered by a bilateral labour agreement (Italy-Philippines agreement 2017) and are among the countries admitted under the Decreto Flussi 2026-2028. The checklist of the Italian Embassy in Manila covers both the Schengen type C visa (up to 90 days) and the national type D visa (over 90 days)."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-PH-accordo",
+          "name": "Accordo Italia-Filippine in materia di lavoro e migrazione (2017)",
+          "authority": "Ministero degli Affari Esteri e della Cooperazione Internazionale",
+          "url": "https://atrio.esteri.it/Search/Allegati/50964",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-scegli",
+          "name": "Scegli il visto corretto e controlla i documenti necessari",
+          "authority": "Ambasciata d'Italia a Manila",
+          "url": "https://ambmanila.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-scheda",
+          "name": "Visto per lavoro subordinato — Schengen tipo C o visto nazionale tipo D (checklist)",
+          "authority": "Ambasciata d'Italia a Manila",
+          "url": "https://ambmanila.esteri.it/wp-content/uploads/2026/08/C-D_WORK_ITA.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-dove",
+          "name": "Dove chiedere un visto — VFS Global (Manila, Cebu, Batangas, Davao)",
+          "authority": "Ambasciata d'Italia a Manila",
+          "url": "https://ambmanila.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/6752-2/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote per i Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PH-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application module" },
+          "description": {
+            "it": "Modulo di richiesta del visto scaricato e compilato senza lasciare campi vuoti (indicare 'N/A' se non applicabile): modulo Schengen per il visto tipo C (fino a 90 giorni) oppure modulo per il visto nazionale per il tipo D (oltre 90 giorni).",
+            "en": "Visa application module downloaded and completed without leaving empty fields (write 'N/A' when not applicable): Schengen module for the type C visa (up to 90 days) or the national visa module for type D (over 90 days)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o VFS Global (canale ufficiale dell'Ambasciata d'Italia a Manila).",
+            "en": "The 'Visa for Italy' portal or VFS Global (official channel of the Italian Embassy in Manila)."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato in ogni campo, firmato negli appositi riquadri.",
+            "en": "A module filled in every field, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato passaporto", "en": "Passport photo" },
+          "description": {
+            "it": "Una fotografia recente a colori di formato 3.5 x 4.0 cm conforme agli standard ICAO, con sfondo bianco e orecchie visibili.",
+            "en": "One recent colour photo of 3.5 x 4.0 cm compliant with ICAO standards, with white background and visible ears."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente in formato ICAO.",
+            "en": "One recent ICAO-format photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Documento di viaggio (passaporto)", "en": "Travel document (passport)" },
+          "description": {
+            "it": "Passaporto attuale valido (ed eventuali passaporti precedenti), con scadenza almeno tre mesi successiva al periodo di validità del visto richiesto. Si raccomanda una validità residua di almeno sei mesi, come richiesto dal Philippine Bureau of Immigration.",
+            "en": "Current valid passport (and any previous passports), with expiry at least three months after the validity period of the visa requested. A remaining validity of at least six months is recommended, as required by the Philippine Bureau of Immigration."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità filippina preposta al rilascio dei passaporti.",
+            "en": "Philippine authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la validità del visto; consigliati 6 mesi.", "en": "At least 3 months beyond the visa validity; 6 months recommended." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Passport photocopy" },
+          "description": {
+            "it": "Fotocopia della pagina anagrafica del passaporto.",
+            "en": "Photocopy of the passport bio-data page."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia della pagina anagrafica del passaporto.",
+            "en": "Photocopy of the passport bio-data page."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta in corso di validità rilasciato dallo Sportello Unico per l'Immigrazione in Italia. Da utilizzare entro sei mesi dal rilascio per le domande nelle quote del Decreto Flussi (articoli 22 e 24 del D.Lgs. 286/1998) oppure entro quattro mesi per i casi dell'articolo 27. Il nulla osta non è richiesto per marittimi e membri dell'equipaggio, professionisti sportivi, personale domestico di diplomatici e consoli (Convenzioni di Vienna 1961/1963) e corrispondenti esteri.",
+            "en": "Valid work authorization (nulla osta) issued by the One-Stop Immigration Desk (SUI) in Italy. It must be used within six months of issue for Decreto Flussi applications (articles 22 and 24 of Legislative Decree 286/1998) or within four months for article 27 cases. The nulla osta is not required for seafarers and crew members, sports professionals, domestic staff of diplomats and consuls (Vienna Conventions 1961/1963) and foreign correspondents."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI in corso di validità, da presentare con la domanda di visto.",
+            "en": "Valid nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Sei mesi dal rilascio (Decreto Flussi) o quattro mesi (art. 27).", "en": "Six months from issue (Decreto Flussi) or four months (art. 27)." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "prova-alloggio",
+          "code": "ACCOMMODATION_PROOF",
+          "name": { "it": "Prova dell'alloggio", "en": "Proof of accommodation" },
+          "description": {
+            "it": "Conferma della prenotazione alberghiera, voucher alberghiero oppure lettera del soggetto ospitante attestante la disponibilità dell'alloggio.",
+            "en": "Hotel booking confirmation, hotel voucher or a letter from the hosting party attesting the availability of accommodation."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Albergo/struttura ricettiva o soggetto ospitante in Italia.",
+            "en": "Hotel/accommodation facility or hosting party in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Documento che attesti la disponibilità di un alloggio in Italia.",
+            "en": "A document attesting the availability of accommodation in Italy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "lettera-invito",
+          "code": "INVITATION_LETTER",
+          "name": { "it": "Lettera di invito", "en": "Invitation letter" },
+          "description": {
+            "it": "Lettera di invito personalizzata, recante i dati personali e il ruolo della persona invitata, il nome, i recapiti e la qualifica del firmatario, nonché lo scopo e la durata della visita o dell'attività.",
+            "en": "Personalized invitation letter bearing the personal data and role of the invited person, the name, contacts and qualification of the signatory, as well as the purpose and duration of the visit or activity."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Datore di lavoro o soggetto invitante in Italia.",
+            "en": "Employer or inviting party in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Lettera di invito firmata con dati e qualifica del firmatario.",
+            "en": "Invitation letter signed with the signatory's data and qualification."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "assicurazione-sanitaria",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione sanitaria (solo visti Schengen)", "en": "Health insurance (Schengen visas only)" },
+          "description": {
+            "it": "Assicurazione sanitaria con copertura minima di 30.000 EUR valida per l'intero spazio Schengen per spese di ricovero d'urgenza e rimpatrio. La compagnia assicurativa deve essere inclusa nell'elenco delle compagnie accreditate.",
+            "en": "Health insurance with a minimum coverage of EUR 30,000 valid for the whole Schengen area for emergency hospitalization and repatriation costs. The insurance company must be included in the list of accredited companies."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Compagnia di assicurazione accreditata.",
+            "en": "Accredited insurance company."
+          },
+          "whatYouNeed": {
+            "it": "Polizza con copertura minima di 30.000 EUR per l'intero spazio Schengen.",
+            "en": "A policy with a minimum EUR 30,000 coverage for the whole Schengen area."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile; alcune società coprono le spese di viaggio.", "en": "Varies; some companies cover travel costs." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PH-scheda"
+        },
+        {
+          "id": "diritti-visto",
+          "code": "VISA_FEES",
+          "name": { "it": "Pagamento dei diritti per il visto", "en": "Payment of visa fees" },
+          "description": {
+            "it": "Pagamento dell'importo per la trattazione della domanda di visto.",
+            "en": "Payment of the visa processing fee."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "VFS Global, al momento della presentazione della domanda.",
+            "en": "VFS Global, at the time of application submission."
+          },
+          "whatYouNeed": {
+            "it": "Pagamento dei diritti per la trattazione della domanda.",
+            "en": "Payment of the visa processing fee."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "sourceId": "source-PH-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino filippino in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. Le Filippine sono coperte dall'Accordo Italia-Filippine (2017) e rientrano tra i Paesi ammessi al Decreto Flussi 2026-2028.",
+          "en": "Filipino citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. The Philippines are covered by the Italy-Philippines agreement (2017) and are among the countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global — Visa Application Centres (per conto dell'Ambasciata d'Italia a Manila)", "en": "VFS Global — Visa Application Centres (on behalf of the Italian Embassy in Manila)" },
+          "appointment": { "it": "Obbligatoria tramite il sito VFS Global indicato nella pagina 'Dove chiedere un visto' dell'Ambasciata.", "en": "Mandatory via the VFS Global website indicated on the Embassy's 'Where to apply' page." },
+          "website": "https://ambmanila.esteri.it",
+          "notes": {
+            "it": "Quattro centri VFS Global: Manila, Cebu, Batangas e Davao. La richiesta di visto per lavoro subordinato si presenta dopo il rilascio del nulla osta.",
+            "en": "Four VFS Global centres: Manila, Cebu, Batangas and Davao. The subordinate-work visa application is submitted after the nulla osta is issued."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite i Visa Application Centres VFS Global (canale ufficiale dell'Ambasciata d'Italia a Manila)", "en": "Visa application via the VFS Global Visa Application Centres (official channel of the Italian Embassy in Manila)" },
+        "processingTime": { "it": "Termine massimo di trattazione: 30 giorni (indicato nella scheda dell'Ambasciata).", "en": "Maximum processing time: 30 days (as stated in the Embassy checklist)." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino filippino fissa un appuntamento presso VFS Global e presenta la domanda di visto per lavoro subordinato.", "en": "Once the nulla osta is obtained, the Filipino citizen books an appointment at VFS Global and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Non potranno essere accettate domande di visto con data di viaggio prevista superiore a sei mesi dalla data di presentazione della domanda. I documenti originali restano al lavoratore per i controlli in frontiera.",
+          "en": "Visa applications with an intended travel date more than six months from the date of submission will not be accepted. Original documents remain with the worker for border checks."
+        }
+      }
+    }
+  ]
+}

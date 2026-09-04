@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "countryCode": "SN",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "SN-permesso-soggiorno-lavoro",
+      "countryCode": "SN",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino senegalese nell'ambito del Decreto Flussi 2026-2028. Attualmente non risulta attivo un accordo bilaterale in materia di lavoro tra Italia e Senegal; il visto per lavoro subordinato viene rilasciato previo nulla osta dello Sportello Unico per l'Immigrazione.",
+        "en": "Documents to work in Italy as a Senegalese citizen within the Decreto Flussi 2026-2028. No bilateral labour agreement between Italy and Senegal is currently active; the subordinate-work visa is issued upon a nulla osta from the One-Stop Immigration Desk."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-SN-accordi",
+          "name": "Accordi migrazione lavoro — nessun accordo bilaterale attivo con il Senegal",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-scegli",
+          "name": "Scegli il visto corretto e controlla i documenti necessari",
+          "authority": "Ambasciata d'Italia a Dakar",
+          "url": "https://ambdakar.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-scheda",
+          "name": "Visto per lavoro subordinato — documenti necessari",
+          "authority": "Ambasciata d'Italia a Dakar",
+          "url": "https://ambdakar.esteri.it/wp-content/uploads/2026/08/lavoro-subordinato_ITA.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-dove",
+          "name": "Dove chiedere un visto — BLS International o Ufficio Visti dell'Ambasciata",
+          "authority": "Ambasciata d'Italia a Dakar",
+          "url": "https://ambdakar.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote per i Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-SN-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di domanda di visto", "en": "Visa application form" },
+          "description": {
+            "it": "Formulario di domanda di visto per lavoro subordinato, debitamente compilato e firmato.",
+            "en": "Subordinate-work visa application form, duly completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o BLS International / Ufficio Visti dell'Ambasciata d'Italia a Dakar.",
+            "en": "The 'Visa for Italy' portal or BLS International / the Visa Office of the Italian Embassy in Dakar."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia recente formato ICAO", "en": "Recent ICAO photo" },
+          "description": {
+            "it": "Una fotografia recente, a colori su sfondo bianco, di cm 3,5 x 4,5 in formato ICAO.",
+            "en": "One recent colour photo on a white background, 3.5 x 4.5 cm, ICAO format."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente in formato ICAO.",
+            "en": "One recent ICAO-format photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Documento di viaggio (passaporto)", "en": "Travel document (passport)" },
+          "description": {
+            "it": "Originale e fotocopia del documento di viaggio (passaporto) in corso di validità, con scadenza superiore di almeno 3 mesi a quella del visto richiesto.",
+            "en": "Original and photocopy of the travel document (passport), valid, with expiry at least 3 months beyond that of the visa requested."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità senegalese preposta al rilascio dei passaporti.",
+            "en": "Senegalese authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la scadenza del visto richiesto.", "en": "At least 3 months beyond the expiry of the visa requested." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopie del passaporto", "en": "Passport photocopies" },
+          "description": {
+            "it": "Due fotocopie delle due prime pagine del passaporto e, se presenti, delle pagine contenenti visti Schengen.",
+            "en": "Two photocopies of the first two pages of the passport and, if any, of the pages bearing Schengen visas."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopie delle prime pagine e delle pagine con visti precedenti.",
+            "en": "Photocopies of the first pages and of any pages with previous visas."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta al lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione (SUI) territorialmente competente; lo SUI invia telematicamente il nulla osta e la proposta di contratto di soggiorno all'Ambasciata d'Italia a Dakar.",
+            "en": "Work authorization for subordinate employment issued by the competent One-Stop Immigration Desk (SUI); the SUI sends the nulla osta and the proposed residence contract electronically to the Italian Embassy in Dakar."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dal rilascio.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "documentazione-azienda",
+          "code": "COMPANY_SOLVENCY_DOCS",
+          "name": { "it": "Documentazione dell'azienda (visura camerale e solidità economica)", "en": "Company documentation (registry extract and economic solvency)" },
+          "description": {
+            "it": "Visura camerale aggiornata dell'azienda nonché bilanci, dichiarazioni fiscali o altri documenti che attestino la solidità economica e l'effettiva operatività dell'impresa (sito web, fotografie della sede, licenze, autorizzazioni). Per i datori di lavoro domestici: documenti che attestino la capacità economica del nucleo familiare, tramite la dichiarazione dei redditi dell'anno immediatamente precedente.",
+            "en": "Updated company registry extract as well as financial statements, tax returns or other documents proving the economic solidity and actual operation of the company (website, office photos, licences, authorizations). For domestic employers: documents proving the economic capacity of the household, by means of the previous year's income tax return."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Camera di Commercio italiana, commercialista o documenti aziendali del datore di lavoro.",
+            "en": "Italian Chamber of Commerce, accountant or the employer's company documents."
+          },
+          "whatYouNeed": {
+            "it": "Visura camerale aggiornata e documenti di solidità economica dell'azienda (o del nucleo familiare per il lavoro domestico).",
+            "en": "Updated registry extract and economic solvency documents of the company (or of the household for domestic work)."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-SN-scheda"
+        },
+        {
+          "id": "proposta-contratto",
+          "code": "WORK_CONTRACT_OFFER",
+          "name": { "it": "Proposta di contratto di soggiorno per lavoro subordinato", "en": "Proposed residence contract for subordinate work" },
+          "description": {
+            "it": "Proposta di contratto di soggiorno per lavoro subordinato trasmessa al SUI, corredata di descrizione delle mansioni, dell'orario e della sede di lavoro e del livello retributivo, per verificarne la conformità ai CCNL.",
+            "en": "Proposed residence contract for subordinate employment transmitted to the SUI, accompanied by a description of the duties, working hours and workplace and the pay level, to verify compliance with national collective agreements (CCNL)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Datore di lavoro in Italia (predisposta e trasmessa allo SUI).",
+            "en": "Employer in Italy (drafted and transmitted to the SUI)."
+          },
+          "whatYouNeed": {
+            "it": "Proposta di contratto con mansioni, orario, sede e livello retributivo.",
+            "en": "Proposed contract with duties, hours, workplace and pay level."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "sourceId": "source-SN-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino senegalese in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi 2026-2028. Attualmente non risulta attivo un accordo bilaterale in materia di lavoro tra Italia e Senegal.",
+          "en": "Senegalese citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi 2026-2028. No bilateral labour agreement between Italy and Senegal is currently active."
+        },
+        "whereToApply": {
+          "name": { "it": "BLS International o Ufficio Visti dell'Ambasciata d'Italia a Dakar", "en": "BLS International or the Visa Office of the Italian Embassy in Dakar" },
+          "appointment": { "it": "Presentazione tramite BLS International (www.blsitalyvisa.com/senegal) o su appuntamento presso l'Ufficio Visti dell'Ambasciata, secondo le indicazioni della pagina 'Dove chiedere un visto'.", "en": "Submission via BLS International (www.blsitalyvisa.com/senegal) or by appointment at the Embassy Visa Office, as indicated on the 'Where to apply' page." },
+          "website": "https://ambdakar.esteri.it",
+          "notes": {
+            "it": "Il costo del visto è di 116 euro, più le spese di servizio (disponibili sul sito BLS). La presenza personale è obbligatoria al momento del deposito del dossier e del ritiro del visto (salvo casi di delega consentita). La cartella deve contenere 2 set di documenti: un set di originali e un set con sole fotocopie in formato A4.",
+            "en": "The visa fee is EUR 116 plus service charges (available on the BLS website). Personal appearance is mandatory when filing the dossier and collecting the visa (except where delegation is allowed). The folder must contain 2 sets of documents: one set of originals and one set with photocopies only in A4 format."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite BLS International o direttamente presso l'Ufficio Visti dell'Ambasciata d'Italia a Dakar", "en": "Visa application via BLS International or directly at the Visa Office of the Italian Embassy in Dakar" },
+        "estimatedCost": { "it": "116 € (visto) + spese di servizio BLS.", "en": "EUR 116 (visa) + BLS service charges." },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino senegalese presenta la domanda di visto per lavoro subordinato tramite BLS International o l'Ufficio Visti dell'Ambasciata.", "en": "Once the nulla osta is obtained, the Senegalese citizen submits the subordinate-work visa application via BLS International or the Embassy Visa Office." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "La presentazione di un fascicolo completo non garantisce necessariamente l'ottenimento del visto; potranno essere richiesti documenti aggiuntivi o un colloquio. Ogni documento del fascicolo va presentato in originale con fotocopia in formato A4.",
+          "en": "The submission of a complete file does not necessarily guarantee the visa; additional documents or an interview may be requested. Each document in the file must be presented in original with an A4 photocopy."
+        }
+      }
+    }
+  ]
+}

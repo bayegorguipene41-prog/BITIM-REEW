@@ -32,6 +32,10 @@ import alJson from "@/data/procedures/AL.json";
 import maJson from "@/data/procedures/MA.json";
 import tnJson from "@/data/procedures/TN.json";
 import egJson from "@/data/procedures/EG.json";
+import bdJson from "@/data/procedures/BD.json";
+import phJson from "@/data/procedures/PH.json";
+import snJson from "@/data/procedures/SN.json";
+import lkJson from "@/data/procedures/LK.json";
 
 const FILES: Record<string, CountryProceduresFile> = {
   IT: itJson as unknown as CountryProceduresFile,
@@ -41,6 +45,10 @@ const FILES: Record<string, CountryProceduresFile> = {
   MA: maJson as unknown as CountryProceduresFile,
   TN: tnJson as unknown as CountryProceduresFile,
   EG: egJson as unknown as CountryProceduresFile,
+  BD: bdJson as unknown as CountryProceduresFile,
+  PH: phJson as unknown as CountryProceduresFile,
+  SN: snJson as unknown as CountryProceduresFile,
+  LK: lkJson as unknown as CountryProceduresFile,
 };
 
 export function loadCountryProceduresJson(countryCode: string): Procedure[] {

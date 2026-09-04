@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "countryCode": "LK",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "LK-permesso-soggiorno-lavoro",
+      "countryCode": "LK",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino dello Sri Lanka nell'ambito del Decreto Flussi 2026-2028 (lavoro subordinato, compreso lo stagionale). Attualmente non risulta attivo un accordo bilaterale in materia di lavoro tra Italia e Sri Lanka; il visto viene rilasciato previo nulla osta dello Sportello Unico per l'Immigrazione.",
+        "en": "Documents to work in Italy as a Sri Lankan citizen within the Decreto Flussi 2026-2028 (subordinate work, including seasonal). No bilateral labour agreement between Italy and Sri Lanka is currently active; the visa is issued upon a nulla osta from the One-Stop Immigration Desk."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-LK-accordi",
+          "name": "Accordi migrazione lavoro — nessun accordo bilaterale attivo con lo Sri Lanka",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-scegli",
+          "name": "Scegli il visto corretto e controlla i documenti necessari",
+          "authority": "Ambasciata d'Italia a Colombo",
+          "url": "https://ambcolombo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-scheda",
+          "name": "Checklist per il visto — lavoro subordinato (versione 3/26 del 22/07/2026)",
+          "authority": "Ambasciata d'Italia a Colombo",
+          "url": "https://ambcolombo.esteri.it/wp-content/uploads/2026/07/4-IT.-Lavoro-subordinato-Visto-checklist.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-dove",
+          "name": "Dove chiedere un visto — VFS Global (solo prenotazione online)",
+          "authority": "Ambasciata d'Italia a Colombo",
+          "url": "https://ambcolombo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote per i Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-LK-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto compilato e firmato dal richiedente.",
+            "en": "Visa application form completed and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o VFS Global (canale ufficiale dell'Ambasciata d'Italia a Colombo).",
+            "en": "The 'Visa for Italy' portal or VFS Global (official channel of the Italian Embassy in Colombo)."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato ICAO", "en": "ICAO photo" },
+          "description": {
+            "it": "Una fotografia recente in formato ICAO a colori, frontale su sfondo bianco.",
+            "en": "One recent colour photograph in ICAO format, frontal on a white background."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente in formato ICAO.",
+            "en": "One recent ICAO-format photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto in corso di validità", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto in corso di validità con almeno due pagine bianche e validità di almeno 3 mesi oltre la data prevista di rientro nello Sri Lanka.",
+            "en": "Passport in force with at least two blank pages and validity of at least 3 months beyond the planned return date to Sri Lanka."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità dello Sri Lanka preposta al rilascio dei passaporti.",
+            "en": "Sri Lankan authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la data prevista di rientro nello Sri Lanka.", "en": "At least 3 months beyond the planned return date to Sri Lanka." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Copie del passaporto", "en": "Passport copies" },
+          "description": {
+            "it": "Copia della pagina anagrafica del passaporto attuale e di quello precedente.",
+            "en": "Copy of the bio-data page of the current passport and of the previous one."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Copie delle pagine anagrafiche del passaporto attuale e precedente.",
+            "en": "Copies of the bio-data pages of the current and previous passports."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta al lavoro subordinato)", "en": "Work authorization (nulla osta for subordinate work)" },
+          "description": {
+            "it": "Nulla osta al lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi.",
+            "en": "Work authorization (nulla osta) for subordinate employment issued by the One-Stop Immigration Desk, within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dal rilascio.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "contratto-lavoro",
+          "code": "WORK_CONTRACT",
+          "name": { "it": "Contratto di lavoro", "en": "Employment contract" },
+          "description": {
+            "it": "Contratto di lavoro rilasciato dal datore di lavoro/azienda italiana oppure proposta di assunzione/proposta di contratto di lavoro firmata dal rappresentante della società italiana, con l'indicazione delle mansioni che il lavoratore dovrà svolgere in Italia. Corredato di copia della pagina anagrafica del passaporto e della carta d'identità del rappresentante della società italiana che ha richiesto il nulla osta e copia della Visura Camerale dell'azienda italiana.",
+            "en": "Employment contract issued by the Italian employer/company or a hiring offer/proposed employment contract signed by the representative of the Italian company, indicating the duties the worker will perform in Italy. Accompanied by a copy of the bio-data page of the passport and of the ID card of the Italian company representative who requested the nulla osta, and a copy of the company registry extract (Visura Camerale) of the Italian company."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Datore di lavoro o azienda italiana (proposta firmata dal rappresentante della società).",
+            "en": "Italian employer or company (proposal signed by the company representative)."
+          },
+          "whatYouNeed": {
+            "it": "Contratto o proposta di assunzione con le mansioni, più copie dei documenti del rappresentante e Visura Camerale.",
+            "en": "Contract or hiring offer with the duties, plus copies of the representative's documents and the registry extract."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "esperienza-lavorativa",
+          "code": "PROOF_OF_WORK_EXPERIENCE",
+          "name": { "it": "Esperienza professionale", "en": "Professional experience" },
+          "description": {
+            "it": "Documentazione attestante eventuali precedenti rapporti di lavoro svolti nello Sri Lanka, al fine di dimostrare l'esperienza professionale nel settore per il quale è previsto l'impiego in Italia.",
+            "en": "Documentation attesting any previous work relationships held in Sri Lanka, to demonstrate professional experience in the sector for which employment in Italy is planned."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Precedenti datori di lavoro nello Sri Lanka.",
+            "en": "Previous employers in Sri Lanka."
+          },
+          "whatYouNeed": {
+            "it": "Documentazione dei precedenti rapporti di lavoro nel settore di impiego previsto.",
+            "en": "Documentation of previous work relationships in the sector of planned employment."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "qualifiche-professionali",
+          "code": "PROFESSIONAL_QUALIFICATIONS",
+          "name": { "it": "Certificati di qualifica professionale", "en": "Professional qualification certificates" },
+          "description": {
+            "it": "Certificati attestanti le qualifiche professionali (se disponibili), al fine di dimostrare la coerenza con il settore di impiego previsto in Italia.",
+            "en": "Certificates attesting professional qualifications (if available), to demonstrate consistency with the sector of planned employment in Italy."
+          },
+          "necessity": "recommended",
+          "whereToGet": {
+            "it": "Istituti di formazione o autorità competenti.",
+            "en": "Training institutions or the competent authorities."
+          },
+          "whatYouNeed": {
+            "it": "Certificati di qualifica disponibili, coerenti con il settore di impiego.",
+            "en": "Available qualification certificates consistent with the employment sector."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "prenotazione-viaggio",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione aerea (solo lavoro stagionale)", "en": "Flight booking (seasonal work only)" },
+          "description": {
+            "it": "In caso di lavoro stagionale, prenotazione aerea confermata rilasciata da una compagnia aerea o da un'agenzia di viaggi.",
+            "en": "In case of seasonal work, a confirmed flight booking issued by an airline or a travel agency."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Prenotazione aerea confermata.",
+            "en": "Confirmed flight booking."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-LK-scheda"
+        },
+        {
+          "id": "assicurazione-sanitaria",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione sanitaria di viaggio", "en": "Travel health insurance" },
+          "description": {
+            "it": "Assicurazione sanitaria di viaggio, richiesta solo per i visti Schengen se non prevista dal contratto di lavoro.",
+            "en": "Travel health insurance, required only for Schengen visas if not provided for by the employment contract."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Compagnia di assicurazione.",
+            "en": "Insurance company."
+          },
+          "whatYouNeed": {
+            "it": "Polizza sanitaria di viaggio (solo per visti Schengen se non prevista dal contratto).",
+            "en": "Travel health policy (only for Schengen visas if not provided for by the contract)."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-LK-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino dello Sri Lanka in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi 2026-2028 (lavoro subordinato, compreso lo stagionale). Attualmente non risulta attivo un accordo bilaterale in materia di lavoro tra Italia e Sri Lanka.",
+          "en": "Sri Lankan citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi 2026-2028 (subordinate work, including seasonal). No bilateral labour agreement between Italy and Sri Lanka is currently active."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global (per conto dell'Ambasciata d'Italia a Colombo)", "en": "VFS Global (on behalf of the Italian Embassy in Colombo)" },
+          "appointment": { "it": "Obbligatoria: la prenotazione si effettua esclusivamente online tramite il sito VFS Global indicato nella pagina 'Dove chiedere un visto' dell'Ambasciata, selezionando la categoria di visto.", "en": "Mandatory: booking is made exclusively online through the VFS Global website indicated on the Embassy's 'Where to apply' page, selecting the visa category." },
+          "website": "https://ambcolombo.esteri.it",
+          "notes": {
+            "it": "La richiesta di visto si presenta solo con prenotazione online tramite VFS Global. La checklist è aggiornata alla versione 3/26 del 22/07/2026.",
+            "en": "Visa applications are submitted only via online booking through VFS Global. The checklist is updated to version 3/26 of 22/07/2026."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite VFS Global su prenotazione online (canale ufficiale dell'Ambasciata d'Italia a Colombo)", "en": "Visa application via VFS Global with online booking (official channel of the Italian Embassy in Colombo)" },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino dello Sri Lanka prenota online tramite VFS Global e presenta la domanda di visto per lavoro subordinato.", "en": "Once the nulla osta is obtained, the Sri Lankan citizen books online through VFS Global and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Tutti i documenti devono essere presentati in originale, accompagnati da una serie di fotocopie in formato A4. I documenti redatti in singalese, tamil o in qualsiasi altra lingua devono essere accompagnati da una traduzione ufficiale in inglese e autenticati dal Ministero degli Affari Esteri dello Sri Lanka. Per i cittadini non srilankesi, i documenti devono essere certificati dalla rispettiva Ambasciata, Alto Commissariato o Consolato con sede a Colombo.",
+          "en": "All documents must be submitted in original, accompanied by a set of A4 photocopies. Documents drafted in Sinhala, Tamil or any other language must be accompanied by an official translation into English and authenticated by the Ministry of Foreign Affairs of Sri Lanka. For non-Sri Lankan citizens, documents must be certified by their Embassy, High Commission or Consulate based in Colombo."
+        }
+      }
+    }
+  ]
+}

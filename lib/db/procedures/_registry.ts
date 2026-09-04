@@ -29,6 +29,10 @@ const STATIC_STATUS: Record<string, VerificationStatus> = {
   MA: "verified",
   TN: "verified",
   EG: "verified",
+  BD: "verified",
+  PH: "verified",
+  SN: "verified",
+  LK: "verified",
   FR: "needs_review",
   DE: "needs_review",
 };
@@ -81,6 +85,10 @@ const ALL_BUNDLE_DATA: Procedure[] = [
   ...loadCountryProceduresJson("MA"),
   ...loadCountryProceduresJson("TN"),
   ...loadCountryProceduresJson("EG"),
+  ...loadCountryProceduresJson("BD"),
+  ...loadCountryProceduresJson("PH"),
+  ...loadCountryProceduresJson("SN"),
+  ...loadCountryProceduresJson("LK"),
   ...UNVERIFIED_PROCEDURES,
 ];
 

@@ -107,20 +107,6 @@ describe("resolveNationalityGroups — bilateral agreements (destination=IT)", (
     expect(groups).toContain("foreign");
   });
 
-  it("Senegal → bilateral + bilateral_it-senegal + foreign", () => {
-    const groups = resolveNationalityGroups("SN");
-    expect(groups).toContain("bilateral");
-    expect(groups).toContain("bilateral_it-senegal");
-    expect(groups).toContain("foreign");
-  });
-
-  it("Sri Lanka → bilateral + bilateral_it-srilanka + foreign", () => {
-    const groups = resolveNationalityGroups("LK");
-    expect(groups).toContain("bilateral");
-    expect(groups).toContain("bilateral_it-srilanka");
-    expect(groups).toContain("foreign");
-  });
-
   it("Philippines → bilateral + bilateral_it-philippines + foreign", () => {
     const groups = resolveNationalityGroups("PH");
     expect(groups).toContain("bilateral");
@@ -153,6 +139,14 @@ describe("resolveNationalityGroups — generic foreign", () => {
 
   it("China → foreign only", () => {
     expect(resolveNationalityGroups("CN")).toEqual(["foreign"]);
+  });
+
+  it("Senegal → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("SN")).toEqual(["foreign"]);
+  });
+
+  it("Sri Lanka → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("LK")).toEqual(["foreign"]);
   });
 
   it("United States → foreign only", () => {

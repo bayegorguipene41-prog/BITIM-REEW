@@ -57,8 +57,6 @@ export const BILATERAL_AGREEMENTS: BilateralAgreements = {
     TN: "bilateral_it-tunisia",  // Tunisia
     AL: "bilateral_it-albania",  // Albania
     EG: "bilateral_it-egypt",    // Egitto
-    SN: "bilateral_it-senegal",  // Senegal
-    LK: "bilateral_it-srilanka", // Sri Lanka
     PH: "bilateral_it-philippines", // Filippine
     BD: "bilateral_it-bangladesh",  // Bangladesh
   },

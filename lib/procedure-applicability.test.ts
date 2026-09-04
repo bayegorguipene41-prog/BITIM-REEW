@@ -165,7 +165,7 @@ describe("Procedure applicability — nationalityGroup", () => {
   });
 
   it("conditionContextFromProfile includes nationalityGroup for non-EU", () => {
-    const ctx = conditionContextFromProfile({ nationality: "IN" }) as any;
+    const ctx = conditionContextFromProfile({ nationality: "CN" }) as any;
     expect(ctx.nationalityGroup).toEqual(["foreign"]);
   });
 

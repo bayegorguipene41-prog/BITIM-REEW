@@ -36,6 +36,9 @@ import bdJson from "@/data/procedures/BD.json";
 import phJson from "@/data/procedures/PH.json";
 import snJson from "@/data/procedures/SN.json";
 import lkJson from "@/data/procedures/LK.json";
+import pkJson from "@/data/procedures/PK.json";
+import ngJson from "@/data/procedures/NG.json";
+import inJson from "@/data/procedures/IN.json";
 
 const FILES: Record<string, CountryProceduresFile> = {
   IT: itJson as unknown as CountryProceduresFile,
@@ -49,6 +52,9 @@ const FILES: Record<string, CountryProceduresFile> = {
   PH: phJson as unknown as CountryProceduresFile,
   SN: snJson as unknown as CountryProceduresFile,
   LK: lkJson as unknown as CountryProceduresFile,
+  PK: pkJson as unknown as CountryProceduresFile,
+  NG: ngJson as unknown as CountryProceduresFile,
+  IN: inJson as unknown as CountryProceduresFile,
 };
 
 export function loadCountryProceduresJson(countryCode: string): Procedure[] {

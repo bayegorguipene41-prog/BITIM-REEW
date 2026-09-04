@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "countryCode": "NG",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "NG-permesso-soggiorno-lavoro",
+      "countryCode": "NG",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino nigeriano. La Nigeria non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028. La sede consolare competente per i visti di lavoro è il Consolato Generale d'Italia a Lagos (l'Ambasciata d'Italia ad Abuja tratta soltanto i visti di breve durata).",
+        "en": "Documents to work in Italy as a Nigerian citizen. Nigeria has no bilateral labour agreement with Italy, but is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028. The consulate competent for work visas is the Italian Consulate General in Lagos (the Italian Embassy in Abuja only handles short-stay visas)."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-NG-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-scegli",
+          "name": "Scegli il visto corretto in base alle tue esigenze e controlla quali sono i documenti necessari",
+          "authority": "Consolato Generale d'Italia a Lagos",
+          "url": "https://conslagos.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-scheda",
+          "name": "LAVORO-SUB — Visto di ingresso per «Lavoro Subordinato SUI» (V.N.)",
+          "authority": "Consolato Generale d'Italia a Lagos",
+          "url": "https://conslagos.esteri.it/wp-content/uploads/2026/07/LAVORO-SUB.rev_.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-dove",
+          "name": "Dove chiedere un visto — TLScontact Visa Application Centre (Lagos e Abuja)",
+          "authority": "Consolato Generale d'Italia a Lagos",
+          "url": "https://conslagos.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-costi",
+          "name": "Quanto costa un visto e come pagare",
+          "authority": "Consolato Generale d'Italia a Lagos",
+          "url": "https://conslagos.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-NG-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di domanda di visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di domanda di visto firmato, compilato in tutte le sue parti e datato.",
+            "en": "Visa application form signed, fully completed and dated."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o centro TLScontact (Lagos o Abuja).",
+            "en": "The 'Visa for Italy' portal or the TLScontact centre (Lagos or Abuja)."
+          },
+          "whatYouNeed": {
+            "it": "Modulo firmato, compilato in tutte le sue parti e datato.",
+            "en": "A form signed, fully completed and dated."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-NG-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photo" },
+          "description": {
+            "it": "Una foto recente formato ICAO.",
+            "en": "One recent ICAO-compliant photograph."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or booth compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente formato ICAO.",
+            "en": "One recent ICAO-size photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-NG-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto in corso di validità", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto in corso di validità superiore di 15 mesi in caso di visto D.",
+            "en": "Passport with a validity exceeding 15 months in the case of a type D visa."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità nigeriana preposta al rilascio dei passaporti (Nigerian Immigration Service).",
+            "en": "Nigerian authority responsible for passport issuance (Nigerian Immigration Service)."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto con validità residua di almeno 15 mesi per il visto D.",
+            "en": "Passport with at least 15 months of remaining validity for the D visa."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Validità superiore di 15 mesi in caso di visto D.", "en": "Validity exceeding 15 months in the case of a type D visa." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-NG-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta di lavoro (SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta di lavoro rilasciato dallo Sportello Unico per l'Immigrazione (SUI) della competente Prefettura. Il visto per lavoro subordinato consente l'ingresso per un soggiorno di breve o lunga durata, a tempo determinato o indeterminato, per chi è chiamato a prestare attività lavorativa subordinata in Italia; i requisiti sono previsti dagli artt. 22, 24 e 27 del T.U. n. 286/1998 e dagli artt. 29, 30, 31, 38 e 40 del D.P.R. n. 394/1999 (fermi gli adempimenti di cui agli artt. 49 e 50 per l'esercizio di attività professionali).",
+            "en": "Work authorization (nulla osta) issued by the One-Stop Immigration Desk (SUI) of the competent Prefettura. The subordinate-work visa allows entry for a short or long stay, fixed or open-ended, for anyone called to carry out subordinate work in Italy; the requirements are set out in Articles 22, 24 and 27 of T.U. No. 286/1998 and Articles 29, 30, 31, 38 and 40 of D.P.R. No. 394/1999 (subject to the obligations of Articles 49 and 50 for professional activities)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) della Prefettura competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) of the Prefettura competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta di lavoro rilasciato dal SUI della competente Prefettura, da presentare con la domanda di visto.",
+            "en": "Work authorization issued by the SUI of the competent Prefettura, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-NG-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino nigeriano (o straniero residente) chiamato a prestare attività lavorativa subordinata in Italia, in possesso di nulla osta di lavoro rilasciato dal SUI della competente Prefettura. La Nigeria rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028). I requisiti e le condizioni sono previsti dagli artt. 22, 24 e 27 del T.U. n. 286/1998 e dagli artt. 29, 30, 31, 38 e 40 del D.P.R. n. 394/1999, fermi gli adempimenti di cui agli artt. 49 e 50 per l'esercizio di attività professionali.",
+          "en": "Nigerian citizen (or resident foreign national) called to carry out subordinate work in Italy, holding a work authorization (nulla osta) issued by the SUI of the competent Prefettura. Nigeria is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028). Requirements and conditions are set out in Articles 22, 24 and 27 of T.U. No. 286/1998 and Articles 29, 30, 31, 38 and 40 of D.P.R. No. 394/1999, subject to the obligations of Articles 49 and 50 for professional activities."
+        },
+        "whereToApply": {
+          "name": { "it": "TLScontact Visa Application Centre (per conto del Consolato Generale d'Italia a Lagos)", "en": "TLScontact Visa Application Centre (on behalf of the Italian Consulate General in Lagos)" },
+          "address": {
+            "it": "Lagos: quarto piano, Ivie House, 4/6 Ajose Adeogun Street, Victoria Island, Lagos; Abuja: terzo piano, Murkhtar El-Yakub Place, accanto a Metro Plaza, Plot 1129 Zakariya Maimalari Street, Central Business District, Abuja.",
+            "en": "Lagos: 4th floor, Ivie House, 4/6 Ajose Adeogun Street, Victoria Island, Lagos; Abuja: 3rd floor, Murkhtar El-Yakub Place, next to Metro Plaza, Plot 1129 Zakariya Maimalari Street, Central Business District, Abuja."
+          },
+          "hours": {
+            "it": "Su appuntamento, da lunedì a venerdì, dalle 08:00 alle 13:00.",
+            "en": "By appointment, Monday to Friday, from 08:00 to 13:00."
+          },
+          "appointment": {
+            "it": "Obbligatoria: prenotare, previa registrazione dell'utente, tramite il sito https://visas-it.tlscontact.com/en-us/country/ng.",
+            "en": "Required: book, after user registration, via https://visas-it.tlscontact.com/en-us/country/ng."
+          },
+          "website": "https://visas-it.tlscontact.com/en-us/country/ng",
+          "notes": {
+            "it": "Le richieste di visto devono essere presentate tramite TLScontact, che dispone di un centro di raccolta delle domande sia ad Abuja che a Lagos. Il Consolato Generale d'Italia a Lagos (12B Walter Carrington Crescent, Victoria Island) riceve direttamente soltanto le domande di ricongiungimento familiare, con appuntamento registrato sul portale Prenot@Mi.",
+            "en": "Visa applications must be submitted through TLScontact, which runs application collection centres in both Abuja and Lagos. The Italian Consulate General in Lagos (12B Walter Carrington Crescent, Victoria Island) only receives family reunification applications directly, with an appointment booked on the Prenot@Mi portal."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto tramite TLScontact (canale ufficiale del Consolato Generale d'Italia a Lagos).",
+          "en": "Visa application via TLScontact (official channel of the Italian Consulate General in Lagos)."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione della Prefettura competente (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk of the competent Prefettura (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)."
+          },
+          {
+            "it": "Ottenuto il nulla osta, il cittadino nigeriano fissa un appuntamento presso TLScontact (Lagos o Abuja) e presenta la domanda di visto per lavoro subordinato.",
+            "en": "Once the nulla osta is obtained, the Nigerian citizen books an appointment at TLScontact (Lagos or Abuja) and submits the subordinate-work visa application."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          },
+          {
+            "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.",
+            "en": "For renewal, submit the application at least 60 days before expiry."
+          }
+        ],
+        "note": {
+          "it": "L'elenco dei documenti fornito dalla sede consolare è meramente orientativo: la sede si riserva di effettuare ulteriori approfondimenti a seconda del caso e di richiedere eventuali integrazioni documentali. La Nigeria non ha un accordo bilaterale con l'Italia in materia di lavoro: l'ingresso avviene nell'ambito delle quote del Decreto Flussi per i Paesi con cooperazione attiva. Il costo del visto nazionale D è di 116 euro.",
+          "en": "The document list provided by the consulate is merely indicative: the office reserves the right to carry out further checks on a case-by-case basis and to request additional documents. Nigeria has no bilateral labour agreement with Italy: entry is within the Decreto Flussi quotas for countries with active cooperation. The national D visa fee is €116."
+        }
+      }
+    }
+  ]
+}

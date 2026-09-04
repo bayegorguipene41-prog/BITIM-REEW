@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "countryCode": "PK",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "PK-permesso-soggiorno-lavoro",
+      "countryCode": "PK",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino pakistano. Il Pakistan è coperto dal Memorandum d'Intesa Italia-Pakistan (2025) in materia di migrazione e lavoro e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028. La sede competente è l'Ambasciata d'Italia a Islamabad (con centro esterno BLS-Intiana), la raccolta delle domande è affidata all'outsourcer.",
+        "en": "Documents to work in Italy as a Pakistani citizen. Pakistan is covered by the Italy-Pakistan Memorandum of Understanding (2025) on migration and labour and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028. The competent office is the Italian Embassy in Islamabad (with the BLS-Intiana external centre); applications are collected by the outsourcer."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-PK-accordo",
+          "name": "Accordi migrazione lavoro — Memorandum d'Intesa Italia-Pakistan (2025)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-scegli",
+          "name": "Scegli il visto corretto in base alle tue esigenze e controlla quali sono i documenti necessari",
+          "authority": "Ambasciata d'Italia a Islamabad",
+          "url": "https://ambislamabad.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/scegli-il-visto-corretto-in-base-alle-tue-esigenze-e-controlla-quali-sono-i-documenti-necessari/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-scheda",
+          "name": "MI06 — Visto per lavoro subordinato (V.N.), sede di Islamabad",
+          "authority": "Ambasciata d'Italia a Islamabad",
+          "url": "https://ambislamabad.esteri.it/wp-content/uploads/2026/06/MI06_VISTO-PER-LAVORO-SUBORDINATO_ITA_Islamabad.rev_.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-dove",
+          "name": "Dove chiedere un visto — BLS-Intiana Italy Visa Application Centre in Pakistan",
+          "authority": "Ambasciata d'Italia a Islamabad",
+          "url": "https://ambislamabad.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PK-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto per lavoro subordinato, compilato e firmato dal richiedente.",
+            "en": "Subordinate-work visa application form, fully completed and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o centro BLS-Intiana (per conto dell'Ambasciata d'Italia a Islamabad).",
+            "en": "The 'Visa for Italy' portal or the BLS-Intiana centre (on behalf of the Italian Embassy in Islamabad)."
+          },
+          "whatYouNeed": {
+            "it": "Modulo di richiesta visto compilato e firmato.",
+            "en": "A completed and signed visa application form."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photo" },
+          "description": {
+            "it": "Una foto recente formato ICAO.",
+            "en": "One recent ICAO-compliant photograph."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or booth compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia recente formato ICAO.",
+            "en": "One recent ICAO-size photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "residenza-circoscrizione",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Prova della residenza nella circoscrizione consolare", "en": "Proof of residence in the consular district" },
+          "description": {
+            "it": "Certificato di residenza; per i cittadini pakistani anche copia della carta d'identità CNIC; per i cittadini stranieri, prova della residenza regolare in Pakistan (es. visto per soggiorno di lunga durata e/o permesso di soggiorno o di lavoro).",
+            "en": "Certificate of residence; for Pakistani citizens also a copy of the CNIC national ID; for foreign nationals, proof of regular residence in Pakistan (e.g. long-stay visa and/or residence or work permit)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Ufficio anagrafe locale; carta d'identità CNIC (NADRA).",
+            "en": "Local registry office; CNIC national ID (NADRA)."
+          },
+          "whatYouNeed": {
+            "it": "Certificato di residenza emesso dall'autorità locale, più CNIC o prova di residenza regolare.",
+            "en": "Certificate of residence issued by the local authority, plus CNIC or proof of regular residence."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "La documentazione ha validità di sei mesi dalla data di rilascio.", "en": "Documents are valid for six months from the date of issue." },
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto in corso di validità", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto in corso di validità, in originale + 1 fotocopia, con data di scadenza di almeno tre mesi successiva alla scadenza del visto richiesto.",
+            "en": "Valid passport, original + 1 photocopy, with an expiry date at least three months after the requested visa expiry."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità pakistana preposta al rilascio dei passaporti.",
+            "en": "Pakistani authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità (originale) e una fotocopia.",
+            "en": "A valid passport (original) and one photocopy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Scadenza di almeno tre mesi successiva alla scadenza del visto.", "en": "Expiry at least three months after the requested visa expiry." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "prenotazione-aerea",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione aerea", "en": "Flight booking" },
+          "description": {
+            "it": "Prenotazione aerea; la documentazione deve contenere il nome del richiedente, la città di partenza e quella di arrivo (compresi eventuali scali).",
+            "en": "Flight booking; the documentation must include the applicant's name, the departure and arrival cities (including any transit points)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Conferma della prenotazione dei voli verso l'Italia.",
+            "en": "Booking confirmation of the flights to Italy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta al lavoro subordinato (SUI)", "en": "Work authorization for subordinate employment (SUI)" },
+          "description": {
+            "it": "Nulla osta al lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione (SUI), nell'ambito del Decreto Flussi.",
+            "en": "Work authorization for subordinate employment issued by the One-Stop Immigration Desk (SUI), within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "La documentazione ha validità di sei mesi dalla data di rilascio.", "en": "Documents are valid for six months from the date of issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "contratto-lavoro",
+          "code": "WORK_CONTRACT",
+          "name": { "it": "Documento contrattuale di lavoro", "en": "Work contract document" },
+          "description": {
+            "it": "Documento contrattuale di lavoro (emesso dal SUI).",
+            "en": "Work contract document (issued by the SUI)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Emesso dal SUI nell'ambito della procedura del nulla osta.",
+            "en": "Issued by the SUI within the nulla osta procedure."
+          },
+          "whatYouNeed": {
+            "it": "Contratto di lavoro emesso dal SUI.",
+            "en": "Work contract issued by the SUI."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "documento-datore",
+          "code": "EMPLOYER_IDENTIFICATION",
+          "name": { "it": "Documento del datore di lavoro", "en": "Employer's identification document" },
+          "description": {
+            "it": "Copia della carta d'identità o del passaporto del datore di lavoro.",
+            "en": "Copy of the employer's identity card or passport."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Il datore di lavoro in Italia.",
+            "en": "The employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Copia della carta d'identità o del passaporto del datore di lavoro.",
+            "en": "Copy of the employer's identity card or passport."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "visura-camerale",
+          "code": "COMPANY_REGISTRATION_EXCERPT",
+          "name": { "it": "Visura della Camera di Commercio", "en": "Chamber of Commerce company excerpt" },
+          "description": {
+            "it": "Se il datore di lavoro è una persona giuridica: estratto (visura) della Camera di Commercio.",
+            "en": "If the employer is a legal entity: company excerpt (visura) from the Chamber of Commerce."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Camera di Commercio italiana competente per il datore di lavoro.",
+            "en": "Italian Chamber of Commerce competent for the employer."
+          },
+          "whatYouNeed": {
+            "it": "Visura camerale aggiornata del datore di lavoro.",
+            "en": "Up-to-date Chamber of Commerce excerpt of the employer."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "cud-datore",
+          "code": "EMPLOYER_INCOME_PROOF",
+          "name": { "it": "Redditi e stato di famiglia del datore di lavoro", "en": "Employer's income and family status certificates" },
+          "description": {
+            "it": "Se il datore di lavoro è una persona fisica: ultima certificazione unica (CUD) o ultima dichiarazione dei redditi del datore di lavoro, congiuntamente al Certificato di Stato di Famiglia, munito di apostille.",
+            "en": "If the employer is a natural person: latest annual income certificate (CUD) or latest tax return of the employer, together with the Family Status Certificate, bearing an apostille."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "CUD/dichiarazione dei redditi: sostituto d'imposta o Inps; Certificato di Stato di Famiglia: ufficio anagrafe.",
+            "en": "CUD/tax return: withholding agent or INPS; Family Status Certificate: registry office."
+          },
+          "whatYouNeed": {
+            "it": "CUD o dichiarazione dei redditi del datore di lavoro e Certificato di Stato di Famiglia con apostille.",
+            "en": "Employer's CUD or tax return and Family Status Certificate with an apostille."
+          },
+          "translationRequired": false,
+          "apostilleRequired": true,
+          "validityPeriod": { "it": "La documentazione ha validità di sei mesi dalla data di rilascio.", "en": "Documents are valid for six months from the date of issue." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "certificato-buona-condotta",
+          "code": "POLICE_CLEARANCE",
+          "name": { "it": "Certificato di buona condotta", "en": "Certificate of good conduct" },
+          "description": {
+            "it": "Certificato di buona condotta rilasciato dalle autorità pakistane, munito di apostille.",
+            "en": "Certificate of good conduct issued by the Pakistani authorities, bearing an apostille."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità di polizia pakistana competente.",
+            "en": "Competent Pakistani police authority."
+          },
+          "whatYouNeed": {
+            "it": "Certificato di buona condotta in corso di validità, munito di apostille.",
+            "en": "A valid certificate of good conduct, bearing an apostille."
+          },
+          "translationRequired": false,
+          "apostilleRequired": true,
+          "validityPeriod": { "it": "La documentazione ha validità di sei mesi dalla data di rilascio.", "en": "Documents are valid for six months from the date of issue." },
+          "processingTime": { "it": "Variabile secondo l'autorità emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "assicurazione-sanitaria",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione sanitaria", "en": "Health insurance" },
+          "description": {
+            "it": "Sottoscrizione di una assicurazione sanitaria se non prevista dal contratto e se il viaggio prevede uno scalo in area Schengen.",
+            "en": "Health insurance policy if not covered by the contract and if the trip includes a transit in the Schengen area."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Compagnia assicurativa — copertura sanitaria per il periodo di soggiorno.",
+            "en": "Insurance provider — health cover for the period of stay."
+          },
+          "whatYouNeed": {
+            "it": "Polizza di assicurazione sanitaria valida per la durata del soggiorno.",
+            "en": "Health insurance policy valid for the duration of the stay."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Valida per la durata del soggiorno.", "en": "Valid for the duration of the stay." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PK-scheda"
+        },
+        {
+          "id": "apostille-traduzione",
+          "code": "APOSTILLE_TRANSLATION",
+          "name": { "it": "Apostille e traduzione dei documenti", "en": "Apostille and translation of documents" },
+          "description": {
+            "it": "Gli atti rilasciati da autorità pakistane devono essere muniti di apostille; gli atti rilasciati da autorità di Paesi terzi devono essere, ove possibile, apostillati oppure legalizzati. Sono ammessi esclusivamente documenti redatti in lingua inglese o corredati da traduzione in lingua italiana, certificata conforme da un notaio la cui firma deve essere a sua volta debitamente apostillata. La documentazione prodotta ha una validità di sei mesi dalla data di rilascio.",
+            "en": "Documents issued by Pakistani authorities must bear an apostille; documents issued by third-country authorities must, where possible, be apostilled or legalized. Only documents in English or accompanied by an Italian translation certified as conforming by a notary (whose signature must itself bear an apostille) are accepted. Documents are valid for six months from the date of issue."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Apostille: autorità pakistana competente per la Convenzione dell'Aja; traduzione certificata conforme: notaio.",
+            "en": "Apostille: competent Pakistani authority under the Hague Convention; certified translation: notary."
+          },
+          "whatYouNeed": {
+            "it": "Apostille sulla documentazione e traduzioni certificate conformi per i documenti non in inglese.",
+            "en": "Apostilles on documents and certified translations for documents not in English."
+          },
+          "translationRequired": true,
+          "apostilleRequired": true,
+          "validityPeriod": { "it": "La documentazione ha validità di sei mesi dalla data di rilascio.", "en": "Documents are valid for six months from the date of issue." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PK-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino pakistano in possesso di nulla osta al lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. Il Pakistan è coperto dal Memorandum d'Intesa Italia-Pakistan (2025) e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028). Le domande sono ricevibili esclusivamente da richiedenti stabilmente residenti nella circoscrizione consolare di competenza (Ambasciata d'Italia a Islamabad o Consolato Generale d'Italia a Karachi).",
+          "en": "Pakistani citizen holding a work authorization (nulla osta) for subordinate employment issued by the One-Stop Immigration Desk, within the Decreto Flussi. Pakistan is covered by the Italy-Pakistan Memorandum of Understanding (2025) and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028). Applications are accepted only from applicants permanently resident in the competent consular district (Italian Embassy in Islamabad or Italian Consulate General in Karachi)."
+        },
+        "whereToApply": {
+          "name": { "it": "BLS-Intiana Italy Visa Application Centre (per conto dell'Ambasciata d'Italia a Islamabad / del Consolato Generale d'Italia a Karachi)", "en": "BLS-Intiana Italy Visa Application Centre (on behalf of the Italian Embassy in Islamabad / the Italian Consulate General in Karachi)" },
+          "address": {
+            "it": "Circoscrizione Ambasciata Islamabad: centri a Islamabad, Lahore, Multan, Faisalabad; circoscrizione Consolato Generale Karachi: centri a Karachi, Quetta.",
+            "en": "Embassy district Islamabad: centres in Islamabad, Lahore, Multan, Faisalabad; Consulate General Karachi district: centres in Karachi, Quetta."
+          },
+          "appointment": {
+            "it": "Obbligatoria tramite il sito dell'outsourcer (https://www.intianaitalyvisa.com/).",
+            "en": "Required via the outsourcer's website (https://www.intianaitalyvisa.com/)."
+          },
+          "website": "https://www.intianaitalyvisa.com/",
+          "notes": {
+            "it": "La gestione degli appuntamenti e la raccolta delle domande di visto sono affidate alla società di outsourcing BLS-Intiana, sotto la supervisione dell'Ambasciata. Le domande possono essere presentate esclusivamente presso il centro BLS competente per la circoscrizione consolare in cui il richiedente ha la propria residenza permanente.",
+            "en": "Appointment management and visa application collection are handled by the outsourcing company BLS-Intiana, under the Embassy's supervision. Applications may be submitted exclusively at the BLS centre competent for the consular district where the applicant is permanently resident."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto tramite l'outsourcer BLS-Intiana (canale ufficiale dell'Ambasciata d'Italia a Islamabad).",
+          "en": "Visa application via the BLS-Intiana outsourcer (official channel of the Italian Embassy in Islamabad)."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)."
+          },
+          {
+            "it": "Ottenuto il nulla osta, il cittadino pakistano fissa un appuntamento presso il centro BLS-Intiana della propria circoscrizione e presenta la domanda di visto per lavoro subordinato.",
+            "en": "Once the nulla osta is obtained, the Pakistani citizen books an appointment at the BLS-Intiana centre of their district and submits the subordinate-work visa application."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          },
+          {
+            "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.",
+            "en": "For renewal, submit the application at least 60 days before expiry."
+          }
+        ],
+        "note": {
+          "it": "Gli atti rilasciati da autorità pakistane devono essere muniti di apostille; sono ammessi solo documenti in inglese o con traduzione in italiano certificata conforme da notaio (con firma a sua volta apostillata). La documentazione ha validità di sei mesi dalla data di rilascio. Le domande sono ricevibili esclusivamente da richiedenti stabilmente residenti nella circoscrizione consolare. I minori devono essere accompagnati da uno o da entrambi i genitori o dai tutori legali al momento della presentazione; le domande sottoscritte esclusivamente dal minore sono irricevibili. L'Ambasciata si riserva il diritto di richiedere eventuale documentazione aggiuntiva.",
+          "en": "Documents issued by Pakistani authorities must bear an apostille; only documents in English or with an Italian translation certified as conforming by a notary (with the signature itself bearing an apostille) are accepted. Documents are valid for six months from the date of issue. Applications are accepted exclusively from applicants permanently resident in the consular district. Minors must be accompanied by one or both parents or legal guardians when submitting; applications signed only by the minor are rejected. The Embassy reserves the right to request additional documentation."
+        }
+      }
+    }
+  ]
+}

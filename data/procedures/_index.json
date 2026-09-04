@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "description": "Indice leggero dello stato di verifica procedure per paese. I dettagli completi vivono nei singoli file <ISO>.json. Stato 'unavailable' = nessun dato; 'needs_review' = da verificare; 'partial' = parzialmente verificato; 'verified' = verificato su fonte ufficiale.",
   "countries": [
     { "countryCode": "IT", "procedureCount": 2, "lastVerified": "2026-08-30", "status": "verified" },
@@ -12,6 +12,9 @@
     { "countryCode": "PH", "procedureCount": 1, "lastVerified": "2026-09-04", "status": "verified" },
     { "countryCode": "SN", "procedureCount": 1, "lastVerified": "2026-09-04", "status": "verified" },
     { "countryCode": "LK", "procedureCount": 1, "lastVerified": "2026-09-04", "status": "verified" },
+    { "countryCode": "PK", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "NG", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "IN", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
     { "countryCode": "FR", "procedureCount": 1, "lastVerified": "", "status": "needs_review" },
     { "countryCode": "DE", "procedureCount": 1, "lastVerified": "", "status": "needs_review" }
   ]

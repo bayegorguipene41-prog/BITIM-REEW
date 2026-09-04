@@ -62,6 +62,18 @@ describe("COUNTRY_PROCEDURE_INDEX — copertura paesi", () => {
     expect(COUNTRY_PROCEDURE_INDEX["LK"]?.procedureCount).toBe(1);
   });
 
+  it("Pakistan, Nigeria e India sono verified con una procedura reale (Fase 2B, Wave 1b)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["PK"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["PK"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["NG"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["NG"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["IN"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["IN"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["PK"]?.lastVerified).toBe("2026-09-05");
+    expect(COUNTRY_PROCEDURE_INDEX["NG"]?.lastVerified).toBe("2026-09-05");
+    expect(COUNTRY_PROCEDURE_INDEX["IN"]?.lastVerified).toBe("2026-09-05");
+  });
+
   it("i paesi senza dati sono 'unavailable' con procedureCount 0", () => {
     // Algeria, ecc. non hanno ancora dati → unavailable
     expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.status).toBe("unavailable");
@@ -102,6 +114,12 @@ describe("isCountryAvailable / getCountryMeta", () => {
     expect(isCountryAvailable("PH")).toBe(true);
     expect(isCountryAvailable("SN")).toBe(true);
     expect(isCountryAvailable("LK")).toBe(true);
+  });
+
+  it("Pakistan, Nigeria e India sono available (Fase 2B, Wave 1b)", () => {
+    expect(isCountryAvailable("PK")).toBe(true);
+    expect(isCountryAvailable("NG")).toBe(true);
+    expect(isCountryAvailable("IN")).toBe(true);
   });
 
   it("doesn't throw on null/undefined/empty", () => {
@@ -179,6 +197,27 @@ describe("loadProceduresForCountry", () => {
     expect(procs[0].dataSource).toBe("verified");
   });
 
+  it("Pakistan → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("PK");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("PK-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Nigeria → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("NG");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("NG-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("India → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("IN");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("IN-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
   it("Francia → 1 procedura (needs_review)", async () => {
     const procs = await loadProceduresForCountry("FR");
     expect(procs.length).toBe(1);
@@ -232,6 +271,15 @@ describe("lookup — integrazione sync/async backward compat", () => {
     const lk = await proceduresForCountryAsync("LK");
     expect(lk.length).toBeGreaterThanOrEqual(1);
     expect(lk[0].id).toBe("LK-permesso-soggiorno-lavoro");
+    const pk = await proceduresForCountryAsync("PK");
+    expect(pk.length).toBeGreaterThanOrEqual(1);
+    expect(pk[0].id).toBe("PK-permesso-soggiorno-lavoro");
+    const ng = await proceduresForCountryAsync("NG");
+    expect(ng.length).toBeGreaterThanOrEqual(1);
+    expect(ng[0].id).toBe("NG-permesso-soggiorno-lavoro");
+    const inResult = await proceduresForCountryAsync("IN");
+    expect(inResult.length).toBeGreaterThanOrEqual(1);
+    expect(inResult[0].id).toBe("IN-permesso-soggiorno-lavoro");
     const fr = await proceduresForCountryAsync("FR");
     expect(fr.length).toBeGreaterThanOrEqual(1);
     const dz = await proceduresForCountryAsync("DZ");
@@ -255,6 +303,9 @@ describe("PROCEDURES/PROCEDURES_ALL — nessuna regressione", () => {
     expect(ids).toContain("PH-permesso-soggiorno-lavoro");
     expect(ids).toContain("SN-permesso-soggiorno-lavoro");
     expect(ids).toContain("LK-permesso-soggiorno-lavoro");
+    expect(ids).toContain("PK-permesso-soggiorno-lavoro");
+    expect(ids).toContain("NG-permesso-soggiorno-lavoro");
+    expect(ids).toContain("IN-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });
@@ -331,6 +382,21 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     }
   });
 
+  it("PK/NG/IN.json sono la fonte delle procedure Wave 1b (Fase 2B)", () => {
+    for (const [code, id] of [
+      ["PK", "PK-permesso-soggiorno-lavoro"],
+      ["NG", "NG-permesso-soggiorno-lavoro"],
+      ["IN", "IN-permesso-soggiorno-lavoro"],
+    ] as const) {
+      const json = loadCountryProceduresJson(code);
+      expect(json.length).toBe(1);
+      expect(json.map((p) => p.id)).toEqual(expect.arrayContaining([id]));
+      expect(getCountryProceduresJson(code)?.status).toBe("verified");
+      expect(json[0].sources[0].verificationStatus).toBe("verified");
+      expect(getCountryProceduresJson(code)?.updatedAt).toBe("2026-09-05");
+    }
+  });
+
   it("paese senza file JSON → array vuoto", () => {
     expect(loadCountryProceduresJson("DZ")).toEqual([]);
     expect(loadCountryProceduresJson("ZZ")).toEqual([]);
@@ -348,6 +414,9 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(ids).toContain("PH-permesso-soggiorno-lavoro");
     expect(ids).toContain("SN-permesso-soggiorno-lavoro");
     expect(ids).toContain("LK-permesso-soggiorno-lavoro");
+    expect(ids).toContain("PK-permesso-soggiorno-lavoro");
+    expect(ids).toContain("NG-permesso-soggiorno-lavoro");
+    expect(ids).toContain("IN-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });

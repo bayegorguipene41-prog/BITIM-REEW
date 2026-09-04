@@ -33,9 +33,29 @@ const STATIC_STATUS: Record<string, VerificationStatus> = {
   PH: "verified",
   SN: "verified",
   LK: "verified",
+  PK: "verified",
+  NG: "verified",
+  IN: "verified",
   FR: "needs_review",
   DE: "needs_review",
 };
+
+// Data di ultima verifica per i paesi con dati (allineata a data/procedures/_index.json)
+const COUNTRY_LAST_VERIFIED: Record<string, string> = {
+  IT: "2026-08-30",
+  AL: "2026-09-04",
+  MA: "2026-09-04",
+  TN: "2026-09-04",
+  EG: "2026-09-04",
+  BD: "2026-09-04",
+  PH: "2026-09-04",
+  SN: "2026-09-04",
+  LK: "2026-09-04",
+  PK: "2026-09-05",
+  NG: "2026-09-05",
+  IN: "2026-09-05",
+};
+const LATEST_VERIFIED_DATE = "2026-09-05";
 
 // ── Indice completo: ogni paese in COUNTRIES ha una voce ───────
 // I paesi con dati procedura hanno procedureCount > 0; quelli senza dati
@@ -57,7 +77,7 @@ export const COUNTRY_PROCEDURE_INDEX: Record<string, CountryProcedureMeta> =
               ? loadCountryProceduresJson(c.code).length
               : UNVERIFIED_PROCEDURES.filter((p) => p.countryCode === c.code).length
             : 0,
-          lastVerified: hasData ? "2026-09-04" : "",
+          lastVerified: hasData ? COUNTRY_LAST_VERIFIED[c.code] ?? LATEST_VERIFIED_DATE : "",
           status,
         },
       ];
@@ -89,6 +109,9 @@ const ALL_BUNDLE_DATA: Procedure[] = [
   ...loadCountryProceduresJson("PH"),
   ...loadCountryProceduresJson("SN"),
   ...loadCountryProceduresJson("LK"),
+  ...loadCountryProceduresJson("PK"),
+  ...loadCountryProceduresJson("NG"),
+  ...loadCountryProceduresJson("IN"),
   ...UNVERIFIED_PROCEDURES,
 ];
 

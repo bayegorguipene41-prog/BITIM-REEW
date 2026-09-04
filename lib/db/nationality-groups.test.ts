@@ -121,6 +121,20 @@ describe("resolveNationalityGroups — bilateral agreements (destination=IT)", (
     expect(groups).toContain("foreign");
   });
 
+  it("Pakistan → bilateral + bilateral_it-pakistan + foreign", () => {
+    const groups = resolveNationalityGroups("PK");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-pakistan");
+    expect(groups).toContain("foreign");
+  });
+
+  it("India → bilateral + bilateral_it-india + foreign", () => {
+    const groups = resolveNationalityGroups("IN");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-india");
+    expect(groups).toContain("foreign");
+  });
+
   it("all IT bilateral partners are in the map", () => {
     for (const partnerCode of Object.keys(itPartners)) {
       const groups = resolveNationalityGroups(partnerCode);
@@ -133,10 +147,6 @@ describe("resolveNationalityGroups — bilateral agreements (destination=IT)", (
 // ── Generic foreign countries ────────────────────────────────────
 
 describe("resolveNationalityGroups — generic foreign", () => {
-  it("India → foreign only", () => {
-    expect(resolveNationalityGroups("IN")).toEqual(["foreign"]);
-  });
-
   it("China → foreign only", () => {
     expect(resolveNationalityGroups("CN")).toEqual(["foreign"]);
   });

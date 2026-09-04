@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "countryCode": "IN",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "IN-permesso-soggiorno-lavoro",
+      "countryCode": "IN",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino indiano. L'India è coperta dall'Accordo bilaterale in materia di migrazione e mobilità (2023) e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028. Requisiti basati sulla checklist del Consolato di Mumbai (giurisdizione Ovest/Sud); per altre giurisdizioni italiane in India verificare eventuali differenze locali.",
+        "en": "Documents to work in Italy as an Indian citizen. India is covered by the bilateral agreement on migration and mobility (2023) and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028. Requirements based on the checklist of the Consulate in Mumbai (West/South jurisdiction); for other Italian jurisdictions in India check for any local differences."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-IN-accordo",
+          "name": "Accordo bilaterale in materia di migrazione e mobilità tra Italia e India (2023)",
+          "authority": "Presidenza del Consiglio dei Ministri / Governo italiano",
+          "url": "https://atrio.esteri.it/Search/Allegati/54272",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-visti",
+          "name": "Visti — informazioni generali (visto nazionale D e criterio della residenza)",
+          "authority": "Ambasciata d'Italia a New Delhi",
+          "url": "https://ambnewdelhi.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-scheda",
+          "name": "EMPLOYMENT VISA check list — REQUISITE DOCUMENTS (LONG TERM – TYPE D)",
+          "authority": "Consolato Generale d'Italia a Mumbai",
+          "url": "https://consmumbai.esteri.it/wp-content/uploads/2024/07/Employment-VISA-check_list_190413.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-sezione",
+          "name": "Visa Checklists — sezione LONG TERM – TYPE D",
+          "authority": "Consolato Generale d'Italia a Mumbai",
+          "url": "https://consmumbai.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visa-checklists/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-vfs",
+          "name": "VFS Global — Italy Visa Application Centre in India",
+          "authority": "VFS Global / Ambasciata d'Italia a New Delhi",
+          "url": "https://visa.vfsglobal.com/ind/en/ita",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-IN-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di domanda di visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di domanda di visto completamente compilato e firmato dal richiedente.",
+            "en": "Application form fully completed and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o VFS Global Italy Visa Application Centre.",
+            "en": "The 'Visa for Italy' portal or the VFS Global Italy Visa Application Centre."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato in ogni sua parte e firmato dal richiedente.",
+            "en": "A form fully completed and signed by the applicant."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photographs" },
+          "description": {
+            "it": "Due foto recenti formato passaporto (sfondo bianco). Non fissare le fotografie al modulo di domanda con punti metallici.",
+            "en": "Two recent passport-size photographs (white background). Please do not staple the photographs to the application form."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or booth compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Due fotografie recenti formato passaporto, a fondo bianco.",
+            "en": "Two recent passport-size photographs with a white background."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recenti.", "en": "Recent." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto / documento di viaggio", "en": "Passport / travel document" },
+          "description": {
+            "it": "Documento di viaggio che deve: essere stato emesso negli ultimi 10 anni, con validità che non supera i 10 anni; avere una validità residua di almeno 3 mesi dopo il soggiorno previsto; avere almeno 2 pagine bianche. Per i cittadini indiani l'Italia accetta passaporti ordinari, diplomatici e di servizio.",
+            "en": "Travel document that must: have been issued within the previous 10 years, with a validity not exceeding 10 years; have a minimum validity of 3 months after the intended stay; have 2 blank pages. For Indian citizens Italy accepts ordinary, diplomatic and service passports."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità indiana preposta al rilascio dei passaporti (Passport Seva).",
+            "en": "Indian authority responsible for passport issuance (Passport Seva)."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto/documento di viaggio conforme ai criteri di emissione, validità residua e pagine bianche di cui sopra.",
+            "en": "A passport/travel document meeting the issue, remaining validity and blank-page criteria above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Emesso negli ultimi 10 anni; validità residua di almeno 3 mesi dopo il soggiorno previsto.", "en": "Issued within the previous 10 years; at least 3 months of validity after the intended stay." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "autorizzazione-lavoro",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro subordinato", "en": "Work authorization for subordinate employment" },
+          "description": {
+            "it": "Fotocopia dell'«Autorizzazione al lavoro subordinato» (nulla osta per lavoro subordinato) la cui data non sia anteriore a sei mesi. La checklist di Mumbai fa riferimento all'autorizzazione rilasciata dal competente Ufficio Provinciale del Lavoro, vidimata dalla competente Questura; nell'ambito del Decreto Flussi l'autorizzazione è oggi il nulla osta rilasciato dallo Sportello Unico per l'Immigrazione (SUI). Categoria spettacolo: originale e fotocopia dell'«Autorizzazione al lavoro» rilasciata dal competente Ufficio Provinciale del Lavoro – Segreteria Collocamento Spettacolo (Via Fornovo 8, 00193 Roma) o dall'Ufficio Speciale Collocamento dello Spettacolo a Palermo.",
+            "en": "Photocopy of the 'Autorizzazione al lavoro subordinato' (work authorization for dependent work) whose date is not prior to six months. The Mumbai checklist refers to the authorization issued by the competent Labour Provincial Directorate, duly authorized by the competent Police Headquarters (Questura); within the Decreto Flussi the authorization is today the nulla osta issued by the One-Stop Immigration Desk (SUI). Show-business category: original and photocopy of the 'Autorizzazione al lavoro' issued by the competent Labour Provincial Directorate – Division for the Show Business (Via Fornovo 8, 00193 Rome) or by the Special Labour Office for the Show Business in Palermo."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia (nulla osta); per lo spettacolo, uffici competenti del collocamento dello spettacolo.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy (nulla osta); for show business, the competent show-business labour offices."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia dell'autorizzazione al lavoro subordinato, non anteriore a sei mesi, da presentare con la domanda di visto.",
+            "en": "Photocopy of the work authorization, not prior to six months, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Autorizzazione la cui data non sia anteriore a sei mesi.", "en": "Authorization whose date is not prior to six months." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "lettera-impegno-datore",
+          "code": "EMPLOYER_UNDERTAKING_LETTER",
+          "name": { "it": "Lettera di impegno del datore di lavoro", "en": "Employer's undertaking letter" },
+          "description": {
+            "it": "Per la categoria spettacolo: lettera di impegno (undertaking letter) del datore di lavoro, obbligatoria, che assicuri il ritorno in India del richiedente al termine del contratto di lavoro.",
+            "en": "For the show-business category: an undertaking letter by the employer is mandatory, assuring that the applicant will return to India after completion of the work contract."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Il datore di lavoro (per i casi di autorizzazione al lavoro per lo spettacolo).",
+            "en": "The employer (for show-business work authorization cases)."
+          },
+          "whatYouNeed": {
+            "it": "Lettera di impegno del datore di lavoro che assicuri il rientro in India a fine contratto.",
+            "en": "An employer's undertaking letter assuring return to India after the contract ends."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "fotocopia-osservazioni-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia delle osservazioni del passaporto", "en": "Photocopy of passport observations" },
+          "description": {
+            "it": "Fotocopia di tutte le osservazioni presenti nel passaporto.",
+            "en": "Photocopy of all observations in the passport."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia integrale delle pagine con le osservazioni del passaporto.",
+            "en": "Full photocopies of the passport observation pages."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "originali-documenti",
+          "code": "DOCUMENT_ORIGINALS",
+          "name": { "it": "Originali dei documenti", "en": "Original documents" },
+          "description": {
+            "it": "Presentare i documenti originali al momento della presentazione della domanda, per la loro verifica.",
+            "en": "Show original documents at the time of submission of the application, for verification."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Documentazione in proprio possesso.",
+            "en": "Documentation in the applicant's possession."
+          },
+          "whatYouNeed": {
+            "it": "Tutti i documenti originali a supporto della domanda.",
+            "en": "All originals supporting the application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "prova-abilita",
+          "code": "PROOF_OF_SKILLS",
+          "name": { "it": "Prova delle competenze lavorative", "en": "Proof of work skills" },
+          "description": {
+            "it": "Se il lavoro per cui è stata rilasciata l'autorizzazione richiede competenze speciali, la prova delle competenze deve essere documentata.",
+            "en": "If the work for which the authorization has been granted requires special skills, proof of skills is to be documented."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Enti di certificazione delle competenze, datori di lavoro precedenti, attestati professionali.",
+            "en": "Skills certification bodies, previous employers, professional certificates."
+          },
+          "whatYouNeed": {
+            "it": "Documentazione attestante le competenze richieste dal lavoro.",
+            "en": "Documentation proving the skills required for the job."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-IN-scheda"
+        },
+        {
+          "id": "prova-residenza",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Prova della residenza", "en": "Proof of residence" },
+          "description": {
+            "it": "Se nel frattempo sono intervenute variazioni di residenza, deve essere presentata un'adeguata prova della residenza (ad es. estratto conto bancario, bolletta telefonica/della corrente elettrica, ecc.).",
+            "en": "If any change has occurred in this regard, an adequate proof of residence needs to be submitted (bank account, telephone/electricity bill, etc.)."
+          },
+          "necessity": "conditional",
+          "whereToGet": {
+            "it": "Banca, fornitori telefonici ed energetici, autorità locali.",
+            "en": "Bank, telephone and utility providers, local authorities."
+          },
+          "whatYouNeed": {
+            "it": "Documenti che attestino la residenza attuale in caso di variazioni.",
+            "en": "Documents proving the current residence in case of changes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Documentazione aggiornata.", "en": "Up-to-date documentation." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-IN-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino indiano residente nella giurisdizione consolare di una sede italiana in India, in possesso di nulla osta (o autorizzazione al lavoro) per lavoro subordinato, nell'ambito del Decreto Flussi. L'India è coperta dall'Accordo bilaterale in materia di migrazione e mobilità (2023) e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028). Competenze territoriali: Ambasciata d'Italia a New Delhi (Haryana, Himachal Pradesh, Jammu-Kashmir, Punjab, Rajasthan, Uttarakhand, Uttar Pradesh, Delhi, Chandigarh), Consolato Generale a Kolkata, Consolato Generale a Mumbai e Consolato Generale a Bangalore.",
+          "en": "Indian citizen resident in the consular jurisdiction of an Italian office in India, holding a work authorization (nulla osta) for subordinate employment, within the Decreto Flussi. India is covered by the bilateral agreement on migration and mobility (2023) and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028). Territorial competences: Italian Embassy in New Delhi (Haryana, Himachal Pradesh, Jammu-Kashmir, Punjab, Rajasthan, Uttarakhand, Uttar Pradesh, Delhi, Chandigarh), Consulate General in Kolkata, Consulate General in Mumbai and Consulate General in Bangalore."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global Italy Visa Application Centre / Ambasciata d'Italia a New Delhi", "en": "VFS Global Italy Visa Application Centre / Italian Embassy in New Delhi" },
+          "address": {
+            "it": "New Delhi: Italy Visa Application Centre, VFS Global Services Pvt. Ltd, 1st Floor, 27 K.G. Marg, New Delhi 110001. Altri centri VFS sotto i Consolati Generali a Mumbai (Ahmedabad, Pune, Kochi), Kolkata (Kolkata, Kathmandu) e Bangalore (Bengaluru, Chennai, Hyderabad).",
+            "en": "New Delhi: Italy Visa Application Centre, VFS Global Services Pvt. Ltd, 1st Floor, 27 K.G. Marg, New Delhi 110001. Other VFS centres under the Consulates General in Mumbai (Ahmedabad, Pune, Kochi), Kolkata (Kolkata, Kathmandu) and Bangalore (Bengaluru, Chennai, Hyderabad)."
+          },
+          "appointment": {
+            "it": "Obbligatoria, previa registrazione, tramite il sito di VFS Global (https://visa.vfsglobal.com/ind/en/ita); la prenotazione per la categoria lavoro con nulla osta avviene tramite webform.",
+            "en": "Required, after registration, via the VFS Global website (https://visa.vfsglobal.com/ind/en/ita); booking for the employment-with-nulla-osta category takes place via webform."
+          },
+          "phone": "+91 22 67866004",
+          "email": "infonorth.italyin@vfshelpline.com",
+          "website": "https://visa.vfsglobal.com/ind/en/ita",
+          "notes": {
+            "it": "L'utilizzo del Visa Application Centre non è obbligatorio; i relativi costi aggiuntivi devono essere pagati direttamente a VFS Global. Tutte le domande vengono valutate e decise dalla Sezione Visti dell'Ambasciata/Consolato competente. Dato il criterio della residenza, la domanda si presenta alla sede italiana competente per la giurisdizione di residenza.",
+            "en": "Use of the Visa Application Centre is not mandatory; its additional costs must be paid directly to VFS Global. All applications are assessed and decided by the visa section of the competent Embassy/Consulate. Under the residence criterion, the application is submitted at the Italian office competent for the jurisdiction of residence."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto tramite VFS Global (canale ufficiale) o direttamente presso l'Ambasciata/Consolato competente.",
+          "en": "Visa application via VFS Global (official channel) or directly at the competent Embassy/Consulate."
+        },
+        "processingTime": {
+          "it": "Variabile; i tempi per i visti nazionali D sono mediamente più lunghi. La legge italiana prevede per questa tipologia un termine massimo di 30 giorni per la valutazione, sospeso fino al completamento delle eventuali verifiche sulla documentazione.",
+          "en": "Varies; processing times for national D visas are on average longer. Italian law provides a maximum period of 30 days for the evaluation of this visa type, suspended until any verification of the documentation is completed."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)."
+          },
+          {
+            "it": "Ottenuto il nulla osta, il cittadino indiano prenota un appuntamento tramite VFS Global e presenta la domanda di visto per lavoro (con raccolta dei dati biometrici).",
+            "en": "Once the nulla osta is obtained, the Indian citizen books an appointment via VFS Global and submits the work visa application (including biometric data collection)."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno alla Questura della provincia di residenza.",
+            "en": "Within 8 working days of entry, apply for the residence permit at the Police Headquarters (Questura) of the province of residence."
+          },
+          {
+            "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.",
+            "en": "For renewal, submit the application at least 60 days before expiry."
+          }
+        ],
+        "note": {
+          "it": "Requisiti basati sulla checklist del Consolato di Mumbai (giurisdizione Ovest/Sud); per altre giurisdizioni italiane in India verificare eventuali differenze locali. La sezione Visti dell'Ambasciata/Consolato si riserva il diritto di verificare la documentazione presentata. Dall'11 gennaio 2025 l'Italia richiede la raccolta dei dati biometrici (impronte digitali) anche per i visti nazionali D.",
+          "en": "Requirements based on the checklist of the Consulate in Mumbai (West/South jurisdiction); for other Italian jurisdictions in India check for any local differences. The visa section of the Embassy/Consulate reserves the right to verify the documentation submitted. Since 11 January 2025 Italy requires biometric data (fingerprints) collection also for national D visas."
+        }
+      }
+    }
+  ]
+}

@@ -59,6 +59,8 @@ export const BILATERAL_AGREEMENTS: BilateralAgreements = {
     EG: "bilateral_it-egypt",    // Egitto
     PH: "bilateral_it-philippines", // Filippine
     BD: "bilateral_it-bangladesh",  // Bangladesh
+    PK: "bilateral_it-pakistan", // Pakistan (Memorandum d'Intesa 2025)
+    IN: "bilateral_it-india",    // India (Accordo migrazione e mobilità 2023)
   },
   // Futuri esempi:
   // FR: { MA: "bilateral_fr-maroc", TN: "bilateral_fr-tunisia", ... },

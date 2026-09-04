@@ -46,6 +46,11 @@ describe("COUNTRY_PROCEDURE_INDEX — copertura paesi", () => {
     expect(COUNTRY_PROCEDURE_INDEX["TN"]?.procedureCount).toBe(1);
   });
 
+  it("Egitto è verified con una procedura reale (Fase 2B)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["EG"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["EG"]?.procedureCount).toBe(1);
+  });
+
   it("i paesi senza dati sono 'unavailable' con procedureCount 0", () => {
     // Algeria, ecc. non hanno ancora dati → unavailable
     expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.status).toBe("unavailable");
@@ -74,10 +79,11 @@ describe("isCountryAvailable / getCountryMeta", () => {
     expect(isCountryAvailable("DZ")).toBe(false);
   });
 
-  it("Albania, Marocco e Tunisia sono available (datati verificati)", () => {
+  it("Albania, Marocco, Tunisia ed Egitto sono available (datati verificati)", () => {
     expect(isCountryAvailable("AL")).toBe(true);
     expect(isCountryAvailable("MA")).toBe(true);
     expect(isCountryAvailable("TN")).toBe(true);
+    expect(isCountryAvailable("EG")).toBe(true);
   });
 
   it("doesn't throw on null/undefined/empty", () => {
@@ -120,6 +126,13 @@ describe("loadProceduresForCountry", () => {
     expect(procs[0].dataSource).toBe("verified");
   });
 
+  it("Egitto → carica la procedura verificata", async () => {
+    const procs = await loadProceduresForCountry("EG");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("EG-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
   it("Francia → 1 procedura (needs_review)", async () => {
     const procs = await loadProceduresForCountry("FR");
     expect(procs.length).toBe(1);
@@ -158,6 +171,9 @@ describe("lookup — integrazione sync/async backward compat", () => {
     const tn = await proceduresForCountryAsync("TN");
     expect(tn.length).toBeGreaterThanOrEqual(1);
     expect(tn[0].id).toBe("TN-permesso-soggiorno-lavoro");
+    const eg = await proceduresForCountryAsync("EG");
+    expect(eg.length).toBeGreaterThanOrEqual(1);
+    expect(eg[0].id).toBe("EG-permesso-soggiorno-lavoro");
     const fr = await proceduresForCountryAsync("FR");
     expect(fr.length).toBeGreaterThanOrEqual(1);
     const dz = await proceduresForCountryAsync("DZ");
@@ -170,12 +186,13 @@ describe("lookup — integrazione sync/async backward compat", () => {
 });
 
 describe("PROCEDURES/PROCEDURES_ALL — nessuna regressione", () => {
-  it("PROCEDURES contiene Italia + Albania + Marocco + Tunisia + unverified", () => {
+  it("PROCEDURES contiene Italia + Albania + Marocco + Tunisia + Egitto + unverified", () => {
     const ids = PROCEDURES.map((p) => p.id);
     expect(ids).toContain("IT-permesso-soggiorno-lavoro");
     expect(ids).toContain("AL-permesso-soggiorno-lavoro");
     expect(ids).toContain("MA-permesso-soggiorno-lavoro");
     expect(ids).toContain("TN-permesso-soggiorno-lavoro");
+    expect(ids).toContain("EG-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });
@@ -229,6 +246,14 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(json[0].sources[0].verificationStatus).toBe("verified");
   });
 
+  it("EG.json è la fonte delle procedure Egitto (Fase 2B)", () => {
+    const json = loadCountryProceduresJson("EG");
+    expect(json.length).toBe(1);
+    expect(json.map((p) => p.id)).toEqual(expect.arrayContaining(["EG-permesso-soggiorno-lavoro"]));
+    expect(getCountryProceduresJson("EG")?.status).toBe("verified");
+    expect(json[0].sources[0].verificationStatus).toBe("verified");
+  });
+
   it("paese senza file JSON → array vuoto", () => {
     expect(loadCountryProceduresJson("DZ")).toEqual([]);
     expect(loadCountryProceduresJson("ZZ")).toEqual([]);
@@ -241,6 +266,7 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(ids).toContain("AL-permesso-soggiorno-lavoro");
     expect(ids).toContain("MA-permesso-soggiorno-lavoro");
     expect(ids).toContain("TN-permesso-soggiorno-lavoro");
+    expect(ids).toContain("EG-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });

@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "countryCode": "EG",
+  "updatedAt": "2026-09-04",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "EG-permesso-soggiorno-lavoro",
+      "countryCode": "EG",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino egiziano. L'Egitto è coperto da accordo bilaterale in materia di lavoro (Accordo bilaterale Italia-Egitto 2005 e Memorandum d'Intesa 2011) e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028.",
+        "en": "Documents to work in Italy as an Egyptian citizen. Egypt is covered by a bilateral labour agreement (Italy-Egypt bilateral agreement 2005 and Memorandum of Understanding 2011) and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-EG-accordo",
+          "name": "Accordi migrazione lavoro — Accordo bilaterale Italia-Egitto (2005) e Memorandum d'Intesa (2011)",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-interno",
+          "name": "Visto e permesso di soggiorno",
+          "authority": "Ministero dell'Interno",
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-ambasciata",
+          "name": "Visti — informazioni generali e domanda di visto di lavoro",
+          "authority": "Ambasciata d'Italia al Cairo",
+          "url": "https://ambilcairo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-scheda",
+          "name": "Scheda Visto per Lavoro Subordinato (VSU -C/VN -D)",
+          "authority": "Ambasciata d'Italia al Cairo",
+          "url": "https://ambilcairo.esteri.it/wp-content/uploads/2026/08/8.-Lavoro-Subordinato-ITA.pdf",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-almaviva",
+          "name": "Dove chiedere un visto — Visa Application Center ALMAVIVA (Cairo e Alessandria)",
+          "authority": "Ambasciata d'Italia al Cairo",
+          "url": "https://ambilcairo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EG-quote",
+          "name": "Flussi 2026: attribuite le quote per lavoro subordinato non stagionale, click day il 16 febbraio",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/notizie/pagine/flussi-2026-attribuite-le-quote-per-lavoro-subordinato-non-stagionale-click-day-il-16-febbraio",
+          "lastVerifiedAt": "2026-09-04",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-visto",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Formulario di richiesta del visto per lavoro subordinato, compilato e firmato dal richiedente.",
+            "en": "Subordinate-work visa application form, fully completed and signed by the applicant."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Portale 'Il visto per l'Italia' o Visa Application Center ALMAVIVA (Ambasciata d'Italia al Cairo).",
+            "en": "The 'Visa for Italy' portal or the ALMAVIVA Visa Application Center (Italian Embassy in Cairo)."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte, firmato negli appositi riquadri.",
+            "en": "A form completed in full, signed in the designated boxes."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Foto formato tessera", "en": "Passport photo" },
+          "description": {
+            "it": "Foto formato tessera (35 x 40 mm), recente e conforme alle norme ICAO, da incollare sul formulario.",
+            "en": "A 35 x 40 mm ID photo, recent and compliant with ICAO rules, to be pasted on the form."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or cab compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia formato tessera, recente.",
+            "en": "One ID-size photograph, recent."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "estimatedCost": { "it": "Circa € 10-20.", "en": "Around €10-20." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto valido almeno 3 mesi oltre la durata del soggiorno richiesto.",
+            "en": "Passport valid for at least 3 months beyond the intended stay."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità egiziana preposta al rilascio dei passaporti.",
+            "en": "Egyptian authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto in corso di validità con i requisiti di cui sopra.",
+            "en": "A valid passport meeting the requirements above."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 3 mesi oltre la durata del soggiorno.", "en": "Minimum 3 months beyond the stay." },
+          "estimatedCost": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopie del passaporto", "en": "Passport photocopies" },
+          "description": {
+            "it": "Fotocopie del passaporto (pagine con i dati personali e pagine con i visti precedenti).",
+            "en": "Photocopies of the passport (personal-data pages and pages with previous visas)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopie complete del passaporto.",
+            "en": "Complete photocopies of the passport."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro (nulla osta SUI)", "en": "Work authorization (nulla osta / SUI)" },
+          "description": {
+            "it": "Nulla osta per lavoro subordinato rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi, intestato all'Ambasciata d'Italia al Cairo e presentato entro 6 mesi dall'emissione.",
+            "en": "Work authorization for subordinate employment issued by the competent Italian One-Stop Immigration Desk (SUI), within the Decreto Flussi, addressed to the Italian Embassy in Cairo and presented within 6 months of issue."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto; il nulla osta è intestato all'Ambasciata d'Italia al Cairo.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application; it is addressed to the Italian Embassy in Cairo."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il nulla osta per lavoro subordinato ha validità di sei mesi dall'emissione.", "en": "The work nulla osta is valid for six months from issue." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "profilo-viaggiatore",
+          "code": "TRAVELER_PROFILE",
+          "name": { "it": "Profilo viaggiatore / libretto di famiglia", "en": "Traveler profile / family booklet" },
+          "description": {
+            "it": "Profilo viaggiatore (profilo familiare 'Kid Aely') o libretto di famiglia, documento egiziano con i dati anagrafici e familiari.",
+            "en": "Traveler profile (Egyptian family profile 'Kid Aely') or family booklet, the Egyptian document with personal and family details."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità egiziana competente per lo stato civile.",
+            "en": "Competent Egyptian civil-status authority."
+          },
+          "whatYouNeed": {
+            "it": "Profilo viaggiatore/libretto di famiglia in corso di validità.",
+            "en": "A valid traveler profile/family booklet."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Documento di stato civile; verificare l'aggiornamento dei dati.", "en": "Civil-status document; verify that the data are up to date." },
+          "processingTime": { "it": "Variabile secondo l'ente emittente.", "en": "Varies by issuing authority." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "certificato-mogamma",
+          "code": "MOGAMMA_CERTIFICATE",
+          "name": { "it": "Certificato Mogamma", "en": "Mogamma certificate" },
+          "description": {
+            "it": "Certificato di stato civile rilasciato dall'ufficio egiziano di registrazione civile (Mogamma).",
+            "en": "Civil-status certificate issued by the Egyptian civil registry office (Mogamma)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Ufficio di registrazione civile egiziano (Mogamma).",
+            "en": "Egyptian civil registry office (Mogamma)."
+          },
+          "whatYouNeed": {
+            "it": "Certificato Mogamma in corso di validità.",
+            "en": "A valid Mogamma certificate."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "L'aggiornamento del certificato è richiesto se i dati sono variati.", "en": "The certificate must be updated if data have changed." },
+          "processingTime": { "it": "Variabile secondo l'ufficio emittente.", "en": "Varies by issuing office." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "prenotazione-viaggio",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del biglietto di viaggio", "en": "Travel ticket booking" },
+          "description": {
+            "it": "Conferma della prenotazione dei voli per l'Italia.",
+            "en": "Booking confirmation of the flights to Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Prenotazione confermata dei voli.",
+            "en": "Confirmed flight booking."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-EG-scheda"
+        },
+        {
+          "id": "traduzione-documenti",
+          "code": "APOSTILLE_TRANSLATION",
+          "name": { "it": "Traduzione e fotocopie dei documenti", "en": "Translation and photocopies of documents" },
+          "description": {
+            "it": "Ogni documento deve essere presentato in italiano o inglese, con la relativa fotocopia; i documenti in arabo richiedono traduzione asseverata.",
+            "en": "Each document must be presented in Italian or English, accompanied by its photocopy; Arabic documents require sworn translation."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotocopie: qualsiasi centro copie; traduzione: traduttore giurato.",
+            "en": "Photocopies: any copy shop; translation: sworn translator."
+          },
+          "whatYouNeed": {
+            "it": "Tutti i giustificativi presentati in italiano o inglese con fotocopia.",
+            "en": "All supporting documents presented in Italian or English with a photocopy."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "La validità dipende dal singolo documento.", "en": "Validity depends on the individual document." },
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-EG-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino egiziano in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. L'Egitto è coperto dall'Accordo bilaterale Italia-Egitto (2005) e dal Memorandum d'Intesa (2011) e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028).",
+          "en": "Egyptian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Egypt is covered by the Italy-Egypt bilateral agreement (2005) and Memorandum of Understanding (2011) and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028)."
+        },
+        "whereToApply": {
+          "name": { "it": "Visa Application Center ALMAVIVA (per conto dell'Ambasciata d'Italia al Cairo)", "en": "ALMAVIVA Visa Application Center (on behalf of the Italian Embassy in Cairo)" },
+          "address": { "it": "Cairo: 20, Elmadinah Elmonawara St., Dokki, Giza — Alessandria: Building No. 230 Abdelsalam Aref, Loran, Elraml Awal", "en": "Cairo: 20, Elmadinah Elmonawara St., Dokki, Giza — Alexandria: Building No. 230 Abdelsalam Aref, Loran, Elraml Awal" },
+          "hours": { "it": "Dom-Gio: 08:00-17:00; Ven-Sab chiuso", "en": "Sun-Thu: 08:00-17:00; Fri-Sat closed" },
+          "appointment": { "it": "Obbligatoria tramite il sito del Visa Application Center (https://egy.almaviva-visa.it).", "en": "Required via the Visa Application Center website (https://egy.almaviva-visa.it)." },
+          "phone": "+20 2 2124 9234",
+          "email": "eg.info-visa@almaviva-visa.services",
+          "website": "https://ambilcairo.esteri.it",
+          "notes": {
+            "it": "La richiesta del visto per lavoro subordinato si presenta dopo il rilascio del nulla osta, con appuntamento obbligatorio presso il Visa Application Center ALMAVIVA. Per i familiari di cittadini europei è possibile recarsi al centro senza appuntamento. Per richieste particolari: visti.cairo@esteri.it.",
+            "en": "The subordinate-work visa application is submitted after the nulla osta is issued, by mandatory appointment at the ALMAVIVA Visa Application Center. Family members of EU citizens may visit the centre without an appointment. For special enquiries: visti.cairo@esteri.it."
+          }
+        },
+        "method": { "it": "Domanda di visto tramite il Visa Application Center ALMAVIVA (canale ufficiale dell'Ambasciata d'Italia al Cairo)", "en": "Visa application via the ALMAVIVA Visa Application Center (official channel of the Italian Embassy in Cairo)" },
+        "processingTime": { "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.", "en": "Varies; depends on the nulla osta and the consular schedule." },
+        "validity": { "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.", "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work." },
+        "renewal": { "it": "Presentare la domanda almeno 60 giorni prima della scadenza.", "en": "Submit the application at least 60 days before expiry." },
+        "appointmentRequired": true,
+        "steps": [
+          { "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi; click day per i non stagionali: 16 febbraio 2026).", "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi; click day for non-seasonal work: 16 February 2026)." },
+          { "it": "Ottenuto il nulla osta, il cittadino egiziano fissa un appuntamento presso il Visa Application Center ALMAVIVA e presenta la domanda di visto per lavoro subordinato.", "en": "Once the nulla osta is obtained, the Egyptian citizen books an appointment at the ALMAVIVA Visa Application Center and submits the subordinate-work visa application." },
+          { "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.", "en": "The visa is issued and the worker enters Italy." },
+          { "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.", "en": "Within 8 working days of entry, apply for the residence permit." },
+          { "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.", "en": "For renewal, submit the application at least 60 days before expiry." }
+        ],
+        "note": {
+          "it": "Ogni documento deve essere presentato in italiano o inglese con la relativa fotocopia. I documenti originali restano al lavoratore per i controlli in frontiera.",
+          "en": "Each document must be presented in Italian or English with its photocopy. Original documents remain with the worker for border checks."
+        }
+      }
+    }
+  ]
+}

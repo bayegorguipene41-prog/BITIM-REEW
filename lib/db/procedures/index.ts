@@ -13,12 +13,14 @@ import { PROCEDURE_ITALIA } from "./Italia";
 // AL: procedure Albania (verificate) — AL.json (Fase 2B, Sessione 5).
 // MA: procedure Marocco (verificate) — MA.json (Fase 2B, Sessione 6).
 // TN: procedure Tunisia (verificate) — TN.json (Fase 2B, Sessione 6).
+// EG: procedure Egitto (verificate) — EG.json (Fase 2B, Sessione 7).
 // FR/DE: placeholder marcati needs_review — FR.json / DE.json.
 const VERIFIED_FROM_JSON: Procedure[] = [
   ...loadCountryProceduresJson("IT"),
   ...loadCountryProceduresJson("AL"),
   ...loadCountryProceduresJson("MA"),
   ...loadCountryProceduresJson("TN"),
+  ...loadCountryProceduresJson("EG"),
 ];
 
 export const PROCEDURES: Procedure[] = [

@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "countryCode": "PE",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "PE-permesso-soggiorno-lavoro",
+      "countryCode": "PE",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino peruviano. Il Perù non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). I cittadini peruviani sono esenti da visto per soggiorni fino a 90 giorni; per soggiorni superiori (lavoro) è richiesto il visto nazionale di tipo D.",
+        "en": "Documents to work in Italy as a Peruvian citizen. Peru has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). Peruvian citizens are visa-exempt for stays of up to 90 days; for longer stays (work) a national type-D visa is required."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-PE-scheda",
+          "name": "Visa para Trabajo Dependiente — requisitos",
+          "authority": "Ambasciata d'Italia a Lima",
+          "url": "https://amblima.esteri.it/wp-content/uploads/2024/03/Lavoro-Subordinato.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PE-visti",
+          "name": "Visti — informazioni generali",
+          "authority": "Ambasciata d'Italia a Lima",
+          "url": "https://amblima.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-PE-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "formulario-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto nazionale", "en": "National visa application form" },
+          "description": {
+            "it": "Formulario di richiesta del visto nazionale (tipo D) completato in ogni sua parte e firmato.",
+            "en": "National visa (type D) application form fully completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sito istituzionale 'Il visto per l'Italia' o Cancelleria Consolare dell'Ambasciata d'Italia a Lima.",
+            "en": "The official 'Visa for Italy' website or the Consular Chancery of the Italian Embassy in Lima."
+          },
+          "whatYouNeed": {
+            "it": "Formulario compilato in ogni sua parte e firmato.",
+            "en": "A form completed in full and signed."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato passaporto", "en": "Passport-size photograph" },
+          "description": {
+            "it": "Una fotografia a colori recente, su sfondo bianco, formato passaporto.",
+            "en": "One recent colour photograph, on a white background, passport size."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or booth compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia a colori recente su sfondo bianco formato passaporto.",
+            "en": "One recent colour passport-size photograph on a white background."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente.", "en": "Recent." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto peruviano valido", "en": "Valid Peruvian passport" },
+          "description": {
+            "it": "Passaporto peruviano con scadenza di almeno 3 mesi oltre il periodo del visto richiesto e almeno una pagina libera.",
+            "en": "Peruvian passport valid for at least 3 months beyond the requested visa period, with at least one blank page."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità peruviana preposta al rilascio dei passaporti (Superintendencia Nacional de Migraciones).",
+            "en": "Peruvian passport authority (Superintendencia Nacional de Migraciones)."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto con validità residua di almeno 3 mesi oltre il visto e almeno una pagina libera.",
+            "en": "Passport with at least 3 months of remaining validity beyond the visa and at least one blank page."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 3 mesi oltre il periodo del visto richiesto.", "en": "At least 3 months beyond the requested visa period." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Passport photocopy" },
+          "description": {
+            "it": "Fotocopia semplice del passaporto (parte che contiene i dati del titolare).",
+            "en": "Simple photocopy of the passport (the part containing the holder's details)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopia semplice della pagina con i dati del titolare.",
+            "en": "Simple photocopy of the holder's data page."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (Prefettura / SUI)", "en": "Nulla osta (Prefettura / SUI)" },
+          "description": {
+            "it": "Nulla osta per lavoro subordinato emesso dalla Prefettura (Sportello Unico Immigrazione) e trasmesso telematicamente dalla Prefettura all'Ambasciata. Il nulla osta deve essere utilizzato prima della scadenza (sei mesi dalla data di emissione).",
+            "en": "Nulla osta for subordinate work issued by the Prefecture (One-Stop Immigration Desk) and transmitted electronically by the Prefecture to the Embassy. The nulla osta must be used before it expires (six months from issue)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Prefettura (Sportello Unico Immigrazione) competente per il datore di lavoro in Italia.",
+            "en": "Prefecture (One-Stop Immigration Desk) competent for the employer in Italy."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta emesso dalla Prefettura; la pratica deve essere stata inviata telematicamente dalla Prefettura all'Ambasciata.",
+            "en": "Nulla osta issued by the Prefecture; the file must have been sent electronically by the Prefecture to the Embassy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Sei mesi dalla data di emissione.", "en": "Six months from the issue date." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "documentazione-lavorativa",
+          "code": "WORK_HISTORY_DOCUMENTATION",
+          "name": { "it": "Documentazione dell'attività lavorativa", "en": "Documentation of previous work activity" },
+          "description": {
+            "it": "Documentazione che dimostri l'attività lavorativa esercitata fino al momento (ad esempio certificati, ricevute, lettere di presentazione).",
+            "en": "Documentation showing the work activity performed so far (e.g. certificates, receipts, letters of reference)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Datore di lavoro o enti emittenti della documentazione (certificati, ricevute, lettere).",
+            "en": "Employer or issuing bodies of the documentation (certificates, receipts, letters)."
+          },
+          "whatYouNeed": {
+            "it": "Documentazione che comprovi la precedente attività lavorativa.",
+            "en": "Documentation proving previous work activity."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-PE-scheda"
+        },
+        {
+          "id": "prenotazione-aerea",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del biglietto aereo", "en": "Flight ticket booking" },
+          "description": {
+            "it": "Reservazione del biglietto aereo per l'Italia.",
+            "en": "Booking of the flight to Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Prenotazione confermata del biglietto aereo.",
+            "en": "Confirmed flight booking."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-PE-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino peruviano (o titolare di altro documento di viaggio) in possesso di nulla osta al lavoro rilasciato dalla Prefettura (Sportello Unico Immigrazione), nell'ambito del Decreto Flussi. Il Perù non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Peruvian citizen (or holder of another travel document) holding a work authorization (nulla osta) issued by the Prefecture (One-Stop Immigration Desk), within the Decreto Flussi. Peru has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "Cancelleria Consolare dell'Ambasciata d'Italia a Lima", "en": "Consular Chancery of the Italian Embassy in Lima" },
+          "address": { "it": "Av. Giuseppe Garibaldi, 298 — Jesus Maria, Lima 15072", "en": "Av. Giuseppe Garibaldi, 298 — Jesus Maria, Lima 15072" },
+          "hours": { "it": "Orari di apertura della Cancelleria Consolare, su appuntamento.", "en": "Consular Chancery opening hours, by appointment." },
+          "appointment": {
+            "it": "Obbligatoria: dal 5 giugno 2024 tutti i servizi consolari richiedono appuntamento tramite il portale Prenot@mi (https://prenotami.esteri.it/).",
+            "en": "Required: since 5 June 2024 all consular services require an appointment via the Prenot@mi portal (https://prenotami.esteri.it/)."
+          },
+          "email": "cancconsolare.lima@esteri.it",
+          "website": "https://amblima.esteri.it",
+          "notes": {
+            "it": "La procedura è strettamente personale. L'Ufficio Visti non può ricevere richieste che non siano state inviate telematicamente dalla Prefettura (Italia) all'Ambasciata. La mancanza di uno dei documenti indicati comporta il rifiuto della richiesta allo sportello. L'Ambasciata può chiedere ulteriore documentazione.",
+            "en": "The procedure is strictly personal. The Visa Office cannot accept applications that have not been sent electronically by the Prefecture (Italy) to the Embassy. Missing any of the required documents results in rejection at the counter. The Embassy may request additional documentation."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto presentata personalmente presso la Cancelleria Consolare dell'Ambasciata d'Italia a Lima, con appuntamento sul portale Prenot@mi.",
+          "en": "Visa application submitted in person at the Consular Chancery of the Italian Embassy in Lima, with an appointment on the Prenot@mi portal."
+        },
+        "estimatedCost": {
+          "it": "Variabile (revisione trimestrale, vedi tarifario). Si accetta solo valuta locale (soles). Il costo del visto non è rimborsabile.",
+          "en": "Variable (revised quarterly, see fee schedule). Only local currency (soles) is accepted. The visa fee is non-refundable."
+        },
+        "processingTime": {
+          "it": "7-10 giorni lavorativi dal ricevimento della pratica, se esiste già la conferma del nulla osta dall'Italia e non vi sono problemi con la pratica.",
+          "en": "7-10 working days from receipt of the file, if the nulla osta confirmation from Italy already exists and there are no issues with the file."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta alla Prefettura (Sportello Unico Immigrazione), nell'ambito del Decreto Flussi.",
+            "en": "The employer in Italy requests the nulla osta from the Prefecture (One-Stop Immigration Desk), within the Decreto Flussi."
+          },
+          {
+            "it": "La Prefettura trasmette telematicamente la pratica all'Ambasciata d'Italia a Lima.",
+            "en": "The Prefecture sends the file electronically to the Italian Embassy in Lima."
+          },
+          {
+            "it": "Il cittadino peruviano prenota un appuntamento su Prenot@mi e presenta la domanda di visto personalmente.",
+            "en": "The Peruvian citizen books an appointment on Prenot@mi and submits the visa application in person."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "La mancanza di uno dei documenti indicati comporta il rifiuto della richiesta allo sportello. Il nulla osta deve essere utilizzato prima della scadenza (valido sei mesi dalla data di emissione). La procedura è strettamente personale; l'Ambasciata si riserva di richiedere ulteriore documentazione.",
+          "en": "Missing any of the stated documents results in rejection at the counter. The nulla osta must be used before it expires (valid six months from issue). The procedure is strictly personal; the Embassy reserves the right to request additional documentation."
+        }
+      }
+    }
+  ]
+}

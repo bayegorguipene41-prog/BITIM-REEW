@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "countryCode": "DZ",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "DZ-permesso-soggiorno-lavoro",
+      "countryCode": "DZ",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino algerino. L'Algeria non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). Le domande di visto si presentano presso i centri VFS Global, che gestiscono gli appuntamenti per conto dell'Ambasciata d'Italia ad Algeri.",
+        "en": "Documents to work in Italy as an Algerian citizen. Algeria has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). Visa applications are submitted at the VFS Global centres, which manage appointments on behalf of the Italian Embassy in Algiers."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-DZ-scheda",
+          "name": "Lista dei documenti per Lavoro subordinato con «Nulla Osta»",
+          "authority": "Ambasciata d'Italia ad Algeri",
+          "url": "https://ambalgeri.esteri.it/wp-content/uploads/2026/05/6.1-Lavoro_subordinato_ITA.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-DZ-lista",
+          "name": "Lista armonizzata dei documenti — ALGERIA_IT",
+          "authority": "Ambasciata d'Italia ad Algeri",
+          "url": "https://ambalgeri.esteri.it/wp-content/uploads/2026/06/ALGERIA_IT.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-DZ-dove",
+          "name": "Dove chiedere un visto — centri VFS Global",
+          "authority": "Ambasciata d'Italia ad Algeri",
+          "url": "https://ambalgeri.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-DZ-costo",
+          "name": "Quanto costa un visto — tariffe",
+          "authority": "Ambasciata d'Italia ad Algeri",
+          "url": "https://ambalgeri.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-DZ-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo originale di richiesta di visto per soggiorno di lunga durata, compilato e firmato. Il modulo va scaricato e compilato, anche se verrà consegnato all'arrivo presso il centro VFS Global.",
+            "en": "Original application form for a long-stay visa, completed and signed. The form must be downloaded and filled in, even though it will be handed over upon arrival at the VFS Global centre."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Moduli e modulistica dell'Ambasciata d'Italia ad Algeri, o fornito gratuitamente allo sportello VFS Global.",
+            "en": "Forms section of the Italian Embassy in Algiers, or provided free of charge at the VFS Global counter."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato in ogni sua parte e firmato.",
+            "en": "A form completed in full and signed."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-DZ-scheda"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia biometrica", "en": "Biometric photograph" },
+          "description": {
+            "it": "Fotografia identificativa a colori (larghezza 35 mm, altezza 40 mm), recente (massimo 6 mesi), su sfondo bianco e a volto scoperto, conforme agli standard ICAO.",
+            "en": "Colour ID photograph (35 mm wide, 40 mm high), recent (at most 6 months old), on a white background with uncovered face, compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.",
+            "en": "Authorized photographer or booth compliant with ICAO rules."
+          },
+          "whatYouNeed": {
+            "it": "Una fotografia biometrica recente conforme ICAO.",
+            "en": "One recent ICAO-compliant biometric photograph."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente (massimo 6 mesi).", "en": "Recent (at most 6 months)." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-DZ-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto originale", "en": "Original passport" },
+          "description": {
+            "it": "Passaporto con una validità superiore di almeno 15 mesi rispetto al visto richiesto e con almeno due foglietti vergini (uno di fronte all'altro) per l'apposizione del visto.",
+            "en": "Passport with a validity exceeding the requested visa by at least 15 months and with at least two blank pages (facing each other) for the visa sticker."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Autorità algerina preposta al rilascio dei passaporti.",
+            "en": "Algerian authority responsible for passport issuance."
+          },
+          "whatYouNeed": {
+            "it": "Passaporto con validità residua di almeno 15 mesi rispetto al visto e almeno due pagine bianche.",
+            "en": "Passport with at least 15 months of remaining validity beyond the visa and at least two blank pages."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 15 mesi oltre la validità del visto richiesto.", "en": "At least 15 months beyond the requested visa." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-DZ-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Passport photocopy" },
+          "description": {
+            "it": "Fotocopia della pagina dei dati biometrici e di tutte le pagine contenenti visti e timbri di ingresso e uscita dall'area Schengen.",
+            "en": "Photocopy of the biometric-data page and of all pages containing visas and entry/exit stamps from the Schengen area."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Qualsiasi copisteria.",
+            "en": "Any copy shop."
+          },
+          "whatYouNeed": {
+            "it": "Fotocopie complete del passaporto.",
+            "en": "Complete passport photocopies."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-DZ-scheda"
+        },
+        {
+          "id": "prenotazione-viaggio",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione", "en": "Booking" },
+          "description": {
+            "it": "Prenotazione del viaggio per l'Italia.",
+            "en": "Booking of the trip to Italy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Compagnia aerea o agenzia di viaggio.",
+            "en": "Airline or travel agency."
+          },
+          "whatYouNeed": {
+            "it": "Prenotazione confermata del viaggio.",
+            "en": "Confirmed travel booking."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-DZ-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (SUI)", "en": "Nulla osta (SUI)" },
+          "description": {
+            "it": "Nulla osta rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, con una data di rilascio non superiore a sei mesi.",
+            "en": "Nulla osta issued by the competent Italian One-Stop Immigration Desk, with an issue date not older than six months."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia, nell'ambito del Decreto Flussi.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy, within the Decreto Flussi."
+          },
+          "whatYouNeed": {
+            "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.",
+            "en": "Nulla osta issued by the SUI, to be presented with the visa application."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Data di rilascio non superiore a sei mesi.", "en": "Issue date not older than six months." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-DZ-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino algerino in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. L'Algeria non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Algerian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Algeria has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global Visa Application Centre (per conto dell'Ambasciata d'Italia ad Algeri)", "en": "VFS Global Visa Application Centre (on behalf of the Italian Embassy in Algiers)" },
+          "address": { "it": "Algeri: N.1 Rue Bouteldja Houidef, Ben Aknoune; altri centri ad Annaba, Costantina, Ghardaia, Orano e Tindouf.", "en": "Algiers: N.1 Rue Bouteldja Houidef, Ben Aknoune; other centres in Annaba, Constantine, Ghardaia, Oran and Tindouf." },
+          "hours": { "it": "Dalla domenica al giovedì, 08:30-16:00 (Tindouf: lunedì; Ghardaia: domenica-mercoledì).", "en": "Sunday to Thursday, 08:30-16:00 (Tindouf: Monday; Ghardaia: Sunday-Wednesday)." },
+          "appointment": {
+            "it": "Obbligatoria: prenotabile online 24 ore su 24 tramite il sito VFS Global (https://visa.vfsglobal.com/dza/fr/ita) oppure tramite Call Center al numero +213 (0)21 99 60 09.",
+            "en": "Required: bookable online 24/7 via the VFS Global website (https://visa.vfsglobal.com/dza/fr/ita) or through the Call Centre at +213 (0)21 99 60 09."
+          },
+          "phone": "+213 (0)21 99 60 09",
+          "email": "segreteria.algeri@esteri.it",
+          "website": "https://visa.vfsglobal.com/dza/fr/ita",
+          "notes": {
+            "it": "Dal 3 gennaio 2024 gli appuntamenti sono gestiti da VFS Global. Resta possibile richiedere un appuntamento direttamente allo sportello consolare (tel. +213 (0)21 99 60 09, dom-gio 11:00-12:30) per familiari di cittadini UE, casi medici urgenti e altre categorie secondo disponibilità. Tutti i richiedenti devono presentarsi personalmente con la documentazione completa.",
+            "en": "Since 3 January 2024 appointments are managed by VFS Global. It is still possible to request an appointment directly at the consulate (tel. +213 (0)21 99 60 09, Sun-Thu 11:00-12:30) for EU citizen family members, urgent medical cases and other categories where space allows. All applicants must attend in person with complete documentation."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto tramite VFS Global (canale ufficiale dell'Ambasciata d'Italia ad Algeri).",
+          "en": "Visa application via VFS Global (official channel of the Italian Embassy in Algiers)."
+        },
+        "estimatedCost": {
+          "it": "Visto lungo soggiorno: 116,00 euro (17.600 DZD); spese di servizio VFS Global: 40,00 euro (6.060 DZD). Le tariffe si pagano in contanti o con carta bancaria CIB al tasso di cambio corrente.",
+          "en": "Long-stay visa: €116.00 (17,600 DZD); VFS Global service fee: €40.00 (6,060 DZD). Fees are paid in cash or by CIB bank card at the current exchange rate."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)."
+          },
+          {
+            "it": "Ottenuto il nulla osta, il cittadino algerino prenota un appuntamento su VFS Global e presenta la domanda di visto per lavoro subordinato.",
+            "en": "Once the nulla osta is obtained, the Algerian citizen books an appointment on VFS Global and submits the subordinate-work visa application."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          },
+          {
+            "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.",
+            "en": "For renewal, submit the application at least 60 days before expiry."
+          }
+        ],
+        "note": {
+          "it": "L'elenco dei documenti fornito dalla sede consolare è meramente indicativo: la sede si riserva di chiedere ulteriori documenti secondo necessità. Le spese di servizio VFS Global non sono rimborsabili se l'annullamento dell'appuntamento avviene entro 72 ore. L'Agenzia non ha un accordo bilaterale con l'Italia in materia di lavoro: l'ingresso avviene nell'ambito delle quote del Decreto Flussi.",
+          "en": "The document list provided by the consulate is merely indicative: the office reserves the right to request further documents as needed. VFS Global service fees are non-refundable if the appointment is cancelled within 72 hours. Algeria has no bilateral labour agreement with Italy: entry is within the Decreto Flussi quotas."
+        }
+      }
+    }
+  ]
+}

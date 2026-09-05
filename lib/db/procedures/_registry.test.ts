@@ -74,10 +74,25 @@ describe("COUNTRY_PROCEDURE_INDEX — copertura paesi", () => {
     expect(COUNTRY_PROCEDURE_INDEX["IN"]?.lastVerified).toBe("2026-09-05");
   });
 
+  it("Algeria, Perù, Ecuador e Moldavia sono verified con una procedura reale (Fase 2B, Wave 2)", () => {
+    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["PE"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["PE"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["EC"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["EC"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["MD"]?.status).toBe("verified");
+    expect(COUNTRY_PROCEDURE_INDEX["MD"]?.procedureCount).toBe(1);
+    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.lastVerified).toBe("2026-09-05");
+    expect(COUNTRY_PROCEDURE_INDEX["PE"]?.lastVerified).toBe("2026-09-05");
+    expect(COUNTRY_PROCEDURE_INDEX["EC"]?.lastVerified).toBe("2026-09-05");
+    expect(COUNTRY_PROCEDURE_INDEX["MD"]?.lastVerified).toBe("2026-09-05");
+  });
+
   it("i paesi senza dati sono 'unavailable' con procedureCount 0", () => {
-    // Algeria, ecc. non hanno ancora dati → unavailable
-    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.status).toBe("unavailable");
-    expect(COUNTRY_PROCEDURE_INDEX["DZ"]?.procedureCount).toBe(0);
+    // Stati Uniti, ecc. non hanno ancora dati → unavailable
+    expect(COUNTRY_PROCEDURE_INDEX["US"]?.status).toBe("unavailable");
+    expect(COUNTRY_PROCEDURE_INDEX["US"]?.procedureCount).toBe(0);
   });
 
   it("ogni meta ha la forma CountryProcedureMeta completa", () => {
@@ -98,8 +113,8 @@ describe("isCountryAvailable / getCountryMeta", () => {
     expect(isCountryAvailable("FR")).toBe(true);
   });
 
-  it("paese senza dati (Algeria) NON è available", () => {
-    expect(isCountryAvailable("DZ")).toBe(false);
+  it("paese senza dati (Stati Uniti) NON è available", () => {
+    expect(isCountryAvailable("US")).toBe(false);
   });
 
   it("Albania, Marocco, Tunisia ed Egitto sono available (datati verificati)", () => {
@@ -120,6 +135,13 @@ describe("isCountryAvailable / getCountryMeta", () => {
     expect(isCountryAvailable("PK")).toBe(true);
     expect(isCountryAvailable("NG")).toBe(true);
     expect(isCountryAvailable("IN")).toBe(true);
+  });
+
+  it("Algeria, Perù, Ecuador e Moldavia sono available (Fase 2B, Wave 2)", () => {
+    expect(isCountryAvailable("DZ")).toBe(true);
+    expect(isCountryAvailable("PE")).toBe(true);
+    expect(isCountryAvailable("EC")).toBe(true);
+    expect(isCountryAvailable("MD")).toBe(true);
   });
 
   it("doesn't throw on null/undefined/empty", () => {
@@ -218,6 +240,34 @@ describe("loadProceduresForCountry", () => {
     expect(procs[0].dataSource).toBe("verified");
   });
 
+  it("Algeria → carica la procedura verificata (Fase 2B, Wave 2)", async () => {
+    const procs = await loadProceduresForCountry("DZ");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("DZ-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Perù → carica la procedura verificata (Fase 2B, Wave 2)", async () => {
+    const procs = await loadProceduresForCountry("PE");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("PE-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Ecuador → carica la procedura verificata (Fase 2B, Wave 2)", async () => {
+    const procs = await loadProceduresForCountry("EC");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("EC-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
+  it("Moldavia → carica la procedura verificata (Fase 2B, Wave 2)", async () => {
+    const procs = await loadProceduresForCountry("MD");
+    expect(procs.length).toBe(1);
+    expect(procs[0].id).toBe("MD-permesso-soggiorno-lavoro");
+    expect(procs[0].dataSource).toBe("verified");
+  });
+
   it("Francia → 1 procedura (needs_review)", async () => {
     const procs = await loadProceduresForCountry("FR");
     expect(procs.length).toBe(1);
@@ -225,7 +275,7 @@ describe("loadProceduresForCountry", () => {
   });
 
   it("paese senza dati → array vuoto", async () => {
-    expect(await loadProceduresForCountry("DZ")).toEqual([]);
+    expect(await loadProceduresForCountry("US")).toEqual([]);
     expect(await loadProceduresForCountry("ZZ")).toEqual([]);
   });
 
@@ -280,10 +330,22 @@ describe("lookup — integrazione sync/async backward compat", () => {
     const inResult = await proceduresForCountryAsync("IN");
     expect(inResult.length).toBeGreaterThanOrEqual(1);
     expect(inResult[0].id).toBe("IN-permesso-soggiorno-lavoro");
+    const dz = await proceduresForCountryAsync("DZ");
+    expect(dz.length).toBeGreaterThanOrEqual(1);
+    expect(dz[0].id).toBe("DZ-permesso-soggiorno-lavoro");
+    const pe = await proceduresForCountryAsync("PE");
+    expect(pe.length).toBeGreaterThanOrEqual(1);
+    expect(pe[0].id).toBe("PE-permesso-soggiorno-lavoro");
+    const ec = await proceduresForCountryAsync("EC");
+    expect(ec.length).toBeGreaterThanOrEqual(1);
+    expect(ec[0].id).toBe("EC-permesso-soggiorno-lavoro");
+    const md = await proceduresForCountryAsync("MD");
+    expect(md.length).toBeGreaterThanOrEqual(1);
+    expect(md[0].id).toBe("MD-permesso-soggiorno-lavoro");
     const fr = await proceduresForCountryAsync("FR");
     expect(fr.length).toBeGreaterThanOrEqual(1);
-    const dz = await proceduresForCountryAsync("DZ");
-    expect(dz.length).toBe(0);
+    const us = await proceduresForCountryAsync("US");
+    expect(us.length).toBe(0);
   });
 
   it("getProcedureById risolve ancora FR (unverified)", () => {
@@ -306,6 +368,10 @@ describe("PROCEDURES/PROCEDURES_ALL — nessuna regressione", () => {
     expect(ids).toContain("PK-permesso-soggiorno-lavoro");
     expect(ids).toContain("NG-permesso-soggiorno-lavoro");
     expect(ids).toContain("IN-permesso-soggiorno-lavoro");
+    expect(ids).toContain("DZ-permesso-soggiorno-lavoro");
+    expect(ids).toContain("PE-permesso-soggiorno-lavoro");
+    expect(ids).toContain("EC-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MD-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });
@@ -397,8 +463,24 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     }
   });
 
+  it("DZ/PE/EC/MD.json sono la fonte delle procedure Wave 2 (Fase 2B)", () => {
+    for (const [code, id] of [
+      ["DZ", "DZ-permesso-soggiorno-lavoro"],
+      ["PE", "PE-permesso-soggiorno-lavoro"],
+      ["EC", "EC-permesso-soggiorno-lavoro"],
+      ["MD", "MD-permesso-soggiorno-lavoro"],
+    ] as const) {
+      const json = loadCountryProceduresJson(code);
+      expect(json.length).toBe(1);
+      expect(json.map((p) => p.id)).toEqual(expect.arrayContaining([id]));
+      expect(getCountryProceduresJson(code)?.status).toBe("verified");
+      expect(json[0].sources[0].verificationStatus).toBe("verified");
+      expect(getCountryProceduresJson(code)?.updatedAt).toBe("2026-09-05");
+    }
+  });
+
   it("paese senza file JSON → array vuoto", () => {
-    expect(loadCountryProceduresJson("DZ")).toEqual([]);
+    expect(loadCountryProceduresJson("US")).toEqual([]);
     expect(loadCountryProceduresJson("ZZ")).toEqual([]);
     expect(loadCountryProceduresJson("")).toEqual([]);
   });
@@ -417,6 +499,10 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(ids).toContain("PK-permesso-soggiorno-lavoro");
     expect(ids).toContain("NG-permesso-soggiorno-lavoro");
     expect(ids).toContain("IN-permesso-soggiorno-lavoro");
+    expect(ids).toContain("DZ-permesso-soggiorno-lavoro");
+    expect(ids).toContain("PE-permesso-soggiorno-lavoro");
+    expect(ids).toContain("EC-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MD-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });

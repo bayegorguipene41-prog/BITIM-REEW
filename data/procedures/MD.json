@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "countryCode": "MD",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "MD-permesso-soggiorno-lavoro",
+      "countryCode": "MD",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino moldavo. La Moldavia è coperta dall'Accordo del 5 luglio 2011 tra il Governo della Repubblica Italiana e il Governo della Repubblica di Moldova in materia migratoria per motivi di lavoro e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028. La domanda di visto nazionale D per lavoro subordinato si presenta presso l'Ambasciata d'Italia a Chisinau.",
+        "en": "Documents to work in Italy as a Moldovan citizen. Moldova is covered by the Agreement of 5 July 2011 between the Government of the Italian Republic and the Government of the Republic of Moldova on migration for work purposes and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028. The national type-D visa application for subordinate work is submitted at the Italian Embassy in Chisinau."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-MD-accordo",
+          "name": "Accordi migrazione lavoro — Moldova 2011",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MD-scheda",
+          "name": "Elenco documenti per Visto Nazionale D per Lavoro Subordinato",
+          "authority": "Ambasciata d'Italia a Chisinau",
+          "url": "https://ambchisinau.esteri.it/wp-content/uploads/2025/12/NEW-Elenco-doc-per-Visto-D-Lavoro-Subordinato.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MD-visti",
+          "name": "Visti — Ambasciata d'Italia a Chisinau",
+          "authority": "Ambasciata d'Italia a Chisinau",
+          "url": "https://ambchisinau.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MD-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di domanda per visto di tipo D", "en": "Type D visa application form" },
+          "description": {
+            "it": "Modulo di domanda per visto di tipo D, compilato in ogni suo campo. Il modulo va compilato in stampatello e con alfabeto latino (non russo).",
+            "en": "Type D visa application form, completed in every field. The form must be filled in block capitals and in the Latin alphabet (not Russian)."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Database visti del Ministero degli Affari Esteri ('I Visti per entrare in Italia') o Ambasciata d'Italia a Chisinau.",
+            "en": "The 'Visas for entering Italy' database of the Ministry of Foreign Affairs, or the Italian Embassy in Chisinau."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato in ogni sua parte, in stampatello e in alfabeto latino.",
+            "en": "Form completed in full, in block capitals and in the Latin alphabet."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido con copia", "en": "Valid passport with copy" },
+          "description": {
+            "it": "Passaporto valido oltre 3 mesi dopo la scadenza del visto richiesto, accompagnato da copia.",
+            "en": "Passport valid for more than 3 months after the expiry of the requested visa, accompanied by a copy."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità moldava preposta al rilascio dei passaporti.", "en": "Moldovan passport authority." },
+          "whatYouNeed": {
+            "it": "Passaporto con validità residua di oltre 3 mesi dopo la scadenza del visto e relativa copia.",
+            "en": "Passport with more than 3 months of remaining validity after the visa expiry, and its copy."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Oltre 3 mesi dopo la scadenza del visto richiesto.", "en": "More than 3 months after the requested visa expiry." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "carta-identita",
+          "code": "NATIONAL_ID",
+          "name": { "it": "Carta d'identità / permesso di soggiorno del richiedente", "en": "Applicant's ID card / residence permit" },
+          "description": {
+            "it": "Carta d'identità o permesso di soggiorno del richiedente il visto, rilasciato dalle competenti Autorità.",
+            "en": "ID card or residence permit of the visa applicant, issued by the competent authorities."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità moldava competente (Servizio di identificazione e registrazione).", "en": "Competent Moldovan authority (Identification and registration service)." },
+          "whatYouNeed": { "it": "Carta d'identità o permesso di soggiorno in corso di validità.", "en": "A valid ID card or residence permit." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "2 foto recenti formato tessera", "en": "2 recent ID photos" },
+          "description": {
+            "it": "Due foto recenti formato tessera.",
+            "en": "Two recent passport-size photos."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato.", "en": "Authorized photographer." },
+          "whatYouNeed": { "it": "Due fotografie recenti formato tessera.", "en": "Two recent ID-size photographs." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recenti.", "en": "Recent." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta", "en": "Nulla osta" },
+          "description": {
+            "it": "Nulla osta al lavoro (autorizzazione per il lavoro) rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi.",
+            "en": "Work authorization (nulla osta) issued by the competent Italian One-Stop Immigration Desk, within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": { "it": "Nulla osta rilasciato dal SUI, da presentare con la domanda di visto.", "en": "Nulla osta issued by the SUI, to be presented with the visa application." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "prenotazione-viaggio",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del viaggio", "en": "Travel booking" },
+          "description": {
+            "it": "Prenotazione aerea; se si viaggia via terra con bus, prenotazione rilasciata dalla compagnia di trasporto; se si viaggia con mezzi privati, dichiarazione sottoscritta dal conducente dell'auto con allegate copia del passaporto, patente e documentazione dell'auto.",
+            "en": "Flight booking; if travelling by land by bus, the booking issued by the transport company; if travelling by private vehicle, a declaration signed by the car driver with attached copies of the passport, driving licence and car documentation."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea, compagnia di trasporto su gomma o dichiarazione del conducente.", "en": "Airline, road transport company or driver's declaration." },
+          "whatYouNeed": {
+            "it": "Prenotazione aerea, prenotazione bus o dichiarazione del conducente con documenti dell'auto.",
+            "en": "Flight booking, bus booking or driver's declaration with the car documents."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "assicurazione-sanitaria",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione sanitaria", "en": "Health insurance" },
+          "description": {
+            "it": "Assicurazione sanitaria per la durata del soggiorno.",
+            "en": "Health insurance covering the stay."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia assicurativa.", "en": "Insurance company." },
+          "whatYouNeed": { "it": "Polizza di assicurazione sanitaria attiva.", "en": "An active health insurance policy." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MD-scheda"
+        },
+        {
+          "id": "atto-cambio-nome",
+          "code": "NAME_CHANGE_DOCUMENT",
+          "name": { "it": "Atto di stato civile in caso di cambio di cognome/nome", "en": "Civil-status document in case of name change" },
+          "description": {
+            "it": "Nel caso in cui il richiedente abbia cambiato cognome e/o nome, produrre qualsiasi atto di stato civile da cui si evinca il cambiamento, corredato dalla traduzione in lingua italiana e da apostille.",
+            "en": "If the applicant has changed surname and/or name, provide any civil-status document showing the change, accompanied by an Italian translation and an apostille."
+          },
+          "necessity": "conditional",
+          "whereToGet": { "it": "Autorità di stato civile competente, con traduzione italiana e apostille.", "en": "Competent civil-status authority, with Italian translation and apostille." },
+          "whatYouNeed": {
+            "it": "Atto di stato civile con traduzione in italiano e apostille, solo in caso di cambio di cognome/nome.",
+            "en": "Civil-status document with Italian translation and apostille, only in case of a name change."
+          },
+          "translationRequired": true,
+          "apostilleRequired": true,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MD-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino moldavo in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. La Moldavia è coperta dall'Accordo del 5 luglio 2011 con l'Italia in materia migratoria per motivi di lavoro e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028).",
+          "en": "Moldovan citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Moldova is covered by the Agreement of 5 July 2011 with Italy on migration for work purposes and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028)."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Chisinau — Ufficio Visti", "en": "Italian Embassy in Chisinau — Visa Office" },
+          "address": { "it": "Str. Vlaicu Pârcalab, 63 — MD-2012, Chisinau, Rep. di Moldova", "en": "Str. Vlaicu Pârcalab, 63 — MD-2012, Chisinau, Republic of Moldova" },
+          "phone": "+373 22 266 720",
+          "email": "chisinau.visti@esteri.it",
+          "website": "https://ambchisinau.esteri.it",
+          "notes": {
+            "it": "Per la richiesta del visto consultare il database visti 'I Visti per entrare in Italia' dalla pagina Visti dell'Ambasciata d'Italia a Chisinau. Per richieste di chiarimento: chisinau.visti@esteri.it.",
+            "en": "For visa applications, consult the 'Visas for entering Italy' database from the Visa page of the Italian Embassy in Chisinau. For clarifications: chisinau.visti@esteri.it."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale D per lavoro subordinato presentata presso l'Ambasciata d'Italia a Chisinau.",
+          "en": "National type-D visa application for subordinate work submitted at the Italian Embassy in Chisinau."
+        },
+        "estimatedCost": { "it": "Visto nazionale D: 116,00 euro.", "en": "National type-D visa: €116.00." },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)."
+          },
+          {
+            "it": "Ottenuto il nulla osta, il cittadino moldavo presenta la domanda di visto D per lavoro subordinato presso l'Ambasciata d'Italia a Chisinau.",
+            "en": "Once the nulla osta is obtained, the Moldovan citizen submits the type-D subordinate-work visa application at the Italian Embassy in Chisinau."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          },
+          {
+            "it": "Per il rinnovo, presentare la domanda almeno 60 giorni prima della scadenza.",
+            "en": "For renewal, submit the application at least 60 days before expiry."
+          }
+        ],
+        "note": {
+          "it": "La domanda di visto va compilata in ogni suo campo e corredata di tutta la documentazione necessaria. Il modulo va compilato in stampatello e con alfabeto latino (non russo). Il costo del visto è di 116 euro. La lista dei documenti è orientativa: possono essere richieste integrazioni.",
+          "en": "The visa application must be completed in every field and accompanied by all the necessary documentation. The form must be filled in block capitals and in the Latin alphabet (not Russian). The visa fee is €116. The document list is indicative: additional documents may be requested."
+        }
+      }
+    }
+  ]
+}

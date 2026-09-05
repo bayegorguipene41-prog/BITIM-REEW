@@ -135,6 +135,20 @@ describe("resolveNationalityGroups — bilateral agreements (destination=IT)", (
     expect(groups).toContain("foreign");
   });
 
+  it("Ecuador → bilateral + bilateral_it-ecuador + foreign", () => {
+    const groups = resolveNationalityGroups("EC");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-ecuador");
+    expect(groups).toContain("foreign");
+  });
+
+  it("Moldavia → bilateral + bilateral_it-moldova + foreign", () => {
+    const groups = resolveNationalityGroups("MD");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-moldova");
+    expect(groups).toContain("foreign");
+  });
+
   it("all IT bilateral partners are in the map", () => {
     for (const partnerCode of Object.keys(itPartners)) {
       const groups = resolveNationalityGroups(partnerCode);
@@ -173,6 +187,14 @@ describe("resolveNationalityGroups — generic foreign", () => {
 
   it("Nigeria → foreign only", () => {
     expect(resolveNationalityGroups("NG")).toEqual(["foreign"]);
+  });
+
+  it("Algeria → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("DZ")).toEqual(["foreign"]);
+  });
+
+  it("Perù → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("PE")).toEqual(["foreign"]);
   });
 });
 

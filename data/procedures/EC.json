@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "countryCode": "EC",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "EC-permesso-soggiorno-lavoro",
+      "countryCode": "EC",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino ecuadoriano. L'Ecuador è coperto dal Memorandum of Understanding (2025) tra Italia ed Ecuador in materia di migrazione e mobilità e rientra tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028. Gli appuntamenti per i visti nazionali di lavoro si prendono sul portale Prenot@mi e la domanda si presenta presso l'Agenzia VFS Global.",
+        "en": "Documents to work in Italy as an Ecuadorian citizen. Ecuador is covered by the Memorandum of Understanding (2025) between Italy and Ecuador on migration and mobility and is among the countries with active cooperation admitted under the Decreto Flussi 2026-2028. Appointments for national work visas are booked on the Prenot@mi portal and the application is submitted at the VFS Global agency."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-EC-accordo",
+          "name": "Accordi migrazione lavoro — Ecuador 2025 Memorandum of Understanding",
+          "authority": "Ministero del Lavoro e delle Politiche Sociali",
+          "url": "https://www.lavoro.gov.it/temi-e-priorita/immigrazione/focus-on/cooperazione-internazionale/pagine/accordi-migrazione-lavoro",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EC-scheda",
+          "name": "Visa para Trabajo Dependiente — requisitos",
+          "authority": "Ambasciata d'Italia a Quito",
+          "url": "https://ambquito.esteri.it/wp-content/uploads/2026/06/trabajo_dependiente.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EC-servizi",
+          "name": "Servizi per il cittadino straniero — Requisiti e tariffe",
+          "authority": "Ambasciata d'Italia a Quito",
+          "url": "https://ambquito.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-EC-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "presenza-personale",
+          "code": "PERSONAL_APPEARANCE",
+          "name": { "it": "Presenza personale del richiedente", "en": "Personal appearance of the applicant" },
+          "description": {
+            "it": "Presenza della persona che richiede il visto.",
+            "en": "The applicant must appear in person."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Agenzia VFS Global o Ambasciata d'Italia a Quito.", "en": "VFS Global agency or Italian Embassy in Quito." },
+          "whatYouNeed": { "it": "Presentarsi personalmente alla data dell'appuntamento.", "en": "Appear in person on the appointment date." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Giorno dell'appuntamento.", "en": "Day of the appointment." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "formulario-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Formulario di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto (nazionale di lunga durata) debitamente compilato e firmato alla fine.",
+            "en": "Visa application form (national visa for long stay) duly completed and signed at the end."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sito 'Il visto per l'Italia' o modello 'Módulo Visa Nacional de larga duración' dell'Ambasciata d'Italia a Quito.",
+            "en": "The 'Visa for Italy' website or the 'Módulo Visa Nacional de larga duración' form of the Italian Embassy in Quito."
+          },
+          "whatYouNeed": {
+            "it": "Modulo compilato e firmato alla fine.",
+            "en": "Form completed and signed at the end."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "foto-tessera",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato carnet", "en": "Carnet-size photograph" },
+          "description": {
+            "it": "Una fotografia attuale formato carnet, a colori, su sfondo bianco.",
+            "en": "One current carnet-size colour photograph on a white background."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato.", "en": "Authorized photographer." },
+          "whatYouNeed": { "it": "Una fotografia formato carnet a colori su sfondo bianco.", "en": "One colour carnet-size photograph on a white background." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Attuale.", "en": "Current." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto con validità minima di un anno e 3 mesi a partire dalla scadenza del contratto di lavoro.",
+            "en": "Passport with a minimum validity of one year and 3 months from the expiry of the work contract."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità ecuadoriana preposta al rilascio dei passaporti.", "en": "Ecuadorian passport authority." },
+          "whatYouNeed": {
+            "it": "Passaporto con validità minima di 1 anno e 3 mesi oltre la scadenza del contratto.",
+            "en": "Passport valid for at least 1 year and 3 months beyond the contract expiry."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Minimo 1 anno e 3 mesi oltre la scadenza del contratto di lavoro.", "en": "At least 1 year and 3 months beyond the work contract expiry." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "prenotazione-aerea",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione aerea originale di sola andata", "en": "Original one-way flight booking" },
+          "description": { "it": "Prenotazione originale del volo di sola andata per l'Italia.", "en": "Original booking of the one-way flight to Italy." },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea o agenzia di viaggio.", "en": "Airline or travel agency." },
+          "whatYouNeed": { "it": "Prenotazione aerea originale di sola andata.", "en": "Original one-way flight booking." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Autorizzazione al lavoro / Nulla osta", "en": "Work authorization / Nulla osta" },
+          "description": {
+            "it": "Autorizzazione al lavoro (in originale e fotocopia) rilasciata dalla 'Direzione Provinciale del Lavoro' e approvata dalla Questura competente, oppure il nulla osta rilasciato dallo Sportello Unico.",
+            "en": "Work authorization (original and photocopy) issued by the 'Direzione Provinciale del Lavoro' and approved by the competent Questura, or the nulla osta issued by the One-Stop Desk."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Direzione Provinciale del Lavoro / Questura o Sportello Unico per l'Immigrazione competente in Italia.",
+            "en": "Direzione Provinciale del Lavoro / Questura or One-Stop Immigration Desk competent in Italy."
+          },
+          "whatYouNeed": { "it": "Autorizzazione in originale e fotocopia, o nulla osta.", "en": "Authorization in original and photocopy, or nulla osta." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-EC-scheda"
+        },
+        {
+          "id": "comprovante-deposito",
+          "code": "VISA_FEE_RECEIPT",
+          "name": { "it": "Comprovante del deposito del costo del visto", "en": "Proof of visa fee deposit" },
+          "description": {
+            "it": "Comprovante originale del deposito del costo del visto effettuato al Banco Pichincha a nome dell'Ambasciata d'Italia. Se l'appuntamento è tramite VFS Global va pagato anche il costo del servizio dell'Agenzia e portato il relativo comprovante originale; se l'appuntamento è direttamente all'Ambasciata non va pagato il servizio dell'Agenzia.",
+            "en": "Original receipt of the visa fee deposit made at Banco Pichincha in the name of the Italian Embassy. If the appointment is via VFS Global, the Agency service fee must also be paid and its original receipt brought; if the appointment is directly at the Embassy, the Agency service fee is not charged."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Banco Pichincha (sportello dedicato), a nome dell'Ambasciata d'Italia.", "en": "Banco Pichincha (dedicated counter), in the name of the Italian Embassy." },
+          "whatYouNeed": { "it": "Bollettino di versamento originale del costo del visto (e del servizio VFS Global se applicabile).", "en": "Original payment slip for the visa fee (and VFS Global service fee if applicable)." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "116,00 USD (equivalente di 116,00 euro).", "en": "$116.00 (equivalent of €116.00)." },
+          "processingTime": { "it": "Immediato al Banco Pichincha.", "en": "Immediate at Banco Pichincha." },
+          "sourceId": "source-EC-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino ecuadoriano in possesso di autorizzazione al lavoro (nulla osta o autorizzazione della Direzione Provinciale del Lavoro approvata dalla Questura), nell'ambito del Decreto Flussi. L'Ecuador è coperto dal Memorandum of Understanding (2025) con l'Italia e rientra tra i Paesi con cooperazione attiva del DPCM 2 ottobre 2025 (triennale 2026-2028).",
+          "en": "Ecuadorian citizen holding a work authorization (nulla osta or authorization from the Direzione Provinciale del Lavoro approved by the Questura), within the Decreto Flussi. Ecuador is covered by the Memorandum of Understanding (2025) with Italy and is among the countries with active cooperation under DPCM 2 October 2025 (triennial 2026-2028)."
+        },
+        "whereToApply": {
+          "name": { "it": "Agenzia VFS Global (per conto dell'Ambasciata d'Italia a Quito)", "en": "VFS Global agency (on behalf of the Italian Embassy in Quito)" },
+          "address": { "it": "La Isla N26-25 y Humberto Albornoz, 170521, Quito (Ecuador)", "en": "La Isla N26-25 y Humberto Albornoz, 170521, Quito (Ecuador)" },
+          "appointment": {
+            "it": "Obbligatoria: per i visti nazionali di lavoro subordinato l'appuntamento si prende sul portale Prenot@mi (https://prenotami.esteri.it/). Tutti gli appuntamenti presi sul portale Prenot@mi prevedono la presentazione all'Agenzia VFS Global.",
+            "en": "Required: for national subordinate-work visas the appointment is booked on the Prenot@mi portal (https://prenotami.esteri.it/). All appointments booked on the Prenot@mi portal are submitted at the VFS Global agency."
+          },
+          "phone": "02 5137684",
+          "email": "Italia.quito@vfshelpline.com",
+          "website": "https://visa.vfsglobal.com/ecu/es/ita",
+          "notes": {
+            "it": "Le tariffe si pagano soltanto allo sportello del Banco Pichincha a nome dell'Ambasciata d'Italia; il bollettino di versamento originale va portato il giorno dell'appuntamento. Le agenzie di viaggio e i 'tramitadores' NON sono canali ufficiali: completare la procedura personalmente. Per dubbi: visti.quito@esteri.it.",
+            "en": "Fees are paid only at the Banco Pichincha counter in the name of the Italian Embassy; the original payment slip must be brought on the appointment day. Travel agencies and 'tramitadores' are NOT official channels: complete the procedure personally. For doubts: visti.quito@esteri.it."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale di lavoro subordinato tramite appuntamento su Prenot@mi e presentazione all'Agenzia VFS Global (canale ufficiale dell'Ambasciata d'Italia a Quito).",
+          "en": "National subordinate-work visa application via appointment on Prenot@mi and submission at the VFS Global agency (official channel of the Italian Embassy in Quito)."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale per lavoro subordinato (tipo D): 116,00 euro (135,00 USD). Tariffe valide dal 1° luglio al 30 settembre 2026.",
+          "en": "National subordinate-work visa (type D): €116.00 ($135.00). Fees valid from 1 July to 30 September 2026."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (o presenta l'istanza alla Direzione Provinciale del Lavoro, approvata dalla Questura), nell'ambito del Decreto Flussi.",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (or files the application with the Direzione Provinciale del Lavoro, approved by the Questura), within the Decreto Flussi."
+          },
+          {
+            "it": "Il cittadino ecuadoriano prenota un appuntamento su Prenot@mi e versa il costo del visto al Banco Pichincha.",
+            "en": "The Ecuadorian citizen books an appointment on Prenot@mi and pays the visa fee at Banco Pichincha."
+          },
+          {
+            "it": "La domanda viene presentata all'Agenzia VFS Global con tutta la documentazione.",
+            "en": "The application is submitted at the VFS Global agency with all the documentation."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "La lista dei documenti è orientativa: l'Ambasciata può chiedere ulteriore documentazione. Il visto nazionale per lavoro subordinato (tipo D) costa 116,00 euro (135,00 USD). Gli utenti con il tipo di visto sbagliato non saranno accettati. Per la sola durata della validità delle condizioni di ingresso, consultare anche le condizioni generali di ingresso sul sito esteri.it.",
+          "en": "The document list is indicative: the Embassy may request additional documentation. The national subordinate-work visa (type D) costs €116.00 ($135.00). Users with the wrong visa type will not be accepted. For entry conditions validity, also check the general entry conditions on esteri.it."
+        }
+      }
+    }
+  ]
+}

@@ -16,6 +16,7 @@ import { PROCEDURE_ITALIA } from "./Italia";
 // EG: procedure Egitto (verificate) — EG.json (Fase 2B, Sessione 7).
 // BD/PH/SN/LK: procedure Bangladesh, Filippine, Senegal, Sri Lanka (verificate) — BD.json / PH.json / SN.json / LK.json (Fase 2B, Wave 1).
 // PK/NG/IN: procedure Pakistan, Nigeria, India (verificate) — PK.json / NG.json / IN.json (Fase 2B, Wave 1b).
+// DZ/PE/EC/MD: procedure Algeria, Perù, Ecuador, Moldavia (verificate) — DZ.json / PE.json / EC.json / MD.json (Fase 2B, Wave 2).
 // FR/DE: placeholder marcati needs_review — FR.json / DE.json.
 const VERIFIED_FROM_JSON: Procedure[] = [
   ...loadCountryProceduresJson("IT"),
@@ -30,6 +31,10 @@ const VERIFIED_FROM_JSON: Procedure[] = [
   ...loadCountryProceduresJson("PK"),
   ...loadCountryProceduresJson("NG"),
   ...loadCountryProceduresJson("IN"),
+  ...loadCountryProceduresJson("DZ"),
+  ...loadCountryProceduresJson("PE"),
+  ...loadCountryProceduresJson("EC"),
+  ...loadCountryProceduresJson("MD"),
 ];
 
 export const PROCEDURES: Procedure[] = [

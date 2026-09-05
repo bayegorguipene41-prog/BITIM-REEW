@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "countryCode": "GH",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "GH-permesso-soggiorno-lavoro",
+      "countryCode": "GH",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino ghanese. Il Ghana non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). Le domande di visto nazionale (tipo D) si presentano tramite l'outsourcer VFS Global, per conto dell'Ambasciata d'Italia ad Accra.",
+        "en": "Documents to work in Italy as a Ghanaian citizen. Ghana has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). National visa (type D) applications are submitted through the outsourcer VFS Global, on behalf of the Italian Embassy in Accra."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-GH-scheda",
+          "name": "Checklist — Work Visa (VN) National (D)",
+          "authority": "Ambasciata d'Italia ad Accra",
+          "url": "https://ambaccra.esteri.it/uploads/2026/08/ING_WORK-VISA_D.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-GH-costi",
+          "name": "Quanto costa un visto e come pagare — diritti e spese di servizio",
+          "authority": "Ambasciata d'Italia ad Accra",
+          "url": "https://ambaccra.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-GH-dove",
+          "name": "Dove chiedere un visto — outsourcer VFS Global",
+          "authority": "Ambasciata d'Italia ad Accra",
+          "url": "https://ambaccra.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-GH-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto nazionale (tipo D) compilato in inglese e firmato. Per i minorenni è richiesta la firma di entrambi i genitori o dei tutori legali.",
+            "en": "National visa (type D) application form completed in English and signed. For minors, the signature of both parents or legal guardians is required."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Modulistica dell'Ambasciata d'Italia ad Accra o 'Il visto per l'Italia'.",
+            "en": "Forms section of the Italian Embassy in Accra or the 'Visa for Italy' website."
+          },
+          "whatYouNeed": { "it": "Modulo compilato in inglese e firmato (per minori: entrambi i genitori).", "en": "Form completed in English and signed (for minors: both parents)." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia biometrica", "en": "Biometric photograph" },
+          "description": {
+            "it": "Una fotografia biometrica a colori, formato 35 x 45 mm, su sfondo bianco, a volto scoperto, scattata negli ultimi 6 mesi e conforme agli standard ICAO.",
+            "en": "One colour biometric photograph, size 35 x 45 mm, on a white background with uncovered face, taken within the last 6 months and compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato, conforme agli standard ICAO.", "en": "Authorized photographer, ICAO-compliant." },
+          "whatYouNeed": { "it": "Una fotografia biometrica 35x45 conforme ICAO.", "en": "One ICAO-compliant 35x45 biometric photograph." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Scattata negli ultimi 6 mesi.", "en": "Taken within the last 6 months." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto con validità residua di almeno tre mesi oltre la durata prevista del soggiorno, rilasciato negli ultimi dieci anni, con almeno due pagine libere per l'apposizione del visto.",
+            "en": "Passport with at least three months of remaining validity beyond the planned stay, issued within the last ten years, with at least two blank pages for the visa sticker."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità ghanese preposta al rilascio dei passaporti.", "en": "Ghanaian authority responsible for passport issuance." },
+          "whatYouNeed": {
+            "it": "Passaporto valido con almeno 3 mesi oltre il soggiorno e 2 pagine libere.",
+            "en": "Passport valid for at least 3 months beyond the stay with 2 blank pages."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la durata del soggiorno; rilascio negli ultimi 10 anni.", "en": "At least 3 months beyond the stay; issued within the last 10 years." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "copie-visti-precedenti",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Copie dei visti e dei passaporti precedenti", "en": "Copies of previous visas and passports" },
+          "description": {
+            "it": "Copie delle pagine del passaporto contenenti visti precedenti (Schengen, Stati Uniti, Regno Unito o altri) e dei passaporti precedenti, a supporto del profilo di viaggio del richiedente.",
+            "en": "Copies of passport pages bearing previous visas (Schengen, United States, United Kingdom or others) and of previous passports, supporting the applicant's travel profile."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": {
+            "it": "Fotocopie dei visti e dei passaporti precedenti.",
+            "en": "Photocopies of previous visas and passports."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (SUI)", "en": "Nulla osta (SUI)" },
+          "description": {
+            "it": "Nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi.",
+            "en": "Work authorization (nulla osta) issued by the competent Italian One-Stop Immigration Desk, within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": { "it": "Nulla osta valido da presentare con la domanda di visto.", "en": "Valid nulla osta to be presented with the visa application." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Validità del nulla osta secondo la normativa vigente (di norma 6 mesi).", "en": "Nulla osta validity under current rules (usually 6 months)." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "documenti-datore-impresa",
+          "code": "COMPANY_REGISTRATION_EXCERPT",
+          "name": { "it": "Documenti del datore di lavoro impresa", "en": "Company employer's documents" },
+          "description": {
+            "it": "Struttura societaria ('Chamber of Commerce extract') dell'impresa datrice, bilanci finanziari e documentazione a dimostrazione dell'attività dell'impresa e della sua capacità di assumere.",
+            "en": "Corporate structure ('Chamber of Commerce extract') of the employing company, financial statements and documentation demonstrating the company's activity and ability to hire."
+          },
+          "necessity": "conditional",
+          "whereToGet": { "it": "Camera di Commercio italiana e datore di lavoro.", "en": "Italian Chamber of Commerce and the employer." },
+          "whatYouNeed": {
+            "it": "Estratto societario, bilanci e prova dell'attività dell'impresa.",
+            "en": "Company extract, financial statements and proof of business activity."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "documenti-datore-domestico",
+          "code": "EMPLOYER_INCOME_PROOF",
+          "name": { "it": "Documenti del datore di lavoro domestico", "en": "Domestic employer's documents" },
+          "description": {
+            "it": "Per un datore di lavoro privato (es. lavoro domestico o assistenza familiare): documentazione finanziaria che attesti la capacità di assunzione, certificato di stato di famiglia e compilazione del modello A-Bis.",
+            "en": "For a private employer (e.g. domestic or family care work): financial documentation attesting the ability to hire, family status certificate and completion of Form A-Bis."
+          },
+          "necessity": "conditional",
+          "whereToGet": { "it": "Datore di lavoro privato e anagrafe di residenza.", "en": "Private employer and the residence registry." },
+          "whatYouNeed": {
+            "it": "Documenti finanziari del datore, stato di famiglia e modello A-Bis.",
+            "en": "Employer's financial documents, family status and Form A-Bis."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "certificato-nascita",
+          "code": "BIRTH_CERTIFICATE",
+          "name": { "it": "Certificato di nascita", "en": "Birth certificate" },
+          "description": {
+            "it": "Certificato di nascita del richiedente (e dei familiari a carico, se del caso), come attestazione della composizione del nucleo familiare.",
+            "en": "Birth certificate of the applicant (and of dependants, if applicable), attesting the composition of the family unit."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità di stato civile ghanese.", "en": "Ghanaian civil registry." },
+          "whatYouNeed": { "it": "Certificato di nascita del richiedente (e dei familiari, se del caso).", "en": "Birth certificate of the applicant (and of family members, where applicable)." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GH-scheda"
+        },
+        {
+          "id": "stato-famiglia",
+          "code": "FAMILY_STATUS_CERTIFICATE",
+          "name": { "it": "Stato di famiglia e dichiarazione giurata del nucleo familiare", "en": "Family status and sworn declaration of the family unit" },
+          "description": {
+            "it": "Certificato di stato di famiglia e dichiarazione giurata sulla composizione del nucleo familiare nel Paese d'origine.",
+            "en": "Family status certificate and sworn declaration on the composition of the family unit in the home country."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità di stato civile ghanese e dichiarazione personale.", "en": "Ghanaian civil registry and personal declaration." },
+          "whatYouNeed": {
+            "it": "Stato di famiglia e dichiarazione giurata del nucleo familiare.",
+            "en": "Family status certificate and sworn family-unit declaration."
+          },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GH-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino ghanese in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. Il Ghana non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Ghanaian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Ghana has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "Outsourcer VFS Global (per conto dell'Ambasciata d'Italia ad Accra)", "en": "VFS Global outsourcer (on behalf of the Italian Embassy in Accra)" },
+          "address": { "it": "Ambasciata d'Italia: Jawaharlal Nehru Road, P.O.Box CT 885, Cantonments, Accra.", "en": "Italian Embassy: Jawaharlal Nehru Road, P.O.Box CT 885, Cantonments, Accra." },
+          "phone": "+233 59-692-0549",
+          "email": "ambasciata.accra@esteri.it",
+          "notes": {
+            "it": "Dal febbraio 2026 le domande di visto si presentano tramite l'outsourcer VFS Global. Sezione visti dell'Ambasciata: +233 24 352 5356 / +233 24 352 6437 / +233 24 352 6956.",
+            "en": "Since February 2026 visa applications are submitted through the outsourcer VFS Global. Embassy visa section: +233 24 352 5356 / +233 24 352 6437 / +233 24 352 6956."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale di lavoro tramite l'outsourcer VFS Global (canale ufficiale dell'Ambasciata d'Italia ad Accra).",
+          "en": "National work visa application via the outsourcer VFS Global (official channel of the Italian Embassy in Accra)."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro (1.508 cedi ghanesi / 93.039 franchi CFA). Spese di servizio VFS Global: 143 cedi ghanesi (visti tipo C e D, adulti e bambini). Gli importi sono calcolati al tasso di cambio trimestrale e si pagano in valuta locale presso VFS; per chi presenta domanda presso l'agenzia di Lomé solo carta di credito.",
+          "en": "National type D visa: €116.00 (1,508 Ghana cedis / 93,039 CFA francs). VFS Global service fee: 143 Ghana cedis (C and D visas, adults and children). Amounts are calculated at the quarterly exchange rate and paid in local currency at VFS; for applications submitted at the Lomé agency only credit card is accepted."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)."
+          },
+          {
+            "it": "Il cittadino ghanese prenota un appuntamento tramite VFS Global e presenta la domanda di visto con tutta la documentazione.",
+            "en": "The Ghanaian citizen books an appointment through VFS Global and submits the visa application with all the documentation."
+          },
+          {
+            "it": "VFS Global trasmette la domanda all'Ambasciata, che può richiedere integrazioni.",
+            "en": "VFS Global forwards the application to the Embassy, which may request additional documents."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "L'elenco dei documenti fornito dall'Ambasciata è indicativo e la sede si riserva di chiedere ulteriori documenti secondo necessità. Il Ghana non ha un accordo bilaterale con l'Italia in materia di lavoro: l'ingresso avviene nell'ambito delle quote del Decreto Flussi. Per le pratiche presentate presso l'agenzia di Lomé (Togo) i pagamenti sono accettati solo con carta di credito.",
+          "en": "The document list provided by the Embassy is indicative and the office reserves the right to request further documents as needed. Ghana has no bilateral labour agreement with Italy: entry is within the Decreto Flussi quotas. For applications submitted at the Lomé (Togo) agency only credit card payments are accepted."
+        }
+      }
+    }
+  ]
+}

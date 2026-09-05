@@ -19,6 +19,10 @@
     { "countryCode": "PE", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
     { "countryCode": "EC", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
     { "countryCode": "MD", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "UA", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "CI", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "GH", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
+    { "countryCode": "GE", "procedureCount": 1, "lastVerified": "2026-09-05", "status": "verified" },
     { "countryCode": "FR", "procedureCount": 1, "lastVerified": "", "status": "needs_review" },
     { "countryCode": "DE", "procedureCount": 1, "lastVerified": "", "status": "needs_review" }
   ]

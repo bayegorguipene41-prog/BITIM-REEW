@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "countryCode": "UA",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "UA-permesso-soggiorno-lavoro",
+      "countryCode": "UA",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino ucraino. L'Ucraina non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). Le domande di visto sono gestite dal centro VMS, autorizzato per conto dell'Ambasciata d'Italia a Kyiv.",
+        "en": "Documents to work in Italy as a Ukrainian citizen. Ukraine has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). Visa applications are managed by the VMS centre, authorized on behalf of the Italian Embassy in Kyiv."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-UA-scheda",
+          "name": "Visto per lavoro subordinato con Nulla Osta — requisiti",
+          "authority": "VMS Visa Application Centre (centro autorizzato dall'Ambasciata d'Italia a Kyiv)",
+          "url": "https://italyvms.com.ua/it/content/108.html",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UA-visti",
+          "name": "Visti — informazioni e modalità di presentazione",
+          "authority": "Ambasciata d'Italia a Kyiv",
+          "url": "https://ambkiev.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UA-costi",
+          "name": "Costi del visto — tariffario della sede",
+          "authority": "Ambasciata d'Italia a Kyiv",
+          "url": "https://ambkiev.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/costi-del-visto/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UA-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "scheda-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Scheda di domanda del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Scheda di richiesta del visto di lunga durata compilata e firmata alla fine. Può essere compilata online sul sito VMS e stampata, oppure compilata a mano in stampatello.",
+            "en": "Long-stay visa application form completed and signed at the end. It can be filled in online on the VMS website and printed, or completed by hand in block capitals."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sito del centro VMS (sezione modulistica) o 'Il visto per l'Italia'.",
+            "en": "VMS centre website (forms section) or 'Visa for Italy' website."
+          },
+          "whatYouNeed": { "it": "Scheda compilata in ogni sua parte e firmata.", "en": "Form completed in full and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "foto-biometriche",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografie biometriche", "en": "Biometric photographs" },
+          "description": {
+            "it": "Due fotografie a colori, formato 3,5 x 4,5 cm, su sfondo bianco e a volto scoperto, conformi agli standard ICAO.",
+            "en": "Two colour photographs, size 3.5 x 4.5 cm, on a white background with uncovered face, compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato o cabina conforme alle norme ICAO.", "en": "Authorized photographer or booth compliant with ICAO rules." },
+          "whatYouNeed": { "it": "Due fotografie biometriche recenti conformi ICAO.", "en": "Two recent ICAO-compliant biometric photographs." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recent (massimo 6 mesi).", "en": "Recent (at most 6 months)." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto originale", "en": "Original passport" },
+          "description": {
+            "it": "Passaporto con una validità di almeno 3 mesi oltre la durata del visto richiesto, con almeno due pagine libere (preferibilmente una di fronte all'altra) per l'apposizione del visto e rilasciato negli ultimi 10 anni.",
+            "en": "Passport valid for at least 3 months beyond the requested visa, with at least two blank pages (preferably facing each other) for the visa sticker, issued within the last 10 years."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Servizio statale ucraino preposto al rilascio dei passaporti.", "en": "Ukrainian state service responsible for passport issuance." },
+          "whatYouNeed": {
+            "it": "Passaporto valido con almeno 3 mesi oltre il visto, due pagine libere e rilascio negli ultimi 10 anni.",
+            "en": "Valid passport with at least 3 months beyond the visa, two blank pages and issued within the last 10 years."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre il visto; rilascio negli ultimi 10 anni.", "en": "At least 3 months beyond the visa; issued within the last 10 years." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Passport photocopy" },
+          "description": {
+            "it": "Fotocopia della prima pagina (dati biometrici) del passaporto e copie dei passaporti precedenti. La copia della prima pagina va inviata via email o fax al centro VMS PRIMA di prenotare l'appuntamento, per la verifica dell'arrivo del nulla osta.",
+            "en": "Photocopy of the first (biometric data) page of the passport and copies of previous passports. The copy of the first page must be sent by email or fax to the VMS centre BEFORE booking the appointment, to verify the arrival of the nulla osta."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria o scanner; invio via email o fax.", "en": "Any copy shop or scanner; sent by email or fax." },
+          "whatYouNeed": {
+            "it": "Copia della prima pagina del passaporto (per l'invio preventivo) e copie dei passaporti precedenti.",
+            "en": "Copy of the first page of the passport (for advance submission) and copies of previous passports."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "carta-identita",
+          "code": "NATIONAL_ID",
+          "name": { "it": "Carta d'identità ucraina", "en": "Ukrainian identity card" },
+          "description": {
+            "it": "Copia della carta d'identità (passaporto interno) del richiedente. Non è richiesta traduzione.",
+            "en": "Copy of the applicant's identity card (internal passport). Translation is not required."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità ucraina preposta al rilascio della carta d'identità.", "en": "Ukrainian authority responsible for identity cards." },
+          "whatYouNeed": { "it": "Copia della carta d'identità.", "en": "Copy of the identity card." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (SUI)", "en": "Nulla osta (SUI)" },
+          "description": {
+            "it": "Nulla osta rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, con una data di rilascio non superiore a sei mesi. Da presentare in originale, unitamente a una copia.",
+            "en": "Nulla osta issued by the competent Italian One-Stop Immigration Desk, with an issue date not older than six months. To be submitted in original, together with a copy."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia, nell'ambito del Decreto Flussi.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy, within the Decreto Flussi."
+          },
+          "whatYouNeed": { "it": "Nulla osta in originale e copia.", "en": "Nulla osta in original and copy." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Data di rilascio non superiore a sei mesi.", "en": "Issue date not older than six months." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-UA-scheda"
+        },
+        {
+          "id": "traduzione-semplice",
+          "code": "SIMPLE_TRANSLATION",
+          "name": { "it": "Traduzione semplice dei documenti in ucraino", "en": "Simple translation of Ukrainian documents" },
+          "description": {
+            "it": "I documenti redatti in ucraino (ad eccezione della carta d'identità) devono essere presentati con traduzione in italiano o inglese in semplice forma: non è prevista alcuna notarizzazione delle traduzioni.",
+            "en": "Documents written in Ukrainian (except the identity card) must be submitted with a translation into Italian or English in simple form: no notarization of translations is required."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Traduttore di fiducia.", "en": "Trusted translator." },
+          "whatYouNeed": {
+            "it": "Traduzione semplice (italiano o inglese) dei documenti non redatti in italiano o inglese.",
+            "en": "Simple translation (Italian or English) of documents not already in Italian or English."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UA-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino ucraino in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. L'Ucraina non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Ukrainian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Ukraine has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "Centro VMS di richiesta visti (per conto dell'Ambasciata d'Italia a Kyiv)", "en": "VMS Visa Application Centre (on behalf of the Italian Embassy in Kyiv)" },
+          "address": { "it": "Kyiv, via Kruhlouniversytetska 3-5; altri centri a Leopoli, Charkiv, Odessa, Dnipro, Chernivtsi e Ivano-Frankivsk.", "en": "Kyiv, 3-5 Kruhlouniversytetska St.; other centres in Lviv, Kharkiv, Odesa, Dnipro, Chernivtsi and Ivano-Frankivsk." },
+          "hours": { "it": "Call center attivo dalle 08:30 alle 18:30.", "en": "Call centre open from 08:30 to 18:30." },
+          "appointment": {
+            "it": "Obbligatoria: prenotazione online sul sito VMS oppure tramite il Call Center al numero +380 44 220 32 00.",
+            "en": "Required: book online on the VMS website or through the Call Centre at +380 44 220 32 00."
+          },
+          "phone": "+380 44 220 32 00",
+          "website": "https://italyvms.com.ua",
+          "notes": {
+            "it": "Prima di prenotare, inviare via email o fax al centro VMS la copia della prima pagina del passaporto, per consentire la verifica dell'arrivo del nulla osta. Tutti i richiedenti devono presentarsi personalmente con la documentazione completa (originali e copie).",
+            "en": "Before booking, send by email or fax to the VMS centre a copy of the first page of the passport, so the arrival of the nulla osta can be verified. All applicants must attend in person with complete documentation (originals and copies)."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale di lavoro subordinato tramite il centro VMS (canale autorizzato per conto dell'Ambasciata d'Italia a Kyiv).",
+          "en": "National subordinate-work visa application via the VMS centre (authorized channel on behalf of the Italian Embassy in Kyiv)."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro (tariffa ordinaria; la pagina 'Costi del visto' della sede è attualmente in aggiornamento). Spese di servizio del centro VMS: dati storici indicativi (16,67 euro + IVA 20%); l'importo effettivo va confermato al centro di richiesta.",
+          "en": "National type D visa: €116.00 (standard fee; the Embassy 'Cost of the visa' page is currently being updated). VMS centre service fees: indicative historical data (€16.67 + 20% VAT); the actual amount must be confirmed at the application centre."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)."
+          },
+          {
+            "it": "Prima di prenotare, il richiedente invia via email o fax la copia della prima pagina del passaporto al centro VMS per la verifica dell'arrivo del nulla osta.",
+            "en": "Before booking, the applicant sends by email or fax a copy of the first page of the passport to the VMS centre to verify the arrival of the nulla osta."
+          },
+          {
+            "it": "Il richiedente prenota un appuntamento online o tramite Call Center e presenta la domanda di visto per lavoro subordinato.",
+            "en": "The applicant books an appointment online or via Call Centre and submits the subordinate-work visa application."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "A causa della situazione bellica, l'Ambasciata d'Italia a Kyiv non rilascia attualmente visti: i cittadini ucraini residenti in Ucraina presentano la domanda presso altre sedi diplomatiche italiane all'estero dove risultano legalmente presenti (es. Varsavia: ambvarsavia.esteri.it, visti.varsavia@esteri.it). I titolari di passaporto biometrico ucraino entrano nello spazio Schengen senza visto per soggiorni fino a 90 giorni, ma per un'attività lavorativa è comunque necessario il visto nazionale di tipo D. L'elenco dei documenti fornito dal centro è indicativo: la sede si riserva di chiedere ulteriori documenti secondo necessità.",
+          "en": "Due to the war situation, the Italian Embassy in Kyiv does not currently issue visas: Ukrainian citizens residing in Ukraine apply at other Italian diplomatic missions abroad where they are legally present (e.g. Warsaw: ambvarsavia.esteri.it, visti.varsavia@esteri.it). Holders of a Ukrainian biometric passport enter the Schengen area without a visa for stays of up to 90 days, but a national type D visa is still required to work. The document list provided by the centre is indicative: the office reserves the right to request further documents as needed."
+        }
+      }
+    }
+  ]
+}

@@ -40,6 +40,10 @@ const STATIC_STATUS: Record<string, VerificationStatus> = {
   PE: "verified",
   EC: "verified",
   MD: "verified",
+  UA: "verified",
+  CI: "verified",
+  GH: "verified",
+  GE: "verified",
   FR: "needs_review",
   DE: "needs_review",
 };
@@ -62,6 +66,10 @@ const COUNTRY_LAST_VERIFIED: Record<string, string> = {
   PE: "2026-09-05",
   EC: "2026-09-05",
   MD: "2026-09-05",
+  UA: "2026-09-05",
+  CI: "2026-09-05",
+  GH: "2026-09-05",
+  GE: "2026-09-05",
 };
 const LATEST_VERIFIED_DATE = "2026-09-05";
 
@@ -124,6 +132,10 @@ const ALL_BUNDLE_DATA: Procedure[] = [
   ...loadCountryProceduresJson("PE"),
   ...loadCountryProceduresJson("EC"),
   ...loadCountryProceduresJson("MD"),
+  ...loadCountryProceduresJson("UA"),
+  ...loadCountryProceduresJson("CI"),
+  ...loadCountryProceduresJson("GH"),
+  ...loadCountryProceduresJson("GE"),
   ...UNVERIFIED_PROCEDURES,
 ];
 

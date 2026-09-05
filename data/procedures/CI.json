@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "countryCode": "CI",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "CI-permesso-soggiorno-lavoro",
+      "countryCode": "CI",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino ivoriano. La Costa d'Avorio non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). Le domande di visto si presentano tramite l'Agenzia VFS Global; la valutazione spetta all'Ambasciata d'Italia ad Abidjan, che può convocare il richiedente.",
+        "en": "Documents to work in Italy as an Ivorian citizen. Côte d'Ivoire has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). Visa applications are submitted through the VFS Global agency; assessment is carried out by the Italian Embassy in Abidjan, which may summon the applicant."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-CI-scheda",
+          "name": "Employment / Travail salarié — liste des documents à fournir",
+          "authority": "Ambasciata d'Italia ad Abidjan",
+          "url": "https://ambabidjan.esteri.it/uploads/2026/07/Employment-Travail-salarie.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-CI-costi",
+          "name": "Quanto costa un visto e come pagare — diritti e spese di servizio",
+          "authority": "Ambasciata d'Italia ad Abidjan",
+          "url": "https://ambabidjan.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-CI-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo originale di richiesta del visto nazionale di lunga durata, debitamente compilato e firmato.",
+            "en": "Original application form for the national long-stay visa, duly completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sito 'Il visto per l'Italia' o modulistica dell'Ambasciata d'Italia ad Abidjan.",
+            "en": "The 'Visa for Italy' website or the forms section of the Italian Embassy in Abidjan."
+          },
+          "whatYouNeed": { "it": "Modulo compilato in ogni sua parte e firmato.", "en": "Form completed in full and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Documento di viaggio valido, con validità residua di almeno tre mesi oltre la durata prevista del soggiorno e con almeno due pagine libere per l'apposizione del visto.",
+            "en": "Valid travel document, with at least three months of remaining validity beyond the planned stay and with at least two blank pages for the visa sticker."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità ivoriana preposta al rilascio dei passaporti.", "en": "Ivorian authority responsible for passport issuance." },
+          "whatYouNeed": {
+            "it": "Passaporto valido con almeno 3 mesi di validità residua oltre il soggiorno.",
+            "en": "Passport valid for at least 3 months beyond the stay."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la durata del soggiorno.", "en": "At least 3 months beyond the stay." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "foto",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia recente", "en": "Recent photograph" },
+          "description": {
+            "it": "Una fotografia a colori, recente, su sfondo chiaro e a volto scoperto, conforme agli standard ICAO.",
+            "en": "One recent colour photograph on a light background with uncovered face, compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato.", "en": "Authorized photographer." },
+          "whatYouNeed": { "it": "Una fotografia recente conforme ICAO.", "en": "One recent ICAO-compliant photograph." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Recente (massimo 6 mesi).", "en": "Recent (at most 6 months)." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (SUI)", "en": "Nulla osta (SUI)" },
+          "description": {
+            "it": "Nulla osta rilasciato dallo Sportello Unico per l'Immigrazione italiano competente, nell'ambito del Decreto Flussi.",
+            "en": "Nulla osta issued by the competent Italian One-Stop Immigration Desk, within the Decreto Flussi."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione (SUI) competente per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk (SUI) competent for the employer in Italy."
+          },
+          "whatYouNeed": { "it": "Nulla osta valido da presentare con la domanda di visto.", "en": "Valid nulla osta to be presented with the visa application." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Validità del nulla osta secondo la normativa vigente (di norma 6 mesi).", "en": "Nulla osta validity under current rules (usually 6 months)." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "cv-qualifiche",
+          "code": "PROFESSIONAL_QUALIFICATIONS",
+          "name": { "it": "Curriculum, qualifiche e referenze", "en": "CV, qualifications and references" },
+          "description": {
+            "it": "Curriculum vitae aggiornato, titoli di studio e qualifiche professionali, nonché lettere di referenza che attestino l'esperienza lavorativa del richiedente.",
+            "en": "Updated curriculum vitae, educational and professional qualifications, as well as reference letters attesting the applicant's work experience."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Istituzioni scolastiche e formatrici, precedenti datori di lavoro.",
+            "en": "Educational and training institutions, previous employers."
+          },
+          "whatYouNeed": { "it": "CV, titoli di studio, qualifiche e lettere di referenza.", "en": "CV, diplomas, qualifications and reference letters." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "documenti-datore",
+          "code": "COMPANY_REGISTRATION_EXCERPT",
+          "name": { "it": "Documenti del datore di lavoro", "en": "Employer's documents" },
+          "description": {
+            "it": "Estratto del registro delle imprese (visura camerale) del datore di lavoro in Italia e documenti finanziari a dimostrazione della solidità dell'impresa.",
+            "en": "Extract from the Italian Chamber of Commerce register (visura camerale) of the employer and financial documents demonstrating the company's solvency."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Camera di Commercio italiana e datore di lavoro.", "en": "Italian Chamber of Commerce and the employer." },
+          "whatYouNeed": { "it": "Visura camerale e documenti finanziari dell'impresa datrice.", "en": "Company registration extract and financial documents of the employing company." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "contratto-lavoro",
+          "code": "WORK_CONTRACT_OFFER",
+          "name": { "it": "Contratto o offerta di lavoro", "en": "Work contract or job offer" },
+          "description": {
+            "it": "Contratto di lavoro o offerta di impiego con indicazione di mansioni, orario, luogo di lavoro e retribuzione, conforme al contratto collettivo nazionale applicabile (CCNL).",
+            "en": "Work contract or job offer stating duties, working hours, workplace and salary, compliant with the applicable national collective agreement (CCNL)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datore di lavoro in Italia.", "en": "Employer in Italy." },
+          "whatYouNeed": {
+            "it": "Contratto o offerta con mansioni, orario, luogo e retribuzione.",
+            "en": "Contract or offer with duties, hours, workplace and salary."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-CI-scheda"
+        },
+        {
+          "id": "legami-paese",
+          "code": "HOME_COUNTRY_TIES",
+          "name": { "it": "Legami con il Paese d'origine", "en": "Ties with the home country" },
+          "description": {
+            "it": "Informazioni sul nucleo familiare nel Paese d'origine e sulla sistemazione abitativa, ed eventuale documentazione a supporto dell'intenzione di far rientro nel Paese d'origine.",
+            "en": "Information on the family unit in the home country and on housing arrangements, with any supporting documentation of the intention to return to the home country."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Dichiarazioni proprie e documentazione personale.", "en": "Own statements and personal documentation." },
+          "whatYouNeed": {
+            "it": "Dati sul nucleo familiare e sulla sistemazione abitativa nel Paese d'origine.",
+            "en": "Details on family and housing in the home country."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-CI-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino ivoriano in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione, nell'ambito del Decreto Flussi. La Costa d'Avorio non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Ivorian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk, within the Decreto Flussi. Côte d'Ivoire has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "Agenzia VFS Global (per conto dell'Ambasciata d'Italia ad Abidjan)", "en": "VFS Global agency (on behalf of the Italian Embassy in Abidjan)" },
+          "appointment": {
+            "it": "Obbligatoria: prenotazione tramite il portale VFS Global. I diritti del visto e le spese di servizio si pagano elettronicamente sul portale al momento della prenotazione.",
+            "en": "Required: booking through the VFS Global portal. Visa fees and service charges are paid electronically on the portal at the time of booking."
+          },
+          "notes": {
+            "it": "La valutazione della domanda spetta in via esclusiva all'Ambasciata d'Italia ad Abidjan, che può convocare il richiedente per un colloquio o richiedere documenti integrativi. Riferirsi alla scheda 'Employment / Travail salarié' per l'elenco aggiornato dei documenti.",
+            "en": "Assessment of the application is carried out exclusively by the Italian Embassy in Abidjan, which may summon the applicant for an interview or request additional documents. Refer to the 'Employment / Travail salarié' sheet for the updated list of documents."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale di lavoro subordinato tramite l'Agenzia VFS Global, con valutazione esclusiva dell'Ambasciata d'Italia ad Abidjan.",
+          "en": "National subordinate-work visa application via the VFS Global agency, with exclusive assessment by the Italian Embassy in Abidjan."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro (circa 77.000 franchi CFA, tariffe del 2026). Spese di servizio VFS Global: 11.300 franchi CFA (circa 17,22 euro), da pagare elettronicamente sul portale VFS. Visti per studio: 50,00 euro.",
+          "en": "National type D visa: €116.00 (about 77,000 CFA francs, 2026 fees). VFS Global service fee: 11,300 CFA francs (about €17.22), paid electronically on the VFS portal. Study visas: €50.00."
+        },
+        "processingTime": {
+          "it": "Variabile; l'Ambasciata valuta la domanda in via esclusiva e può convocare il richiedente a un colloquio.",
+          "en": "Varies; the Embassy assesses the application exclusively and may summon the applicant to an interview."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi)."
+          },
+          {
+            "it": "Il cittadino ivoriano prenota un appuntamento sul portale VFS Global e paga elettronicamente i diritti del visto e le spese di servizio.",
+            "en": "The Ivorian citizen books an appointment on the VFS Global portal and pays visa fees and service charges electronically."
+          },
+          {
+            "it": "La domanda viene presentata all'Agenzia VFS Global con tutta la documentazione; l'Ambasciata valuta in via esclusiva e può convocare il richiedente.",
+            "en": "The application is submitted at the VFS Global agency with all documentation; the Embassy assesses exclusively and may summon the applicant."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "La lista dei documenti è fornita dall'Ambasciata ed è indicativa: la sede valuta la domanda in via esclusiva e può convocare il richiedente a colloquio o richiedere documenti aggiuntivi. La Costa d'Avorio non ha un accordo bilaterale con l'Italia in materia di lavoro: l'ingresso avviene nell'ambito delle quote del Decreto Flussi.",
+          "en": "The document list is provided by the Embassy and is indicative: the office assesses the application exclusively and may summon the applicant to an interview or request additional documents. Côte d'Ivoire has no bilateral labour agreement with Italy: entry is within the Decreto Flussi quotas."
+        }
+      }
+    }
+  ]
+}

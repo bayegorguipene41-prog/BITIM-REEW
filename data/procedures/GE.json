@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "countryCode": "GE",
+  "updatedAt": "2026-09-05",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "GE-permesso-soggiorno-lavoro",
+      "countryCode": "GE",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino georgiano. La Georgia non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). L'appuntamento si prende sul portale Prenot@mi e la domanda si presenta all'Ambasciata d'Italia a Tbilisi.",
+        "en": "Documents to work in Italy as a Georgian citizen. Georgia has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). Appointments are booked on the Prenot@mi portal and the application is submitted at the Italian Embassy in Tbilisi."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-GE-scheda",
+          "name": "Visto per lavoro subordinato con Nulla Osta — elenco documenti",
+          "authority": "Ambasciata d'Italia a Tbilisi",
+          "url": "https://ambtbilisi.esteri.it/uploads/2026/05/LAVORO-SUBORDINATO_ITA-final.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-GE-tariffe",
+          "name": "Tariffa consolare — III trimestre 2026",
+          "authority": "Ambasciata d'Italia a Tbilisi",
+          "url": "https://ambtbilisi.esteri.it/uploads/2026/06/Tariffa-consolare-III-trim.-2026.pdf",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-GE-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-05",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto di lunga durata compilato in italiano o in inglese e firmato.",
+            "en": "Long-stay visa application form completed in Italian or English and signed."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Sito 'Il visto per l'Italia' o modulistica dell'Ambasciata d'Italia a Tbilisi.", "en": "The 'Visa for Italy' website or the forms section of the Italian Embassy in Tbilisi." },
+          "whatYouNeed": { "it": "Modulo compilato in italiano o inglese e firmato.", "en": "Form completed in Italian or English and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-GE-scheda"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto con validità residua di almeno tre mesi oltre la durata prevista del soggiorno, con almeno due pagine libere (preferibilmente consecutive) per l'apposizione del visto.",
+            "en": "Passport with at least three months of remaining validity beyond the planned stay, with at least two blank pages (preferably consecutive) for the visa sticker."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità georgiana preposta al rilascio dei passaporti.", "en": "Georgian authority responsible for passport issuance." },
+          "whatYouNeed": {
+            "it": "Passaporto valido con almeno 3 mesi di validità residua oltre il soggiorno e 2 pagine libere.",
+            "en": "Passport valid for at least 3 months beyond the stay with 2 blank pages."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Almeno 3 mesi oltre la durata del soggiorno.", "en": "At least 3 months beyond the stay." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GE-scheda"
+        },
+        {
+          "id": "foto",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia biometrica", "en": "Biometric photograph" },
+          "description": {
+            "it": "Una fotografia recente (non più di 6 mesi), su sfondo bianco, a volto scoperto, conforme agli standard ICAO.",
+            "en": "One recent photograph (not older than 6 months), on a white background with uncovered face, compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato.", "en": "Authorized photographer." },
+          "whatYouNeed": { "it": "Una fotografia biometrica recente conforme ICAO.", "en": "One recent ICAO-compliant biometric photograph." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Non più di 6 mesi.", "en": "Not older than 6 months." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-GE-scheda"
+        },
+        {
+          "id": "residenza-georgia",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Prova di residenza in Georgia", "en": "Proof of residence in Georgia" },
+          "description": {
+            "it": "Documentazione che attesti l'attuale residenza in Georgia (indirizzo di residenza) insieme al permesso di soggiorno georgiano valido, con almeno tre mesi di validità residua al rientro nel Paese.",
+            "en": "Documentation attesting the current residence in Georgia (residential address) together with a valid Georgian residence permit, with at least three months of remaining validity upon return to the country."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Agenzia dello sviluppo statale georgiana (Public Service Development Agency).", "en": "Georgian Public Service Development Agency." },
+          "whatYouNeed": {
+            "it": "Prova di residenza e permesso di soggiorno georgiano con almeno 3 mesi di validità residua.",
+            "en": "Proof of residence and Georgian residence permit with at least 3 months of remaining validity."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Permesso di soggiorno valido con almeno 3 mesi di validità residua al rientro.", "en": "Residence permit valid with at least 3 months remaining on return." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-GE-scheda"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta (SUI/ANPAL/CONI)", "en": "Nulla osta (SUI/ANPAL/CONI)" },
+          "description": {
+            "it": "Nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione (SUI), da ANPAL o da CONI, con una validità di sei mesi dalla data di rilascio.",
+            "en": "Work authorization (nulla osta) issued by the One-Stop Immigration Desk (SUI), ANPAL or CONI, valid for six months from the issue date."
+          },
+          "necessity": "required",
+          "whereToGet": {
+            "it": "Sportello Unico per l'Immigrazione/ANPAL/CONI competenti per il datore di lavoro in Italia.",
+            "en": "One-Stop Immigration Desk/ANPAL/CONI competent for the employer in Italy."
+          },
+          "whatYouNeed": { "it": "Nulla osta valido per sei mesi dalla data di rilascio.", "en": "Nulla osta valid for six months from the issue date." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Sei mesi dalla data di rilascio.", "en": "Six months from the issue date." },
+          "processingTime": { "it": "Variabile, nell'ambito del Decreto Flussi.", "en": "Varies, within the Decreto Flussi." },
+          "sourceId": "source-GE-scheda"
+        },
+        {
+          "id": "prenotazione-biglietto",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del biglietto aereo", "en": "Flight booking" },
+          "description": {
+            "it": "Prenotazione del biglietto aereo con numero di prenotazione, compagnia aerea, nome del passeggero, date e itinerario del volo.",
+            "en": "Flight booking with reservation number, airline, passenger name, dates and flight itinerary."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea o agenzia di viaggio.", "en": "Airline or travel agency." },
+          "whatYouNeed": {
+            "it": "Prenotazione aerea con numero di prenotazione, compagnia, nome, date e itinerario.",
+            "en": "Flight booking with reservation number, airline, name, dates and itinerary."
+          },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "estimatedCost": { "it": "Variabile.", "en": "Varies." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-GE-scheda"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino georgiano in possesso di nulla osta al lavoro rilasciato dallo Sportello Unico per l'Immigrazione (o da ANPAL/CONI), nell'ambito del Decreto Flussi. La Georgia non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025).",
+          "en": "Georgian citizen holding a work authorization (nulla osta) issued by the One-Stop Immigration Desk (or ANPAL/CONI), within the Decreto Flussi. Georgia has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025)."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Tbilisi", "en": "Italian Embassy in Tbilisi" },
+          "appointment": {
+            "it": "Obbligatoria: prenotazione tramite il portale Prenot@mi (https://prenotami.esteri.it/).",
+            "en": "Required: booking through the Prenot@mi portal (https://prenotami.esteri.it/)."
+          },
+          "website": "https://prenotami.esteri.it",
+          "notes": {
+            "it": "La domanda si presenta di persona all'Ambasciata d'Italia a Tbilisi con appuntamento su Prenotami. Le tariffe si pagano solo in lari georgiani il giorno dell'appuntamento.",
+            "en": "The application is submitted in person at the Italian Embassy in Tbilisi by appointment on Prenotami. Fees are paid only in Georgian lari on the appointment day."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale di lavoro subordinato tramite appuntamento su Prenot@mi, presentata all'Ambasciata d'Italia a Tbilisi.",
+          "en": "National subordinate-work visa application via appointment on Prenot@mi, submitted at the Italian Embassy in Tbilisi."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro = 362,00 lari georgiani (tariffa consolare III trimestre 2026, cambio consolare 1 EUR = 3,1177 GEL). Il pagamento avviene SOLO in lari georgiani il giorno dell'appuntamento, con carta di credito o contanti in misura esatta.",
+          "en": "National type D visa: €116.00 = 362.00 Georgian lari (consular fee Q3 2026, consular rate 1 EUR = 3.1177 GEL). Payment is made ONLY in Georgian lari on the appointment day, by credit card or exact cash."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal rilascio del nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (o l'istanza ad ANPAL/CONI), nell'ambito del Decreto Flussi.",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (or applies to ANPAL/CONI), within the Decreto Flussi."
+          },
+          {
+            "it": "Il cittadino georgiano prenota un appuntamento sul portale Prenot@mi.",
+            "en": "The Georgian citizen books an appointment on the Prenot@mi portal."
+          },
+          {
+            "it": "La domanda viene presentata all'Ambasciata d'Italia a Tbilisi con tutta la documentazione; i diritti si pagano in lari georgiani il giorno stesso.",
+            "en": "The application is submitted at the Italian Embassy in Tbilisi with all documentation; fees are paid in Georgian lari on the same day."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "La lista dei documenti fornita dalla sede è indicativa: l'Ambasciata può chiedere ulteriori documenti. Il pagamento delle tariffe è ammesso solo in lari georgiani il giorno dell'appuntamento. La Georgia non ha un accordo bilaterale con l'Italia in materia di lavoro: l'ingresso avviene nell'ambito delle quote del Decreto Flussi.",
+          "en": "The document list provided by the office is indicative: the Embassy may request further documents. Payment of fees is accepted only in Georgian lari on the appointment day. Georgia has no bilateral labour agreement with Italy: entry is within the Decreto Flussi quotas."
+        }
+      }
+    }
+  ]
+}

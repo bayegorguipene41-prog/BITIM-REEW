@@ -196,6 +196,22 @@ describe("resolveNationalityGroups — generic foreign", () => {
   it("Perù → foreign only (nessun accordo bilaterale attivo)", () => {
     expect(resolveNationalityGroups("PE")).toEqual(["foreign"]);
   });
+
+  it("Ucraina → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("UA")).toEqual(["foreign"]);
+  });
+
+  it("Costa d'Avorio → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("CI")).toEqual(["foreign"]);
+  });
+
+  it("Ghana → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("GH")).toEqual(["foreign"]);
+  });
+
+  it("Georgia → foreign only (nessun accordo bilaterale attivo)", () => {
+    expect(resolveNationalityGroups("GE")).toEqual(["foreign"]);
+  });
 });
 
 // ── Edge cases: invalid/missing codes ───────────────────────────

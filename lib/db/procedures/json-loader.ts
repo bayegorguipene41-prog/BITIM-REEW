@@ -47,6 +47,10 @@ import uaJson from "@/data/procedures/UA.json";
 import ciJson from "@/data/procedures/CI.json";
 import ghJson from "@/data/procedures/GH.json";
 import geJson from "@/data/procedures/GE.json";
+import muJson from "@/data/procedures/MU.json";
+import uzJson from "@/data/procedures/UZ.json";
+import joJson from "@/data/procedures/JO.json";
+import thJson from "@/data/procedures/TH.json";
 
 const FILES: Record<string, CountryProceduresFile> = {
   IT: itJson as unknown as CountryProceduresFile,
@@ -71,6 +75,10 @@ const FILES: Record<string, CountryProceduresFile> = {
   CI: ciJson as unknown as CountryProceduresFile,
   GH: ghJson as unknown as CountryProceduresFile,
   GE: geJson as unknown as CountryProceduresFile,
+  MU: muJson as unknown as CountryProceduresFile,
+  UZ: uzJson as unknown as CountryProceduresFile,
+  JO: joJson as unknown as CountryProceduresFile,
+  TH: thJson as unknown as CountryProceduresFile,
 };
 
 export function loadCountryProceduresJson(countryCode: string): Procedure[] {

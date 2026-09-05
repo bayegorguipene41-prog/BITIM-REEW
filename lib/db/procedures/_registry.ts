@@ -44,6 +44,10 @@ const STATIC_STATUS: Record<string, VerificationStatus> = {
   CI: "verified",
   GH: "verified",
   GE: "verified",
+  MU: "verified",
+  UZ: "verified",
+  JO: "verified",
+  TH: "verified",
   FR: "needs_review",
   DE: "needs_review",
 };
@@ -70,8 +74,12 @@ const COUNTRY_LAST_VERIFIED: Record<string, string> = {
   CI: "2026-09-05",
   GH: "2026-09-05",
   GE: "2026-09-05",
+  MU: "2026-09-06",
+  UZ: "2026-09-06",
+  JO: "2026-09-06",
+  TH: "2026-09-06",
 };
-const LATEST_VERIFIED_DATE = "2026-09-05";
+const LATEST_VERIFIED_DATE = "2026-09-06";
 
 // ── Indice completo: ogni paese in COUNTRIES ha una voce ───────
 // I paesi con dati procedura hanno procedureCount > 0; quelli senza dati
@@ -136,6 +144,10 @@ const ALL_BUNDLE_DATA: Procedure[] = [
   ...loadCountryProceduresJson("CI"),
   ...loadCountryProceduresJson("GH"),
   ...loadCountryProceduresJson("GE"),
+  ...loadCountryProceduresJson("MU"),
+  ...loadCountryProceduresJson("UZ"),
+  ...loadCountryProceduresJson("JO"),
+  ...loadCountryProceduresJson("TH"),
   ...UNVERIFIED_PROCEDURES,
 ];
 

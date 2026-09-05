@@ -63,6 +63,8 @@ export const BILATERAL_AGREEMENTS: BilateralAgreements = {
     IN: "bilateral_it-india",    // India (Accordo migrazione e mobilità 2023)
     EC: "bilateral_it-ecuador",  // Ecuador (Memorandum of Understanding 2025)
     MD: "bilateral_it-moldova",  // Moldavia (Accordo 5 luglio 2011 in materia migratoria per motivi di lavoro)
+    MU: "bilateral_it-mauritius", // Mauritius
+    UZ: "bilateral_it-uzbekistan", // Uzbekistan
   },
   // Futuri esempi:
   // FR: { MA: "bilateral_fr-maroc", TN: "bilateral_fr-tunisia", ... },

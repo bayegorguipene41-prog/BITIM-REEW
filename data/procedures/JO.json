@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "countryCode": "JO",
+  "updatedAt": "2026-09-06",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "JO-permesso-soggiorno-lavoro",
+      "countryCode": "JO",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino giordano tramite il visto nazionale (tipo D). La Giordania non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). I visti nazionali (tipo D) si presentano direttamente all'Ufficio Visti dell'Ambasciata d'Italia ad Amman, scrivendo a visti.amman@esteri.it: solo i visti Schengen transitano tramite VFS Global.",
+        "en": "Documents to work in Italy as a Jordanian citizen through the national visa (type D). Jordan has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). National visas (type D) are submitted directly at the Visa Office of the Italian Embassy in Amman, writing to visti.amman@esteri.it: only Schengen visas go through VFS Global."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-JO-visti",
+          "name": "Visti — pagina ufficiale dell'Ambasciata d'Italia ad Amman",
+          "authority": "Ambasciata d'Italia ad Amman",
+          "url": "https://ambamman.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-JO-modulo",
+          "name": "Modulo di domanda per visti nazionali",
+          "authority": "Ambasciata d'Italia ad Amman",
+          "url": "https://ambamman.esteri.it/wp-content/uploads/2023/08/8._modulo_domanda_visto_nazionale.pdf",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-JO-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto nazionale", "en": "National visa application form" },
+          "description": {
+            "it": "Modulo di domanda per visti nazionali (tipo D), disponibile sul sito dell'Ambasciata d'Italia ad Amman, debitamente compilato e firmato.",
+            "en": "National visa (type D) application form, available on the website of the Italian Embassy in Amman, duly completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Sezione Visti del sito dell'Ambasciata d'Italia ad Amman.", "en": "Visas section of the Italian Embassy in Amman website." },
+          "whatYouNeed": { "it": "Modulo compilato e firmato.", "en": "Form completed and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-JO-visti"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto valido con almeno due pagine libere.",
+            "en": "Valid passport with at least two blank pages."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità giordana preposta al rilascio dei passaporti.", "en": "Jordanian authority responsible for passport issuance." },
+          "whatYouNeed": { "it": "Passaporto valido con almeno 2 pagine libere.", "en": "Valid passport with at least 2 blank pages." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-JO-visti"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato passaporto", "en": "Passport-size photo" },
+          "description": {
+            "it": "Fotografia formato passaporto conforme alle specifiche ICAO.",
+            "en": "Passport photo compliant with ICAO specifications."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato conforme agli standard ICAO.", "en": "Authorized photographer, ICAO-compliant." },
+          "whatYouNeed": { "it": "Foto formato passaporto conforme ICAO.", "en": "ICAO-compliant passport photo." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-JO-visti"
+        },
+        {
+          "id": "nulla-osta",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta al lavoro (o assenso al ricongiungimento)", "en": "Work clearance (nulla osta)" },
+          "description": {
+            "it": "Nulla osta allo svolgimento di attività lavorativa rilasciato dallo Sportello Unico per l'Immigrazione della Questura competente, ottenuto dal datore di lavoro secondo le quote annuali del Decreto Flussi o per le categorie fuori quota.",
+            "en": "Clearance to carry out work activity issued by the One-Stop Immigration Desk of the competent Questura, obtained by the employer within the annual Decreto Flussi quotas or for out-of-quota categories."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "A cura del datore di lavoro presso lo Sportello Unico per l'Immigrazione.", "en": "By the employer at the One-Stop Immigration Desk." },
+          "whatYouNeed": { "it": "Nulla osta rilasciato dallo Sportello Unico per l'Immigrazione.", "en": "Clearance issued by the One-Stop Immigration Desk." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile (procedura dello Sportello Unico).", "en": "Varies (One-Stop Immigration Desk procedure)." },
+          "sourceId": "source-JO-visti"
+        },
+        {
+          "id": "prova-residenza",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Prova di residenza in Giordania", "en": "Proof of residence in Jordan" },
+          "description": {
+            "it": "Documento che attesti la regolare residenza in Giordania del richiedente (certificato di residenza, passaporto valido con visto di residenza, o documento equivalente).",
+            "en": "Document proving the applicant's regular residence in Jordan (residence certificate, valid passport with residence visa, or equivalent document)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità giordane competenti.", "en": "Competent Jordanian authorities." },
+          "whatYouNeed": { "it": "Documento attestante la residenza in Giordania.", "en": "Document proving residence in Jordan." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-JO-visti"
+        },
+        {
+          "id": "prova-pagamento",
+          "code": "VISA_FEE_RECEIPT",
+          "name": { "it": "Prova del pagamento delle spese amministrative", "en": "Proof of payment of administrative fees" },
+          "description": {
+            "it": "Importo per le spese amministrative del trattamento della domanda di visto, da corrispondere al momento della presentazione in dinari giordani ed esclusivamente in contanti. L'importo esatto in dinari non è pubblicato online: l'Ambasciata applica la tariffa standard per i visti nazionali (116,00 euro) al cambio trimestrale comunicato alla presentazione.",
+            "en": "Amount for the administrative costs of processing the visa application, to be paid at submission in Jordanian dinars and exclusively in cash. The exact amount in dinars is not published online: the Embassy applies the standard national visa fee (€116.00) at the quarterly exchange rate communicated at submission."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Ufficio Visti dell'Ambasciata d'Italia ad Amman (pagamento in contanti in dinari giordani).", "en": "Visa Office of the Italian Embassy in Amman (cash payment in Jordanian dinars)." },
+          "whatYouNeed": { "it": "Contanti in dinari giordani.", "en": "Cash in Jordanian dinars." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Contestuale alla presentazione.", "en": "At submission." },
+          "sourceId": "source-JO-visti"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino giordano (o cittadino di un Paese terzo regolarmente residente in Giordania) che intende svolgere attività lavorativa in Italia per oltre 90 giorni nell'ambito del Decreto Flussi o come lavoratore fuori quota (altamente qualificato, trasferimento intra-societario, etc.). La Giordania non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028.",
+          "en": "Jordanian citizen (or third-country national regularly residing in Jordan) intending to carry out work activity in Italy for more than 90 days within the Decreto Flussi or as an out-of-quota worker (highly qualified, intra-corporate transferee, etc.). Jordan has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "Ufficio Visti dell'Ambasciata d'Italia ad Amman", "en": "Visa Office of the Italian Embassy in Amman" },
+          "address": { "it": "Jabal Al Weibdeh, 5 Hafeth Ibrahim Str., P.O.Box 9800, 11191 Amman, Giordania.", "en": "Jabal Al Weibdeh, 5 Hafeth Ibrahim Str., P.O.Box 9800, 11191 Amman, Jordan." },
+          "phone": "+962 6 463 6413",
+          "email": "visti.amman@esteri.it",
+          "website": "https://ambamman.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/",
+          "notes": {
+            "it": "I visti nazionali (tipo D) si presentano direttamente presso l'Ufficio Visti dell'Ambasciata, prenotando un appuntamento scrivendo a visti.amman@esteri.it. SOLO i visti Schengen (turismo/affari) passano tramite VFS Global (Al Barakeh Mall – P2, Sweifeih; +962 6 581 9024).",
+            "en": "National visas (type D) are submitted directly at the Embassy Visa Office, booking an appointment by writing to visti.amman@esteri.it. ONLY Schengen visas (tourism/business) go through VFS Global (Al Barakeh Mall – P2, Sweifeih; +962 6 581 9024)."
+          }
+        },
+        "method": {
+          "it": "Appuntamento diretto con l'Ufficio Visti dell'Ambasciata d'Italia ad Amman via e-mail (visti.amman@esteri.it); presentazione della domanda in Ambasciata.",
+          "en": "Direct appointment with the Visa Office of the Italian Embassy in Amman by e-mail (visti.amman@esteri.it); application submitted at the Embassy."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro (tariffa standard MAECI), pagato in dinari giordani in contanti al momento della presentazione; importo in JOD comunicato al cambio trimestrale.",
+          "en": "National type D visa: €116.00 (standard MAECI fee), paid in Jordanian dinars in cash at submission; JOD amount communicated at the quarterly exchange rate."
+        },
+        "processingTime": {
+          "it": "In media 21 giorni lavorativi dall'emissione (possono variare a seconda della cittadinanza, della stagionalità e della tipologia di visto richiesto).",
+          "en": "On average 21 working days from issuance (may vary depending on nationality, seasonality and visa type)."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi o per le categorie fuori quota).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi or for out-of-quota categories)."
+          },
+          {
+            "it": "Il cittadino giordano scrive a visti.amman@esteri.it per fissare l'appuntamento con l'Ufficio Visti dell'Ambasciata d'Italia ad Amman.",
+            "en": "The Jordanian citizen writes to visti.amman@esteri.it to book an appointment with the Visa Office of the Italian Embassy in Amman."
+          },
+          {
+            "it": "Presentare la domanda con la documentazione richiesta e pagare in contanti (dinari giordani) le spese amministrative.",
+            "en": "Submit the application with the required documentation and pay the administrative fees in cash (Jordanian dinars)."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "Il sito dell'Ambasciata d'Italia ad Amman non pubblica una checklist dettagliata per i visti nazionali di lavoro: indica che moduli, modelli di lettere, tariffe e liste documentali sono reperibili presso VFS Global (www.vfsglobal.com/italy/jordan), mentre la presentazione dei visti nazionali avviene direttamente in Ambasciata. L'elenco sopra riportato è la documentazione standard per i visti nazionali D ed è indicativo: l'Ambasciata si riserva il diritto di richiedere ulteriore documentazione.",
+          "en": "The website of the Italian Embassy in Amman does not publish a detailed checklist for national work visas: it indicates that forms, letter templates, fees and document lists are available at VFS Global (www.vfsglobal.com/italy/jordan), while national visas are submitted directly at the Embassy. The list above is the standard documentation for national D visas and is indicative: the Embassy reserves the right to request further documents."
+        }
+      }
+    }
+  ]
+}

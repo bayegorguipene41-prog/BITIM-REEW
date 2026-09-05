@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "countryCode": "MU",
+  "updatedAt": "2026-09-06",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "MU-permesso-soggiorno-lavoro",
+      "countryCode": "MU",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino mauriziano tramite il visto nazionale (tipo D). Mauritius è coperta da una Dichiarazione Congiunta in materia di migrazione circolare (2012) con il Ministero del Lavoro italiano ed è tra i Paesi con accordi/intese in materia migratoria, oltre a rientrare tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). ATTENZIONE: l'Italia non ha un'Ambasciata residente a Mauritius — la domanda di visto si presenta all'Ambasciata d'Italia a Pretoria (Sudafrica), che copre anche Mauritius, oppure tramite il Consolato Onorario a Port Louis.",
+        "en": "Documents to work in Italy as a Mauritian citizen through the national visa (type D). Mauritius is covered by a Joint Declaration on circular migration (2012) with the Italian Ministry of Labour and is among the countries with agreements/memoranda in migration matters, besides being among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). PLEASE NOTE: Italy has no resident Embassy in Mauritius — visa applications are submitted to the Italian Embassy in Pretoria (South Africa), which also covers Mauritius, or via the Honorary Consulate in Port Louis."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-MU-checklist",
+          "name": "Lavoro subordinato — checklist ufficiale",
+          "authority": "Ambasciata d'Italia a Pretoria",
+          "url": "https://ambpretoria.esteri.it/wp-content/uploads/2026/05/LavoroSubordinato_rev.pdf",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MU-costi",
+          "name": "Quanto costa un visto e come pagare",
+          "authority": "Ambasciata d'Italia a Pretoria",
+          "url": "https://ambpretoria.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MU-rete",
+          "name": "La rete consolare — Chi siamo",
+          "authority": "Ambasciata d'Italia a Pretoria",
+          "url": "https://ambpretoria.esteri.it/it/chi-siamo/la-rete-consolare/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-MU-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto valido per almeno 3 mesi dalla data del ritorno e con 2 pagine bianche.",
+            "en": "Passport valid for at least 3 months after the return date and with 2 blank pages."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Passport Office mauriziano (autorità preposta al rilascio dei passaporti).", "en": "Mauritian Passport Office (authority responsible for passport issuance)." },
+          "whatYouNeed": { "it": "Passaporto valido almeno 3 mesi oltre il ritorno, con 2 pagine bianche.", "en": "Passport valid at least 3 months beyond return, with 2 blank pages." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di domanda nazionale", "en": "National application form" },
+          "description": {
+            "it": "Formulario nazionale di domanda del visto, debitamente compilato e firmato.",
+            "en": "National visa application form, duly completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Modulistica dell'Ambasciata d'Italia a Pretoria o del Consolato Onorario a Port Louis.", "en": "Forms section of the Italian Embassy in Pretoria or of the Honorary Consulate in Port Louis." },
+          "whatYouNeed": { "it": "Modulo compilato e firmato.", "en": "Form completed and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fototessera ICAO a colori", "en": "Color ICAO ID photo" },
+          "description": {
+            "it": "Fotografia formato passaporto a colori conforme alle specifiche ICAO.",
+            "en": "Color passport photo compliant with ICAO specifications."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato conforme agli standard ICAO.", "en": "Authorized photographer, ICAO-compliant." },
+          "whatYouNeed": { "it": "Fototessera ICAO a colori.", "en": "Color ICAO ID photo." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "fotocopia-passaporto",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto", "en": "Photocopy of the passport" },
+          "description": {
+            "it": "Fotocopia del passaporto del richiedente.",
+            "en": "Photocopy of the applicant's passport."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": { "it": "Fotocopia del passaporto.", "en": "Photocopy of the passport." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "fotocopia-visti-precedenti",
+          "code": "PREVIOUS_VISA_COPIES",
+          "name": { "it": "Fotocopia dei visti precedenti", "en": "Photocopy of previous visas" },
+          "description": {
+            "it": "Fotocopia dei visti precedentemente rilasciati.",
+            "en": "Photocopy of previously issued visas."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": { "it": "Fotocopie dei visti precedenti.", "en": "Photocopies of previous visas." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "prova-trasporto",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prova di trasporto", "en": "Proof of transport" },
+          "description": {
+            "it": "Biglietto o prenotazione confermati, che provino l'arrivo in Italia.",
+            "en": "Confirmed ticket or reservation, proving the arrival into Italy."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea o agenzia di viaggio.", "en": "Airline or travel agency." },
+          "whatYouNeed": { "it": "Biglietto o prenotazione confermati (arrivo in Italia).", "en": "Confirmed ticket or reservation (arrival in Italy)." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "nulla-osta-sui",
+          "code": "WORK_AUTHORIZATION",
+          "name": { "it": "Nulla osta SUI", "en": "Nulla osta SUI" },
+          "description": {
+            "it": "Nulla osta autorizzato dallo Sportello Unico per l'Immigrazione (SUI) della Questura competente. Il visto deve essere rilasciato entro 6 mesi dall'emissione del nulla osta.",
+            "en": "Clearance authorised by the One-Stop Immigration Desk (SUI) of the competent Questura. The visa must be issued within 6 months from the nulla osta issuance."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "A cura del datore di lavoro presso lo Sportello Unico per l'Immigrazione.", "en": "By the employer at the One-Stop Immigration Desk." },
+          "whatYouNeed": { "it": "Nulla osta rilasciato correttamente dal SUI.", "en": "Clearance correctly issued by the SUI." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Il visto deve essere rilasciato entro 6 mesi dall'emissione del nulla osta.", "en": "The visa must be issued within 6 months from the nulla osta issuance." },
+          "processingTime": { "it": "Variabile (procedura dello Sportello Unico).", "en": "Varies (One-Stop Immigration Desk procedure)." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "prova-residenza",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Prova di residenza", "en": "Proof of residence" },
+          "description": {
+            "it": "Prova di residenza, ad esempio certificato di residenza, bolletta o estratto conto.",
+            "en": "Proof of residence, e.g. residence certificate, utility bill or bank statement."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità locali, fornitore di servizi o banca.", "en": "Local authorities, utility provider or bank." },
+          "whatYouNeed": { "it": "Certificato, bolletta o estratto conto recente.", "en": "Recent certificate, utility bill or bank statement." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-MU-checklist"
+        },
+        {
+          "id": "prova-pagamento",
+          "code": "VISA_FEE_RECEIPT",
+          "name": { "it": "Prova di pagamento", "en": "Proof of payment" },
+          "description": {
+            "it": "Prova del pagamento delle spese amministrative del visto.",
+            "en": "Proof of payment of the visa administrative fees."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Banca (bonifico sul conto dell'Ambasciata d'Italia a Pretoria) o consolato onorario.", "en": "Bank (bank transfer to the Italian Embassy in Pretoria account) or honorary consulate." },
+          "whatYouNeed": { "it": "Ricevuta/comprovante del bonifico eseguito.", "en": "Receipt/proof of the transfer made." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (dopo il bonifico).", "en": "Immediate (after transfer)." },
+          "sourceId": "source-MU-checklist"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino mauriziano (o cittadino di un Paese terzo regolarmente residente a Mauritius) che intende svolgere attività lavorativa in Italia per oltre 90 giorni nell'ambito del Decreto Flussi o come lavoratore fuori quota (altamente qualificato, trasferimento intra-societario, etc.). Mauritius è coperta da una Dichiarazione Congiunta in materia di migrazione circolare con l'Italia (2012) ed è tra i Paesi con accordi/intese in materia migratoria, oltre a rientrare tra i Paesi ammessi al Decreto Flussi 2026-2028.",
+          "en": "Mauritian citizen (or third-country national regularly residing in Mauritius) intending to carry out work activity in Italy for more than 90 days within the Decreto Flussi or as an out-of-quota worker (highly qualified, intra-corporate transferee, etc.). Mauritius is covered by a Joint Declaration on circular migration with Italy (2012) and is among the countries with agreements/memoranda in migration matters, besides being among the countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Pretoria — Ufficio Visti (accreditamento per Mauritius)", "en": "Italian Embassy in Pretoria — Visa Office (accredited for Mauritius)" },
+          "address": { "it": "796 George Avenue, Arcadia, Pretoria, 0083, Sudafrica.", "en": "796 George Avenue, Arcadia, Pretoria, 0083, South Africa." },
+          "phone": "+27 12 423 0005",
+          "email": "visti.pretoria@esteri.it",
+          "website": "https://ambpretoria.esteri.it/it/chi-siamo/la-rete-consolare/",
+          "notes": {
+            "it": "L'Italia NON ha un'Ambasciata residente a Mauritius: le domande di visto per i residenti a Mauritius si presentano tramite l'Ambasciata d'Italia a Pretoria (Sudafrica), accreditata anche per Mauritius. In loco è disponibile il Consolato Onorario a Port Louis: Console Onorario Stefano ZINNO, portlouis.onorario@esteri.it / consolatoitalia@myt.mu, tel. +230 263 0358.",
+            "en": "Italy has NO resident Embassy in Mauritius: visa applications from Mauritius residents are submitted through the Italian Embassy in Pretoria (South Africa), also accredited for Mauritius. On site, the Honorary Consulate in Port Louis is available: Honorary Consul Stefano ZINNO, portlouis.onorario@esteri.it / consolatoitalia@myt.mu, tel. +230 263 0358."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale (tipo D) tramite l'Ambasciata d'Italia a Pretoria (accreditamento per Mauritius), eventualmente via Consolato Onorario a Port Louis.",
+          "en": "National visa (type D) application through the Italian Embassy in Pretoria (accredited for Mauritius), possibly via the Honorary Consulate in Port Louis."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro = 2.234,00 rand sudafricani (tasso del periodo luglio-settembre 2026). Il pagamento avviene tramite bonifico bancario (EFT) sul conto dell'Ambasciata d'Italia a Pretoria presso la First National Bank (FNB) Brooklyn — non è accettato pagamento in contanti.",
+          "en": "National type D visa: €116.00 = ZAR 2,234.00 (July-September 2026 rate). Payment is made by bank transfer (EFT) to the Italian Embassy in Pretoria account at First National Bank (FNB) Brooklyn — no cash payments accepted."
+        },
+        "processingTime": {
+          "it": "Variabile; in media alcune settimane dopo la presentazione completa della documentazione.",
+          "en": "Varies; on average a few weeks after complete documentation is submitted."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi o per le categorie fuori quota).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi or for out-of-quota categories)."
+          },
+          {
+            "it": "Il cittadino mauriziano presenta la domanda all'Ambasciata d'Italia a Pretoria (o tramite il Consolato Onorario di Port Louis), completo della documentazione richiesta e della prova del pagamento via bonifico.",
+            "en": "The Mauritian citizen submits the application to the Italian Embassy in Pretoria (or via the Honorary Consulate in Port Louis), complete with the required documentation and proof of bank transfer payment."
+          },
+          {
+            "it": "Viene rilasciato il visto (entro 6 mesi dall'emissione del nulla osta); il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued (within 6 months from the nulla osta issuance); the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "Attenzione: l'Italia non ha un'Ambasciata residente in Mauritius. Tutte le pratiche di visto per chi risiede a Mauritius fanno capo all'Ambasciata d'Italia a Pretoria, con ricezione documenti presso il Consolato Onorario di Port Louis. Verificare presso il Consolato Onorario le modalità di ricezione e inoltro della documentazione.",
+          "en": "Please note: Italy has no resident Embassy in Mauritius. All visa procedures for Mauritius residents are handled by the Italian Embassy in Pretoria, with document reception at the Honorary Consulate in Port Louis. Check with the Honorary Consulate about the document reception and forwarding arrangements."
+        }
+      }
+    }
+  ]
+}

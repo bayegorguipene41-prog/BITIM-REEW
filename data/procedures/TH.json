@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "countryCode": "TH",
+  "updatedAt": "2026-09-06",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "TH-permesso-soggiorno-lavoro",
+      "countryCode": "TH",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino tailandese tramite il visto nazionale (tipo D). La Thailandia non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). Le domande di visto nazionale (tipo D) si presentano tramite le sedi VFS Global accreditate per l'Ambasciata d'Italia a Bangkok.",
+        "en": "Documents to work in Italy as a Thai citizen through the national visa (type D). Thailand has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). National visa (type D) applications are submitted through the VFS Global centres accredited by the Italian Embassy in Bangkok."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-TH-checklist",
+          "name": "Employment visa — Remote workers (checklist)",
+          "authority": "Ambasciata d'Italia a Bangkok",
+          "url": "https://ambbangkok.esteri.it/wp-content/uploads/2026/06/Employment-visa-%E2%80%93-Remote-workers.pdf",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TH-costi",
+          "name": "Quanto costa un visto e come pagare",
+          "authority": "Ambasciata d'Italia a Bangkok",
+          "url": "https://ambbangkok.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TH-dove",
+          "name": "Dove chiedere un visto — VFS Global",
+          "authority": "Ambasciata d'Italia a Bangkok",
+          "url": "https://ambbangkok.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-TH-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto", "en": "Visa application form" },
+          "description": {
+            "it": "Modulo di richiesta del visto nazionale (tipo D) debitamente compilato e firmato.",
+            "en": "National visa (type D) application form duly completed and signed."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Modulistica dell'Ambasciata d'Italia a Bangkok o VFS Global.", "en": "Forms section of the Italian Embassy in Bangkok or VFS Global." },
+          "whatYouNeed": { "it": "Modulo compilato e firmato.", "en": "Form completed and signed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato passaporto", "en": "Passport-size photo" },
+          "description": {
+            "it": "Una fotografia formato passaporto (da non fissare sul modulo di domanda), conforme alle specifiche ICAO: non più vecchia di 6 mesi, larghezza 35–40 mm, luminosità e contrasto adeguati, sguardo frontale, mascherine o coperture del capo non ammesse salvo motivi religiosi, nessuna alterazione digitale.",
+            "en": "One passport photo (not to be affixed to the application form), compliant with ICAO specifications: no more than 6 months old, 35–40 mm wide, adequate brightness and contrast, frontal gaze, head coverings not permitted except for religious reasons, no digital alterations."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato conforme agli standard ICAO.", "en": "Authorized photographer, ICAO-compliant." },
+          "whatYouNeed": { "it": "Una fotografia formato passaporto conforme ICAO.", "en": "One ICAO-compliant passport photo." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Scattata negli ultimi 6 mesi.", "en": "Taken within the last 6 months." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto valido con almeno due pagine libere.",
+            "en": "Valid passport with at least two blank pages."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità tailandese preposta al rilascio dei passaporti.", "en": "Thai authority responsible for passport issuance." },
+          "whatYouNeed": { "it": "Passaporto valido con almeno 2 pagine libere.", "en": "Valid passport with at least 2 blank pages." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "status-residenza",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Status di residenza a lungo termine", "en": "Long-term residence status" },
+          "description": {
+            "it": "Per i richiedenti non thailandesi, cambogiani o laotiani: visto a lungo termine thailandese/cambogiano/laotiano di durata almeno annuale (i visti trimestrali, sebbene rinnovabili, non sono accettati).",
+            "en": "For non-Thai/Cambodian/Laotian applicants: a long-term Thai/Cambodian/Laotian visa of at least one year (three-month visas, although renewable, are not acceptable)."
+          },
+          "necessity": "conditional",
+          "whereToGet": { "it": "Autorità tailandese, cambogiana o laotiana competente.", "en": "Competent Thai, Cambodian or Laotian authority." },
+          "whatYouNeed": { "it": "Visto a lungo termine di durata almeno annuale.", "en": "Long-term visa of at least one year." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "lettera-presentazione",
+          "code": "COVER_LETTER",
+          "name": { "it": "Lettera di presentazione (cover letter)", "en": "Cover letter" },
+          "description": {
+            "it": "Lettera di presentazione del richiedente (cover letter).",
+            "en": "Applicant's cover letter."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Redatta dal richiedente.", "en": "Drafted by the applicant." },
+          "whatYouNeed": { "it": "Lettera di presentazione firmata.", "en": "Signed cover letter." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "prenotazione-volo",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Conferma della prenotazione del volo", "en": "Flight booking confirmation" },
+          "description": {
+            "it": "Conferma della prenotazione del volo di andata e ritorno o di sola andata.",
+            "en": "Round-trip or one-way flight booking confirmation."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea o agenzia di viaggio.", "en": "Airline or travel agency." },
+          "whatYouNeed": { "it": "Prenotazione del volo A/R o sola andata.", "en": "Round-trip or one-way flight booking." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "assicurazione-medica",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Assicurazione medica", "en": "Medical insurance" },
+          "description": {
+            "it": "Assicurazione medica che copra il periodo di soggiorno previsto, con copertura minima di 30.000,00 euro per cure mediche e trattamento ospedaliero d'emergenza.",
+            "en": "Medical insurance covering the period of intended stay, with a minimum coverage of €30,000.00 for medical care and emergency hospital treatment."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia assicurativa.", "en": "Insurance company." },
+          "whatYouNeed": { "it": "Polizza con copertura minima di 30.000 euro.", "en": "Policy with minimum coverage of €30,000." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "prova-alloggio",
+          "code": "ACCOMMODATION_PROOF",
+          "name": { "it": "Prova di alloggio idoneo", "en": "Proof of suitable lodging" },
+          "description": {
+            "it": "Prova di alloggio idoneo, come un contratto di locazione a lungo termine o un atto di proprietà registrato presso l'Agenzia delle Entrate.",
+            "en": "Proof of suitable lodging, such as a long-term lease agreement or a property deed registered with the Agenzia delle Entrate."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Affittuario o proprietario in Italia (Agenzia delle Entrate per la registrazione).", "en": "Tenant or owner in Italy (Agenzia delle Entrate for registration)." },
+          "whatYouNeed": { "it": "Contratto di locazione a lungo termine o atto di proprietà.", "en": "Long-term lease agreement or property deed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "copie-passaporto-visti",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Copia del passaporto e dei visti precedenti", "en": "Copy of passport and previous visas" },
+          "description": {
+            "it": "Copia del passaporto e dei visti precedenti (solo visti Schengen, UK, USA e Canada rilasciati negli ultimi 5 anni; se i visti sono apposti in un passaporto vecchio, è richiesta anche una copia del vecchio documento di viaggio).",
+            "en": "Copy of the passport and of previous visas (only Schengen, UK, USA and Canada visas issued within the last 5 years; if the visas are affixed in an old passport, a copy of the old travel document is also required)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": { "it": "Fotocopie del passaporto e dei visti precedenti (ultimi 5 anni).", "en": "Photocopies of the passport and of previous visas (last 5 years)." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "qualifica",
+          "code": "PROOF_OF_SKILLS",
+          "name": { "it": "Prova della qualifica professionale", "en": "Proof of professional qualification" },
+          "description": {
+            "it": "Prova di appartenere a una professione qualificante, in una di tre modalità alternative: (1) laurea triennale, magistrale o dottorato (durata almeno 3 anni) riconosciuti tramite Dichiarazione di Valore o attestati CIMEA; (2) qualifica o attestato di competenza rilasciato dall'autorità italiana competente per le professioni regolamentate; (3) qualifica professionale superiore dimostrata con almeno 5 anni di esperienza lavorativa nel settore (per dirigenti e specialisti ICT il requisito si riduce a 3 anni di esperienza negli ultimi 7).",
+            "en": "Proof of belonging to a qualifying profession, in one of three alternative ways: (1) bachelor's, master's or doctorate degree (lasting at least 3 years) recognized through a Declaration of Value or CIMEA attestations; (2) relevant qualification or competence attestation issued by the competent Italian authority for regulated professions; (3) higher professional qualification proven with at least 5 years of work experience in the field (for ICT executives and specialists the requirement drops to 3 years of experience within the last 7)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Università o autorità dello Stato che ha rilasciato il titolo; CIMEA / Ufficio consolare per la Dichiarazione di Valore.", "en": "University or authority of the issuing State; CIMEA / consular office for the Declaration of Value." },
+          "whatYouNeed": { "it": "Titolo di studio o documenti comprovanti l'esperienza professionale richiesta.", "en": "Degree or documents proving the required professional experience." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile (dipende dalla Dichiarazione di Valore).", "en": "Varies (depends on the Declaration of Value)." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "reddito-annuo",
+          "code": "PROOF_OF_INCOME",
+          "name": { "it": "Reddito annuo da fonti legittime", "en": "Annual income from legitimate sources" },
+          "description": {
+            "it": "Reddito annuo derivante da fonti legittime, pari ad almeno tre volte l'importo minimo previsto dalla normativa nazionale per l'esenzione dalla compartecipazione alle spese sanitarie (almeno 25.000,00 euro).",
+            "en": "Annual income derived from legitimate sources, at least three times the minimum amount set by national legislation for the exemption from participation in health costs (at least €25,000.00)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datore di lavoro o autorità fiscale.", "en": "Employer or tax authority." },
+          "whatYouNeed": { "it": "Documenti che attestino un reddito annuo di almeno 25.000 euro.", "en": "Documents proving an annual income of at least €25,000." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "esperienza-lavoro",
+          "code": "PROOF_OF_WORK_EXPERIENCE",
+          "name": { "it": "Esperienza lavorativa nel settore", "en": "Work experience in the field" },
+          "description": {
+            "it": "Almeno 6 mesi di esperienza nel settore di attività da svolgere.",
+            "en": "At least 6 months of experience in the field of work to be carried out."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datori di lavoro precedenti.", "en": "Previous employers." },
+          "whatYouNeed": { "it": "Documenti comprovanti almeno 6 mesi di esperienza nel settore.", "en": "Documents proving at least 6 months of experience in the field." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        },
+        {
+          "id": "documenti-datore-italia",
+          "code": "EMPLOYER_UNDERTAKING_LETTER",
+          "name": { "it": "Documenti richiesti per i lavoratori da remoto (datore di lavoro)", "en": "Documents required for remote workers (employer)" },
+          "description": {
+            "it": "Per i lavoratori da remoto: contratto di lavoro con retribuzione non inferiore alla retribuzione netta media equivalente del settore calcolata dall'ISTAT, e lettera del datore di lavoro che attesti l'assenza di condanne negli ultimi cinque anni per i reati di cui all'art. 22, comma 5-bis, del D.Lgs. 286/1998 (lettera firmata da un dirigente o rappresentante legale, in originale, con copia del documento d'identità del firmatario).",
+            "en": "For remote workers: employment contract with a salary not lower than the average equivalent net salary for the sector calculated by ISTAT, and a letter from the employer stating that the employer has not been convicted in the past five years of crimes listed under art. 22, paragraph 5-bis, of Legislative Decree 286/1998 (letter signed by an executive or legal representative, in original, with a copy of the signatory's ID)."
+          },
+          "necessity": "conditional",
+          "whereToGet": { "it": "Datore di lavoro in Italia.", "en": "Employer in Italy." },
+          "whatYouNeed": { "it": "Contratto di lavoro e lettera del datore di lavoro firmata in originale.", "en": "Employment contract and employer's letter signed in original." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-TH-checklist"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino tailandese (o cittadino di un Paese terzo legalmente residente in Thailandia) che intende svolgere attività lavorativa in Italia per oltre 90 giorni, come lavoratore altamente qualificato o lavoratore da remoto, oppure nell'ambito del Decreto Flussi. La Thailandia non ha un accordo bilaterale con l'Italia in materia di lavoro, ma rientra tra i Paesi ammessi al Decreto Flussi 2026-2028.",
+          "en": "Thai citizen (or third-country national legally residing in Thailand) intending to carry out work activity in Italy for more than 90 days, as a highly qualified or remote worker, or within the Decreto Flussi. Thailand has no bilateral labour agreement with Italy, but is among the countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "VFS Global — Visa Application Centre (per conto dell'Ambasciata d'Italia a Bangkok)", "en": "VFS Global — Visa Application Centre (on behalf of the Italian Embassy in Bangkok)" },
+          "address": { "it": "Ambasciata d'Italia: 40° piano, CRC Tower, All Seasons Place, 87 Wireless Road, Bangkok.", "en": "Italian Embassy: 40th floor, CRC Tower, All Seasons Place, 87 Wireless Road, Bangkok." },
+          "phone": "+66 2 250 4970",
+          "email": "visti.bangkok@esteri.it",
+          "website": "https://visa.vfsglobal.com/tha/en/ita",
+          "notes": {
+            "it": "Prenotazione online su visa.vfsglobal.com/tha/en/ita e presentazione presso i Visa Application Centre VFS Global a Bangkok, Phuket e Chiang Mai.",
+            "en": "Online booking at visa.vfsglobal.com/tha/en/ita and submission at VFS Global Visa Application Centres in Bangkok, Phuket and Chiang Mai."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale (tipo D) tramite i Visa Application Centre VFS Global (canale ufficiale dell'Ambasciata d'Italia a Bangkok).",
+          "en": "National visa (type D) application through the VFS Global Visa Application Centres (official channel of the Italian Embassy in Bangkok)."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro (4.292 baht thailandesi). Il pagamento avviene in contanti o tramite QR code presso l'Ufficio Visti dell'Ambasciata d'Italia a Bangkok (pagamento solo in contanti alla Cancelleria).",
+          "en": "National type D visa: €116.00 (4,292 Thai baht). Payment is made in cash or via QR code at the Visa Office of the Italian Embassy in Bangkok (cash-only payment at the Chancery)."
+        },
+        "processingTime": {
+          "it": "Variabile; dipende dal nulla osta e dalla programmazione della sede consolare.",
+          "en": "Varies; depends on the nulla osta and the consular schedule."
+        },
+        "validity": {
+          "it": "Permesso di soggiorno per lavoro: fino a 1 anno (tempo determinato) o 2 anni (tempo indeterminato); 9 mesi per lavoro stagionale.",
+          "en": "Work residence permit: up to 1 year (fixed-term) or 2 years (open-ended); 9 months for seasonal work."
+        },
+        "renewal": {
+          "it": "Presentare la domanda almeno 60 giorni prima della scadenza.",
+          "en": "Submit the application at least 60 days before expiry."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia richiede il nulla osta allo Sportello Unico per l'Immigrazione (nell'ambito del Decreto Flussi o per le categorie fuori quota).",
+            "en": "The employer in Italy requests the nulla osta from the One-Stop Immigration Desk (within the Decreto Flussi or for out-of-quota categories)."
+          },
+          {
+            "it": "Il cittadino tailandese prenota online su visa.vfsglobal.com/tha/en/ita e presenta la domanda presso un Visa Application Centre VFS Global.",
+            "en": "The Thai citizen books online at visa.vfsglobal.com/tha/en/ita and submits the application at a VFS Global Visa Application Centre."
+          },
+          {
+            "it": "Il pagamento del visto viene effettuato presso l'Ufficio Visti dell'Ambasciata d'Italia a Bangkok.",
+            "en": "The visa fee is paid at the Visa Office of the Italian Embassy in Bangkok."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "La checklist ufficiale dell'Ambasciata d'Italia a Bangkok riguarda l'employment visa nella variante del lavoratore da remoto / altamente qualificato (art. 27-quater del D.Lgs. 286/1998). L'elenco è indicativo e la sede si riserva di richiedere ulteriori documenti secondo necessità.",
+          "en": "The official checklist of the Italian Embassy in Bangkok concerns the employment visa in the remote / highly qualified worker variant (art. 27-quater of Legislative Decree 286/1998). The list is indicative and the office reserves the right to request further documents as needed."
+        }
+      }
+    }
+  ]
+}

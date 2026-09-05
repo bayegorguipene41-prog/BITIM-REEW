@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "countryCode": "UZ",
+  "updatedAt": "2026-09-06",
+  "status": "verified",
+  "procedures": [
+    {
+      "id": "UZ-permesso-soggiorno-lavoro",
+      "countryCode": "UZ",
+      "slug": "permesso-soggiorno-lavoro",
+      "title": { "it": "Permesso di soggiorno per lavoro", "en": "Residence permit for work" },
+      "description": {
+        "it": "Documenti per lavorare in Italia come cittadino uzbeko tramite il visto nazionale (tipo D). L'Uzbekistan figura tra i Paesi con cooperazione attiva ammessi al Decreto Flussi 2026-2028 (DPCM 2 ottobre 2025). L'Ambasciata d'Italia a Tashkent pubblica una checklist dedicata al visto per lavoro subordinato (lavoratore a distanza / altamente qualificato, art. 27-quater del D.Lgs. 286/1998) e gestisce anche i visti D dei cittadini tagiki.",
+        "en": "Documents to work in Italy as an Uzbek citizen through the national visa (type D). Uzbekistan is among the cooperating countries admitted under the Decreto Flussi 2026-2028 (DPCM 2 October 2025). The Italian Embassy in Tashkent publishes a dedicated checklist for the subordinate employment visa (remote / highly qualified worker, art. 27-quater of Legislative Decree 286/1998) and also handles type D visas for Tajik citizens."
+      },
+      "category": "immigration",
+      "dataSource": "verified",
+      "sources": [
+        {
+          "id": "source-UZ-checklist",
+          "name": "Checklist — Visto per lavoro subordinato (lavoratore da remoto)",
+          "authority": "Ambasciata d'Italia a Tashkent",
+          "url": "https://ambtashkent.esteri.it/wp-content/uploads/2026/05/16.-Lavoro-subordinato-lavoratore-da-remoto-ITALIANO-rev.pdf",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UZ-costi",
+          "name": "Quanto costa un visto e come pagare",
+          "authority": "Ambasciata d'Italia a Tashkent",
+          "url": "https://ambtashkent.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UZ-dove",
+          "name": "Dove chiedere un visto",
+          "authority": "Ambasciata d'Italia a Tashkent",
+          "url": "https://ambtashkent.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        },
+        {
+          "id": "source-UZ-flussi",
+          "name": "Decreto Flussi 2026-2028 — quote riservate ai Paesi con cooperazione attiva",
+          "authority": "Ministero del Lavoro / integrazionemigranti.gov.it",
+          "url": "https://www.integrazionemigranti.gov.it/it-it/Dettaglio-approfondimento/id/64/Flussi-2026",
+          "lastVerifiedAt": "2026-09-06",
+          "confidence": "high",
+          "verificationStatus": "verified"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "modulo-domanda",
+          "code": "VISA_APPLICATION_FORM",
+          "name": { "it": "Modulo di richiesta del visto nazionale (tipo D)", "en": "National visa (type D) application form" },
+          "description": {
+            "it": "Formulario della domanda di Visto Nazionale di tipo 'D' debitamente compilato e firmato in originale dall'interessato. In presenza di minori di anni 18, il formulario deve essere firmato in originale da entrambi i genitori in Ambasciata al momento della presentazione della domanda dinnanzi al Funzionario incaricato.",
+            "en": "National visa (type D) application form duly completed and signed in original by the applicant. For minors under 18, the form must be signed in original by both parents at the Embassy when the application is submitted before the appointed officer."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Modulistica dell'Ambasciata d'Italia a Tashkent.", "en": "Forms section of the Italian Embassy in Tashkent." },
+          "whatYouNeed": { "it": "Modulo compilato e firmato in originale (per minori: entrambi i genitori presenti).", "en": "Form completed and signed in original (for minors: both parents present)." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato (compilazione).", "en": "Immediate (completion)." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "foto-biometrica",
+          "code": "PASSPORT_PHOTOS",
+          "name": { "it": "Fotografia formato tessera", "en": "Passport-size photo" },
+          "description": {
+            "it": "Una foto formato tessera con sfondo bianco, recente (non oltre sei mesi), conforme agli standard ICAO.",
+            "en": "One passport-size photo with a white background, recent (not older than six months), compliant with ICAO standards."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Fotografo autorizzato, conforme agli standard ICAO.", "en": "Authorized photographer, ICAO-compliant." },
+          "whatYouNeed": { "it": "Una foto formato tessera su sfondo bianco degli ultimi 6 mesi.", "en": "One white-background passport-size photo taken within the last 6 months." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Scattata negli ultimi 6 mesi.", "en": "Taken within the last 6 months." },
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "passaporto",
+          "code": "PASSPORT",
+          "name": { "it": "Passaporto valido", "en": "Valid passport" },
+          "description": {
+            "it": "Passaporto originale: la data di rilascio non deve essere antecedente a 10 anni; il passaporto deve avere una validità di almeno 90 giorni dalla data di scadenza del visto richiesto; devono essere presenti almeno due pagine libere.",
+            "en": "Original passport: the issue date must not be earlier than 10 years ago; the passport must be valid for at least 90 days beyond the expiry date of the requested visa; at least two blank pages are required."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità uzbeka preposta al rilascio dei passaporti.", "en": "Uzbek authority responsible for passport issuance." },
+          "whatYouNeed": { "it": "Passaporto rilasciato da meno di 10 anni, valido 90 giorni oltre il visto, con 2 pagine libere.", "en": "Passport issued less than 10 years ago, valid 90 days beyond the visa, with 2 blank pages." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "validityPeriod": { "it": "Rilascio negli ultimi 10 anni; validità di almeno 90 giorni oltre la scadenza del visto.", "en": "Issued within the last 10 years; valid for at least 90 days beyond visa expiry." },
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "fotocopia-documenti",
+          "code": "PASSPORT_COPY",
+          "name": { "it": "Fotocopia del passaporto e della carta di identità", "en": "Photocopy of passport and identity card" },
+          "description": {
+            "it": "Fotocopia del passaporto e della carta di identità o passaporto interno uzbeko (o del documento di identità tagiko, per i cittadini del Tagikistan).",
+            "en": "Photocopy of the passport and of the Uzbek identity card or internal passport (or of the Tajik identity document, for Tajik citizens)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": { "it": "Fotocopie del passaporto e del documento di identità.", "en": "Photocopies of passport and identity document." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "prova-residenza",
+          "code": "PROOF_OF_RESIDENCE",
+          "name": { "it": "Documentazione probatoria della residenza", "en": "Proof of residence documentation" },
+          "description": {
+            "it": "Per i cittadini uzbeki: carta di identità uzbeka o passaporto interno e certificato di residenza scaricabile dal portale https://my.gov.uz. Per i cittadini tagiki: carta di identità tagika e certificato di residenza. Per gli altri stranieri residenti in Uzbekistan: permesso di soggiorno e permesso di lavoro rilasciato dalla Migration Agency (Cabinet of Ministers), certificato di impiego e salario da my.gov.uz, certificato del datore di lavoro locale, contratto di affitto o titolo di proprietà con bollette degli ultimi tre mesi.",
+            "en": "For Uzbek citizens: Uzbek identity card or internal passport and residence certificate downloadable from the portal https://my.gov.uz. For Tajik citizens: Tajik identity card and residence certificate. For other foreigners residing in Uzbekistan: residence permit and work permit issued by the Migration Agency (Cabinet of Ministers), employment and salary certificate from my.gov.uz, certificate from the local employer, lease agreement or property deed with utility bills for the last three months."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Portale governativo https://my.gov.uz e autorità locali competenti.", "en": "Government portal https://my.gov.uz and competent local authorities." },
+          "whatYouNeed": { "it": "Documenti di residenza come da checklist dell'Ambasciata.", "en": "Residence documents as per the Embassy checklist." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "copie-visti-precedenti",
+          "code": "PREVIOUS_VISA_COPIES",
+          "name": { "it": "Copie dei visti precedenti", "en": "Copies of previous visas" },
+          "description": {
+            "it": "Copie dei precedenti visti Schengen, Regno Unito e Stati Uniti (e delle pagine del passaporto che li contengono).",
+            "en": "Copies of previous Schengen, United Kingdom and United States visas (and of the passport pages bearing them)."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Qualsiasi copisteria.", "en": "Any copy shop." },
+          "whatYouNeed": { "it": "Fotocopie dei visti Schengen, UK e USA precedenti.", "en": "Photocopies of previous Schengen, UK and USA visas." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "qualifica-lavoratore",
+          "code": "PROOF_OF_SKILLS",
+          "name": { "it": "Prova della qualifica di 'lavoratore altamente qualificato'", "en": "Proof of 'highly qualified worker' status" },
+          "description": {
+            "it": "Documentazione comprovante la qualifica di lavoratore altamente qualificato, ai sensi dell'art. 27-quater, comma 1, del D.Lgs. 286/1998: diploma di istruzione superiore di durata almeno triennale, oppure certificati dell'Autorità italiana competente per le professioni regolamentate, oppure qualifica professionale superiore conseguita sulla base di almeno cinque anni di esperienza professionale (tre anni negli ultimi sette, per manager e specialisti ICT, classificazione ISCO-08 nn. 133 e 25). Titoli e certificati vanno legalizzati o apostillati, tradotti in italiano; per i titoli universitari serve la Dichiarazione di Valore.",
+            "en": "Documentation proving the status of highly qualified worker under art. 27-quater, paragraph 1, of Legislative Decree 286/1998: higher education diploma of at least three years, or certificates issued by the competent Italian Authority for regulated professions, or a higher professional qualification based on at least five years of professional experience (three years within the last seven, for ICT managers and specialists, ISCO-08 codes 133 and 25). Qualifications and certificates must be legalized or apostilled, translated into Italian; for university degrees the Declaration of Value is required."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Università o autorità governativa dello Stato che ha rilasciato il titolo; CIMEA / Ufficio consolare per Dichiarazione di Valore.", "en": "University or government authority of the issuing State; CIMEA / consular office for the Declaration of Value." },
+          "whatYouNeed": { "it": "Titolo di studio o certificati professionale/esperienza, legalizzati o apostillati, tradotti in italiano.", "en": "Degree or professional/experience certificates, legalized or apostilled, translated into Italian." },
+          "translationRequired": true,
+          "apostilleRequired": true,
+          "processingTime": { "it": "Variabile (dipende da legalizzazione e Dichiarazione di Valore).", "en": "Varies (depends on legalization and Declaration of Value)." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "contratto-datore-italia",
+          "code": "WORK_CONTRACT",
+          "name": { "it": "Contratto di lavoro con il datore di lavoro in Italia", "en": "Employment contract with the employer in Italy" },
+          "description": {
+            "it": "Contratto di lavoro che specifichi l'attività lavorativa da svolgere, con retribuzione annua non inferiore a quella prevista dai contratti collettivi nazionali e comunque non inferiore alla retribuzione annua lorda media rilevata dall'ISTAT.",
+            "en": "Employment contract specifying the work to be carried out, with an annual salary not lower than that set by national collective agreements and in any case not lower than the average gross annual salary recorded by ISTAT."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datore di lavoro in Italia.", "en": "Employer in Italy." },
+          "whatYouNeed": { "it": "Contratto di lavoro con retribuzione conforme ai CCNL e ai parametri ISTAT.", "en": "Employment contract with a salary compliant with collective agreements and ISTAT parameters." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "autodichiarazione-datore",
+          "code": "EMPLOYER_UNDERTAKING_LETTER",
+          "name": { "it": "Documenti del datore di lavoro in Italia", "en": "Employer's documents in Italy" },
+          "description": {
+            "it": "Autodichiarazione sottoscritta dal datore di lavoro nella quale si dichiara l'assenza di condanne negli ultimi 5 anni per i reati di cui all'art. 22, comma 5-bis, del D.Lgs. 286/1998, fotocopia della visura camerale e fotocopia del passaporto del datore di lavoro.",
+            "en": "Self-declaration signed by the employer stating the absence of convictions in the last 5 years for the crimes referred to in art. 22, paragraph 5-bis, of Legislative Decree 286/1998, photocopy of the company register extract and photocopy of the employer's passport."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datore di lavoro in Italia (Camera di Commercio per la visura).", "en": "Employer in Italy (Chamber of Commerce for the extract)." },
+          "whatYouNeed": { "it": "Autodichiarazione, visura camerale e copia passaporto del datore di lavoro.", "en": "Self-declaration, company extract and copy of the employer's passport." },
+          "translationRequired": true,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "reddito-annuo",
+          "code": "PROOF_OF_INCOME",
+          "name": { "it": "Prova di redditi conseguiti annualmente", "en": "Proof of annual income" },
+          "description": {
+            "it": "Prova di redditi conseguiti annualmente in Uzbekistan o Tagikistan, di importo non inferiore a circa 25.500,00 euro (tre volte il livello minimo previsto per l'esenzione dal contributo socio-sanitario). Non sono accettate garanzie bancarie o polizze fideiussorie; sono considerati affidabili solo i proventi in SUM, USD o Euro, comprovati da documenti ufficiali emessi da autorità finanziarie di Uzbekistan/Tagikistan.",
+            "en": "Proof of annual income earned in Uzbekistan or Tajikistan, not lower than approximately €25,500.00 (three times the minimum level for exemption from health contribution). Bank guarantees and surety bonds are not accepted; only funds in SUM, USD or Euros, proven by official documents issued by financial authorities in Uzbekistan/Tajikistan, are considered reliable."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Autorità finanziarie in Uzbekistan o Tagikistan.", "en": "Financial authorities in Uzbekistan or Tajikistan." },
+          "whatYouNeed": { "it": "Documenti ufficiali originali e timbrati che attestino redditi annuali di almeno 25.500 euro.", "en": "Original stamped official documents attesting annual income of at least €25,500." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "nulla-osta-datore-locale",
+          "code": "LOCAL_EMPLOYER_RELEASE_LETTER",
+          "name": { "it": "Lettera di nulla osta del datore di lavoro locale", "en": "Letter of release from the local employer" },
+          "description": {
+            "it": "Lettera di nulla osta rilasciata dal datore di lavoro in Uzbekistan o Tagikistan, con la quale si autorizza il trasferimento del richiedente in Italia e se ne confermano le eventuali dimissioni. Se il candidato intende dimettersi, è richiesta anche la lettera di licenziamento o l'attestazione di accettazione delle dimissioni.",
+            "en": "Letter of release issued by the employer in Uzbekistan or Tajikistan authorizing the applicant's transfer to Italy and confirming any resignation. If the candidate intends to resign, a dismissal letter or acceptance of resignation is also required."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Datore di lavoro in Uzbekistan o Tagikistan.", "en": "Employer in Uzbekistan or Tajikistan." },
+          "whatYouNeed": { "it": "Lettera di nulla osta (e, se del caso, lettera di dimissioni) firmata dal datore di lavoro locale.", "en": "Release letter (and, where applicable, resignation letter) signed by the local employer." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "assicurazione-medica",
+          "code": "HEALTH_INSURANCE",
+          "name": { "it": "Certificato di copertura assicurativa sanitaria", "en": "Health insurance certificate" },
+          "description": {
+            "it": "Certificato di copertura assicurativa sanitaria per l'intero periodo di soggiorno nell'Area Schengen, con copertura minima di 30.000,00 euro, valida in tutta l'Area Schengen e comprensiva di ricovero ospedaliero d'urgenza, rimpatrio per motivi sanitari, cure mediche urgenti, decesso e rimpatrio della salma.",
+            "en": "Health insurance certificate covering the entire period of stay in the Schengen Area, with minimum coverage of €30,000.00, valid throughout the Schengen Area and including urgent hospitalization, medical repatriation, urgent medical care, death and repatriation of remains."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia assicurativa con copertura Schengen.", "en": "Insurance company with Schengen coverage." },
+          "whatYouNeed": { "it": "Polizza con copertura minima di 30.000 euro valida in Schengen.", "en": "Policy with minimum coverage of €30,000 valid in Schengen." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "prova-alloggio",
+          "code": "ACCOMMODATION_PROOF",
+          "name": { "it": "Prova di alloggio", "en": "Proof of accommodation" },
+          "description": {
+            "it": "Disponibilità di alloggio dimostrata tramite contratto di affitto registrato presso l'Agenzia delle Entrate oppure atto di proprietà di immobile debitamente registrato dalle autorità notarili competenti.",
+            "en": "Availability of accommodation proven through a lease agreement registered with the Agenzia delle Entrate or a property deed duly registered by the competent notarial authorities."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Proprietario o affittuario in Italia (Agenzia delle Entrate per la registrazione).", "en": "Owner or tenant in Italy (Agenzia delle Entrate for registration)." },
+          "whatYouNeed": { "it": "Contratto di affitto registrato o atto di proprietà.", "en": "Registered lease agreement or property deed." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Variabile.", "en": "Varies." },
+          "sourceId": "source-UZ-checklist"
+        },
+        {
+          "id": "prenotazione-volo",
+          "code": "TRAVEL_ITINERARY",
+          "name": { "it": "Prenotazione del volo di andata e ritorno", "en": "Round-trip flight booking" },
+          "description": {
+            "it": "Prenotazione di volo di andata e ritorno.",
+            "en": "Round-trip flight booking."
+          },
+          "necessity": "required",
+          "whereToGet": { "it": "Compagnia aerea o agenzia di viaggio.", "en": "Airline or travel agency." },
+          "whatYouNeed": { "it": "Prenotazione di volo A/R.", "en": "Round-trip flight booking." },
+          "translationRequired": false,
+          "apostilleRequired": false,
+          "processingTime": { "it": "Immediato.", "en": "Immediate." },
+          "sourceId": "source-UZ-checklist"
+        }
+      ],
+      "meta": {
+        "whoCanApply": {
+          "it": "Cittadino uzbeko (o tagiko, tramite la sede di Tashkent) lavoratore altamente qualificato che intende svolgere attività di lavoro subordinato o di collaborazione in regime di telelavoro mediante strumenti informatici (art. 27-quater del D.Lgs. 286/1998), con sede principale del datore di lavoro in Italia o all'estero. L'Uzbekistan è coperto dal Memorandum di Intesa in materia di migrazione e mobilità con l'Italia (29 maggio 2025) ed è tra i Paesi con accordi in materia migratoria, oltre a figurare tra quelli con cooperazione attiva ammessi al Decreto Flussi 2026-2028.",
+          "en": "Uzbek citizen (or Tajik citizen, through the Tashkent office) who is a highly qualified worker intending to carry out subordinate employment or collaboration through remote work using IT tools (art. 27-quater of Legislative Decree 286/1998), with the employer's headquarters in Italy or abroad. Uzbekistan is covered by the Memorandum of Understanding on migration and mobility with Italy (29 May 2025) and is among the countries with migration agreements, besides being among the cooperating countries admitted under the Decreto Flussi 2026-2028."
+        },
+        "whereToApply": {
+          "name": { "it": "Ambasciata d'Italia a Tashkent — Ufficio Visti", "en": "Italian Embassy in Tashkent — Visa Office" },
+          "address": { "it": "Yusuf Xos Xodjib Str. nr. 40, 100031 Tashkent, Uzbekistan.", "en": "40 Yusuf Xos Xodjib Str., 100031 Tashkent, Uzbekistan." },
+          "phone": "00998712521119 / 00998712521120",
+          "email": "visti.tashkent@esteri.it",
+          "notes": {
+            "it": "La sede di Tashkent gestisce anche i visti nazionali (tipo D) dei cittadini tagiki. Per copie conformi e appuntamenti all'Ufficio Consolare occorre contattare l'Ambasciata via e-mail.",
+            "en": "The Tashkent office also handles national (type D) visas for Tajik citizens. For certified copies and appointments at the Consular Office, applicants must contact the Embassy by email."
+          }
+        },
+        "method": {
+          "it": "Domanda di visto nazionale (tipo D) presentata direttamente all'Ufficio Visti dell'Ambasciata d'Italia a Tashkent (nessun outsourcer per i visti D). Presentazione non prima di sei mesi e al più tardi 15 giorni di calendario prima dell'inizio del viaggio previsto.",
+          "en": "National visa (type D) application submitted directly to the Visa Office of the Italian Embassy in Tashkent (no outsourcer for D visas). Applications may be submitted no earlier than six months and no later than 15 calendar days before the start of the planned trip."
+        },
+        "estimatedCost": {
+          "it": "Visto nazionale di tipo D: 116,00 euro, pagato in dollari USA in contanti per 136 USD (tasso di cambio consolare trimestrale; tabella aggiornata il 27.04.2026).",
+          "en": "National type D visa: €116.00, paid in US dollars in cash at 136 USD (quarterly consular exchange rate; table updated on 27.04.2026)."
+        },
+        "processingTime": {
+          "it": "Circa 30 giorni secondo la checklist della sede; in ogni caso fino a 90 giorni per la trattazione della domanda.",
+          "en": "About 30 days according to the office checklist; in any case up to 90 days for processing the application."
+        },
+        "validity": {
+          "it": "Visto di durata da 91 a 365 giorni, con ingressi multipli.",
+          "en": "Visa for a stay of 91 to 365 days, multiple entries."
+        },
+        "renewal": {
+          "it": "Presentare la domanda di permesso di soggiorno entro 8 giorni lavorativi dall'ingresso in Italia.",
+          "en": "Submit the residence permit application within 8 working days of entry into Italy."
+        },
+        "appointmentRequired": true,
+        "steps": [
+          {
+            "it": "Il datore di lavoro in Italia (o all'estero) predispone il contratto di lavoro e la documentazione aziendale.",
+            "en": "The employer in Italy (or abroad) prepares the employment contract and corporate documentation."
+          },
+          {
+            "it": "Il richiedente raccoglie la documentazione come da checklist e presenta la domanda (non prima di 6 mesi e al più tardi 15 giorni prima del viaggio).",
+            "en": "The applicant collects the documentation as per the checklist and submits the application (no earlier than 6 months and no later than 15 days before the trip)."
+          },
+          {
+            "it": "Viene rilasciato il visto; il lavoratore fa ingresso in Italia.",
+            "en": "The visa is issued and the worker enters Italy."
+          },
+          {
+            "it": "Entro 8 giorni lavorativi dall'ingresso, richiedere il permesso di soggiorno.",
+            "en": "Within 8 working days of entry, apply for the residence permit."
+          }
+        ],
+        "note": {
+          "it": "L'elenco dei documenti fornito dall'Ambasciata di Tashkent riguarda il visto per lavoro subordinato nella variante del lavoratore da remoto/altamente qualificato (art. 27-quater). Tutti i documenti vanno presentati in originale e in fotocopia; le fotocopie devono essere munite dell'attestazione consolare di copia conforme. Le domande presentate fuori dai limiti temporali (6 mesi / 15 giorni) vengono respinte.",
+          "en": "The document list provided by the Tashkent Embassy concerns the subordinate employment visa in the remote/highly qualified worker variant (art. 27-quater). All documents must be submitted in original and photocopy; photocopies must bear the consular certification of true copy. Applications submitted outside the time limits (6 months / 15 days) are rejected."
+        }
+      }
+    }
+  ]
+}

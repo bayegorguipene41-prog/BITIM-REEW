@@ -438,6 +438,10 @@ describe("PROCEDURES/PROCEDURES_ALL — nessuna regressione", () => {
     expect(ids).toContain("CI-permesso-soggiorno-lavoro");
     expect(ids).toContain("GH-permesso-soggiorno-lavoro");
     expect(ids).toContain("GE-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MU-permesso-soggiorno-lavoro");
+    expect(ids).toContain("UZ-permesso-soggiorno-lavoro");
+    expect(ids).toContain("JO-permesso-soggiorno-lavoro");
+    expect(ids).toContain("TH-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });
@@ -561,6 +565,24 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     }
   });
 
+  it("MU/UZ/JO/TH.json sono la fonte delle procedure Wave 1 (Fase 2C)", () => {
+    for (const [code, id] of [
+      ["MU", "MU-permesso-soggiorno-lavoro"],
+      ["UZ", "UZ-permesso-soggiorno-lavoro"],
+      ["JO", "JO-permesso-soggiorno-lavoro"],
+      ["TH", "TH-permesso-soggiorno-lavoro"],
+    ] as const) {
+      const json = loadCountryProceduresJson(code);
+      expect(json.length).toBe(1);
+      expect(json.map((p) => p.id)).toEqual(expect.arrayContaining([id]));
+      expect(getCountryProceduresJson(code)?.status).toBe("verified");
+      expect(json[0].sources[0].verificationStatus).toBe("verified");
+      expect(getCountryProceduresJson(code)?.updatedAt).toBe("2026-09-06");
+      expect(COUNTRY_PROCEDURE_INDEX[code]?.lastVerified).toBe("2026-09-06");
+      expect(COUNTRY_PROCEDURE_INDEX[code]?.procedureCount).toBe(1);
+    }
+  });
+
   it("paese senza file JSON → array vuoto", () => {
     expect(loadCountryProceduresJson("US")).toEqual([]);
     expect(loadCountryProceduresJson("ZZ")).toEqual([]);
@@ -589,6 +611,10 @@ describe("Migrazione JSON (Sessione 3) — fonte canonica", () => {
     expect(ids).toContain("CI-permesso-soggiorno-lavoro");
     expect(ids).toContain("GH-permesso-soggiorno-lavoro");
     expect(ids).toContain("GE-permesso-soggiorno-lavoro");
+    expect(ids).toContain("MU-permesso-soggiorno-lavoro");
+    expect(ids).toContain("UZ-permesso-soggiorno-lavoro");
+    expect(ids).toContain("JO-permesso-soggiorno-lavoro");
+    expect(ids).toContain("TH-permesso-soggiorno-lavoro");
     expect(ids).toContain("FR-permesso-soggiorno-lavoro");
     expect(ids).toContain("DE-permesso-soggiorno-lavoro");
   });

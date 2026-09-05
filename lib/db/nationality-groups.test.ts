@@ -149,6 +149,20 @@ describe("resolveNationalityGroups — bilateral agreements (destination=IT)", (
     expect(groups).toContain("foreign");
   });
 
+  it("Mauritius → bilateral + bilateral_it-mauritius + foreign", () => {
+    const groups = resolveNationalityGroups("MU");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-mauritius");
+    expect(groups).toContain("foreign");
+  });
+
+  it("Uzbekistan → bilateral + bilateral_it-uzbekistan + foreign", () => {
+    const groups = resolveNationalityGroups("UZ");
+    expect(groups).toContain("bilateral");
+    expect(groups).toContain("bilateral_it-uzbekistan");
+    expect(groups).toContain("foreign");
+  });
+
   it("all IT bilateral partners are in the map", () => {
     for (const partnerCode of Object.keys(itPartners)) {
       const groups = resolveNationalityGroups(partnerCode);
